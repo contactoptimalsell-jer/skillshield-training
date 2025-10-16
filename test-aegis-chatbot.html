@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Aegis Chatbot - SkillShield Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .test-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .test-link:hover {
+            background-color: #0056b3;
+        }
+        .status {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .feature-list {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .feature-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Test Aegis Chatbot - SkillShield Dashboard</h1>
+        
+        <div class="status success">
+            ✅ Composant AegisChatbot créé dans src/components/dashboard/AegisChatbot.tsx
+        </div>
+        
+        <div class="status success">
+            ✅ Intégration dans DashboardLayout.tsx pour accessibilité globale
+        </div>
+        
+        <div class="status info">
+            📍 Le chatbot Aegis est maintenant accessible depuis toutes les pages du dashboard
+        </div>
+        
+        <h2>🔗 Liens de Test :</h2>
+        
+        <a href="http://localhost:5173/dashboard" class="test-link" target="_blank">
+            🎯 Accéder au Dashboard avec Aegis
+        </a>
+        
+        <a href="http://localhost:5173/dashboard/score" class="test-link" target="_blank">
+            📈 Page Score avec Aegis
+        </a>
+        
+        <a href="http://localhost:5173/dashboard/formations" class="test-link" target="_blank">
+            📚 Page Formations avec Aegis
+        </a>
+        
+        <h2>🤖 Fonctionnalités du Chatbot Aegis :</h2>
+        
+        <div class="feature-list">
+            <h3>🧠 Intelligence Adaptative :</h3>
+            <ul>
+                <li>✅ Détection émotionnelle (anxiété, burnout, motivation)</li>
+                <li>✅ Scénarios contextuels personnalisés</li>
+                <li>✅ Réponses basées sur le profil utilisateur</li>
+                <li>✅ Mode sparring pour conseils avancés</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>💬 Interactions :</h3>
+            <ul>
+                <li>✅ Messages avec effet de frappe</li>
+                <li>✅ Actions rapides (Impact IA, Compétences, etc.)</li>
+                <li>✅ Interface glassmorphism cohérente</li>
+                <li>✅ Animations fluides et avatars animés</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🎯 Scénarios Disponibles :</h3>
+            <ul>
+                <li>✅ Impact IA sur le métier</li>
+                <li>✅ Compétences à développer</li>
+                <li>✅ Métiers similaires AI-proof</li>
+                <li>✅ Analyse d'offres d'emploi</li>
+                <li>✅ Gestion de l'anxiété et du burnout</li>
+                <li>✅ Motivation et planification</li>
+            </ul>
+        </div>
+        
+        <h2>📋 Vérifications à faire :</h2>
+        <ul>
+            <li>✅ Cliquer sur "Accéder au Dashboard avec Aegis"</li>
+            <li>✅ Vérifier que le bouton flottant Aegis apparaît en bas à droite</li>
+            <li>✅ Cliquer sur le bouton pour ouvrir le chatbot</li>
+            <li>✅ Confirmer que le message de bienvenue s'affiche</li>
+            <li>✅ Tester les actions rapides en bas du chat</li>
+            <li>✅ Écrire un message personnalisé et vérifier la réponse</li>
+            <li>✅ Tester la détection émotionnelle (écrire "je suis inquiet")</li>
+            <li>✅ Naviguer vers d'autres pages du dashboard</li>
+            <li>✅ Confirmer que le chatbot reste accessible partout</li>
+            <li>✅ Tester le mode sparring (icône épée)</li>
+            <li>✅ Vérifier les animations et effets visuels</li>
+        </ul>
+        
+        <h2>🎮 Tests Spécifiques :</h2>
+        
+        <div class="feature-list">
+            <h3>💭 Messages de Test :</h3>
+            <ul>
+                <li><strong>"Je suis inquiet"</strong> → Détection anxiété</li>
+                <li><strong>"Je suis fatigué"</strong> → Détection burnout</li>
+                <li><strong>"Je suis motivé !"</strong> → Mode motivation</li>
+                <li><strong>"Impact IA sur mon métier"</strong> → Scénario impactIA</li>
+                <li><strong>"Compétences à développer"</strong> → Scénario compétences</li>
+            </ul>
+        </div>
+        
+        <div class="status info">
+            🎯 Le chatbot utilise des données mockées pour Alex (Développeur Full Stack, 5 ans d'expérience, score 67%)
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Projections Avancées - Aegis Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .test-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .test-link:hover {
+            background-color: #0056b3;
+        }
+        .status {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e3cb;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .feature-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .feature-list {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .feature-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .dynamic-projections {
+            background-color: #e7f3ff;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .sectorial-comparisons {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .temporal-alerts {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .pdf-export {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.9em;
+            white-space: pre-wrap;
+            margin: 10px 0;
+        }
+        .metrics-dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .metric-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .metric-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+        .metric-label {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .sector-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .sector-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .sector-card h4 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .migration-paths {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .path-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .path-card h4 {
+            margin-top: 0;
+            color: #28a745;
+        }
+        .alert-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .alert-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .alert-card.milestone {
+            border-left: 4px solid #dc3545;
+        }
+        .alert-card.deadline {
+            border-left: 4px solid #fd7e14;
+        }
+        .alert-card.opportunity {
+            border-left: 4px solid #28a745;
+        }
+        .pdf-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .pdf-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .pdf-card h4 {
+            margin-top: 0;
+            color: #6f42c1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Test Projections Avancées - Aegis Chatbot</h1>
+        
+        <div class="status success">
+            ✅ Projections Dynamiques avec ajustement selon feedback utilisateur implémentées
+        </div>
+        
+        <div class="status success">
+            ✅ Comparaisons Sectorielles par secteur d'activité implémentées
+        </div>
+        
+        <div class="status success">
+            ✅ Alertes Temporelles à l'approche des échéances implémentées
+        </div>
+        
+        <div class="status success">
+            ✅ Export PDF de rapports de projection implémenté
+        </div>
+        
+        <h2>🔗 Test du Chatbot avec Projections Avancées :</h2>
+        
+        <a href="http://localhost:5173/dashboard" class="test-link" target="_blank">
+            🚀 Ouvrir Aegis Chatbot avec Projections Avancées
+        </a>
+        
+        <h2>🚀 Fonctionnalités Avancées Implémentées :</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>📊 Projections Dynamiques</h3>
+                <ul>
+                    <li>Ajustement selon feedback utilisateur</li>
+                    <li>Facteurs d'adaptation en temps réel</li>
+                    <li>Précision des projections améliorée</li>
+                    <li>Historique des projections</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🏭 Comparaisons Sectorielles</h3>
+                <ul>
+                    <li>Analyse comparative entre secteurs</li>
+                    <li>Chemins de migration recommandés</li>
+                    <li>Opportunités croisées</li>
+                    <li>Données sectorielles en temps réel</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>⏰ Alertes Temporelles</h3>
+                <ul>
+                    <li>Jalons à venir avec rappels</li>
+                    <li>Rappels d'échéances automatiques</li>
+                    <li>Points de contrôle de progression</li>
+                    <li>Opportunités marché détectées</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📄 Export PDF</h3>
+                <ul>
+                    <li>Rapports de projection complets</li>
+                    <li>Génération automatique</li>
+                    <li>Historique des exports</li>
+                    <li>Contenu structuré et personnalisé</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>📊 Projections Dynamiques :</h2>
+        
+        <div class="dynamic-projections">
+            <h3>📊 Système d'Adaptation Intelligent :</h3>
+            <ul>
+                <li><strong>Feedback Utilisateur</strong> : Analyse des retours sur les projections précédentes</li>
+                <li><strong>Facteurs d'Adaptation</strong> : 4 facteurs ajustés en temps réel</li>
+                <li><strong>Précision Améliorée</strong> : Projections de plus en plus précises</li>
+                <li><strong>Historique Complet</strong> : Suivi de l'évolution des projections</li>
+            </ul>
+            
+            <div class="code-block">
+FACTEURS D'ADAPTATION:
+
+• userProgress: 100% (Progression utilisateur)
+• marketConditions: 100% (Conditions marché)
+• sectorTrends: 100% (Tendances secteur)
+• personalFactors: 100% (Facteurs personnels)
+
+PRÉCISION DES PROJECTIONS:
+• Précision Globale: 78%
+• Précision Salaires: 73%
+• Précision Compétences: 85%
+• Historique: 0 projections
+            </div>
+        </div>
+        
+        <div class="metrics-dashboard">
+            <div class="metric-card">
+                <div class="metric-value">78%</div>
+                <div class="metric-label">Précision Globale</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">73%</div>
+                <div class="metric-label">Précision Salaires</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">85%</div>
+                <div class="metric-label">Précision Compétences</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">0</div>
+                <div class="metric-label">Projections Historique</div>
+            </div>
+        </div>
+        
+        <h2>🏭 Comparaisons Sectorielles :</h2>
+        
+        <div class="sectorial-comparisons">
+            <h3>🏭 Migration Sectorielle :</h3>
+            <ul>
+                <li><strong>Secteur Actuel</strong> : Tech & IT (45-52K€)</li>
+                <li><strong>Secteur Cible</strong> : DevOps Engineer (55-70K€)</li>
+                <li><strong>Chemins de Migration</strong> : Direct et Progressif</li>
+                <li><strong>Opportunités Croisées</strong> : Analyse multi-secteurs</li>
+            </ul>
+            
+            <div class="code-block">
+DONNÉES SECTORIELLES:
+
+Tech & IT:
+• Salaire: 45-52K€
+• Risque: 67%
+• Croissance: 15%
+• Demande: stable
+
+DevOps:
+• Salaire: 55-70K€
+• Risque: 25%
+• Croissance: 28%
+• Demande: rising
+
+Cloud:
+• Salaire: 60-80K€
+• Risque: 20%
+• Croissance: 35%
+• Demande: rising
+
+AI/ML:
+• Salaire: 65-90K€
+• Risque: 15%
+• Croissance: 42%
+• Demande: booming
+            </div>
+        </div>
+        
+        <div class="sector-comparison">
+            <div class="sector-card">
+                <h4>📊 Secteur Actuel</h4>
+                <div class="metric-value">Tech & IT</div>
+                <div class="metric-label">45-52K€</div>
+                <div class="metric-label">Risque: 67%</div>
+            </div>
+            <div class="sector-card">
+                <h4>🎯 Secteur Cible</h4>
+                <div class="metric-value">DevOps</div>
+                <div class="metric-label">55-70K€</div>
+                <div class="metric-label">Risque: 25%</div>
+            </div>
+            <div class="sector-card">
+                <h4>☁️ Cloud</h4>
+                <div class="metric-value">Cloud</div>
+                <div class="metric-label">60-80K€</div>
+                <div class="metric-label">Risque: 20%</div>
+            </div>
+            <div class="sector-card">
+                <h4>🤖 AI/ML</h4>
+                <div class="metric-value">AI/ML</div>
+                <div class="metric-label">65-90K€</div>
+                <div class="metric-label">Risque: 15%</div>
+            </div>
+        </div>
+        
+        <div class="migration-paths">
+            <div class="path-card">
+                <h4>🚀 Migration Directe</h4>
+                <div class="metric-value">70% succès</div>
+                <div class="metric-label">Durée: 6-12 mois</div>
+                <ul>
+                    <li>Formation intensive DevOps</li>
+                    <li>Projets portfolio spécialisés</li>
+                    <li>Certifications sectorielles</li>
+                    <li>Réseautage professionnel</li>
+                </ul>
+            </div>
+            <div class="path-card">
+                <h4>📈 Migration Progressive</h4>
+                <div class="metric-value">80% succès</div>
+                <div class="metric-label">Durée: 12-18 mois</div>
+                <ul>
+                    <li>Formation complémentaire</li>
+                    <li>Expérience hybride</li>
+                    <li>Transition progressive</li>
+                    <li>Spécialisation finale</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>⏰ Alertes Temporelles :</h2>
+        
+        <div class="temporal-alerts">
+            <h3>⏰ Système d'Alertes Intelligent :</h3>
+            <ul>
+                <li><strong>Jalons à Venir</strong> : Rappels 7 jours avant échéance</li>
+                <li><strong>Rappels d'Échéances</strong> : Notifications automatiques</li>
+                <li><strong>Points de Contrôle</strong> : Vérifications tous les 14 jours</li>
+                <li><strong>Opportunités Marché</strong> : Détection automatique</li>
+            </ul>
+            
+            <div class="code-block">
+PARAMÈTRES D'ALERTES:
+
+• Rappel Jalons: 7 jours avant
+• Vérification Progression: 14 jours
+• Mise à jour Marché: 30 jours
+• Évaluation Compétences: 21 jours
+
+TYPES D'ALERTES:
+• milestone_reminder: Jalons à venir
+• deadline_reminder: Échéances
+• progress_checkpoint: Points de contrôle
+• market_opportunity: Opportunités marché
+            </div>
+        </div>
+        
+        <div class="alert-types">
+            <div class="alert-card milestone">
+                <h4>🚨 Jalons à Venir</h4>
+                <div class="metric-value">0</div>
+                <div class="metric-label">Jalons détectés</div>
+                <p>Rappels automatiques 7 jours avant échéance</p>
+            </div>
+            <div class="alert-card deadline">
+                <h4>⏰ Rappels d'Échéances</h4>
+                <div class="metric-value">0</div>
+                <div class="metric-label">Échéances détectées</div>
+                <p>Notifications automatiques des deadlines</p>
+            </div>
+            <div class="alert-card opportunity">
+                <h4>🔥 Opportunités Marché</h4>
+                <div class="metric-value">0</div>
+                <div class="metric-label">Opportunités détectées</div>
+                <p>Détection automatique des tendances marché</p>
+            </div>
+        </div>
+        
+        <h2>📄 Export PDF :</h2>
+        
+        <div class="pdf-export">
+            <h3>📄 Génération de Rapports :</h3>
+            <ul>
+                <li><strong>Rapport Complet</strong> : Toutes les données de projection</li>
+                <li><strong>Contenu Structuré</strong> : 8 pages, 1200 mots, 4 graphiques</li>
+                <li><strong>Historique des Exports</strong> : Suivi des générations</li>
+                <li><strong>Personnalisation</strong> : Adaptation au profil utilisateur</li>
+            </ul>
+            
+            <div class="code-block">
+CONTENU DU RAPPORT PDF:
+
+1. Résumé Exécutif
+   • Nom, score de risque, secteur cible
+   • Précision des projections
+   • Recommandations clés
+
+2. Projection Dynamique
+   • Timeline 3/6/12 mois
+   • Probabilité de réussite
+   • Facteurs d'adaptation
+
+3. Comparaisons Sectorielles
+   • Secteur actuel vs cible
+   • Chemins de migration
+   • Opportunités croisées
+
+4. Alertes Temporelles
+   • Jalons à venir
+   • Rappels d'échéances
+   • Opportunités marché
+
+5. Recommandations
+   • Actions immédiates
+   • Objectifs court terme
+   • Plan long terme
+            </div>
+        </div>
+        
+        <div class="pdf-features">
+            <div class="pdf-card">
+                <h4>📊 Résumé Exécutif</h4>
+                <p>Vue d'ensemble du profil et des projections</p>
+                <div class="metric-value">1 page</div>
+            </div>
+            <div class="pdf-card">
+                <h4>📈 Projection Dynamique</h4>
+                <p>Timeline détaillée 3/6/12 mois</p>
+                <div class="metric-value">2 pages</div>
+            </div>
+            <div class="pdf-card">
+                <h4>🏭 Comparaisons Sectorielles</h4>
+                <p>Analyse comparative des secteurs</p>
+                <div class="metric-value">2 pages</div>
+            </div>
+            <div class="pdf-card">
+                <h4>⏰ Alertes Temporelles</h4>
+                <p>Jalons et opportunités détectées</p>
+                <div class="metric-value">1 page</div>
+            </div>
+            <div class="pdf-card">
+                <h4>🎯 Recommandations</h4>
+                <p>Plan d'action personnalisé</p>
+                <div class="metric-value">2 pages</div>
+            </div>
+        </div>
+        
+        <h2>🧪 Tests à Effectuer :</h2>
+        
+        <div class="feature-list">
+            <h3>📊 Tests Projections Dynamiques :</h3>
+            <ul>
+                <li>Cliquer sur l'icône <strong>Zap (Purple)</strong> → Vérifier l'affichage des projections dynamiques</li>
+                <li>Observer les facteurs d'adaptation → Confirmer les 4 facteurs (100% chacun)</li>
+                <li>Vérifier la précision → Confirmer précision globale 78%, salaires 73%, compétences 85%</li>
+                <li>Analyser l'historique → Observer le nombre de projections (0 initialement)</li>
+                <li>Tester l'adaptation → Envoyer des messages pour voir l'évolution</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🏭 Tests Comparaisons Sectorielles :</h3>
+            <ul>
+                <li>Cliquer sur l'icône <strong>Building2 (Orange)</strong> → Vérifier l'affichage des comparaisons</li>
+                <li>Observer la migration sectorielle → Confirmer Tech & IT → DevOps Engineer</li>
+                <li>Vérifier les chemins de migration → Observer Direct (70%) et Progressif (80%)</li>
+                <li>Analyser les données sectorielles → Confirmer salaires et risques par secteur</li>
+                <li>Examiner les opportunités croisées → Vérifier les 4 secteurs analysés</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>⏰ Tests Alertes Temporelles :</h3>
+            <ul>
+                <li>Cliquer sur l'icône <strong>AlertTriangle (Red)</strong> → Vérifier l'affichage des alertes</li>
+                <li>Observer les jalons à venir → Vérifier détection automatique (0 initialement)</li>
+                <li>Vérifier les rappels d'échéances → Confirmer notifications automatiques</li>
+                <li>Analyser les opportunités marché → Observer détection des tendances</li>
+                <li>Examiner les paramètres → Vérifier intervalles de vérification</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>📄 Tests Export PDF :</h3>
+            <ul>
+                <li>Cliquer sur le bouton <strong>"📄 Générer PDF"</strong> → Vérifier la génération</li>
+                <li>Observer le message de confirmation → Confirmer génération réussie</li>
+                <li>Vérifier l'historique → Observer ajout dans exportsPDF</li>
+                <li>Analyser le contenu → Confirmer structure complète du rapport</li>
+                <li>Tester la répétition → Générer plusieurs PDF pour vérifier l'historique</li>
+            </ul>
+        </div>
+        
+        <h2>🎯 Tests de Scénarios Complets :</h2>
+        
+        <div class="feature-list">
+            <h3>🚀 Scénario Projections Avancées :</h3>
+            <ul>
+                <li>Activer tous les panneaux → Zap, Building2, AlertTriangle</li>
+                <li>Observer les données → Vérifier cohérence entre les systèmes</li>
+                <li>Générer un PDF → Confirmer intégration de toutes les données</li>
+                <li>Envoyer des messages → Observer l'évolution des projections</li>
+                <li>Analyser les alertes → Vérifier détection automatique</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>📊 Scénario Migration Sectorielle :</h3>
+            <ul>
+                <li>Analyser la migration Tech & IT → DevOps</li>
+                <li>Comparer les chemins → Direct vs Progressif</li>
+                <li>Vérifier les opportunités → Cloud, AI/ML</li>
+                <li>Générer rapport PDF → Confirmer analyse complète</li>
+                <li>Observer les alertes → Vérifier détection d'opportunités</li>
+            </ul>
+        </div>
+        
+        <div class="status info">
+            🚀 Le système de projections avancées offre une analyse complète avec projections dynamiques, comparaisons sectorielles, alertes temporelles et export PDF professionnel
+        </div>
+    </div>
+</body>
+</html>

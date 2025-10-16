@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Système d'Accueil Enrichi - Aegis Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .test-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .test-link:hover {
+            background-color: #0056b3;
+        }
+        .status {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .status.warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        .feature-list {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .feature-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .scenario-box {
+            background-color: #e7f3ff;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .scenario-title {
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        .context-details {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+        .debug-buttons {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .debug-button {
+            display: inline-block;
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .debug-button:hover {
+            background-color: #0056b3;
+        }
+        .message-example {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 0.9em;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Test Système d'Accueil Enrichi - Aegis Chatbot</h1>
+        
+        <div class="status success">
+            ✅ Système de messages d'accueil enrichi implémenté avec succès
+        </div>
+        
+        <div class="status success">
+            ✅ Tracking des visites, états émotionnels et alertes intégrés
+        </div>
+        
+        <div class="status warning">
+            🔧 Mode debug activé - Boutons de simulation disponibles en développement
+        </div>
+        
+        <h2>🔗 Test du Chatbot :</h2>
+        
+        <a href="http://localhost:5173/dashboard" class="test-link" target="_blank">
+            🤖 Ouvrir Aegis Chatbot avec Système Enrichi
+        </a>
+        
+        <h2>🎯 Types de Messages d'Accueil Enrichis :</h2>
+        
+        <div class="scenario-box">
+            <div class="scenario-title">1. 🎉 Première Visite</div>
+            <div class="context-details">Context: nombreVisites === 0, derniereVisite === null</div>
+            <div class="message-example">Bonjour, je suis Aegis 🛡️. Votre intelligence artificielle de protection professionnelle. Je suis ici pour vous aider à naviguer dans un monde du travail transformé par l'IA.
+
+Je vois que vous êtes Développeur Full Stack avec 5 ans d'expérience. Votre score de risque actuel est à 67%.
+
+Excellent ! Vous avez déjà commencé "Docker & Kubernetes" (34% complété). C'est un très bon début ! 💪
+
+Je suis là pour vous accompagner personnellement. Qu'est-ce qui vous préoccupe aujourd'hui ?
+
+— Aegis 🛡️ | Votre garde rapprochée contre l'obsolescence</div>
+        </div>
+        
+        <div class="scenario-box">
+            <div class="scenario-title">2. 👋 Retour Utilisateur</div>
+            <div class="context-details">Context: nombreVisites > 0, pas d'alerte récente, pas d'état émotionnel fort</div>
+            <div class="message-example">Re-bonjour Alex ! Content de vous revoir 🛡️. 
+
+Je vois que votre score de risque est à 67% (-3% depuis la dernière fois).
+
+📉 Votre score a légèrement augmenté. Pas de panique, on va travailler là-dessus ensemble.
+
+Votre formation "Docker & Kubernetes" avance bien : 34% complété.
+
+Qu'est-ce qui vous préoccupe aujourd'hui ?
+
+— Aegis 🛡️ | Votre garde rapprochée contre l'obsolescence</div>
+        </div>
+        
+        <div class="scenario-box">
+            <div class="scenario-title">3. ⚠️ Après Alerte Critique</div>
+            <div class="context-details">Context: derniereAlerteLue avec timestamp < 24h</div>
+            <div class="message-example">Alex, je remarque que vous avez consulté l'alerte sur "GPT-5 impact développeurs" Il y a 2h.
+
+C'est une préoccupation légitime pour les Développeur Full Stack. Voulez-vous qu'on analyse ensemble son **impact concret** sur votre métier et ce que vous pouvez faire dès maintenant pour vous protéger ?
+
+Je peux vous donner :
+- Une analyse détaillée de ce que ça change pour vous
+- Les compétences exactes à développer en priorité
+- Un plan d'action sur 3/6/12 mois
+
+On en parle ? 🛡️
+
+— Aegis 🛡️ | Votre garde rapprochée contre l'obsolescence</div>
+        </div>
+        
+        <div class="scenario-box">
+            <div class="scenario-title">4. 💙 Mode Empathique - Anxieux</div>
+            <div class="context-details">Context: dernierEtatEmotionnel === 'anxious'</div>
+            <div class="message-example">Re-bonjour Alex 💙
+
+Je vois que vous étiez préoccupé lors de notre dernière conversation. Comment vous sentez-vous aujourd'hui ?
+
+Rappelez-vous : le simple fait d'être ici et de vous préparer vous place dans le **top 10%** des professionnels qui prennent leur avenir en main.
+
+Votre score de risque à 67% ne définit pas votre valeur. Il définit juste les zones où concentrer vos efforts.
+
+Je suis là pour vous. Qu'est-ce qui vous tracasse aujourd'hui ?
+
+— Aegis 🛡️ | Votre garde rapprochée contre l'obsolescence</div>
+        </div>
+        
+        <div class="scenario-box">
+            <div class="scenario-title">5. 💚 Mode Empathique - Burnout</div>
+            <div class="context-details">Context: dernierEtatEmotionnel === 'burnout'</div>
+            <div class="message-example">Re-bonjour Alex 💚
+
+J'espère que vous avez pu vous reposer depuis notre dernière conversation.
+
+**Rappel important :** On construit votre avenir sur le **long terme**. Pas besoin de tout faire tout de suite. La régularité bat toujours l'intensité.
+
+Comment vous sentez-vous aujourd'hui ? Prêt pour une session tranquille ou vous avez besoin qu'on reparle de votre rythme ?
+
+— Aegis 🛡️ | Votre garde rapprochée contre l'obsolescence</div>
+        </div>
+        
+        <div class="scenario-box">
+            <div class="scenario-title">6. 🔥 Mode Empathique - Motivé</div>
+            <div class="context-details">Context: dernierEtatEmotionnel === 'energetic'</div>
+            <div class="message-example">Re-bonjour Alex ! 🔥
+
+J'adore cette énergie ! La dernière fois, vous étiez super motivé.
+
+Vous avez avancé sur vos objectifs depuis ? Racontez-moi vos progrès, j'ai hâte de voir ce que vous avez accompli ! 💪
+
+— Aegis 🛡️ | Votre potentiel est plus grand que vos peurs</div>
+        </div>
+        
+        <h2>🔧 Boutons de Debug (Mode Développement) :</h2>
+        
+        <div class="debug-buttons">
+            <p><strong>En mode développement, des boutons de debug apparaissent en haut du chatbot pour tester différents scénarios :</strong></p>
+            
+            <button class="debug-button" style="background-color: #007bff;">1ère visite</button>
+            <span>→ Simule une première visite (nombreVisites: 0)</span><br><br>
+            
+            <button class="debug-button" style="background-color: #28a745;">Retour</button>
+            <span>→ Simule un retour utilisateur normal (nombreVisites: 5)</span><br><br>
+            
+            <button class="debug-button" style="background-color: #fd7e14;">Post-alerte</button>
+            <span>→ Simule après une alerte récente (< 24h)</span><br><br>
+            
+            <button class="debug-button" style="background-color: #dc3545;">Anxieux</button>
+            <span>→ Simule un état émotionnel anxieux</span><br><br>
+            
+            <button class="debug-button" style="background-color: #6f42c1;">Motivé</button>
+            <span>→ Simule un état émotionnel énergique</span><br><br>
+        </div>
+        
+        <h2>📊 Fonctionnalités Avancées :</h2>
+        
+        <div class="feature-list">
+            <h3>🧠 Intelligence Contextuelle Enrichie :</h3>
+            <ul>
+                <li>✅ <strong>Tracking des visites</strong> : nombreVisites et derniereVisite</li>
+                <li>✅ <strong>Détection d'alertes récentes</strong> : timestamp < 24h</li>
+                <li>✅ <strong>Mémoire émotionnelle</strong> : dernierEtatEmotionnel</li>
+                <li>✅ <strong>Priorisation intelligente</strong> des messages selon le contexte</li>
+                <li>✅ <strong>Mise à jour automatique</strong> du contexte à chaque interaction</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🎯 Logique de Priorisation :</h3>
+            <ul>
+                <li><strong>1. Première visite</strong> : Si nombreVisites === 0</li>
+                <li><strong>2. Après alerte critique</strong> : Si alerte < 24h (priorité haute)</li>
+                <li><strong>3. Mode empathique</strong> : Si état émotionnel fort détecté</li>
+                <li><strong>4. Retour utilisateur</strong> : Par défaut pour visites multiples</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🔄 Mise à Jour Automatique :</h3>
+            <ul>
+                <li>✅ <strong>À l'ouverture</strong> : Incrémente nombreVisites, met à jour derniereVisite</li>
+                <li>✅ <strong>À chaque message</strong> : Met à jour dernierEtatEmotionnel</li>
+                <li>✅ <strong>État persistant</strong> : Le contexte reste en mémoire pendant la session</li>
+                <li>✅ <strong>Simulation facile</strong> : Boutons debug pour tester tous les scénarios</li>
+            </ul>
+        </div>
+        
+        <h2>🧪 Tests à Effectuer :</h2>
+        
+        <div class="feature-list">
+            <h3>✅ Tests Immédiats :</h3>
+            <ul>
+                <li>Ouvrir le chatbot et vérifier le message d'accueil (devrait être "1ère visite")</li>
+                <li>Utiliser les boutons de debug pour tester chaque scénario</li>
+                <li>Vérifier que les messages changent selon le contexte</li>
+                <li>Envoyer des messages avec émotions et vérifier la mise à jour</li>
+                <li>Fermer/rouvrir le chatbot pour voir l'incrémentation des visites</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🎯 Tests de Scénarios :</h3>
+            <ul>
+                <li><strong>Test "1ère visite"</strong> : Message chaleureux avec présentation complète</li>
+                <li><strong>Test "Retour"</strong> : Message avec suivi des progrès</li>
+                <li><strong>Test "Post-alerte"</strong> : Message empathique avec analyse d'impact</li>
+                <li><strong>Test "Anxieux"</strong> : Message rassurant et encourageant</li>
+                <li><strong>Test "Motivé"</strong> : Message énergique avec focus sur les progrès</li>
+            </ul>
+        </div>
+        
+        <div class="status info">
+            🎯 Le système enrichi offre une expérience personnalisée et empathique, s'adaptant automatiquement au contexte et à l'état émotionnel de l'utilisateur
+        </div>
+    </div>
+</body>
+</html>

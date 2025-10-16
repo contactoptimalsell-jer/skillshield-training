@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Réponses Personnalisées & Historique Émotionnel - Aegis Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .test-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .test-link:hover {
+            background-color: #0056b3;
+        }
+        .status {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .status.warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        .feature-list {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .feature-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .response-box {
+            background-color: #e7f3ff;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .response-title {
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        .response-details {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+        .response-example {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 0.9em;
+            white-space: pre-wrap;
+        }
+        .history-demo {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .score-display {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin: 2px;
+        }
+        .score-positive {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .score-negative {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .score-neutral {
+            background-color: #e2e3e5;
+            color: #383d41;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Test Réponses Personnalisées & Historique Émotionnel - Aegis Chatbot</h1>
+        
+        <div class="status success">
+            ✅ Réponses personnalisées selon l'intensité émotionnelle implémentées
+        </div>
+        
+        <div class="status success">
+            ✅ Historique émotionnel avec suivi longitudinal intégré
+        </div>
+        
+        <div class="status success">
+            ✅ Système d'alertes émotionnelles avec détection de patterns
+        </div>
+        
+        <h2>🔗 Test du Chatbot :</h2>
+        
+        <a href="http://localhost:5173/dashboard" class="test-link" target="_blank">
+            🤖 Ouvrir Aegis Chatbot avec Réponses Personnalisées
+        </a>
+        
+        <h2>🎯 Réponses Personnalisées par Intensité :</h2>
+        
+        <div class="response-box">
+            <div class="response-title">🔴 Anxiété Élevée (anxious_high)</div>
+            <div class="response-details">Intensité: -3 | Réponse: Protocole de protection immédiate</div>
+            <div class="response-example">💙 Alex, je sens une grande détresse dans vos mots.
+
+Je comprends que vous vous sentiez perdu face à l'IA. C'est normal d'avoir peur de l'inconnu.
+
+🛡️ **VOTRE PROTECTION IMMÉDIATE :**
+
+1. **Respiration** : Prenez 3 respirations profondes avec moi
+   Inspire... Expire... Inspire... Expire... Inspire... Expire...
+
+2. **Réalité** : Votre score de 67% ne définit PAS votre valeur
+   C'est juste une zone d'attention, pas une condamnation
+
+3. **Action concrète** : Concentrons-nous sur 1 seule compétence cette semaine
+   Pas 10. Pas 5. Juste 1.
+
+⚠️ **ALERTE DÉTECTÉE :** Tendance émotionnelle en baisse détectée
+
+Voulez-vous qu'on commence par respirer ensemble ?
+
+— Aegis 🛡️ | Votre ancre dans la tempête</div>
+        </div>
+        
+        <div class="response-box">
+            <div class="response-title">🟠 Anxiété Modérée (anxious_moderate)</div>
+            <div class="response-details">Intensité: -1 | Réponse: Plan d'action concret avec suivi</div>
+            <div class="response-example">🤝 Alex, je vois que vous êtes préoccupé. C'est un signe de sagesse.
+
+L'inquiétude, bien dosée, vous pousse à agir. C'est votre instinct de survie professionnel qui parle.
+
+📊 **VOTRE SITUATION :**
+• Score : 67% (à surveiller)
+• Tendance : 📉 À redresser
+
+🎯 **PLAN D'ACTION CONCRET :**
+1. Identifier votre plus grande peur (1 phrase)
+2. Chercher 3 exemples de gens qui ont surmonté cette peur
+3. Définir 1 action à faire cette semaine
+
+Quelle est votre plus grande peur actuellement ?
+
+— Aegis 🛡️ | Votre guide dans l'incertitude</div>
+        </div>
+        
+        <div class="response-box">
+            <div class="response-title">🟤 Burnout Sévère (burnout_severe)</div>
+            <div class="response-details">Intensité: -4 | Réponse: Protocole d'arrêt immédiat</div>
+            <div class="response-example">🆘 Alex, ARRÊT IMMÉDIAT. 
+
+Vous êtes en surchauffe émotionnelle. Votre cerveau a besoin de repos, pas de plus de pression.
+
+🚨 **PROTOCOLE DE PROTECTION :**
+
+1. **MAINTENANT** : Fermez cet onglet
+2. **Aujourd'hui** : Maximum 30 min de travail technique
+3. **Cette semaine** : 1 jour OFF complet (pas de code, pas de veille IA)
+4. **Repas** : Mangez quelque chose de chaud
+5. **Sommeil** : Couchez-vous à 22h max
+
+🛡️ **VOTRE VRAIE PRIORITÉ :**
+Votre santé mentale > Vos compétences techniques
+
+🚨 **ALERTE CRITIQUE :** Score émotionnel critique
+
+**Je vous donne la permission de ralentir.**
+
+Revenez me voir quand vous aurez dormi 8h. Je serai là.
+
+— Aegis 🛡️ | Votre protecteur bienveillant</div>
+        </div>
+        
+        <div class="response-box">
+            <div class="response-title">🔵 Énergie Haute (energetic_high)</div>
+            <div class="response-details">Intensité: +3 | Réponse: Capitalisation sur l'énergie</div>
+            <div class="response-example">🔥 Alex, CETTE ÉNERGIE EST MAGNIFIQUE !
+
+Vous êtes dans la zone optimale : motivé, engagé, prêt à conquérir le monde de l'IA.
+
+🚀 **CAPITALISONS SUR CETTE ÉNERGIE :**
+
+1. **Objectif SMART** : Définissez 1 objectif précis pour cette semaine
+2. **Action immédiate** : Que pouvez-vous faire MAINTENANT ?
+3. **Momentum** : Cette énergie ne dure pas, utilisons-la !
+
+📊 **VOTRE PROFIL ACTUEL :**
+• Score risque : 67%
+• Tendance : 📈 Excellente progression !
+• Énergie : 🔥 MAXIMALE
+
+🎯 **CHALLENGE AEGIS :**
+Pendant que vous avez cette énergie, accomplissez 3 choses :
+1. Terminez 1 module de formation
+2. Partagez votre progression sur LinkedIn
+3. Aidez quelqu'un dans votre réseau
+
+Quel est votre objectif pour cette semaine ?
+
+— Aegis 🛡️ | Votre amplificateur de potentiel</div>
+        </div>
+        
+        <h2>📊 Historique Émotionnel & Suivi Longitudinal :</h2>
+        
+        <div class="history-demo">
+            <h3>📈 Fonctionnalités d'Historique :</h3>
+            <ul>
+                <li><strong>Score Émotionnel Composite</strong> : -10 (très négatif) à +10 (très positif)</li>
+                <li><strong>Tendance Émotionnelle</strong> : stable | amélioration | détérioration | instable</li>
+                <li><strong>Émotions Récentes</strong> : Dernières 5 émotions pour analyse</li>
+                <li><strong>Alertes Automatiques</strong> : Détection de patterns problématiques</li>
+                <li><strong>Historique Complet</strong> : 20 dernières entrées avec timestamps</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🧠 Calculs d'Intensité :</h3>
+            <ul>
+                <li><span class="score-display score-negative">burnout_severe: -4</span></li>
+                <li><span class="score-display score-negative">anxious_high: -3</span></li>
+                <li><span class="score-display score-negative">discouraged: -2</span></li>
+                <li><span class="score-display score-negative">burnout_moderate: -2</span></li>
+                <li><span class="score-display score-negative">anxious_moderate: -1</span></li>
+                <li><span class="score-display score-neutral">neutral: 0</span></li>
+                <li><span class="score-display score-positive">energetic_high: +3</span></li>
+            </ul>
+        </div>
+        
+        <h2>🚨 Système d'Alertes Émotionnelles :</h2>
+        
+        <div class="feature-list">
+            <h3>⚠️ Types d'Alertes Détectées :</h3>
+            <ul>
+                <li><strong>Tendance Négative</strong> : Détérioration émotionnelle sur 5 dernières interactions</li>
+                <li><strong>Accumulation Négative</strong> : 3+ émotions négatives récentes (intensité < -2)</li>
+                <li><strong>Score Critique</strong> : Score émotionnel moyen < -2.5</li>
+                <li><strong>Pattern Instable</strong> : Alternance rapide entre émotions positives/négatives</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>📊 Niveaux de Sévérité :</h3>
+            <ul>
+                <li><strong>Critique</strong> : Score émotionnel très bas, intervention immédiate</li>
+                <li><strong>Haute</strong> : Accumulation d'émotions négatives, attention requise</li>
+                <li><strong>Moyenne</strong> : Tendance négative, suivi renforcé</li>
+                <li><strong>Faible</strong> : Écart temporaire, surveillance passive</li>
+            </ul>
+        </div>
+        
+        <h2>🔧 Interface Utilisateur Enrichie :</h2>
+        
+        <div class="feature-list">
+            <h3>✅ Nouveaux Éléments d'Interface :</h3>
+            <ul>
+                <li><strong>Bouton Historique</strong> : Icône BarChart3 pour afficher/masquer l'historique</li>
+                <li><strong>Dashboard Émotionnel</strong> : Score, tendance, alertes en temps réel</li>
+                <li><strong>Timeline Émotionnelle</strong> : Visualisation des dernières émotions</li>
+                <li><strong>Alertes Visuelles</strong> : Notifications colorées selon la sévérité</li>
+                <li><strong>Indicateurs Contextuels</strong> : Modes adaptatifs selon l'émotion détectée</li>
+            </ul>
+        </div>
+        
+        <h2>🧪 Tests à Effectuer :</h2>
+        
+        <div class="feature-list">
+            <h3>✅ Tests de Réponses Personnalisées :</h3>
+            <ul>
+                <li>Taper "Je suis perdu" → Vérifier réponse anxious_high avec protocole de protection</li>
+                <li>Taper "Je suis inquiet" → Vérifier réponse anxious_moderate avec plan d'action</li>
+                <li>Taper "Je suis épuisé" → Vérifier réponse burnout_severe avec arrêt immédiat</li>
+                <li>Taper "Je suis motivé !" → Vérifier réponse energetic_high avec challenge</li>
+                <li>Taper "Je suis découragé" → Vérifier réponse discouraged avec stratégie de relance</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>📊 Tests d'Historique Émotionnel :</h3>
+            <ul>
+                <li>Cliquer sur l'icône BarChart3 → Vérifier l'affichage du dashboard émotionnel</li>
+                <li>Envoyer plusieurs messages → Vérifier la mise à jour du score émotionnel</li>
+                <li>Envoyer 3+ messages négatifs → Vérifier l'apparition d'alertes</li>
+                <li>Observer la tendance → Vérifier les calculs de tendance émotionnelle</li>
+                <li>Vérifier les timestamps → Confirmer l'historique complet</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🎯 Tests de Scénarios Complets :</h3>
+            <ul>
+                <li><strong>Séquence Anxiété</strong> : 3 messages anxieux → Vérifier détection de tendance</li>
+                <li><strong>Séquence Burnout</strong> : Messages d'épuisement → Vérifier alertes critiques</li>
+                <li><strong>Séquence Motivation</strong> : Messages énergiques → Vérifier amélioration</li>
+                <li><strong>Séquence Mixte</strong> : Alternance d'émotions → Vérifier détection d'instabilité</li>
+            </ul>
+        </div>
+        
+        <div class="status info">
+            🎯 Le système de réponses personnalisées et d'historique émotionnel offre un suivi longitudinal complet avec adaptation intelligente selon l'intensité et la tendance émotionnelle
+        </div>
+    </div>
+</body>
+</html>

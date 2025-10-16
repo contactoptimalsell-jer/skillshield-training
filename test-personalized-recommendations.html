@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Recommandations Personnalisées - Aegis Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .test-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .test-link:hover {
+            background-color: #0056b3;
+        }
+        .status {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .status.warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        .feature-list {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .feature-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .recommendation-box {
+            background-color: #e7f3ff;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .recommendation-title {
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        .recommendation-details {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+        .recommendation-example {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 0.9em;
+            white-space: pre-wrap;
+        }
+        .priority-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin: 2px;
+        }
+        .priority-critique {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .priority-haute {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .priority-moyenne {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+        .pattern-demo {
+            background-color: #e7f3ff;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .action-list {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .action-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .score-display {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin: 2px;
+        }
+        .score-critical {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .score-negative {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .score-positive {
+            background-color: #d4edda;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Test Recommandations Personnalisées - Aegis Chatbot</h1>
+        
+        <div class="status success">
+            ✅ Système de recommandations personnalisées selon l'historique émotionnel implémenté
+        </div>
+        
+        <div class="status success">
+            ✅ Analyse de patterns émotionnels avec génération d'actions adaptées
+        </div>
+        
+        <div class="status success">
+            ✅ Interface utilisateur enrichie avec dashboard de recommandations
+        </div>
+        
+        <h2>🔗 Test du Chatbot :</h2>
+        
+        <a href="http://localhost:5173/dashboard" class="test-link" target="_blank">
+            🤖 Ouvrir Aegis Chatbot avec Recommandations Personnalisées
+        </a>
+        
+        <h2>🎯 Types de Recommandations Personnalisées :</h2>
+        
+        <div class="recommendation-box">
+            <div class="recommendation-title">🛡️ Recommandations de Protection (Score ≤ -2)</div>
+            <div class="recommendation-details">État critique - Focus sur la stabilisation émotionnelle</div>
+            <div class="recommendation-example">🛡️ Protocole de Protection Activé
+Votre état émotionnel nécessite une attention immédiate. Focus sur la stabilisation avant l'apprentissage.
+
+Actions recommandées:
+• Pause de 24h
+• Contact support psychologique  
+• Réduction charge de travail
+
+Stratégie: Stabilisation Émotionnelle
+• Évaluation état mental
+• Plan de récupération
+• Retour progressif</div>
+            <div class="action-list">
+                <strong>Priorité:</strong> <span class="priority-badge priority-critique">CRITIQUE</span>
+                <ul>
+                    <li>Intervention immédiate requise</li>
+                    <li>Focus sur le bien-être mental</li>
+                    <li>Arrêt temporaire de l'apprentissage</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="recommendation-box">
+            <div class="recommendation-title">🤝 Recommandations de Soutien (Score -2 à 0)</div>
+            <div class="recommendation-details">État négatif modéré - Renforcement de la motivation</div>
+            <div class="recommendation-example">🤝 Plan de Soutien Personnalisé
+Renforcement de la motivation et gestion du stress avec approche adaptée.
+
+Actions recommandées:
+• Formation gestion stress
+• Mentoring pair
+• Objectifs micro
+
+Formations suggérées:
+• Gestion du Stress et Motivation (2-3 semaines, urgence: haute)</div>
+            <div class="action-list">
+                <strong>Priorité:</strong> <span class="priority-badge priority-haute">HAUTE</span>
+                <ul>
+                    <li>Formations soft skills adaptées</li>
+                    <li>Support émotionnel renforcé</li>
+                    <li>Objectifs micro-gérés</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="recommendation-box">
+            <div class="recommendation-title">🚀 Recommandations d'Optimisation (Score ≥ 1)</div>
+            <div class="recommendation-details">État positif - Capitalisation sur l'énergie</div>
+            <div class="recommendation-example">🚀 Capitalisation sur l'Énergie Positive
+Exploitez cette énergie pour accélérer votre développement professionnel.
+
+Actions recommandées:
+• Formation intensive
+• Projets challengeants
+• Mentoring junior
+
+Formations suggérées:
+• Compétences Techniques Avancées (4-6 semaines, urgence: moyenne)</div>
+            <div class="action-list">
+                <strong>Priorité:</strong> <span class="priority-badge priority-moyenne">MOYENNE</span>
+                <ul>
+                    <li>Formations techniques avancées</li>
+                    <li>Projets ambitieux</li>
+                    <li>Mentoring et leadership</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>📊 Analyse de Patterns Émotionnels :</h2>
+        
+        <div class="pattern-demo">
+            <h3>🧠 Patterns Détectés Automatiquement :</h3>
+            
+            <div class="recommendation-box">
+                <div class="recommendation-title">Pattern d'Instabilité Émotionnelle</div>
+                <div class="recommendation-details">Alternance rapide entre états émotionnels</div>
+                <div class="action-list">
+                    <strong>Impact:</strong> Réduction efficacité, fatigue cognitive
+                    <br><strong>Recommandation:</strong> Routine de stabilisation, gestion stress
+                </div>
+            </div>
+            
+            <div class="recommendation-box">
+                <div class="recommendation-title">Pattern d'Anxiété Chronique</div>
+                <div class="recommendation-details">Préoccupation constante face aux changements</div>
+                <div class="action-list">
+                    <strong>Impact:</strong> Blocage apprentissage, surcharge cognitive
+                    <br><strong>Recommandation:</strong> Techniques relaxation, objectifs micro
+                </div>
+            </div>
+            
+            <div class="recommendation-box">
+                <div class="recommendation-title">Pattern de Burnout Progressif</div>
+                <div class="recommendation-details">Épuisement émotionnel en augmentation</div>
+                <div class="action-list">
+                    <strong>Impact:</strong> Risque d'effondrement, perte motivation
+                    <br><strong>Recommandation:</strong> Réduction charge, support psychologique
+                </div>
+            </div>
+            
+            <div class="recommendation-box">
+                <div class="recommendation-title">Pattern de Motivation Cyclique</div>
+                <div class="recommendation-details">Pics d'énergie suivis de phases de repos</div>
+                <div class="action-list">
+                    <strong>Impact:</strong> Apprentissage irrégulier, opportunités manquées
+                    <br><strong>Recommandation:</strong> Planification adaptée, capitalisation pics
+                </div>
+            </div>
+        </div>
+        
+        <h2>🎯 Objectifs Recommandés selon le Contexte :</h2>
+        
+        <div class="feature-list">
+            <h3>📈 Score de Risque Élevé (≥ 70%) :</h3>
+            <ul>
+                <li><strong>Objectif Reconversion Prioritaire</strong> : Transition vers DevOps Engineer avec plan accéléré</li>
+                <li><strong>Échéance</strong> : 3-6 mois</li>
+                <li><strong>Formation Intensive DevOps</strong> : Bootcamp accéléré pour transition rapide (8 semaines)</li>
+                <li><strong>Urgence</strong> : Haute</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>📊 Score de Risque Faible (≤ 40%) :</h3>
+            <ul>
+                <li><strong>Optimisation Poste Actuel</strong> : Renforcement des compétences pour sécuriser votre position</li>
+                <li><strong>Échéance</strong> : 6-12 mois</li>
+                <li><strong>Priorité</strong> : Moyenne</li>
+                <li><strong>Focus</strong> : Amélioration continue plutôt que reconversion</li>
+            </ul>
+        </div>
+        
+        <h2>🚨 Recommandations selon les Alertes :</h2>
+        
+        <div class="feature-list">
+            <h3>⚠️ Alerte Score Critique :</h3>
+            <ul>
+                <li><strong>Intervention Urgente</strong> : Actions immédiates requises</li>
+                <li><strong>Actions</strong> : Arrêt travail technique, Contact professionnel, Repos complet</li>
+                <li><strong>Priorité</strong> : <span class="priority-badge priority-critique">CRITIQUE</span></li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>📉 Alerte Tendance Négative :</h3>
+            <ul>
+                <li><strong>Intervention Préventive</strong> : Actions correctives recommandées</li>
+                <li><strong>Actions</strong> : Analyse causes stress, Ajustement planning, Support émotionnel</li>
+                <li><strong>Priorité</strong> : <span class="priority-badge priority-haute">HAUTE</span></li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>📈 Alerte Tendance Positive :</h3>
+            <ul>
+                <li><strong>Consolidation des Progrès</strong> : Maintenir la dynamique positive</li>
+                <li><strong>Actions</strong> : Fixer nouveaux objectifs, Partager expérience, Accélérer formation</li>
+                <li><strong>Priorité</strong> : <span class="priority-badge priority-moyenne">MOYENNE</span></li>
+            </ul>
+        </div>
+        
+        <h2>🎨 Interface Utilisateur Enrichie :</h2>
+        
+        <div class="feature-list">
+            <h3>✅ Nouveaux Éléments d'Interface :</h3>
+            <ul>
+                <li><strong>Bouton Recommandations</strong> : Icône Lightbulb pour afficher/masquer les recommandations</li>
+                <li><strong>Dashboard Recommandations</strong> : Affichage organisé par catégories</li>
+                <li><strong>Codes Couleur</strong> : Rouge (critique), Orange (haute), Bleu (moyenne)</li>
+                <li><strong>Sections Organisées</strong> : Recommandations Actives, Objectifs, Formations, Patterns, Actions</li>
+                <li><strong>Bouton Debug</strong> : "Recommandations" pour tester instantanément</li>
+            </ul>
+        </div>
+        
+        <h2>🧪 Tests à Effectuer :</h2>
+        
+        <div class="feature-list">
+            <h3>✅ Tests de Génération de Recommandations :</h3>
+            <ul>
+                <li>Envoyer 3+ messages négatifs → Vérifier recommandations de protection</li>
+                <li>Envoyer messages d'épuisement → Vérifier protocole d'arrêt</li>
+                <li>Envoyer messages motivés → Vérifier recommandations d'optimisation</li>
+                <li>Alterner émotions → Vérifier détection d'instabilité</li>
+                <li>Cliquer "Recommandations" → Vérifier affichage dashboard</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>📊 Tests de Patterns et Alertes :</h3>
+            <ul>
+                <li><strong>Pattern Anxiété</strong> : 3+ messages anxieux → Vérifier pattern chronique</li>
+                <li><strong>Pattern Burnout</strong> : Messages d'épuisement → Vérifier pattern progressif</li>
+                <li><strong>Pattern Cyclique</strong> : Alternance énergie/repos → Vérifier pattern cyclique</li>
+                <li><strong>Alertes</strong> : Score critique → Vérifier intervention urgente</li>
+                <li><strong>Tendances</strong> : Détérioration → Vérifier intervention préventive</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🎯 Tests de Recommandations Contextuelles :</h3>
+            <ul>
+                <li><strong>Score Risque Élevé</strong> : Vérifier objectifs reconversion prioritaire</li>
+                <li><strong>Score Risque Faible</strong> : Vérifier optimisation poste actuel</li>
+                <li><strong>Formations</strong> : Vérifier suggestions selon état émotionnel</li>
+                <li><strong>Actions</strong> : Vérifier priorités selon urgence</li>
+                <li><strong>Stratégies</strong> : Vérifier approches personnalisées</li>
+            </ul>
+        </div>
+        
+        <div class="status info">
+            🎯 Le système de recommandations personnalisées offre une approche adaptative complète avec analyse de patterns, génération d'actions contextuelles et interface utilisateur intuitive
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Système de Gamification Aegis</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 20px 0;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #6366f1;
+        }
+        .test-step {
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 6px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: 'Monaco', 'Menlo', monospace;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow-x: auto;
+        }
+        .highlight {
+            background: rgba(99, 102, 241, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .success { color: #10b981; }
+        .warning { color: #f59e0b; }
+        .error { color: #ef4444; }
+        .info { color: #3b82f6; }
+        .emoji { font-size: 1.2em; }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+        .feature-card h3 {
+            color: #6366f1;
+            margin-top: 0;
+        }
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .badge-card {
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 12px;
+            padding: 15px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            text-align: center;
+        }
+        .badge-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .badge-name {
+            font-weight: bold;
+            color: #6366f1;
+            margin-bottom: 5px;
+        }
+        .badge-description {
+            font-size: 0.9em;
+            color: #94a3b8;
+            margin-bottom: 10px;
+        }
+        .badge-points {
+            background: rgba(99, 102, 241, 0.2);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            color: #6366f1;
+        }
+        ul, ol {
+            line-height: 1.6;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #6366f1;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #4f46e5;
+        }
+        .gamification-demo {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(16, 185, 129, 0.1));
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .xp-bar {
+            background: rgba(255, 255, 255, 0.1);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .xp-progress {
+            background: linear-gradient(90deg, #06B6D4, #10B981);
+            height: 100%;
+            transition: width 0.5s ease;
+        }
+        .level-badge {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 Test - Système de Gamification Aegis</h1>
+            <p>Guide de test pour le système complet de gamification avec badges, progression et niveaux</p>
+        </div>
+
+        <div class="test-section">
+            <h2>🎯 Objectif du Test</h2>
+            <p>Vérifier que le système de <span class="highlight">gamification complet</span> fonctionne correctement avec :</p>
+            <ul>
+                <li>🏆 <strong>Système de badges</strong> avec 10 badges différents</li>
+                <li>📊 <strong>Progression par niveaux</strong> avec calcul XP</li>
+                <li>🎯 <strong>Défis quotidiens</strong> avec récompenses</li>
+                <li>🏅 <strong>Classement</strong> et leaderboard</li>
+                <li>🔥 <strong>Streaks</strong> et connexion quotidienne</li>
+                <li>🎊 <strong>Animations</strong> et célébrations</li>
+                <li>📱 <strong>Notifications toast</strong> pour les gains</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>🚀 Étapes de Test</h2>
+            
+            <div class="test-step">
+                <h3>1. Accéder au Dashboard</h3>
+                <p>Ouvrez le dashboard : <a href="http://localhost:5173/dashboard" class="btn" target="_blank">Dashboard</a></p>
+                <p>Le chatbot Aegis devrait être visible en bas à droite avec un badge de niveau.</p>
+            </div>
+
+            <div class="test-step">
+                <h3>2. Ouvrir le Panel de Progression</h3>
+                <p><strong>Cliquez sur le bouton 🏆</strong> dans le header du chatbot (avec le badge de niveau)</p>
+                <p>Cela devrait ouvrir un panel avec 3 onglets :</p>
+                <ul>
+                    <li>📊 <strong>Progression</strong> : Niveau, XP, badges, stats</li>
+                    <li>🎯 <strong>Défis</strong> : Défis quotidiens avec timer</li>
+                    <li>🏆 <strong>Classement</strong> : Position et leaderboard</li>
+                </ul>
+            </div>
+
+            <div class="test-step">
+                <h3>3. Tester les Gains XP avec les Boutons Debug</h3>
+                <p><strong>Utilisez les boutons debug</strong> (en mode dev) :</p>
+                
+                <div class="code-block">
+🎮 +100 XP - Gain direct d'XP
+🎓 Formation - Complète une formation (+50 XP)
+🔥 Streak - Augmente le streak quotidien
+                </div>
+                
+                <p><strong>Vérifications :</strong></p>
+                <ul>
+                    <li>✅ <strong>Notifications toast</strong> apparaissent en haut à droite</li>
+                    <li>✅ <strong>Barre de progression XP</strong> se met à jour</li>
+                    <li>✅ <strong>Niveau</strong> augmente si seuil atteint</li>
+                    <li>✅ <strong>Confettis</strong> s'affichent lors de level up</li>
+                </ul>
+            </div>
+
+            <div class="test-step">
+                <h3>4. Tester la Progression des Niveaux</h3>
+                <p><strong>Gagnez suffisamment d'XP</strong> pour monter de niveau :</p>
+                
+                <div class="code-block">
+Niveau 1 : 0-49 XP
+Niveau 2 : 50-99 XP  
+Niveau 3 : 100-199 XP
+Niveau 4 : 200-349 XP
+                </div>
+                
+                <p><strong>À chaque level up :</strong></p>
+                <ul>
+                    <li>🎊 <strong>Confettis</strong> tombent de l'écran</li>
+                    <li>✨ <strong>Notification</strong> "Niveau X atteint !"</li>
+                    <li>🏆 <strong>Badge de niveau</strong> se met à jour</li>
+                    <li>📊 <strong>Barre XP</strong> se remet à zéro</li>
+                </ul>
+            </div>
+
+            <div class="test-step">
+                <h3>5. Tester les Défis Quotidiens</h3>
+                <p><strong>Onglet 🎯 Défis</strong> :</p>
+                <ul>
+                    <li>📚 <strong>Terminer 1 module de formation</strong> (+30 XP)</li>
+                    <li>💬 <strong>Poser 5 questions à Aegis</strong> (+20 XP)</li>
+                    <li>🔍 <strong>Analyser une offre d'emploi</strong> (+25 XP)</li>
+                </ul>
+                
+                <p><strong>Fonctionnalités :</strong></p>
+                <ul>
+                    <li>⏰ <strong>Timer</strong> jusqu'à minuit pour reset</li>
+                    <li>✅ <strong>Validation</strong> automatique des défis</li>
+                    <li>🎁 <strong>Bonus</strong> si tous les défis complétés</li>
+                    <li>🔄 <strong>Reset quotidien</strong> à minuit</li>
+                </ul>
+            </div>
+
+            <div class="test-step">
+                <h3>6. Tester les Badges</h3>
+                <p><strong>Débloquez des badges</strong> en accomplissant des actions :</p>
+                
+                <div class="badge-grid">
+                    <div class="badge-card">
+                        <div class="badge-icon">🐳</div>
+                        <div class="badge-name">Docker Master</div>
+                        <div class="badge-description">3 projets Docker conteneurisés</div>
+                        <div class="badge-points">+50 XP</div>
+                    </div>
+                    <div class="badge-card">
+                        <div class="badge-icon">🚀</div>
+                        <div class="badge-name">Fast Learner</div>
+                        <div class="badge-description">3 formations complétées en 3 mois</div>
+                        <div class="badge-points">+100 XP</div>
+                    </div>
+                    <div class="badge-card">
+                        <div class="badge-icon">📅</div>
+                        <div class="badge-name">Consistency King</div>
+                        <div class="badge-description">30 jours de pratique quotidienne</div>
+                        <div class="badge-points">+250 XP</div>
+                    </div>
+                </div>
+                
+                <p><strong>Vérifications :</strong></p>
+                <ul>
+                    <li>🏆 <strong>Notification badge</strong> débloqué</li>
+                    <li>✨ <strong>Gain XP</strong> automatique</li>
+                    <li>🎨 <strong>Badge coloré</strong> dans la grille</li>
+                    <li>📊 <strong>Compteur</strong> mis à jour (X/10 badges)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🎮 Fonctionnalités de Gamification</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🏆 Système de Badges</h3>
+                    <ul>
+                        <li><strong>10 badges</strong> différents disponibles</li>
+                        <li><strong>Déblocage automatique</strong> selon les actions</li>
+                        <li><strong>Points XP</strong> à chaque badge</li>
+                        <li><strong>Interface visuelle</strong> avec grille</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📊 Progression par Niveaux</h3>
+                    <ul>
+                        <li><strong>Calcul exponentiel</strong> : √(XP/50) + 1</li>
+                        <li><strong>Barre de progression</strong> animée</li>
+                        <li><strong>Badge de niveau</strong> sur le bouton</li>
+                        <li><strong>Célébrations</strong> à chaque level up</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🎯 Défis Quotidiens</h3>
+                    <ul>
+                        <li><strong>3 défis par jour</strong> aléatoires</li>
+                        <li><strong>Timer</strong> jusqu'à minuit</li>
+                        <li><strong>Validation automatique</strong> des actions</li>
+                        <li><strong>Bonus</strong> si tous complétés</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🏅 Classement & Leaderboard</h3>
+                    <ul>
+                        <li><strong>Position utilisateur</strong> mise en évidence</li>
+                        <li><strong>Top 10</strong> des utilisateurs</li>
+                        <li><strong>Calcul automatique</strong> du rang</li>
+                        <li><strong>Mise à jour temps réel</strong></li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🔥 Streaks & Connexion</h3>
+                    <ul>
+                        <li><strong>Streak quotidien</strong> automatique</li>
+                        <li><strong>Indicateur visuel</strong> sur widget fermé</li>
+                        <li><strong>Milestones</strong> (7 jours, 30 jours)</li>
+                        <li><strong>Badges spéciaux</strong> pour constance</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🎊 Animations & Célébrations</h3>
+                    <ul>
+                        <li><strong>Confettis</strong> lors des level up</li>
+                        <li><strong>Notifications toast</strong> pour les gains</li>
+                        <li><strong>Animations fluides</strong> des barres</li>
+                        <li><strong>Feedback visuel</strong> immédiat</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>📋 Badges Disponibles</h2>
+            
+            <div class="badge-grid">
+                <div class="badge-card">
+                    <div class="badge-icon">🐳</div>
+                    <div class="badge-name">Docker Master</div>
+                    <div class="badge-description">3 projets Docker conteneurisés</div>
+                    <div class="badge-points">+50 XP</div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-icon">⚡</div>
+                    <div class="badge-name">CI/CD Ninja</div>
+                    <div class="badge-description">1 pipeline CI/CD en production</div>
+                    <div class="badge-points">+75 XP</div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-icon">🚀</div>
+                    <div class="badge-name">Fast Learner</div>
+                    <div class="badge-description">3 formations complétées en 3 mois</div>
+                    <div class="badge-points">+100 XP</div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-icon">💻</div>
+                    <div class="badge-name">Open Source Hero</div>
+                    <div class="badge-description">5 Pull Requests acceptées</div>
+                    <div class="badge-points">+125 XP</div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-icon">✍️</div>
+                    <div class="badge-name">Thought Leader</div>
+                    <div class="badge-description">5 articles techniques publiés</div>
+                    <div class="badge-points">+150 XP</div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-icon">🏆</div>
+                    <div class="badge-name">Certified Pro</div>
+                    <div class="badge-description">2 certifications obtenues</div>
+                    <div class="badge-points">+200 XP</div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-icon">🤝</div>
+                    <div class="badge-name">Networker</div>
+                    <div class="badge-description">50+ connexions + 5 événements</div>
+                    <div class="badge-points">+100 XP</div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-icon">🌅</div>
+                    <div class="badge-name">Morning Warrior</div>
+                    <div class="badge-description">7 jours consécutifs de formation matinale</div>
+                    <div class="badge-points">+75 XP</div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-icon">📅</div>
+                    <div class="badge-name">Consistency King</div>
+                    <div class="badge-description">30 jours de pratique quotidienne</div>
+                    <div class="badge-points">+250 XP</div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-icon">⭐</div>
+                    <div class="badge-name">Top 10%</div>
+                    <div class="badge-description">Rejoindre le top 10% des utilisateurs</div>
+                    <div class="badge-points">+500 XP</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🎯 Défis Quotidiens</h2>
+            
+            <div class="test-step">
+                <h3>Types de Défis Disponibles</h3>
+                <ul>
+                    <li>📚 <strong>Terminer 1 module de formation</strong> (+30 XP)</li>
+                    <li>💬 <strong>Poser 5 questions à Aegis</strong> (+20 XP)</li>
+                    <li>🔍 <strong>Analyser une offre d'emploi</strong> (+25 XP)</li>
+                    <li>💼 <strong>Mettre à jour son profil LinkedIn</strong> (+35 XP)</li>
+                    <li>🌐 <strong>Ajouter 3 nouvelles connexions</strong> (+40 XP)</li>
+                </ul>
+            </div>
+
+            <div class="test-step">
+                <h3>Mécaniques des Défis</h3>
+                <ul>
+                    <li>🎲 <strong>3 défis aléatoires</strong> chaque jour</li>
+                    <li>⏰ <strong>Reset à minuit</strong> automatique</li>
+                    <li>🎁 <strong>Bonus +50 XP</strong> si tous complétés</li>
+                    <li>💾 <strong>Sauvegarde locale</strong> de la progression</li>
+                    <li>🔔 <strong>Notification</strong> de completion</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🏅 Système de Classement</h2>
+            
+            <div class="test-step">
+                <h3>Calcul du Rang</h3>
+                <div class="code-block">
+const calculateUserRank = (ctx) => {
+  const baseRank = Math.max(1, Math.floor(500 - (ctx.totalPoints / 10)));
+  return baseRank;
+};
+                </div>
+            </div>
+
+            <div class="test-step">
+                <h3>Leaderboard Simulé</h3>
+                <ul>
+                    <li>🥇 <strong>Top 3</strong> avec médailles</li>
+                    <li>👤 <strong>Position utilisateur</strong> mise en évidence</li>
+                    <li>📊 <strong>Points totaux</strong> et niveau affichés</li>
+                    <li>🔄 <strong>Mise à jour</strong> en temps réel</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🎊 Animations et Célébrations</h2>
+            
+            <div class="test-step">
+                <h3>Confettis de Célébration</h3>
+                <ul>
+                    <li>🎊 <strong>50 confettis</strong> colorés</li>
+                    <li>🌈 <strong>4 couleurs</strong> différentes</li>
+                    <li>⏱️ <strong>5 secondes</strong> d'animation</li>
+                    <li>🎯 <strong>Déclenchement</strong> lors des level up</li>
+                </ul>
+            </div>
+
+            <div class="test-step">
+                <h3>Notifications Toast</h3>
+                <ul>
+                    <li>✨ <strong>Gain XP</strong> : Bordure cyan</li>
+                    <li>🏆 <strong>Badge débloqué</strong> : Bordure jaune</li>
+                    <li>🎊 <strong>Level up</strong> : Bordure violette</li>
+                    <li>⏰ <strong>Auto-disparition</strong> après 3-5s</li>
+                </ul>
+            </div>
+
+            <div class="test-step">
+                <h3>Barres de Progression Animées</h3>
+                <ul>
+                    <li>📊 <strong>Animation fluide</strong> de la barre XP</li>
+                    <li>🎨 <strong>Gradient</strong> cyan vers emerald</li>
+                    <li>⚡ <strong>Transition</strong> de 0.5s</li>
+                    <li>🔄 <strong>Mise à jour</strong> en temps réel</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>✅ Checklist de Validation</h2>
+            <ul>
+                <li>☐ Le bouton progression 🏆 s'affiche dans le header</li>
+                <li>☐ Le badge de niveau est visible sur le bouton</li>
+                <li>☐ Le panel de progression s'ouvre avec 3 onglets</li>
+                <li>☐ La barre de progression XP fonctionne</li>
+                <li>☐ Les badges s'affichent en grille (10 badges)</li>
+                <li>☐ Les défis quotidiens se chargent correctement</li>
+                <li>☐ Le classement affiche la position utilisateur</li>
+                <li>☐ Les boutons debug fonctionnent</li>
+                <li>☐ Les notifications toast apparaissent</li>
+                <li>☐ Les confettis s'affichent lors des level up</li>
+                <li>☐ Le streak s'affiche sur le widget fermé</li>
+                <li>☐ La connexion quotidienne donne de l'XP</li>
+                <li>☐ Les badges se débloquent automatiquement</li>
+                <li>☐ Les défis se complètent automatiquement</li>
+                <li>☐ Le reset quotidien fonctionne</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>🐛 Dépannage</h2>
+            <div class="test-step">
+                <h3>Le panel de progression ne s'ouvre pas</h3>
+                <ul>
+                    <li>Vérifiez que le bouton 🏆 est cliquable</li>
+                    <li>Assurez-vous que le chatbot est ouvert</li>
+                    <li>Rechargez la page si nécessaire</li>
+                </ul>
+            </div>
+
+            <div class="test-step">
+                <h3>Les notifications ne s'affichent pas</h3>
+                <ul>
+                    <li>Vérifiez que les boutons debug fonctionnent</li>
+                    <li>Assurez-vous que les fonctions addXP sont appelées</li>
+                    <li>Vérifiez la console pour les erreurs</li>
+                </ul>
+            </div>
+
+            <div class="test-step">
+                <h3>Les badges ne se débloquent pas</h3>
+                <ul>
+                    <li>Utilisez les boutons debug pour augmenter les stats</li>
+                    <li>Vérifiez que les seuils sont atteints</li>
+                    <li>Assurez-vous que unlockBadges() est appelé</li>
+                </ul>
+            </div>
+
+            <div class="test-step">
+                <h3>Les confettis ne s'affichent pas</h3>
+                <ul>
+                    <li>Vérifiez que triggerCelebration() est appelé</li>
+                    <li>Assurez-vous que showConfetti est true</li>
+                    <li>Vérifiez que les animations CSS sont chargées</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🎉 Conclusion</h2>
+            <p>Le système <strong>Gamification</strong> est une fonctionnalité complète qui :</p>
+            <ul>
+                <li>🏆 <strong>Motivate les utilisateurs</strong> avec des récompenses concrètes</li>
+                <li>📊 <strong>Track la progression</strong> de manière visuelle et engageante</li>
+                <li>🎯 <strong>Crée des objectifs quotidiens</strong> avec les défis</li>
+                <li>🏅 <strong>Stimule la compétition</strong> avec le classement</li>
+                <li>🔥 <strong>Encourage la constance</strong> avec les streaks</li>
+                <li>🎊 <strong>Célèbre les réussites</strong> avec animations et confettis</li>
+                <li>📱 <strong>Fournit un feedback immédiat</strong> avec notifications</li>
+            </ul>
+            <p class="success">✅ Système opérationnel pour maximiser l'engagement utilisateur !</p>
+        </div>
+    </div>
+</body>
+</html>

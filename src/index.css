@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-primary-900 font-sans antialiased;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+  }
+  
+  .gradient-primary {
+    background: linear-gradient(135deg, #0F172A 0%, #1e293b 100%);
+  }
+  
+  .gradient-secondary {
+    background: linear-gradient(135deg, #06B6D4 0%, #0891b2 100%);
+  }
+  
+  .gradient-accent {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-900 to-primary-700 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-secondary {
+    @apply bg-gradient-to-r from-secondary-500 to-secondary-700 bg-clip-text text-transparent;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-800 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-secondary-600 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-accent {
+    @apply bg-accent-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-accent-600 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300;
+  }
+  
+  .card-premium {
+    @apply card border-2 border-secondary-200 relative;
+  }
+}
+
+/* Animations pour la Hero Section Premium */
+@keyframes gradient-shift {
+  0%, 100% {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, #1E293B 0%, #334155 50%, #1E293B 100%);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.4);
+  }
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 20s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+/* Effets de perspective 3D */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Gradient radial pour spotlight */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Effets de glassmorphism avancés */
+.glass-premium {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animations de hover pour les cartes */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Effets de texte animé */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #06b6d4 50%,
+    #ffffff 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .perspective-1000 {
+    perspective: 500px;
+  }
+  
+  .animate-gradient-shift {
+    animation-duration: 20s;
+  }
+}

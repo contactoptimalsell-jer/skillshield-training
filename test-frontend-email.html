@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Email Frontend</title>
+</head>
+<body>
+    <h1>🧪 Test Email Frontend</h1>
+    
+    <div>
+        <label>Email:</label>
+        <input type="email" id="email" value="klanbicoc@gmail.com" placeholder="votre@email.com">
+    </div>
+    
+    <div>
+        <label>Prénom:</label>
+        <input type="text" id="firstName" value="Jean Test" placeholder="Votre prénom">
+    </div>
+    
+    <div>
+        <button onclick="testEmail()">📧 Tester l'envoi d'email</button>
+    </div>
+    
+    <div id="result"></div>
+
+    <script>
+        async function testEmail() {
+            const email = document.getElementById('email').value;
+            const firstName = document.getElementById('firstName').value;
+            const resultDiv = document.getElementById('result');
+            
+            if (!email || !email.includes('@')) {
+                resultDiv.innerHTML = '<p style="color: red;">❌ Email invalide</p>';
+                return;
+            }
+            
+            resultDiv.innerHTML = '<p>🔄 Envoi en cours...</p>';
+            
+            const testData = {
+                email: email,
+                firstName: firstName,
+                score: 25,
+                answers: {
+                    firstName: firstName,
+                    job: 'data-analyst',
+                    sector: 'finance'
+                },
+                breakdown: {
+                    baseJob: 20,
+                    taskAdjustment: -2,
+                    digitalSkills: 5
+                }
+            };
+            
+            try {
+                console.log('📧 Envoi vers: http://localhost:3001/api/send-report-with-pdf');
+                console.log('📧 Données:', testData);
+                
+                const response = await fetch('http://localhost:3001/api/send-report-with-pdf', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+                
+                console.log('📧 Réponse du serveur:', response.status, response.statusText);
+                
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    console.error('❌ Erreur serveur:', errorText);
+                    resultDiv.innerHTML = `<p style="color: red;">❌ Erreur ${response.status}: ${errorText}</p>`;
+                    return;
+                }
+                
+                const result = await response.json();
+                console.log('✅ Réponse reçue:', result);
+                
+                if (result.success) {
+                    resultDiv.innerHTML = `
+                        <p style="color: green;">✅ Email envoyé avec succès !</p>
+                        <p>📧 ID: ${result.messageId}</p>
+                        <p>💬 Message: ${result.message}</p>
+                        <p>📬 Vérifiez votre boîte mail : ${email}</p>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `<p style="color: red;">❌ Échec: ${result.error || 'Erreur inconnue'}</p>`;
+                }
+                
+            } catch (error) {
+                console.error('💥 Erreur de connexion:', error);
+                resultDiv.innerHTML = `<p style="color: red;">💥 Erreur de connexion: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
+

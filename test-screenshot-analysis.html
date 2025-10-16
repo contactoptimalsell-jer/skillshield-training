@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Analyse d'Offre par Screenshot - Aegis Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .test-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .test-link:hover {
+            background-color: #0056b3;
+        }
+        .status {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e3cb;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .feature-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .feature-list {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .feature-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .upload-system {
+            background-color: #e7f3ff;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .analysis-engine {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .red-flags {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .green-flags {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.9em;
+            white-space: pre-wrap;
+            margin: 10px 0;
+        }
+        .analysis-example {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 15px 0;
+        }
+        .analysis-example h4 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .score-display {
+            background-color: #e7f3ff;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .score-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007bff;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .flags-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .flag-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .flag-card.red {
+            border-left: 4px solid #dc3545;
+        }
+        .flag-card.green {
+            border-left: 4px solid #28a745;
+        }
+        .flag-card h5 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .flag-card.red h5 {
+            color: #dc3545;
+        }
+        .flag-card.green h5 {
+            color: #28a745;
+        }
+        .tech-stack {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .tech-item {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin: 2px;
+            font-size: 0.9em;
+        }
+        .upload-demo {
+            background-color: #fff;
+            border: 2px dashed #007bff;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 15px 0;
+        }
+        .upload-demo:hover {
+            background-color: #f8f9fa;
+        }
+        .upload-icon {
+            font-size: 3em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 Test Analyse d'Offre par Screenshot - Aegis Chatbot</h1>
+        
+        <div class="status success">
+            ✅ Upload d'image et analyse d'offre d'emploi par screenshot implémenté
+        </div>
+        
+        <div class="status success">
+            ✅ Système d'upload avec validation de format et taille
+        </div>
+        
+        <div class="status success">
+            ✅ Moteur d'analyse avec détection de red/green flags
+        </div>
+        
+        <div class="status success">
+            ✅ Interface utilisateur complète avec prévisualisation
+        </div>
+        
+        <h2>🔗 Test du Chatbot avec Analyse d'Offre :</h2>
+        
+        <a href="http://localhost:5173/dashboard" class="test-link" target="_blank">
+            📸 Ouvrir Aegis Chatbot avec Analyse d'Offre par Screenshot
+        </a>
+        
+        <h2>📸 Analyse d'Offre par Screenshot Implémentée :</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>📤 Système d'Upload</h3>
+                <ul>
+                    <li>Validation de format (JPG, PNG, GIF)</li>
+                    <li>Vérification de taille (max 5MB)</li>
+                    <li>Prévisualisation de l'image</li>
+                    <li>Bouton de suppression</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🔍 Moteur d'Analyse</h3>
+                <ul>
+                    <li>Détection automatique de red flags</li>
+                    <li>Identification des green flags</li>
+                    <li>Extraction de la stack technique</li>
+                    <li>Calcul de score global</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📊 Rapport Détaillé</h3>
+                <ul>
+                    <li>Score global sur 100</li>
+                    <li>Informations extraites</li>
+                    <li>Red/green flags détaillés</li>
+                    <li>Recommandations personnalisées</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>💡 Conseils d'Entretien</h3>
+                <ul>
+                    <li>Questions à poser en entretien</li>
+                    <li>Points de négociation</li>
+                    <li>Évaluation work-life balance</li>
+                    <li>Analyse des perspectives</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>📤 Système d'Upload :</h2>
+        
+        <div class="upload-system">
+            <h3>📤 Fonctionnalités d'Upload :</h3>
+            <ul>
+                <li><strong>Validation de Format</strong> : JPG, PNG, GIF acceptés</li>
+                <li><strong>Vérification de Taille</strong> : Maximum 5MB</li>
+                <li><strong>Prévisualisation</strong> : Affichage de l'image uploadée</li>
+                <li><strong>Suppression</strong> : Bouton pour supprimer l'image</li>
+                <li><strong>Instructions</strong> : Guide d'utilisation intégré</li>
+            </ul>
+            
+            <div class="code-block">
+FONCTIONNALITÉS D'UPLOAD:
+
+• Validation du type de fichier
+• Vérification de la taille (max 5MB)
+• Prévisualisation avec redimensionnement
+• Bouton de suppression avec confirmation
+• Instructions claires pour l'utilisateur
+• Gestion d'erreurs avec messages explicites
+            </div>
+        </div>
+        
+        <div class="upload-demo">
+            <div class="upload-icon">📸</div>
+            <h3>Upload d'Offre d'Emploi</h3>
+            <p>Glissez-déposez ou cliquez pour sélectionner une image</p>
+            <p><strong>Formats acceptés :</strong> JPG, PNG, GIF</p>
+            <p><strong>Taille maximale :</strong> 5MB</p>
+        </div>
+        
+        <h2>🔍 Moteur d'Analyse :</h2>
+        
+        <div class="analysis-engine">
+            <h3>🔍 Analyse Automatique :</h3>
+            <ul>
+                <li><strong>Extraction de Texte</strong> : Simulation OCR (Tesseract.js en production)</li>
+                <li><strong>Détection de Patterns</strong> : Recherche de mots-clés spécifiques</li>
+                <li><strong>Classification</strong> : Red flags vs Green flags</li>
+                <li><strong>Calcul de Score</strong> : Algorithme de scoring personnalisé</li>
+                <li><strong>Recommandations</strong> : Conseils basés sur l'analyse</li>
+            </ul>
+            
+            <div class="code-block">
+ALGORITHME D'ANALYSE:
+
+1. Extraction du texte de l'image (OCR)
+2. Recherche de patterns spécifiques
+3. Classification en red/green flags
+4. Extraction de la stack technique
+5. Analyse du salaire et avantages
+6. Évaluation work-life balance
+7. Calcul du score global (0-100)
+8. Génération des recommandations
+            </div>
+        </div>
+        
+        <h2>🚩 Red Flags Détectés :</h2>
+        
+        <div class="red-flags">
+            <h3>🚩 Système de Détection des Red Flags :</h3>
+            <ul>
+                <li><strong>Salaire Non Transparent</strong> : -5 pts</li>
+                <li><strong>Environnement "Fast-paced"</strong> : -3 pts</li>
+                <li><strong>Scope Creep</strong> : -5 pts</li>
+                <li><strong>Startup Sans Équity</strong> : -2 pts</li>
+                <li><strong>Disponibilité 24/7</strong> : -8 pts</li>
+            </ul>
+            
+            <div class="code-block">
+RED FLAGS DÉTECTÉS:
+
+• "salaire non affiché" → Salaire non transparent (-5 pts)
+• "fast-paced" → Risque overwork (-3 pts)
+• "plusieurs casquettes" → Scope creep (-5 pts)
+• "startup" sans "équity" → Pas de participation (-2 pts)
+• "disponible 24/7" → Disponibilité excessive (-8 pts)
+            </div>
+        </div>
+        
+        <div class="flags-grid">
+            <div class="flag-card red">
+                <h5>🚩 Salaire Non Transparent</h5>
+                <p>L'entreprise ne communique pas sur la rémunération</p>
+                <div class="score-display">
+                    <div class="score-value">-5 pts</div>
+                </div>
+            </div>
+            <div class="flag-card red">
+                <h5>🚩 Environnement Fast-paced</h5>
+                <p>Risque de surcharge de travail et de stress</p>
+                <div class="score-display">
+                    <div class="score-value">-3 pts</div>
+                </div>
+            </div>
+            <div class="flag-card red">
+                <h5>🚩 Scope Creep</h5>
+                <p>Demande de porter plusieurs casquettes</p>
+                <div class="score-display">
+                    <div class="score-value">-5 pts</div>
+                </div>
+            </div>
+            <div class="flag-card red">
+                <h5>🚩 Disponibilité 24/7</h5>
+                <p>Exigence de disponibilité permanente</p>
+                <div class="score-display">
+                    <div class="score-value">-8 pts</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2>✅ Green Flags Détectés :</h2>
+        
+        <div class="green-flags">
+            <h3>✅ Système de Détection des Green Flags :</h3>
+            <ul>
+                <li><strong>Télétravail</strong> : +4 pts</li>
+                <li><strong>Budget Formation</strong> : +3 pts</li>
+                <li><strong>Participation au Capital</strong> : +5 pts</li>
+                <li><strong>Mutuelle Santé</strong> : +2 pts</li>
+                <li><strong>Congés Illimités</strong> : +4 pts</li>
+            </ul>
+            
+            <div class="code-block">
+GREEN FLAGS DÉTECTÉS:
+
+• "télétravail" ou "remote" → Flexibilité (+4 pts)
+• "formation" ou "learning budget" → Développement (+3 pts)
+• "équité" ou "equity" → Participation (+5 pts)
+• "mutuelle" ou "santé" → Avantages (+2 pts)
+• "congés illimité" → Work-life balance (+4 pts)
+            </div>
+        </div>
+        
+        <div class="flags-grid">
+            <div class="flag-card green">
+                <h5>✅ Télétravail</h5>
+                <p>Flexibilité de travail à distance</p>
+                <div class="score-display">
+                    <div class="score-value">+4 pts</div>
+                </div>
+            </div>
+            <div class="flag-card green">
+                <h5>✅ Budget Formation</h5>
+                <p>Investissement dans le développement</p>
+                <div class="score-display">
+                    <div class="score-value">+3 pts</div>
+                </div>
+            </div>
+            <div class="flag-card green">
+                <h5>✅ Participation au Capital</h5>
+                <p>Équity ou participation aux bénéfices</p>
+                <div class="score-display">
+                    <div class="score-value">+5 pts</div>
+                </div>
+            </div>
+            <div class="flag-card green">
+                <h5>✅ Congés Illimités</h5>
+                <p>Flexibilité dans la gestion du temps</p>
+                <div class="score-display">
+                    <div class="score-value">+4 pts</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2>💻 Stack Technique :</h2>
+        
+        <div class="tech-stack">
+            <h3>💻 Technologies Détectées :</h3>
+            <div class="tech-item">React</div>
+            <div class="tech-item">Vue</div>
+            <div class="tech-item">Angular</div>
+            <div class="tech-item">Node.js</div>
+            <div class="tech-item">Python</div>
+            <div class="tech-item">Java</div>
+            <div class="tech-item">TypeScript</div>
+            <div class="tech-item">Docker</div>
+            <div class="tech-item">Kubernetes</div>
+            <div class="tech-item">AWS</div>
+            <div class="tech-item">MongoDB</div>
+            <div class="tech-item">PostgreSQL</div>
+            <div class="tech-item">Redis</div>
+        </div>
+        
+        <h2>📊 Exemple d'Analyse :</h2>
+        
+        <div class="analysis-example">
+            <h4>🔍 ANALYSE D'OFFRE AEGIS</h4>
+            
+            <div class="score-display">
+                <div class="score-value">64/100</div>
+                <p>Score Global</p>
+            </div>
+            
+            <h5>📋 INFORMATIONS EXTRAITES:</h5>
+            <ul>
+                <li><strong>Titre:</strong> Senior React Developer</li>
+                <li><strong>Entreprise:</strong> TechStartup</li>
+                <li><strong>Stack Technique:</strong> React, Node.js, MongoDB, Docker</li>
+                <li><strong>Salaire:</strong> Non spécifié</li>
+            </ul>
+            
+            <h5>🚩 RED FLAGS DÉTECTÉS (3):</h5>
+            <ul>
+                <li>Salaire non transparent (-5 pts)</li>
+                <li>Environnement "fast-paced" = risque overwork (-3 pts)</li>
+                <li>Scope creep détecté (-5 pts)</li>
+            </ul>
+            
+            <h5>✅ GREEN FLAGS DÉTECTÉS (1):</h5>
+            <ul>
+                <li>Télétravail proposé (+4 pts)</li>
+            </ul>
+            
+            <h5>⚖️ WORK-LIFE BALANCE:</h5>
+            <ul>
+                <li>Équipe jeune (attention au turnover)</li>
+                <li>Flexibilité télétravail</li>
+            </ul>
+            
+            <h5>🎯 RECOMMANDATIONS AEGIS:</h5>
+            <p>• Offre correcte, mais négocie les points faibles</p>
+            
+            <h5>💡 QUESTIONS À POSER EN ENTRETIEN:</h5>
+            <ul>
+                <li>Comment gérez-vous la charge de travail ?</li>
+                <li>Quel est le budget formation annuel ?</li>
+                <li>Comment mesurez-vous la performance ?</li>
+                <li>Quelles sont les valeurs de l'entreprise ?</li>
+            </ul>
+        </div>
+        
+        <h2>🧪 Tests à Effectuer :</h2>
+        
+        <div class="feature-list">
+            <h3>📸 Tests Upload d'Image :</h3>
+            <ul>
+                <li>Cliquer sur le bouton <strong>Upload</strong> → Vérifier l'ouverture du sélecteur de fichiers</li>
+                <li>Sélectionner une image valide → Confirmer l'affichage du panneau d'analyse</li>
+                <li>Vérifier la prévisualisation → Observer l'image avec bouton de suppression</li>
+                <li>Tester la validation → Essayer des formats non supportés</li>
+                <li>Vérifier la taille → Tester avec des images > 5MB</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🔍 Tests Analyse d'Offre :</h3>
+            <ul>
+                <li>Cliquer sur <strong>"Analyser l'offre"</strong> → Vérifier l'animation de chargement</li>
+                <li>Observer l'analyse → Confirmer l'affichage du rapport détaillé</li>
+                <li>Vérifier le score → Observer le calcul automatique</li>
+                <li>Analyser les red flags → Confirmer la détection des problèmes</li>
+                <li>Examiner les green flags → Vérifier la détection des avantages</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>📊 Tests Rapport Détaillé :</h3>
+            <ul>
+                <li>Vérifier les informations extraites → Confirmer titre, entreprise, stack</li>
+                <li>Observer le score global → Vérifier le calcul (64/100)</li>
+                <li>Analyser les red flags → Confirmer les 3 flags détectés</li>
+                <li>Examiner les green flags → Vérifier le télétravail détecté</li>
+                <li>Lire les recommandations → Confirmer les conseils personnalisés</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>💡 Tests Conseils d'Entretien :</h3>
+            <ul>
+                <li>Vérifier les questions suggérées → Confirmer la pertinence</li>
+                <li>Observer l'adaptation → Vérifier selon les red flags détectés</li>
+                <li>Analyser la cohérence → Confirmer la logique des conseils</li>
+                <li>Tester différents scénarios → Vérifier l'adaptation du contenu</li>
+                <li>Examiner la complétude → Confirmer tous les aspects couverts</li>
+            </ul>
+        </div>
+        
+        <h2>🎯 Tests de Scénarios Complets :</h2>
+        
+        <div class="feature-list">
+            <h3>📸 Scénario Upload et Analyse :</h3>
+            <ul>
+                <li>Uploader une image d'offre → Observer l'affichage du panneau</li>
+                <li>Lancer l'analyse → Vérifier le processus complet</li>
+                <li>Examiner le rapport → Confirmer tous les éléments</li>
+                <li>Supprimer l'image → Vérifier la réinitialisation</li>
+                <li>Répéter avec différentes images → Tester la robustesse</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🔍 Scénario Analyse Avancée :</h3>
+            <ul>
+                <li>Analyser une offre avec red flags → Vérifier la détection</li>
+                <li>Examiner une offre avec green flags → Confirmer les avantages</li>
+                <li>Tester une offre mixte → Observer l'équilibre</li>
+                <li>Vérifier la stack technique → Confirmer l'extraction</li>
+                <li>Analyser les recommandations → Vérifier la pertinence</li>
+            </ul>
+        </div>
+        
+        <div class="status info">
+            📸 Le système d'analyse d'offre par screenshot offre une évaluation complète et objective des opportunités d'emploi, avec détection automatique des red/green flags et recommandations personnalisées
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,387 @@
+// Serveur de test simplifié pour l'API d'email avec Resend et Supabase
+const express = require('express');
+const cors = require('cors');
+const path = require('path');
+const { createClient } = require('@supabase/supabase-js');
+const { Resend } = require('resend');
+const PDFDocument = require('pdfkit');
+const { Buffer } = require('buffer');
+
+// Charger les variables d'environnement
+require('dotenv').config({ path: path.resolve(__dirname, '.env.local') });
+
+console.log('🔑 Variables d\'environnement chargées:');
+console.log('RESEND_API_KEY:', process.env.RESEND_API_KEY ? 'Trouvée (' + process.env.RESEND_API_KEY.substring(0, 10) + '...)' : 'Manquante');
+console.log('RESEND_FROM_EMAIL:', process.env.RESEND_FROM_EMAIL || 'Manquante');
+console.log('VITE_SUPABASE_URL:', process.env.VITE_SUPABASE_URL ? 'Trouvée' : 'Manquante');
+console.log('VITE_SUPABASE_ANON_KEY:', process.env.VITE_SUPABASE_ANON_KEY ? 'Trouvée' : 'Manquante');
+
+// Initialiser Supabase
+const supabase = createClient(
+  process.env.VITE_SUPABASE_URL || 'https://jkdsepbnigcztrfcwkpj.supabase.co',
+  process.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImprZHNlcGJuaWdjenRyZmN3a3BqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAyMTMxNDIsImV4cCI6MjA3NTc4OTE0Mn0.BNJgx8nRWnYo8XxGV0pMYbm3bo7MK1AQEDlqC6RxnF0'
+);
+
+// Initialiser Resend
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+const app = express();
+const PORT = 3001;
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Middleware pour capturer les erreurs
+app.use((err, req, res, next) => {
+  console.error('💥 Erreur non gérée:', err);
+  res.status(500).json({
+    error: 'Erreur interne du serveur',
+    details: err.message
+  });
+});
+
+// Route de santé
+app.get('/health', (req, res) => {
+  res.json({ status: 'OK', message: 'Test server running' });
+});
+
+// Route API pour la soumission d'évaluation (nouvelle)
+app.post('/api/submit-assessment', async (req, res) => {
+  try {
+    const { email, firstName, score, riskLevel, answers, breakdown } = req.body;
+
+    console.log('📝 Données reçues:', { email, firstName, score, riskLevel });
+
+    // Validation
+    if (!email || !firstName || score === undefined || !answers || !breakdown) {
+      return res.status(400).json({ error: 'Données manquantes' });
+    }
+
+    // Validation email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ error: 'Email invalide' });
+    }
+
+    // Rate limiting simple (max 3 soumissions par heure par IP)
+    const ipAddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress || 'unknown';
+    const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+    
+    const { count } = await supabase
+      .from('risk_assessments')
+      .select('*', { count: 'exact', head: true })
+      .eq('ip_address', ipAddress)
+      .gte('created_at', oneHourAgo);
+
+    if (count >= 3) {
+      return res.status(429).json({ error: 'Trop de tentatives. Réessayez dans 1h.' });
+    }
+
+    console.log('📝 Sauvegarde dans Supabase...');
+
+    // 1. Insérer dans Supabase
+    const { data: assessment, error: dbError } = await supabase
+      .from('risk_assessments')
+      .insert([
+        {
+          email,
+          first_name: firstName,
+          score,
+          risk_level: riskLevel,
+          answers,
+          breakdown,
+          user_agent: req.headers['user-agent'],
+          ip_address: ipAddress,
+        }
+      ])
+      .select()
+      .single();
+
+    if (dbError) {
+      console.error('❌ Erreur Supabase:', dbError);
+      return res.status(500).json({ error: 'Erreur de sauvegarde', details: dbError.message });
+    }
+
+    console.log('✅ Sauvegardé dans Supabase:', assessment.id);
+
+    // 2. Générer le PDF
+    console.log('📄 Génération du PDF...');
+    const pdfBuffer = await generateReportPDF({ firstName, score, answers, breakdown });
+
+    // 3. Envoyer l'email avec Resend
+    console.log('📧 Envoi de l\'email...');
+    const htmlContent = generateEmailHTML({ firstName, score, breakdown });
+
+    const emailResult = await resend.emails.send({
+      from: process.env.RESEND_FROM_EMAIL || 'SkillShield <onboarding@resend.dev>',
+      to: email,
+      subject: `🛡️ ${firstName}, votre avenir professionnel mérite mieux - Rapport SkillShield`,
+      html: htmlContent,
+      attachments: [
+        {
+          filename: `SkillShield_Rapport_${firstName.replace(/\s+/g, '_')}_${score}pct.pdf`,
+          content: pdfBuffer,
+        },
+      ],
+      headers: {
+        'X-Priority': '1',
+        'X-MSMail-Priority': 'High',
+        'Importance': 'high',
+        'X-Mailer': 'SkillShield',
+        'List-Unsubscribe': '<mailto:unsubscribe@skillshield.app>',
+        'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click'
+      },
+      tags: [
+        { name: 'category', value: 'risk-report' },
+        { name: 'user-type', value: 'calculator-user' }
+      ]
+    });
+
+    console.log('✅ Email envoyé:', emailResult.id);
+
+    // 4. Mettre à jour le statut email dans Supabase
+    await supabase
+      .from('risk_assessments')
+      .update({
+        email_sent: true,
+        email_sent_at: new Date().toISOString(),
+        resend_message_id: emailResult.id,
+      })
+      .eq('id', assessment.id);
+
+    console.log('✅ Statut email mis à jour');
+
+    // 5. Retourner la réponse
+    return res.status(200).json({
+      success: true,
+      assessmentId: assessment.id,
+      emailSent: true,
+      messageId: emailResult.id,
+    });
+
+  } catch (error) {
+    console.error('❌ Erreur globale:', error);
+    return res.status(500).json({
+      error: 'Erreur lors du traitement',
+      details: error.message,
+    });
+  }
+});
+
+// Route de test pour l'email avec Resend
+app.post('/api/send-report-with-pdf', async (req, res) => {
+  try {
+    console.log('📧 Requête reçue:', req.body);
+    
+    const { email, firstName, score, answers, breakdown } = req.body;
+    
+    if (!email || !score) {
+      return res.status(400).json({ error: 'Données manquantes' });
+    }
+    
+    console.log(`📧 Tentative d'envoi réel pour ${firstName} (${email}) avec score ${score}%`);
+    console.log(`🔑 RESEND_API_KEY: ${process.env.RESEND_API_KEY ? 'Trouvée' : 'Manquante'}`);
+    
+    // Utiliser Resend pour un vrai envoi
+    const { Resend } = require('resend');
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    
+    // Générer le HTML de l'email
+    console.log('📝 Génération du HTML email...');
+    let htmlContent;
+    try {
+      htmlContent = generateEmailHTML({ firstName, score });
+      console.log('✅ HTML généré, taille:', htmlContent.length, 'caractères');
+    } catch (htmlError) {
+      console.error('❌ Erreur génération HTML:', htmlError);
+      throw new Error('Erreur lors de la génération du HTML email: ' + htmlError.message);
+    }
+    
+    // Envoyer via Resend
+    console.log('📧 Envoi via Resend...');
+    const data = await resend.emails.send({
+      from: 'SkillShield <onboarding@resend.dev>',
+      to: email,
+      subject: `🛡️ ${firstName}, votre rapport de risque IA est prêt - SkillShield`,
+      html: htmlContent,
+      headers: {
+        'X-Priority': '1',
+        'X-MSMail-Priority': 'High',
+        'Importance': 'high',
+        'X-Mailer': 'SkillShield',
+        'List-Unsubscribe': '<mailto:unsubscribe@skillshield.app>',
+        'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click'
+      },
+      tags: [
+        { name: 'category', value: 'risk-report' },
+        { name: 'user-type', value: 'calculator-user' }
+      ]
+    });
+    
+    const messageId = data.id || 'resend_' + Date.now();
+    console.log('✅ Email envoyé avec succès:', messageId);
+    
+    // Retourner la réponse
+    const response = {
+      success: true,
+      messageId: messageId,
+      message: 'Email envoyé avec succès'
+    };
+    
+    console.log('📤 Envoi de la réponse:', response);
+    res.json(response);
+    
+  } catch (error) {
+    console.error('❌ Erreur:', error);
+    res.status(500).json({
+      error: 'Erreur lors de l\'envoi',
+      details: error.message
+    });
+  }
+});
+
+// Fonction pour générer l'HTML de l'email
+function generateEmailHTML({ firstName, score }) {
+  const riskColor = getScoreColor(score);
+  const riskLabel = getRiskLabel(score);
+  
+  return `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background-color: #0F172A;">
+  
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #0F172A;">
+    <tr>
+      <td align="center" style="padding: 40px 20px;">
+        
+        <table width="600" cellpadding="0" cellspacing="0" style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+          
+          <!-- Header Hero -->
+          <tr>
+            <td style="padding: 60px 40px; text-align: center; background: linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%);">
+              <h1 style="margin: 0 0 20px; color: white; font-size: 48px;">
+                ${firstName}
+              </h1>
+              <p style="margin: 0; color: rgba(255,255,255,0.95); font-size: 22px; font-weight: 600; line-height: 1.4;">
+                Votre rapport de risque IA est prêt !
+              </p>
+            </td>
+          </tr>
+
+          <!-- Message émotionnel -->
+          <tr>
+            <td style="padding: 50px 40px; color: white;">
+              <p style="margin: 0 0 25px; font-size: 18px; line-height: 1.7; color: #E2E8F0;">
+                Pendant que vos collègues <strong style="color: #F59E0B;">paniquent</strong> face à l'IA,<br/>
+                vous avez fait le premier pas : <strong style="color: #10B981;">comprendre votre risque</strong>.
+              </p>
+              
+              <p style="margin: 0 0 25px; font-size: 18px; line-height: 1.7; color: #E2E8F0;">
+                Votre score de <strong style="color: ${riskColor}; font-size: 32px;">${score}%</strong> révèle votre niveau d'exposition.
+              </p>
+
+              <p style="margin: 0; font-size: 18px; line-height: 1.7; color: #E2E8F0;">
+                Mais ce n'est que le <strong>début</strong>.<br/>
+                <span style="color: #06B6D4; font-weight: 600;">Vous pouvez transformer ce risque en opportunité.</span>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Score Box -->
+          <tr>
+            <td style="padding: 0 40px 40px;">
+              <table width="100%" cellpadding="0" cellspacing="0" style="background: rgba(255,255,255,0.05); border: 3px solid ${riskColor}; border-radius: 16px; padding: 30px;">
+                <tr>
+                  <td align="center">
+                    <div style="font-size: 72px; font-weight: bold; color: ${riskColor}; margin-bottom: 15px;">
+                      ${score}%
+                    </div>
+                    <div style="font-size: 20px; color: ${riskColor}; font-weight: 600; margin-bottom: 10px;">
+                      ${riskLabel}
+                    </div>
+                    <div style="font-size: 14px; color: #94A3B8;">
+                      ${getRiskMessage(score)}
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- CTA Principal -->
+          <tr>
+            <td style="padding: 50px 40px; text-align: center; background: linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%);">
+              <h2 style="margin: 0 0 15px; color: white; font-size: 32px;">
+                Prêt à reprendre le contrôle ?
+              </h2>
+              <p style="margin: 0 0 30px; color: rgba(255,255,255,0.95); font-size: 18px;">
+                Rejoignez SkillShield et transformez votre risque en opportunité
+              </p>
+              <a href="http://localhost:5173/waitinglist" style="display: inline-block; padding: 20px 50px; background: white; color: #0F172A; text-decoration: none; font-weight: bold; font-size: 18px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.3);">
+                🚀 Rejoindre la Liste d'Attente
+              </a>
+              <p style="margin: 25px 0 0; color: rgba(255,255,255,0.9); font-size: 15px; font-weight: 600;">
+                🔥 Les 20 premiers inscrits : -50% à vie
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 40px; text-align: center; background: #0A0F1E; border-top: 1px solid rgba(6, 182, 212, 0.2);">
+              <p style="margin: 0 0 15px; color: #64748B; font-size: 14px;">
+                <strong style="color: #FFFFFF;">SkillShield</strong> - L'assurance-vie de votre carrière à l'ère de l'IA
+              </p>
+              <p style="margin: 0 0 15px; color: #475569; font-size: 13px;">
+                <a href="http://localhost:5173" style="color: #06B6D4; text-decoration: none;">localhost:5173</a>
+                 | 
+                <a href="mailto:bonjour@skillshield.app" style="color: #06B6D4; text-decoration: none;">bonjour@skillshield.app</a>
+              </p>
+              <p style="margin: 0; color: #475569; font-size: 11px;">
+                Vous recevez cet email car vous avez utilisé notre calculateur de risque IA gratuit.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
+  `;
+}
+
+// Fonctions utilitaires
+function getScoreColor(score) {
+  if (score < 30) return '#10B981';
+  if (score < 50) return '#3B82F6';
+  if (score < 70) return '#F59E0B';
+  return '#EF4444';
+}
+
+function getRiskLabel(score) {
+  if (score < 30) return '🟢 Risque Faible';
+  if (score < 50) return '🔵 Risque Modéré';
+  if (score < 70) return '🟠 Risque Élevé';
+  return '🔴 Risque Critique';
+}
+
+function getRiskMessage(score) {
+  if (score < 30) return 'Votre métier est relativement protégé face à l\'automatisation IA';
+  if (score < 50) return 'Anticipez dès maintenant pour rester compétitif sur le marché';
+  if (score < 70) return 'Action recommandée dans les prochains mois pour sécuriser votre carrière';
+  return 'Action urgente nécessaire pour protéger votre avenir professionnel';
+}
+
+app.listen(PORT, () => {
+  console.log(`🧪 Serveur de test démarré sur http://localhost:${PORT}`);
+  console.log(`📧 API email: http://localhost:${PORT}/api/send-report-with-pdf`);
+  console.log(`🔑 RESEND_API_KEY: ${process.env.RESEND_API_KEY ? 'Trouvée' : 'Manquante'}`);
+});

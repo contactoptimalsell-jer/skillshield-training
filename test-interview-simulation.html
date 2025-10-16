@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Simulation d'Entretien Aegis</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 20px 0;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #3b82f6;
+        }
+        .test-step {
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 6px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: 'Monaco', 'Menlo', monospace;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow-x: auto;
+        }
+        .highlight {
+            background: rgba(59, 130, 246, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .success { color: #10b981; }
+        .warning { color: #f59e0b; }
+        .error { color: #ef4444; }
+        .info { color: #3b82f6; }
+        .emoji { font-size: 1.2em; }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        .feature-card h3 {
+            color: #3b82f6;
+            margin-top: 0;
+        }
+        ul, ol {
+            line-height: 1.6;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #2563eb;
+        }
+        .interview-level {
+            border-left: 4px solid;
+            padding-left: 15px;
+            margin: 15px 0;
+        }
+        .junior { border-color: #10b981; }
+        .intermediate { border-color: #3b82f6; }
+        .senior { border-color: #8b5cf6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 Test - Simulation d'Entretien Aegis</h1>
+            <p>Guide de test pour le mode simulation d'entretien avec feedback instantané</p>
+        </div>
+
+        <div class="test-section">
+            <h2>🎯 Objectif du Test</h2>
+            <p>Vérifier que le système de <span class="highlight">simulation d'entretien</span> fonctionne correctement avec :</p>
+            <ul>
+                <li>🎬 <strong>3 niveaux</strong> : Junior, Intermédiaire, Senior</li>
+                <li>📊 <strong>Feedback instantané</strong> après chaque réponse</li>
+                <li>🎯 <strong>Analyse détaillée</strong> : durée, structure STAR, mots-clés</li>
+                <li>📈 <strong>Score global</strong> et recommandations personnalisées</li>
+                <li>💡 <strong>Conseils concrets</strong> pour améliorer les réponses</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>🚀 Étapes de Test</h2>
+            
+            <div class="test-step">
+                <h3>1. Accéder au Dashboard</h3>
+                <p>Ouvrez le dashboard : <a href="http://localhost:5173/dashboard" class="btn" target="_blank">Dashboard</a></p>
+                <p>Le chatbot Aegis devrait être visible en bas à droite.</p>
+            </div>
+
+            <div class="test-step">
+                <h3>2. Démarrer une Simulation</h3>
+                <p><strong>Option A - Boutons Debug :</strong></p>
+                <ul>
+                    <li>🎬 <strong>Entretien Junior</strong> (vert) - Questions classiques</li>
+                    <li>🎬 <strong>Entretien Intermédiaire</strong> (bleu) - Questions techniques</li>
+                    <li>🎬 <strong>Entretien Senior</strong> (violet) - Questions stratégiques</li>
+                </ul>
+                
+                <p><strong>Option B - Détection Automatique :</strong></p>
+                <ul>
+                    <li>Tapez : <span class="highlight">"Je veux préparer un entretien"</span></li>
+                    <li>Ou : <span class="highlight">"Simulation d'entretien"</span></li>
+                    <li>Ou : <span class="highlight">"Mock interview"</span></li>
+                </ul>
+            </div>
+
+            <div class="test-step">
+                <h3>3. Tester le Flux Complet</h3>
+                <ol>
+                    <li><strong>Introduction</strong> : Message de bienvenue avec contexte entreprise</li>
+                    <li><strong>Question 1</strong> : Répondez naturellement</li>
+                    <li><strong>Feedback instantané</strong> : Analyse en temps réel</li>
+                    <li><strong>Question suivante</strong> : Continuation automatique</li>
+                    <li><strong>Rapport final</strong> : Score global et recommandations</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>📋 Questions par Niveau</h2>
+            
+            <div class="interview-level junior">
+                <h3>🎬 Entretien Junior</h3>
+                <ul>
+                    <li><strong>Question 1 :</strong> "Parle-moi de toi en 2 minutes."</li>
+                    <li><strong>Question 2 :</strong> "Pourquoi ce métier de DevOps Engineer ?"</li>
+                </ul>
+                <p><strong>Focus :</strong> Structure STAR, durée, mots-clés, évitement des clichés</p>
+            </div>
+
+            <div class="interview-level intermediate">
+                <h3>🎬 Entretien Intermédiaire</h3>
+                <ul>
+                    <li><strong>Question 1 :</strong> "Parle-moi de toi en 2 minutes."</li>
+                    <li><strong>Question 2 :</strong> "Explique CI/CD à un non-technique."</li>
+                    <li><strong>Question 3 :</strong> "Comment gères-tu les conflits dans une équipe ?"</li>
+                </ul>
+                <p><strong>Focus :</strong> Vulgarisation technique, exemples concrets, structure STAR</p>
+            </div>
+
+            <div class="interview-level senior">
+                <h3>🎬 Entretien Senior</h3>
+                <ul>
+                    <li><strong>Question 1 :</strong> "Parle-moi de toi en 2 minutes."</li>
+                    <li><strong>Question 2 :</strong> "Comment optimiserais-tu notre infrastructure actuelle ?"</li>
+                </ul>
+                <p><strong>Focus :</strong> Vision stratégique, métriques, ROI, approche méthodologique</p>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>📊 Types de Feedback Analysés</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>⏱️ Durée de Réponse</h3>
+                    <ul>
+                        <li>✅ <strong>Correct :</strong> 200-500 caractères</li>
+                        <li>❌ <strong>Trop court :</strong> &lt; 200 caractères</li>
+                        <li>❌ <strong>Trop long :</strong> &gt; 500 caractères</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🎯 Structure STAR</h3>
+                    <ul>
+                        <li>✅ <strong>Détecté :</strong> Mots "résultat", "projet", "action"</li>
+                        <li>❌ <strong>Manquant :</strong> Récit chronologique</li>
+                        <li>💡 <strong>Conseil :</strong> Template STAR fourni</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>💼 Mots-clés Business</h3>
+                    <ul>
+                        <li>✅ <strong>Impact :</strong> "impact business"</li>
+                        <li>✅ <strong>Résultats :</strong> "résultats mesurables"</li>
+                        <li>✅ <strong>Équipe :</strong> "collaboration équipe"</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🚫 Clichés à Éviter</h3>
+                    <ul>
+                        <li>❌ <strong>"Passion"</strong> - Trop générique</li>
+                        <li>❌ <strong>"Salaire"</strong> - En première position</li>
+                        <li>❌ <strong>"Pipeline"</strong> - Trop technique pour non-tech</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🧪 Tests de Feedback</h2>
+            
+            <div class="test-step">
+                <h3>Test 1 - Réponse Trop Courte</h3>
+                <div class="code-block">
+Question : "Parle-moi de toi en 2 minutes."
+Réponse : "Je suis développeur."
+
+Feedback attendu :
+❌ Trop court, manque de détails
+❌ Structure STAR utilisée : Non
+❌ Mots-clés manquants : impact, résultats, équipe
+💡 Conseils pour améliorer
+                </div>
+            </div>
+
+            <div class="test-step">
+                <h3>Test 2 - Réponse Avec Clichés</h3>
+                <div class="code-block">
+Question : "Pourquoi ce métier ?"
+Réponse : "J'ai une passion pour la tech et je veux un bon salaire."
+
+Feedback attendu :
+⚠️ Évite "passion" (cliché)
+❌ Ne mentionne jamais le salaire en 1er
+❌ Manque l'aspect impact
+❌ Manque l'aspect évolution
+💡 Structure idéale fournie
+                </div>
+            </div>
+
+            <div class="test-step">
+                <h3>Test 3 - Réponse Technique</h3>
+                <div class="code-block">
+Question : "Explique CI/CD à un non-technique."
+Réponse : "C'est un pipeline automatisé qui déploie le code."
+
+Feedback attendu :
+⚠️ "Pipeline" est trop technique pour un non-tech
+❌ Manque de métaphores
+❌ Manque de structure
+💡 Réponse idéale avec métaphore fournie
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🏆 Rapport Final</h2>
+            <p>À la fin de la simulation, le système génère :</p>
+            
+            <div class="code-block">
+🏆 RÉSULTAT DE SIMULATION
+
+Note globale : 7.2/10 (Bon)
+
+Détails par compétence :
+- Communication : 6/10
+- Contenu technique : 8/10
+- Confiance : 6/10
+- Concision : 7/10
+
+🎯 POINTS D'AMÉLIORATION PRIORITAIRES
+1. Utiliser structure STAR systématiquement
+2. Quantifier chaque réalisation
+3. Ralentir le débit
+
+💡 RECOMMANDATIONS AEGIS
+Bon niveau global, quelques ajustements à faire...
+
+Prochaines étapes :
+- Répète cette simulation 2-3 fois cette semaine
+- Prépare 5 exemples STAR pour tes compétences clés
+- Entraîne-toi devant un miroir
+
+[📄 Télécharger rapport] [🔄 Nouvelle simulation]
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>✅ Checklist de Validation</h2>
+            <ul>
+                <li>☐ Les 3 boutons debug fonctionnent (Junior/Intermédiaire/Senior)</li>
+                <li>☐ La détection automatique fonctionne avec "entretien"</li>
+                <li>☐ L'introduction affiche le contexte entreprise</li>
+                <li>☐ Le feedback s'affiche après chaque réponse</li>
+                <li>☐ L'analyse de durée fonctionne (trop court/long/correct)</li>
+                <li>☐ La détection STAR fonctionne</li>
+                <li>☐ Les mots-clés manquants sont identifiés</li>
+                <li>☐ Les clichés sont détectés</li>
+                <li>☐ Les conseils sont personnalisés</li>
+                <li>☐ Le passage à la question suivante fonctionne</li>
+                <li>☐ Le rapport final avec score s'affiche</li>
+                <li>☐ Les recommandations sont pertinentes</li>
+                <li>☐ Le mode se désactive à la fin</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>🐛 Dépannage</h2>
+            <div class="test-step">
+                <h3>La simulation ne démarre pas</h3>
+                <ul>
+                    <li>Vérifiez que les boutons debug sont visibles (mode dev)</li>
+                    <li>Essayez la détection automatique avec "entretien"</li>
+                    <li>Vérifiez que <code>interviewMode</code> est à <code>false</code></li>
+                </ul>
+            </div>
+
+            <div class="test-step">
+                <h3>Le feedback ne s'affiche pas</h3>
+                <ul>
+                    <li>Vérifiez que <code>interviewMode</code> est à <code>true</code></li>
+                    <li>Assurez-vous que la réponse est bien sauvegardée</li>
+                    <li>Vérifiez la fonction <code>generateInterviewFeedback</code></li>
+                </ul>
+            </div>
+
+            <div class="test-step">
+                <h3>Le score semble incorrect</h3>
+                <ul>
+                    <li>Vérifiez la fonction <code>calculateInterviewScore</code></li>
+                    <li>Testez avec des réponses de différentes longueurs</li>
+                    <li>Vérifiez les critères de scoring</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🎉 Conclusion</h2>
+            <p>La <strong>simulation d'entretien</strong> est un système avancé qui :</p>
+            <ul>
+                <li>🎬 <strong>Simule des entretiens réalistes</strong> avec 3 niveaux de difficulté</li>
+                <li>📊 <strong>Analyse en temps réel</strong> chaque réponse</li>
+                <li>🎯 <strong>Détecte les patterns</strong> : durée, structure, mots-clés</li>
+                <li>💡 <strong>Fournit des conseils</strong> concrets et actionables</li>
+                <li>🏆 <strong>Génère un score</strong> global avec recommandations</li>
+                <li>📈 <strong>Propose un plan d'amélioration</strong> personnalisé</li>
+            </ul>
+            <p class="success">✅ Système opérationnel et prêt pour la préparation aux entretiens !</p>
+        </div>
+    </div>
+</body>
+</html>

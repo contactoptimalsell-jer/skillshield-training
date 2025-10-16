@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Fonctionnalités Avancées - Aegis Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .test-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .test-link:hover {
+            background-color: #0056b3;
+        }
+        .status {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e3cb;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .feature-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .feature-list {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .feature-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .ml-demo {
+            background-color: #e7f3ff;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .calendar-demo {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .pdf-demo {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .notification-demo {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.9em;
+            white-space: pre-wrap;
+            margin: 10px 0;
+        }
+        .button-demo {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .priority-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin: 2px;
+        }
+        .priority-critique {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .priority-haute {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .priority-moyenne {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Test Fonctionnalités Avancées - Aegis Chatbot</h1>
+        
+        <div class="status success">
+            ✅ Machine Learning pour amélioration des patterns implémenté
+        </div>
+        
+        <div class="status success">
+            ✅ Intégration calendrier pour suivi des objectifs implémentée
+        </div>
+        
+        <div class="status success">
+            ✅ Export PDF des recommandations implémenté
+        </div>
+        
+        <div class="status success">
+            ✅ Notifications push pour actions prioritaires implémentées
+        </div>
+        
+        <h2>🔗 Test du Chatbot :</h2>
+        
+        <a href="http://localhost:5173/dashboard" class="test-link" target="_blank">
+            🤖 Ouvrir Aegis Chatbot avec Fonctionnalités Avancées
+        </a>
+        
+        <h2>🎯 Fonctionnalités Avancées Implémentées :</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🤖 Machine Learning</h3>
+                <ul>
+                    <li>Analyse des patterns historiques</li>
+                    <li>Prédictions émotionnelles</li>
+                    <li>Amélioration continue du modèle</li>
+                    <li>Score de confiance dynamique</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📅 Calendrier Intégré</h3>
+                <ul>
+                    <li>Objectifs avec échéances</li>
+                    <li>Rappels automatiques</li>
+                    <li>Suivi des progrès</li>
+                    <li>Jalons importants</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📄 Export PDF</h3>
+                <ul>
+                    <li>Rapports personnalisés</li>
+                    <li>Génération automatique</li>
+                    <li>Téléchargement direct</li>
+                    <li>Données complètes</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🔔 Notifications Push</h3>
+                <ul>
+                    <li>Alertes intelligentes</li>
+                    <li>Préférences personnalisées</li>
+                    <li>Notifications contextuelles</li>
+                    <li>Système de priorité</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>🤖 Machine Learning - Amélioration des Patterns :</h2>
+        
+        <div class="ml-demo">
+            <h3>🧠 Fonctionnalités ML :</h3>
+            <ul>
+                <li><strong>Analyse des Patterns Historiques</strong> : Analyse des séquences d'émotions sur 20+ interactions</li>
+                <li><strong>Prédictions Émotionnelles</strong> : Prédiction des émotions futures avec score de confiance</li>
+                <li><strong>Amélioration Continue</strong> : Modèle qui s'améliore avec chaque interaction</li>
+                <li><strong>Score de Confiance Dynamique</strong> : Calcul de la fiabilité des prédictions</li>
+                <li><strong>Boucle de Feedback</strong> : Apprentissage basé sur la précision des prédictions</li>
+            </ul>
+            
+            <div class="code-block">
+Précision du Modèle: 85% → 95% (amélioration continue)
+Score de Confiance: 73% (basé sur l'historique)
+Prédictions:
+• 1 jour: anxious_moderate (78% confiance)
+• 2 jours: anxious_high (65% confiance)  
+• 3 jours: neutral (82% confiance)
+
+Raisonnement: Basé sur 15 séquences analysées
+            </div>
+        </div>
+        
+        <div class="feature-list">
+            <h3>📊 Interface ML :</h3>
+            <ul>
+                <li><strong>Bouton Brain</strong> : Icône Brain pour afficher les insights ML</li>
+                <li><strong>Dashboard ML</strong> : Précision du modèle et score de confiance</li>
+                <li><strong>Prédictions Visuelles</strong> : Affichage des prédictions avec pourcentages</li>
+                <li><strong>Historique d'Apprentissage</strong> : Évolution du modèle dans le temps</li>
+                <li><strong>Codes Couleur</strong> : Violet pour ML, Cyan pour confiance</li>
+            </ul>
+        </div>
+        
+        <h2>📅 Intégration Calendrier - Suivi des Objectifs :</h2>
+        
+        <div class="calendar-demo">
+            <h3>📅 Fonctionnalités Calendrier :</h3>
+            <ul>
+                <li><strong>Objectifs Calendaires</strong> : Conversion automatique des recommandations en événements</li>
+                <li><strong>Rappels Automatiques</strong> : Notifications avant échéances</li>
+                <li><strong>Suivi des Progrès</strong> : Checkpoints hebdomadaires</li>
+                <li><strong>Jalons Importants</strong> : Milestones à 25%, 50%, 100%</li>
+                <li><strong>Sessions de Formation</strong> : Planification des formations recommandées</li>
+            </ul>
+            
+            <div class="code-block">
+Objectifs Planifiés:
+• Objectif Reconversion Prioritaire
+  Début: 15/01/2024 | Fin: 22/01/2024
+  Type: objectif | Priorité: haute
+
+• Formation Intensive DevOps  
+  Échéance: 18/01/2024
+  Type: action | Urgence: haute
+
+Rappels Programmés:
+• Rappel: Objectif Reconversion (20/01/2024)
+• Action à faire: Formation DevOps (17/01/2024)
+• Session formation: Gestion Stress (22/01/2024)
+            </div>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🎯 Interface Calendrier :</h3>
+            <ul>
+                <li><strong>Bouton Calendar</strong> : Icône Calendar pour afficher le calendrier</li>
+                <li><strong>Objectifs Planifiés</strong> : Liste des objectifs avec dates</li>
+                <li><strong>Rappels Programmés</strong> : Notifications à venir</li>
+                <li><strong>Jalons Importants</strong> : Milestones avec récompenses</li>
+                <li><strong>Codes Couleur</strong> : Bleu pour calendrier, Vert pour jalons</li>
+            </ul>
+        </div>
+        
+        <h2>📄 Export PDF - Génération de Rapports :</h2>
+        
+        <div class="pdf-demo">
+            <h3>📄 Fonctionnalités PDF :</h3>
+            <ul>
+                <li><strong>Rapport Complet</strong> : Toutes les données personnalisées</li>
+                <li><strong>Génération Automatique</strong> : PDF créé à la demande</li>
+                <li><strong>Téléchargement Direct</strong> : Download automatique</li>
+                <li><strong>Contenu Structuré</strong> : Résumé exécutif, recommandations, prédictions</li>
+                <li><strong>Historique des Exports</strong> : Traçabilité des rapports générés</li>
+            </ul>
+            
+            <div class="code-block">
+RAPPORT PERSONNALISÉ AEGIS
+============================
+
+Généré le: 15/01/2024
+Utilisateur: Alex
+
+RÉSUMÉ EXÉCUTIF
+===============
+Score de Risque IA: 67%
+Score Émotionnel: -1.2/10
+Tendance: détérioration
+Précision du Modèle: 87%
+Score de Confiance: 73%
+
+RECOMMANDATIONS ACTIVES
+=======================
+• Plan de Soutien Personnalisé (haute)
+  Renforcement de la motivation et gestion du stress
+  Actions: Formation gestion stress, Mentoring pair, Objectifs micro
+
+PRÉDICTIONS ML
+=============
+• 1 jour: anxious_moderate
+  Confiance: 78%
+  Raison: Basé sur le pattern historique: 15 séquences analysées
+            </div>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🔄 Interface PDF :</h3>
+            <ul>
+                <li><strong>Bouton Download</strong> : Icône Download avec animation de chargement</li>
+                <li><strong>Génération en Temps Réel</strong> : PDF créé avec les données actuelles</li>
+                <li><strong>Nom de Fichier Personnalisé</strong> : Rapport_Aegis_Alex_2024-01-15.pdf</li>
+                <li><strong>Feedback Utilisateur</strong> : Confirmation de génération réussie</li>
+                <li><strong>Gestion d'Erreurs</strong> : Messages d'erreur en cas de problème</li>
+            </ul>
+        </div>
+        
+        <h2>🔔 Notifications Push - Alertes Intelligentes :</h2>
+        
+        <div class="notification-demo">
+            <h3>🔔 Fonctionnalités Notifications :</h3>
+            <ul>
+                <li><strong>Alertes Contextuelles</strong> : Notifications basées sur l'état émotionnel</li>
+                <li><strong>Préférences Personnalisées</strong> : Configuration des types de notifications</li>
+                <li><strong>Système de Priorité</strong> : Haute, Moyenne, Faible</li>
+                <li><strong>Notifications Temporelles</strong> : Pas plus d'une par heure</li>
+                <li><strong>Actions Intégrées</strong> : Boutons d'action dans les notifications</li>
+            </ul>
+            
+            <div class="code-block">
+Notifications Actives:
+🚨 Action Critique Requise (haute priorité)
+   Plan de Soutien Personnalisé - Intervention immédiate nécessaire
+   Actions: [Formation gestion stress] [Mentoring pair] [Objectifs micro]
+   
+⚠️ Alerte Émotionnelle Critique (haute priorité)
+   Tendance émotionnelle en baisse détectée
+   
+⏰ Rappel Objectif (moyenne priorité)
+   Rappel: Objectif Reconversion - Objectif à finaliser dans 2 jours
+            </div>
+        </div>
+        
+        <div class="feature-list">
+            <h3>⚙️ Préférences Notifications :</h3>
+            <ul>
+                <li><strong>Actions Prioritaires</strong> : ✅ Activé - Notifications pour actions critiques</li>
+                <li><strong>Rappels Objectifs</strong> : ✅ Activé - Notifications avant échéances</li>
+                <li><strong>Alertes Émotionnelles</strong> : ✅ Activé - Notifications pour états critiques</li>
+                <li><strong>Suggestions Formations</strong> : ❌ Désactivé - Pas de spam de formations</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🎨 Interface Notifications :</h3>
+            <ul>
+                <li><strong>Bouton Bell</strong> : Icône Bell pour afficher les notifications</li>
+                <li><strong>Codes Couleur</strong> : Rouge (haute), Orange (moyenne), Bleu (faible)</li>
+                <li><strong>État Vide</strong> : Message "Aucune notification en attente"</li>
+                <li><strong>Préférences Visibles</strong> : Configuration des notifications</li>
+                <li><strong>Actions Intégrées</strong> : Boutons d'action dans les notifications</li>
+            </ul>
+        </div>
+        
+        <h2>🧪 Tests à Effectuer :</h2>
+        
+        <div class="feature-list">
+            <h3>🤖 Tests Machine Learning :</h3>
+            <ul>
+                <li>Cliquer sur l'icône <strong>Brain</strong> → Vérifier l'affichage des insights ML</li>
+                <li>Envoyer 5+ messages → Vérifier l'amélioration de la précision du modèle</li>
+                <li>Observer les prédictions → Vérifier les scores de confiance</li>
+                <li>Vérifier l'historique d'apprentissage → Confirmer l'évolution du modèle</li>
+                <li>Analyser les patterns → Vérifier la détection de séquences émotionnelles</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>📅 Tests Calendrier :</h3>
+            <ul>
+                <li>Cliquer sur l'icône <strong>Calendar</strong> → Vérifier l'affichage du calendrier</li>
+                <li>Générer des recommandations → Vérifier la création d'objectifs calendaires</li>
+                <li>Observer les rappels → Vérifier la planification des notifications</li>
+                <li>Vérifier les jalons → Confirmer les milestones 25%, 50%, 100%</li>
+                <li>Analyser les sessions → Vérifier la planification des formations</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>📄 Tests Export PDF :</h3>
+            <ul>
+                <li>Cliquer sur l'icône <strong>Download</strong> → Vérifier la génération du PDF</li>
+                <li>Observer l'animation → Confirmer l'indicateur de chargement</li>
+                <li>Vérifier le téléchargement → Confirmer le download automatique</li>
+                <li>Analyser le contenu → Vérifier la complétude du rapport</li>
+                <li>Vérifier le nom de fichier → Confirmer la personnalisation</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🔔 Tests Notifications :</h3>
+            <ul>
+                <li>Cliquer sur l'icône <strong>Bell</strong> → Vérifier l'affichage des notifications</li>
+                <li>Générer des actions critiques → Vérifier les notifications haute priorité</li>
+                <li>Observer les préférences → Confirmer la configuration</li>
+                <li>Vérifier les codes couleur → Confirmer la différenciation des priorités</li>
+                <li>Analyser les actions intégrées → Vérifier les boutons d'action</li>
+            </ul>
+        </div>
+        
+        <h2>🎯 Tests de Scénarios Complets :</h2>
+        
+        <div class="feature-list">
+            <h3>🔄 Scénario ML + Calendrier :</h3>
+            <ul>
+                <li>Envoyer plusieurs messages → Générer des patterns ML</li>
+                <li>Ouvrir le calendrier → Vérifier la création d'objectifs basés sur ML</li>
+                <li>Observer les prédictions → Confirmer l'influence sur la planification</li>
+                <li>Vérifier les rappels → Confirmer l'adaptation aux prédictions</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>📄 Scénario PDF + Notifications :</h3>
+            <ul>
+                <li>Générer des recommandations → Créer du contenu pour le PDF</li>
+                <li>Exporter le PDF → Vérifier l'inclusion de toutes les données</li>
+                <li>Activer les notifications → Vérifier les alertes pour le PDF généré</li>
+                <li>Observer l'intégration → Confirmer la cohérence des données</li>
+            </ul>
+        </div>
+        
+        <div class="status info">
+            🚀 Les 4 fonctionnalités avancées offrent une expérience complète avec Machine Learning, planification calendaire, export PDF et notifications intelligentes
+        </div>
+    </div>
+</body>
+</html>

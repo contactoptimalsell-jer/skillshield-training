@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Messages d'Accueil Contextuels - Aegis Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .test-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .test-link:hover {
+            background-color: #0056b3;
+        }
+        .status {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .feature-list {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .feature-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .scenario-box {
+            background-color: #e7f3ff;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .scenario-title {
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        .context-details {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Test Messages d'Accueil Contextuels - Aegis Chatbot</h1>
+        
+        <div class="status success">
+            ✅ Système de messages d'accueil contextuels implémenté
+        </div>
+        
+        <div class="status success">
+            ✅ Fonction getWelcomeMessage() créée avec 4 types de messages
+        </div>
+        
+        <div class="status info">
+            📍 Le chatbot Aegis adapte maintenant son message d'accueil selon le contexte utilisateur
+        </div>
+        
+        <h2>🔗 Test du Chatbot :</h2>
+        
+        <a href="http://localhost:5173/dashboard" class="test-link" target="_blank">
+            🤖 Ouvrir Aegis Chatbot avec Message Contextuel
+        </a>
+        
+        <h2>🎯 Types de Messages d'Accueil :</h2>
+        
+        <div class="scenario-box">
+            <div class="scenario-title">1. 🎉 Première Visite</div>
+            <div class="context-details">Context: nombreVisites === 0</div>
+            <p>Message chaleureux avec présentation complète du service et mission d'Aegis. Inclut le profil utilisateur et les objectifs.</p>
+        </div>
+        
+        <div class="scenario-box">
+            <div class="scenario-title">2. ⚠️ Après Alerte Critique</div>
+            <div class="context-details">Context: derniereAlerteLue dans les 24h</div>
+            <p>Message empathique qui reconnaît l'alerte récente, rassure l'utilisateur et propose une analyse immédiate de l'impact.</p>
+        </div>
+        
+        <div class="scenario-box">
+            <div class="scenario-title">3. 👋 Retour Utilisateur (Même Jour)</div>
+            <div class="context-details">Context: nombreVisites > 0, derniereVisite = aujourd'hui</div>
+            <p>Message encourageant qui reconnaît l'engagement, fait le suivi des progrès et invite à continuer.</p>
+        </div>
+        
+        <div class="scenario-box">
+            <div class="scenario-title">4. 🔄 Retour Utilisateur (Récent)</div>
+            <div class="context-details">Context: 1-3 jours depuis dernière visite</div>
+            <p>Message de rappel avec récapitulatif de la situation, évolution du score et invitation à reprendre le dialogue.</p>
+        </div>
+        
+        <div class="scenario-box">
+            <div class="scenario-title">5. 🌅 Retour Utilisateur (Ancien)</div>
+            <div class="context-details">Context: Plus de 3 jours depuis dernière visite</div>
+            <p>Message bienveillant qui exprime l'inquiétude, fait un récapitulatif complet et invite à partager les nouveautés.</p>
+        </div>
+        
+        <h2>📊 Données Contextuelles Actuelles :</h2>
+        
+        <div class="feature-list">
+            <h3>👤 Profil Utilisateur (Alex) :</h3>
+            <ul>
+                <li><strong>Dernière visite :</strong> Il y a 2 jours</li>
+                <li><strong>Nombre de visites :</strong> 12</li>
+                <li><strong>Dernière alerte lue :</strong> "GPT-5 impact sur développeurs" (Il y a 2h)</li>
+                <li><strong>Score de risque :</strong> 67%</li>
+                <li><strong>Formation en cours :</strong> Docker & Kubernetes (34%)</li>
+            </ul>
+        </div>
+        
+        <h2>🧪 Tests à Effectuer :</h2>
+        
+        <div class="feature-list">
+            <h3>✅ Vérifications Immédiates :</h3>
+            <ul>
+                <li>Ouvrir le chatbot et vérifier le message d'accueil contextuel</li>
+                <li>Confirmer que le message fait référence à l'alerte récente</li>
+                <li>Vérifier la mention du nombre de visites (12)</li>
+                <li>Confirmer la mention de la formation en cours</li>
+                <li>Tester la fermeture/ouverture du chatbot (message persistant)</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🎯 Tests de Scénarios (Modifications Simulées) :</h3>
+            <ul>
+                <li><strong>Première visite :</strong> Modifier nombreVisites = 0</li>
+                <li><strong>Retour même jour :</strong> Modifier derniereVisite = aujourd'hui</li>
+                <li><strong>Retour récent :</strong> Modifier derniereVisite = il y a 1 jour</li>
+                <li><strong>Retour ancien :</strong> Modifier derniereVisite = il y a 5 jours</li>
+                <li><strong>Sans alerte récente :</strong> Modifier derniereAlerteLue = null</li>
+            </ul>
+        </div>
+        
+        <h2>💡 Fonctionnalités Avancées :</h2>
+        
+        <div class="feature-list">
+            <h3>🧠 Intelligence Contextuelle :</h3>
+            <ul>
+                <li>✅ Calcul automatique du temps écoulé</li>
+                <li>✅ Détection des alertes récentes</li>
+                <li>✅ Adaptation du ton selon la situation</li>
+                <li>✅ Références aux données personnelles</li>
+                <li>✅ Suggestions d'actions pertinentes</li>
+            </ul>
+        </div>
+        
+        <div class="status info">
+            🎯 Le système s'adapte automatiquement selon le contexte utilisateur pour offrir une expérience personnalisée et empathique
+        </div>
+    </div>
+</body>
+</html>

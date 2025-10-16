@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Mode Sparring Partner - Aegis Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .test-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .test-link:hover {
+            background-color: #0056b3;
+        }
+        .status {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e3cb;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .feature-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .feature-list {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .feature-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .sparring-mode {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .challenge-scenarios {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .visual-feedback {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.9em;
+            white-space: pre-wrap;
+            margin: 10px 0;
+        }
+        .scenario-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .scenario-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .scenario-card h4 {
+            margin-top: 0;
+            color: #dc3545;
+        }
+        .challenge-message {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+        .activation-flow {
+            background-color: #e7f3ff;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .button-states {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .button-state {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .button-state.active {
+            background-color: #fff3cd;
+            border-color: #ffc107;
+        }
+        .button-state.inactive {
+            background-color: #f8f9fa;
+            border-color: #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🥊 Test Mode Sparring Partner - Aegis Chatbot</h1>
+        
+        <div class="status success">
+            ✅ Mode Sparring Partner avec logique de challenge activée implémenté
+        </div>
+        
+        <div class="status success">
+            ✅ Scénarios de challenge alternatifs créés
+        </div>
+        
+        <div class="status success">
+            ✅ Feedback visuel et messages d'activation ajoutés
+        </div>
+        
+        <div class="status success">
+            ✅ Intégration seamless dans le système de scénarios
+        </div>
+        
+        <h2>🔗 Test du Chatbot avec Mode Sparring :</h2>
+        
+        <a href="http://localhost:5173/dashboard" class="test-link" target="_blank">
+            🥊 Ouvrir Aegis Chatbot avec Mode Sparring Partner
+        </a>
+        
+        <h2>🥊 Mode Sparring Partner Implémenté :</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🥊 Scénarios de Challenge</h3>
+                <ul>
+                    <li>Impact IA : Questions directes et défis</li>
+                    <li>Reconversion : Challenge sur la motivation</li>
+                    <li>Compétences : Confrontation aux faits</li>
+                    <li>Motivation : Défi des actions concrètes</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🎯 Logique de Challenge</h3>
+                <ul>
+                    <li>Questions qui fâchent</li>
+                    <li>Faits brutaux et réalistes</li>
+                    <li>Défis concrets et mesurables</li>
+                    <li>Poussée dans les retranchements</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🎨 Feedback Visuel</h3>
+                <ul>
+                    <li>Bouton avec ring orange</li>
+                    <li>Avatar avec glow orange</li>
+                    <li>Icône 🥊 dans le nom</li>
+                    <li>Tooltip "Mode Challenge"</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>💬 Messages d'Activation</h3>
+                <ul>
+                    <li>Message d'activation du mode</li>
+                    <li>Message de désactivation</li>
+                    <li>Explication du challenge</li>
+                    <li>Encouragement et motivation</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>🥊 Scénarios de Challenge :</h2>
+        
+        <div class="challenge-scenarios">
+            <h3>🥊 Scénarios Alternatifs de Challenge :</h3>
+            <ul>
+                <li><strong>sparring_impactIA</strong> : Challenge sur l'impact IA et l'action concrète</li>
+                <li><strong>sparring_reconversion</strong> : Défi sur la reconversion et la différence</li>
+                <li><strong>sparring_competences</strong> : Confrontation sur le développement des compétences</li>
+                <li><strong>sparring_motivation</strong> : Challenge sur la motivation vs l'action</li>
+                <li><strong>sparring_default</strong> : Défi par défaut sur les objectifs concrets</li>
+            </ul>
+            
+            <div class="code-block">
+DÉCLENCHEMENT DES SCÉNARIOS:
+
+• "reconversion|devenir|métier|objectif" → sparring_reconversion
+• "impact|ia|remplacer|automatisation" → sparring_impactIA  
+• "compétences|skills|apprendre|formation" → sparring_competences
+• "motivation|motivé|énergie|démotivé" → sparring_motivation
+• Par défaut → sparring_default
+            </div>
+        </div>
+        
+        <div class="scenario-examples">
+            <div class="scenario-card">
+                <h4>🥊 Impact IA</h4>
+                <div class="challenge-message">
+                    "Pourquoi tu devrais être protégé si tu ne te formes pas activement ? Ton score à 67% ne va pas magiquement baisser."
+                </div>
+                <p><strong>Questions qui fâchent :</strong></p>
+                <ul>
+                    <li>Tu es à 34% sur Docker depuis combien de temps ?</li>
+                    <li>Combien de projets concrets tu as faits ce mois-ci ?</li>
+                    <li>Tu lis sur l'IA ou tu pratique l'IA ?</li>
+                </ul>
+            </div>
+            
+            <div class="scenario-card">
+                <h4>🥊 Reconversion</h4>
+                <div class="challenge-message">
+                    "80% des gens qui disent vouloir 'devenir DevOps' abandonnent en 3 mois. Pourquoi tu serais différent ?"
+                </div>
+                <p><strong>Questions qui fâchent :</strong></p>
+                <ul>
+                    <li>Qu'est-ce que TU apportes de différent des 10,000 autres candidats ?</li>
+                    <li>Tu as une vraie compréhension de ce que fait un DevOps au quotidien ?</li>
+                    <li>Ton portfolio montre-t-il que tu es sérieux ou c'est juste "une idée" ?</li>
+                </ul>
+            </div>
+            
+            <div class="scenario-card">
+                <h4>🥊 Compétences</h4>
+                <div class="challenge-message">
+                    "Tout le monde veut 'développer ses compétences'. C'est devenu un cliché."
+                </div>
+                <p><strong>Challenge :</strong></p>
+                <ul>
+                    <li>Montre-moi UN projet que tu as fini cette semaine</li>
+                    <li>Pas commencé. FINI.</li>
+                    <li>Si tu n'en as pas, tu ne développes pas tes compétences</li>
+                </ul>
+            </div>
+            
+            <div class="scenario-card">
+                <h4>🥊 Motivation</h4>
+                <div class="challenge-message">
+                    "La motivation c'est comme les émotions : ça va, ça vient. Mais les gens qui réussissent, ils n'attendent pas la motivation."
+                </div>
+                <p><strong>Challenge brutal :</strong></p>
+                <ul>
+                    <li>Si tu étais vraiment motivé, tu aurais déjà fini Docker</li>
+                    <li>Si tu étais vraiment motivé, tu aurais déjà postulé à 5 offres</li>
+                    <li>Si tu étais vraiment motivé, tu aurais déjà un portfolio à jour</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>🎨 Feedback Visuel :</h2>
+        
+        <div class="visual-feedback">
+            <h3>🎨 Indicateurs Visuels du Mode Sparring :</h3>
+            <ul>
+                <li><strong>Bouton Sparring</strong> : Ring orange + glow orange + tooltip</li>
+                <li><strong>Avatar</strong> : Glow orange + pulse animation</li>
+                <li><strong>Nom Aegis</strong> : Icône 🥊 + texte "Mode Challenge Activé"</li>
+                <li><strong>Tooltip</strong> : "Mode Challenge activé 🥊"</li>
+            </ul>
+            
+            <div class="code-block">
+STYLES VISUELS:
+
+Bouton Actif:
+• bg-orange-500/30 text-orange-300
+• ring-2 ring-orange-400
+• transition-all
+
+Avatar Sparring:
+• glow: rgba(251, 146, 60, 0.6)
+• pulse: 1s ease-in-out infinite
+• prioritaire sur les autres états
+
+Nom Aegis:
+• Aegis 🥊 (icône orange)
+• "Mode Challenge Activé"
+            </div>
+        </div>
+        
+        <div class="button-states">
+            <div class="button-state inactive">
+                <h4>🛡️ Mode Normal</h4>
+                <p>Bouton gris</p>
+                <p>Avatar cyan</p>
+                <p>"Expert IA SkillShield"</p>
+            </div>
+            <div class="button-state active">
+                <h4>🥊 Mode Sparring</h4>
+                <p>Bouton orange + ring</p>
+                <p>Avatar orange + pulse</p>
+                <p>"Mode Challenge Activé"</p>
+            </div>
+        </div>
+        
+        <h2>💬 Messages d'Activation :</h2>
+        
+        <div class="activation-flow">
+            <h3>💬 Flux d'Activation du Mode Sparring :</h3>
+            <ul>
+                <li><strong>Activation</strong> : Message d'explication du challenge</li>
+                <li><strong>Désactivation</strong> : Message de félicitations</li>
+                <li><strong>Pendant le mode</strong> : Réponses challenges</li>
+                <li><strong>Transition</strong> : Basculement seamless entre modes</li>
+            </ul>
+            
+            <div class="code-block">
+MESSAGES D'ACTIVATION:
+
+ACTIVATION:
+"🥊 MODE SPARRING ACTIVÉ
+
+Je vais maintenant challenger tes idées et te pousser 
+dans tes retranchements.
+
+C'est inconfortable, mais c'est comme ça qu'on 
+progresse vraiment.
+
+Prêt ? 💪"
+
+DÉSACTIVATION:
+"🛡️ MODE SPARRING DÉSACTIVÉ
+
+Retour au mode empathique et bienveillant.
+
+Tu as fait du bon travail ! 👏"
+            </div>
+        </div>
+        
+        <h2>🔄 Intégration dans le Système :</h2>
+        
+        <div class="sparring-mode">
+            <h3>🔄 Intégration Seamless :</h3>
+            <ul>
+                <li><strong>findBestScenario</strong> : Priorité aux scénarios sparring en mode actif</li>
+                <li><strong>handleSendMessage</strong> : Passage du paramètre sparringMode</li>
+                <li><strong>SCENARIOS</strong> : Ajout des 5 scénarios de challenge</li>
+                <li><strong>AegisAvatar</strong> : Support du mode sparring avec effets visuels</li>
+            </ul>
+            
+            <div class="code-block">
+INTÉGRATION TECHNIQUE:
+
+1. findBestScenario(message, emotion, context, sparringMode)
+   → Vérification du mode sparring en priorité
+   → Retour des clés sparring_*
+
+2. handleSendMessage()
+   → Passage du sparringMode à findBestScenario
+   → Génération des réponses challenges
+
+3. SCENARIOS Object
+   → Ajout des 5 scénarios sparring
+   → Référence aux SPARRING_SCENARIOS
+
+4. AegisAvatar Component
+   → Support du prop sparringMode
+   → Effets visuels prioritaires
+            </div>
+        </div>
+        
+        <h2>🧪 Tests à Effectuer :</h2>
+        
+        <div class="feature-list">
+            <h3>🥊 Tests Mode Sparring :</h3>
+            <ul>
+                <li>Cliquer sur le bouton <strong>Swords (Orange)</strong> → Vérifier l'activation</li>
+                <li>Observer le message d'activation → Confirmer l'explication du challenge</li>
+                <li>Vérifier les effets visuels → Bouton ring orange, avatar glow orange</li>
+                <li>Confirmer le changement de nom → "Aegis 🥊" + "Mode Challenge Activé"</li>
+                <li>Tester la désactivation → Vérifier le message de félicitations</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🥊 Tests Scénarios de Challenge :</h3>
+            <ul>
+                <li>Envoyer "impact IA" → Vérifier le scénario sparring_impactIA</li>
+                <li>Envoyer "reconversion" → Vérifier le scénario sparring_reconversion</li>
+                <li>Envoyer "compétences" → Vérifier le scénario sparring_competences</li>
+                <li>Envoyer "motivation" → Vérifier le scénario sparring_motivation</li>
+                <li>Envoyer autre chose → Vérifier le scénario sparring_default</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🥊 Tests Questions qui Fâchent :</h3>
+            <ul>
+                <li>Vérifier les questions directes → Confirmer le ton challenge</li>
+                <li>Observer les faits brutaux → Vérifier la confrontation</li>
+                <li>Analyser les défis concrets → Confirmer les actions mesurables</li>
+                <li>Examiner le ton → Vérifier l'approche "avocat du diable"</li>
+                <li>Tester la cohérence → Confirmer la logique de challenge</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🎨 Tests Feedback Visuel :</h3>
+            <ul>
+                <li>Vérifier le bouton actif → Ring orange + glow</li>
+                <li>Observer l'avatar → Glow orange + pulse</li>
+                <li>Confirmer le nom → Icône 🥊 + texte</li>
+                <li>Tester le tooltip → "Mode Challenge activé 🥊"</li>
+                <li>Vérifier la transition → Animation smooth</li>
+            </ul>
+        </div>
+        
+        <h2>🎯 Tests de Scénarios Complets :</h2>
+        
+        <div class="feature-list">
+            <h3>🥊 Scénario Challenge Complet :</h3>
+            <ul>
+                <li>Activer le mode sparring → Observer l'activation</li>
+                <li>Envoyer "je veux devenir DevOps" → Vérifier le challenge</li>
+                <li>Répondre aux questions → Observer la persistance du mode</li>
+                <li>Changer de sujet → Vérifier l'adaptation du challenge</li>
+                <li>Désactiver le mode → Confirmer le retour au mode normal</li>
+            </ul>
+        </div>
+        
+        <div class="feature-list">
+            <h3>🔄 Scénario Transition Modes :</h3>
+            <ul>
+                <li>Mode normal → Envoyer message → Vérifier réponse empathique</li>
+                <li>Activer sparring → Envoyer même message → Vérifier réponse challenge</li>
+                <li>Désactiver sparring → Envoyer message → Vérifier retour empathique</li>
+                <li>Tester plusieurs cycles → Confirmer la stabilité</li>
+                <li>Analyser la cohérence → Vérifier la logique des réponses</li>
+            </ul>
+        </div>
+        
+        <div class="status info">
+            🥊 Le Mode Sparring Partner offre une approche "avocat du diable" pour challenger l'utilisateur et le pousser dans ses retranchements, avec des questions directes et des défis concrets
+        </div>
+    </div>
+</body>
+</html>

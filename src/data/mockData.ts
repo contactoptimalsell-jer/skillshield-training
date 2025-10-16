@@ -1,0 +1,430 @@
+// Mock data for SkillShield Dashboard
+
+export interface User {
+  id: string
+  name: string
+  email: string
+  avatar: string
+  job: string
+  sector: string
+  experience: number
+  plan: 'Sentinelle' | 'Bouclier' | 'Forteresse'
+  subscriptionDate: string
+  nextBilling: string
+  skills: string[]
+  reconversionGoal: string
+}
+
+export interface RiskScore {
+  current: number
+  previous: number
+  trend: 'up' | 'down' | 'stable'
+  level: 'Faible' | 'Modéré' | 'Élevé' | 'Critique'
+  timeline: string
+  breakdown: {
+    taskAutomation: number
+    marketSaturation: number
+    adaptiveSkills: number
+    sectorExposure: number
+  }
+  evolution: Array<{
+    month: string
+    score: number
+    events?: string[]
+  }>
+}
+
+export interface AIAlert {
+  id: string
+  type: 'critical' | 'warning' | 'info' | 'opportunity'
+  title: string
+  description: string
+  source: string
+  date: string
+  impactScore: number
+  isRead: boolean
+  actions: string[]
+  relatedFormation?: string
+}
+
+export interface Formation {
+  id: string
+  title: string
+  description: string
+  duration: number
+  level: 'Débutant' | 'Intermédiaire' | 'Avancé'
+  rating: number
+  reviews: number
+  price: number
+  isIncluded: boolean
+  progress?: number
+  status: 'not_started' | 'in_progress' | 'completed'
+  certification: boolean
+  skills: string[]
+}
+
+export interface Bootcamp {
+  id: string
+  title: string
+  startDate: string
+  duration: number
+  spotsLeft: number
+  maxSpots: number
+  level: 'Débutant' | 'Intermédiaire' | 'Avancé'
+  description: string
+  program: string[]
+  prerequisites: string[]
+  finalProject: string
+  isReserved: boolean
+}
+
+export interface ReconversionPlan {
+  id: string
+  title: string
+  targetJob: string
+  duration: number
+  successProbability: number
+  totalHours: number
+  completedHours: number
+  phases: Array<{
+    title: string
+    duration: string
+    skills: string[]
+    status: 'completed' | 'in_progress' | 'upcoming'
+    progress: number
+  }>
+  alternativeJobs: Array<{
+    title: string
+    similarity: number
+    salary: number
+  }>
+}
+
+export interface SectorReport {
+  id: string
+  title: string
+  sector: string
+  publishDate: string
+  pages: number
+  readTime: number
+  summary: string
+  content: string[]
+  downloadUrl: string
+}
+
+// Mock User Data
+export const mockUser: User = {
+  id: 'user_123',
+  name: 'Marie Dubois',
+  email: 'marie.dubois@email.com',
+  avatar: 'MD',
+  job: 'Développeuse Frontend',
+  sector: 'Technologie & Digital',
+  experience: 5,
+  plan: 'Bouclier',
+  subscriptionDate: '2024-10-01',
+  nextBilling: '2024-11-01',
+  skills: ['React', 'JavaScript', 'CSS', 'TypeScript'],
+  reconversionGoal: 'DevOps Engineer'
+}
+
+// Mock Risk Score Data
+export const mockRiskScore: RiskScore = {
+  current: 67,
+  previous: 65,
+  trend: 'up',
+  level: 'Modéré',
+  timeline: '18 mois',
+  breakdown: {
+    taskAutomation: 75,
+    marketSaturation: 60,
+    adaptiveSkills: 45,
+    sectorExposure: 70
+  },
+  evolution: [
+    { month: '2024-01', score: 62 },
+    { month: '2024-02', score: 61 },
+    { month: '2024-03', score: 63 },
+    { month: '2024-04', score: 64 },
+    { month: '2024-05', score: 65 },
+    { month: '2024-06', score: 66, events: ['GPT-4.5 Release'] },
+    { month: '2024-07', score: 67 },
+    { month: '2024-08', score: 66 },
+    { month: '2024-09', score: 67 },
+    { month: '2024-10', score: 67, events: ['Formation React complétée'] }
+  ]
+}
+
+// Mock AI Alerts
+export const mockAIAlerts: AIAlert[] = [
+  {
+    id: 'alert_1',
+    type: 'critical',
+    title: 'ChatGPT Code Interpreter impacte 40% des tâches de développement frontend',
+    description: 'L\'outil permet désormais d\'automatiser la génération de composants React et la correction de bugs CSS.',
+    source: 'TechCrunch, OpenAI',
+    date: '2024-10-09T10:30:00Z',
+    impactScore: 8.5,
+    isRead: false,
+    actions: [
+      'Suivre la formation "Prompt Engineering Avancé"',
+      'Lire l\'analyse sectorielle complète',
+      'Planifier un coaching pour adapter votre stratégie'
+    ],
+    relatedFormation: 'Prompt Engineering Avancé'
+  },
+  {
+    id: 'alert_2',
+    type: 'opportunity',
+    title: 'Formation React avancé démarre dans 5 jours',
+    description: 'Nouvelle session disponible pour React 18 et Concurrent Features.',
+    source: 'SkillShield Formation',
+    date: '2024-10-09T08:15:00Z',
+    impactScore: 6.0,
+    isRead: true,
+    actions: [
+      'Réserver votre place',
+      'Voir le programme détaillé'
+    ],
+    relatedFormation: 'React 18 Avancé'
+  },
+  {
+    id: 'alert_3',
+    type: 'warning',
+    title: 'Analyse sectorielle mise à jour : Technologie & Digital',
+    description: 'Nouveau rapport disponible avec les dernières tendances du marché.',
+    source: 'SkillShield Analytics',
+    date: '2024-10-08T14:20:00Z',
+    impactScore: 7.2,
+    isRead: false,
+    actions: [
+      'Lire le rapport complet',
+      'Télécharger en PDF'
+    ]
+  },
+  {
+    id: 'alert_4',
+    type: 'info',
+    title: 'Nouvelle IA dans votre secteur : GitHub Copilot X',
+    description: 'Amélioration significative de l\'assistance au développement.',
+    source: 'GitHub Blog',
+    date: '2024-10-07T16:45:00Z',
+    impactScore: 5.5,
+    isRead: true,
+    actions: [
+      'Tester l\'outil',
+      'Suivre la formation GitHub'
+    ]
+  }
+]
+
+// Mock Formations
+export const mockFormations: Formation[] = [
+  {
+    id: 'formation_1',
+    title: 'Docker & Kubernetes Mastery',
+    description: 'Apprenez à containeriser et orchestrer vos applications avec Docker et Kubernetes.',
+    duration: 45,
+    level: 'Intermédiaire',
+    rating: 4.8,
+    reviews: 2340,
+    price: 299,
+    isIncluded: true,
+    progress: 23,
+    status: 'in_progress',
+    certification: true,
+    skills: ['Docker', 'Kubernetes', 'DevOps', 'CI/CD']
+  },
+  {
+    id: 'formation_2',
+    title: 'React 18 Avancé',
+    description: 'Maîtrisez les nouvelles fonctionnalités de React 18 et Concurrent Features.',
+    duration: 32,
+    level: 'Avancé',
+    rating: 4.9,
+    reviews: 1890,
+    price: 199,
+    isIncluded: true,
+    status: 'not_started',
+    certification: true,
+    skills: ['React', 'JavaScript', 'Concurrent Features', 'Suspense']
+  },
+  {
+    id: 'formation_3',
+    title: 'Prompt Engineering Avancé',
+    description: 'Optimisez vos interactions avec l\'IA pour maximiser la productivité.',
+    duration: 18,
+    level: 'Intermédiaire',
+    rating: 4.7,
+    reviews: 1567,
+    price: 149,
+    isIncluded: true,
+    status: 'not_started',
+    certification: false,
+    skills: ['IA', 'Prompt Engineering', 'Productivité', 'Automatisation']
+  },
+  {
+    id: 'formation_4',
+    title: 'CI/CD avec GitHub Actions',
+    description: 'Automatisez vos déploiements avec GitHub Actions.',
+    duration: 20,
+    level: 'Intermédiaire',
+    rating: 4.6,
+    reviews: 1234,
+    price: 179,
+    isIncluded: true,
+    status: 'not_started',
+    certification: true,
+    skills: ['GitHub Actions', 'CI/CD', 'DevOps', 'Automatisation']
+  }
+]
+
+// Mock Bootcamps
+export const mockBootcamps: Bootcamp[] = [
+  {
+    id: 'bootcamp_1',
+    title: 'API REST avec Node.js',
+    startDate: '2024-10-15T09:00:00Z',
+    duration: 5,
+    spotsLeft: 12,
+    maxSpots: 20,
+    level: 'Intermédiaire',
+    description: 'Builder une API complète en 5 jours intensifs',
+    program: [
+      'Jour 1 : Setup & Architecture',
+      'Jour 2 : Routes & Middleware',
+      'Jour 3 : Base de données',
+      'Jour 4 : Authentification & Sécurité',
+      'Jour 5 : Déploiement & Tests'
+    ],
+    prerequisites: ['JavaScript intermédiaire'],
+    finalProject: 'API production-ready',
+    isReserved: false
+  },
+  {
+    id: 'bootcamp_2',
+    title: 'DevOps avec AWS',
+    startDate: '2024-10-22T09:00:00Z',
+    duration: 7,
+    spotsLeft: 8,
+    maxSpots: 15,
+    level: 'Avancé',
+    description: 'Maîtrisez AWS pour le DevOps en une semaine',
+    program: [
+      'Jour 1-2 : Infrastructure AWS',
+      'Jour 3-4 : Automatisation Terraform',
+      'Jour 5-6 : Monitoring & Logs',
+      'Jour 7 : Projet final'
+    ],
+    prerequisites: ['Docker', 'Linux', 'Networking'],
+    finalProject: 'Infrastructure complète sur AWS',
+    isReserved: true
+  }
+]
+
+// Mock Reconversion Plan
+export const mockReconversionPlan: ReconversionPlan = {
+  id: 'plan_1',
+  title: 'Transition vers DevOps Engineer',
+  targetJob: 'DevOps Engineer',
+  duration: 12,
+  successProbability: 78,
+  totalHours: 450,
+  completedHours: 47,
+  phases: [
+    {
+      title: 'Fondations (0-3 mois)',
+      duration: '3 mois',
+      skills: ['Docker', 'Kubernetes', 'CI/CD'],
+      status: 'in_progress',
+      progress: 23
+    },
+    {
+      title: 'Spécialisation (3-6 mois)',
+      duration: '3 mois',
+      skills: ['Terraform', 'Monitoring', 'AWS'],
+      status: 'upcoming',
+      progress: 0
+    },
+    {
+      title: 'Professionnalisation (6-12 mois)',
+      duration: '6 mois',
+      skills: ['Certifications', 'Portfolio', 'Networking'],
+      status: 'upcoming',
+      progress: 0
+    }
+  ],
+  alternativeJobs: [
+    {
+      title: 'Site Reliability Engineer',
+      similarity: 85,
+      salary: 65000
+    },
+    {
+      title: 'Cloud Architect',
+      similarity: 72,
+      salary: 75000
+    },
+    {
+      title: 'Platform Engineer',
+      similarity: 68,
+      salary: 60000
+    }
+  ]
+}
+
+// Mock Sector Reports
+export const mockSectorReports: SectorReport[] = [
+  {
+    id: 'report_1',
+    title: 'Rapport Q4 2024 : Technologie & Digital',
+    sector: 'Technologie & Digital',
+    publishDate: '2024-10-04T00:00:00Z',
+    pages: 42,
+    readTime: 25,
+    summary: 'Analyse complète du secteur technologique avec focus sur l\'impact de l\'IA.',
+    content: [
+      'État du marché et tendances',
+      'Technologies émergentes impactantes',
+      'Compétences les plus demandées',
+      'Prévisions 2025-2027',
+      'Opportunités de pivot'
+    ],
+    downloadUrl: '/reports/tech-digital-q4-2024.pdf'
+  }
+]
+
+// Dashboard widgets data
+export const dashboardWidgets = {
+  protectionStatus: {
+    plan: 'Bouclier',
+    subscriptionDate: '2024-10-01',
+    nextBilling: '2024-11-01',
+    isActive: true
+  },
+  weeklyAlerts: mockAIAlerts.slice(0, 3),
+  formationProgress: {
+    current: 'Docker & Kubernetes Mastery',
+    progress: 23,
+    timeLeft: '2 mois 12 jours',
+    nextCourse: 'Chapitre 4 : Services et Load Balancing'
+  },
+  recommendedActions: [
+    {
+      title: 'Compléter votre profil de compétences',
+      progress: 70,
+      priority: 'high'
+    },
+    {
+      title: 'Réserver votre session de coaching mensuelle',
+      progress: 0,
+      priority: 'medium'
+    },
+    {
+      title: 'Explorer les bootcamps disponibles',
+      progress: 0,
+      priority: 'low'
+    }
+  ]
+}
+
