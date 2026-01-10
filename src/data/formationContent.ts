@@ -6929,6 +6929,6072 @@ ne sera pas remplacé.
 Il deviendra indispensable.`
 }
 
+// Contenu de la formation "IA de Raisonnement - Secteur 1"
+export const iaRaisonnementContent: FormationContent = {
+  formationId: 'formation_ia_raisonnement',
+  introduction: `Ce secteur d'outils existe pour augmenter une capacité humaine très spécifique :
+
+👉 la capacité à penser avec de la complexité,
+👉 à structurer un raisonnement,
+👉 à dialoguer avec ses propres idées.
+
+Contrairement à une idée répandue, ces IA ne sont pas là pour :
+• "donner des réponses"
+• "dire quoi faire"
+• "remplacer l'expertise"
+
+Elles existent parce que le travail moderne a dépassé la capacité cognitive individuelle.
+
+Le problème humain réel qu'elles adressent
+
+Aujourd'hui, un professionnel doit :
+• traiter trop d'informations
+• décider trop vite
+• comprendre trop de dimensions en même temps
+• justifier ses décisions
+• expliquer à des non-experts
+
+👉 Le cerveau humain est excellent pour juger
+👉 Mais médiocre pour traiter des volumes abstraits et simultanés
+
+Ces IA servent donc à : externaliser une partie du raisonnement mécanique pour libérer le jugement humain.`,
+  parts: [
+    {
+      title: 'AXE 1 — RÔLE FONDAMENTAL DANS LE TRAVAIL HUMAIN',
+      sections: [
+        {
+          title: '1. POURQUOI CE SECTEUR EXISTE (RAISON PROFONDE)',
+          content: [
+            'Ce secteur d\'outils existe pour augmenter une capacité humaine très spécifique :',
+            '',
+            '👉 la capacité à penser avec de la complexité,',
+            '👉 à structurer un raisonnement,',
+            '👉 à dialoguer avec ses propres idées.',
+            '',
+            'Contrairement à une idée répandue, ces IA ne sont pas là pour :',
+            '• "donner des réponses"',
+            '• "dire quoi faire"',
+            '• "remplacer l\'expertise"',
+            '',
+            'Elles existent parce que le travail moderne a dépassé la capacité cognitive individuelle.'
+          ]
+        },
+        {
+          title: '2. CE QUE CES IA SONT RÉELLEMENT (ET CE QU\'ELLES NE SONT PAS)',
+          content: [
+            'Ce qu\'elles sont :',
+            '',
+            'Des simulateurs de raisonnement linguistique capables de :',
+            '• reformuler une pensée',
+            '• structurer un problème',
+            '• explorer des hypothèses',
+            '• faire émerger des angles morts',
+            '• dialoguer sans fatigue ni ego',
+            '',
+            'Exemples d\'outils :',
+            '• ChatGPT',
+            '• Claude',
+            '• Gemini',
+            '',
+            '👉 Ce sont des miroirs cognitifs augmentés.',
+            '',
+            'Ce qu\'elles ne sont PAS :',
+            '',
+            '❌ des sources de vérité',
+            '❌ des autorités',
+            '❌ des décideurs',
+            '❌ des experts responsables',
+            '',
+            'Elles n\'ont :',
+            '• aucune compréhension du réel',
+            '• aucune intuition',
+            '• aucune responsabilité',
+            '• aucune conscience des conséquences',
+            '',
+            '👉 Elles parlent bien, mais ne savent rien au sens humain'
+          ]
+        },
+        {
+          title: '3. LA FONCTION CENTRALE : RENDRE LA PENSÉE EXPLICITE',
+          content: [
+            'Un point clé que peu de formations expliquent :',
+            '',
+            'Ces IA forcent le professionnel à expliciter sa pensée.',
+            '',
+            'Or, dans la réalité :',
+            '• beaucoup de décisions sont prises sur intuition',
+            '• beaucoup de raisonnements sont implicites',
+            '• beaucoup de choix sont mal formalisés',
+            '',
+            'L\'IA oblige à :',
+            '• poser le problème',
+            '• formuler les hypothèses',
+            '• expliciter les contraintes',
+            '• nommer les incertitudes',
+            '',
+            '👉 Elle agit comme un révélateur de flou',
+            '',
+            'Ce n\'est pas confortable.',
+            'Mais c\'est extrêmement puissant.'
+          ]
+        },
+        {
+          title: '4. POURQUOI CE SECTEUR EST FONDATIONNEL (AVANT TOUS LES AUTRES)',
+          content: [
+            'Sans ce secteur :',
+            '• l\'IA de rédaction produit du vide',
+            '• l\'IA d\'analyse produit des chiffres sans sens',
+            '• l\'IA d\'automatisation automatise des erreurs',
+            '• l\'IA métier devient dangereuse',
+            '',
+            '👉 Le raisonnement précède l\'exécution',
+            '',
+            'Un professionnel qui n\'a pas appris à :',
+            '• raisonner avec l\'IA',
+            '• dialoguer avec ses hypothèses',
+            '• challenger ses décisions',
+            '',
+            '👉 ne devrait pas utiliser les autres secteurs',
+            '',
+            'C\'est exactement comme : automatiser une usine sans comprendre le process'
+          ]
+        },
+        {
+          title: '5. LE RÔLE HUMAIN QUI NE DISPARAÎTRA JAMAIS DANS CE SECTEUR',
+          content: [
+            'Même avec des IA très avancées, certaines fonctions restent strictement humaines :',
+            '',
+            '🔹 Le jugement',
+            'Décider malgré l\'incertitude.',
+            '',
+            '🔹 L\'arbitrage',
+            'Choisir entre deux mauvaises options.',
+            '',
+            '🔹 La responsabilité',
+            'Assumer les conséquences.',
+            '',
+            '🔹 L\'éthique',
+            'Définir ce qui est acceptable ou non.',
+            '',
+            '🔹 Le sens',
+            'Pourquoi on fait quelque chose.',
+            '',
+            '👉 L\'IA peut simuler un raisonnement,',
+            'elle ne peut pas porter une décision.'
+          ]
+        },
+        {
+          title: 'SYNTHÈSE AXE 1',
+          content: [
+            '👉 Les IA de raisonnement ne servent pas à avoir raison.',
+            'Elles servent à mieux comprendre pourquoi on décide.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 2 — CE QUE L\'IA FAIT BIEN / MAL (ET POURQUOI)',
+      sections: [
+        {
+          title: '1. CE QUE CES IA FONT EXTRÊMEMENT BIEN (LEUR VRAIE FORCE)',
+          content: [
+            '1.1 Structurer un raisonnement flou',
+            '',
+            'Les IA de raisonnement excellent dans une chose très précise :',
+            '👉 transformer du flou en structure verbale exploitable.',
+            '',
+            'Elles savent :',
+            '• découper un problème',
+            '• identifier des dimensions',
+            '• organiser des idées',
+            '• mettre de l\'ordre là où l\'humain a une intuition diffuse',
+            '',
+            '👉 Elle n\'apporte pas la réponse, elle rend le problème lisible.',
+            '',
+            '1.2 Explorer des hypothèses sans fatigue ni ego',
+            '',
+            'L\'humain a des limites :',
+            '• fatigue cognitive',
+            '• biais de confirmation',
+            '• attachement à ses idées',
+            '• peur d\'avoir tort',
+            '',
+            'L\'IA, elle :',
+            '• n\'a pas d\'ego',
+            '• n\'est pas fatiguée',
+            '• accepte d\'explorer des pistes absurdes',
+            '• peut challenger sans froisser',
+            '',
+            '👉 C\'est un sparring-partner intellectuel, pas un décideur.',
+            '',
+            '1.3 Reformuler et traduire (compétence sous-estimée)',
+            '',
+            'Dans le monde professionnel :',
+            '• les problèmes viennent souvent d\'incompréhensions',
+            '• les décisions échouent par mauvaise formulation',
+            '• les conflits naissent d\'ambiguïtés',
+            '',
+            'L\'IA est très forte pour :',
+            '• reformuler un raisonnement',
+            '• traduire un langage expert en langage non expert',
+            '• clarifier une position',
+            '',
+            '👉 Clarifier ≠ simplifier.',
+            '👉 L\'IA aide à rendre intelligible sans trahir.'
+          ]
+        },
+        {
+          title: '2. CE QUE CES IA FONT MAL (ET FERONT TOUJOURS MAL)',
+          content: [
+            '2.1 Elles ne comprennent PAS le réel',
+            '',
+            'Même si le langage est convaincant :',
+            '• l\'IA ne comprend pas le contexte vécu',
+            '• elle ne perçoit pas les enjeux humains',
+            '• elle ne ressent pas la gravité d\'une décision',
+            '',
+            '👉 Elle manipule des symboles.',
+            '👉 Elle ne comprend pas les conséquences.',
+            '',
+            '2.2 Elles ne savent pas ce qui est important',
+            '',
+            'L\'IA traite tout comme :',
+            '• également prioritaire',
+            '• également rationnel',
+            '• également pertinent',
+            '',
+            'Or, dans le réel :',
+            '• tout n\'a pas le même poids',
+            '• certains détails sont vitaux',
+            '• d\'autres sont insignifiants',
+            '',
+            '👉 La hiérarchisation est humaine.',
+            '',
+            '2.3 Elles hallucinent sans le savoir',
+            '',
+            'Point critique.',
+            '',
+            'Les IA peuvent :',
+            '• inventer des faits',
+            '• affirmer avec aplomb',
+            '• produire des raisonnements faux mais cohérents',
+            '',
+            '👉 Le danger n\'est pas l\'erreur.',
+            '👉 Le danger est l\'erreur convaincante.'
+          ]
+        },
+        {
+          title: '3. DIFFÉRENCE FONDAMENTALE : AIDE VS SUBSTITUTION',
+          content: [
+            'Usage sain (aide) :',
+            '• l\'IA éclaire',
+            '• l\'humain décide',
+            '• l\'humain assume',
+            '',
+            'Usage dangereux (substitution) :',
+            '• l\'IA tranche',
+            '• l\'humain suit',
+            '• personne n\'assume vraiment',
+            '',
+            '👉 Le glissement est souvent invisible.',
+            '',
+            'Phrase typique dangereuse : "C\'est ce que l\'IA recommande."',
+            '',
+            'Phrase professionnelle saine : "L\'IA m\'a aidé à explorer, j\'ai décidé autrement / en connaissance."'
+          ]
+        },
+        {
+          title: 'RÈGLE D\'OR DU SECTEUR 1',
+          content: [
+            'Si la sortie de l\'IA te rassure trop vite,',
+            'c\'est que tu n\'as pas assez réfléchi.',
+            '',
+            'L\'IA doit :',
+            '• créer du doute intelligent',
+            '• poser de meilleures questions',
+            '• rendre le raisonnement explicite',
+            '',
+            '👉 Pas fermer la réflexion.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 3 — USAGES PROFESSIONNELS CONCRETS (PAR MÉTIERS)',
+      sections: [
+        {
+          title: 'RÈGLE DE LECTURE IMPORTANTE',
+          content: [
+            'Dans tous les cas suivants, l\'IA de raisonnement (ex. ChatGPT) n\'est jamais :',
+            '• la source finale,',
+            '• l\'autorité,',
+            '• le décideur.',
+            '',
+            'Elle est :',
+            '👉 un espace de réflexion augmenté.'
+          ]
+        },
+        {
+          title: '1. DIRIGEANT / ENTREPRENEUR',
+          content: [
+            'Le dirigeant utilise l\'IA pour :',
+            '• poser le problème clairement',
+            '• expliciter ses hypothèses',
+            '• simuler plusieurs scénarios',
+            '• identifier les angles morts',
+            '',
+            'Exemples concrets :',
+            '• "Quels sont les risques non évidents de cette décision ?"',
+            '• "Si cette stratégie échoue, pourquoi échouera-t-elle ?"',
+            '• "Quelles hypothèses implicites suis-je en train de faire ?"',
+            '',
+            '👉 L\'IA devient un miroir stratégique.'
+          ]
+        },
+        {
+          title: '2. CONSULTANT / STRATÉGIE / ORGANISATION',
+          content: [
+            'L\'IA est utilisée pour :',
+            '• structurer une problématique client',
+            '• explorer plusieurs lectures possibles',
+            '• challenger une analyse',
+            '• préparer des entretiens plus pertinents',
+            '',
+            '👉 Le consultant gagne du temps pour le terrain humain.'
+          ]
+        },
+        {
+          title: '3. JURISTE / AVOCAT',
+          content: [
+            'L\'IA sert à :',
+            '• reformuler un raisonnement juridique',
+            '• traduire le droit pour un client non-juriste',
+            '• tester la cohérence d\'un raisonnement',
+            '• identifier des contre-arguments',
+            '',
+            '👉 Jamais pour conclure juridiquement.'
+          ]
+        },
+        {
+          title: '4. MÉDECIN / PROFESSIONNEL DE SANTÉ',
+          content: [
+            'L\'IA est utilisée pour :',
+            '• structurer un diagnostic différentiel',
+            '• explorer des hypothèses rares',
+            '• préparer une réflexion clinique',
+            '',
+            '👉 Toujours hors consultation patient directe',
+            '👉 Jamais comme verdict'
+          ]
+        },
+        {
+          title: 'PATTERN COMMUN À TOUS LES MÉTIERS',
+          content: [
+            'Bon usage :',
+            '• clarifier',
+            '• structurer',
+            '• challenger',
+            '• réfléchir plus profondément',
+            '',
+            'Mauvais usage :',
+            '• décider',
+            '• juger',
+            '• se déresponsabiliser',
+            '• aller trop vite'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 4 — OUTILS, ARCHITECTURE, WORKFLOWS & BONNES PRATIQUES',
+      sections: [
+        {
+          title: '1. LES TYPES D\'OUTILS DANS CE SECTEUR (NE PAS LES CONFONDRE)',
+          content: [
+            '1.1 Assistants conversationnels généralistes',
+            '',
+            'Exemples :',
+            '• ChatGPT',
+            '• Claude',
+            '• Gemini',
+            '',
+            'Rôle :',
+            '• raisonnement exploratoire',
+            '• clarification',
+            '• structuration',
+            '• reformulation',
+            '• dialogue itératif',
+            '',
+            '👉 C\'est la "salle de réflexion", pas la salle de décision.',
+            '',
+            '1.2 Assistants intégrés dans des outils de travail',
+            '',
+            'Exemples :',
+            '• Notion AI',
+            '• Microsoft Copilot',
+            '',
+            'Rôle :',
+            '• raisonnement contextualisé',
+            '• continuité documentaire',
+            '• aide à la structuration interne',
+            '',
+            '👉 Très utile pour les équipes, mais nécessite des règles claires.'
+          ]
+        },
+        {
+          title: '2. ARCHITECTURE PROFESSIONNELLE SAINE (MODÈLE RECOMMANDÉ)',
+          content: [
+            'Principe clé :',
+            '',
+            'L\'IA de raisonnement doit être placée AVANT la décision, jamais APRÈS.',
+            '',
+            'Architecture saine (exemple générique) :',
+            '1. Problème réel identifié (humain)',
+            '2. Travail de réflexion avec IA (exploration)',
+            '3. Synthèse humaine',
+            '4. Décision humaine',
+            '5. Communication humaine',
+            '6. Exécution (éventuellement automatisée)',
+            '',
+            '👉 L\'IA est en amont, jamais en aval.'
+          ]
+        },
+        {
+          title: '3. WORKFLOWS PROFESSIONNELS RECOMMANDÉS',
+          content: [
+            '3.1 Workflow "Décision complexe" (dirigeant, manager)',
+            '1. Formulation écrite du problème',
+            '2. Dialogue IA pour : hypothèses, scénarios, risques',
+            '3. Pause (temps humain)',
+            '4. Décision assumée',
+            '5. Rédaction humaine finale',
+            '',
+            '👉 La pause est essentielle (elle évite la soumission cognitive)',
+            '',
+            '3.2 Workflow "Analyse / Conseil"',
+            '1. Collecte d\'informations (humain)',
+            '2. Structuration avec IA',
+            '3. Validation terrain',
+            '4. Recommandation humaine',
+            '5. Suivi',
+            '',
+            '👉 L\'IA ne voit pas le terrain.'
+          ]
+        },
+        {
+          title: '4. BONNES PRATIQUES PROFESSIONNELLES (OBLIGATOIRES)',
+          content: [
+            '4.1 Toujours expliciter l\'intention',
+            '',
+            'Mauvais : "Donne-moi la meilleure réponse"',
+            '',
+            'Bon : "Aide-moi à explorer les options et les risques"',
+            '',
+            '👉 La qualité dépend de l\'intention, pas du prompt magique.',
+            '',
+            '4.2 Toujours garder une trace humaine',
+            '• décision écrite par l\'humain',
+            '• justification personnelle',
+            '• responsabilité claire',
+            '',
+            '👉 "L\'IA a dit" n\'est jamais acceptable',
+            '',
+            '4.3 Introduire une règle de contradiction',
+            '',
+            'Bonne pratique :',
+            '• demander à l\'IA de contredire sa propre réponse',
+            '• demander les pires scénarios',
+            '• demander les biais possibles',
+            '',
+            '👉 Cela restaure la pensée critique.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 5 — RISQUES, ÉTHIQUE, RESPONSABILITÉ & AVENIR',
+      sections: [
+        {
+          title: '1. LE RISQUE MAJEUR : LA DÉRESPONSABILISATION INVISIBLE',
+          content: [
+            'Le danger principal de ces IA n\'est ni technique, ni juridique.',
+            '',
+            '👉 Le danger est psychologique et organisationnel.',
+            '',
+            'Mécanisme typique :',
+            '• l\'IA parle bien',
+            '• elle rassure',
+            '• elle structure',
+            '• elle semble "plus logique que l\'humain"',
+            '',
+            'Progressivement :',
+            '• l\'humain doute de lui-même',
+            '• l\'IA devient une béquille',
+            '• la décision est "co-signée mentalement"',
+            '• la responsabilité devient floue',
+            '',
+            '👉 La faute n\'est jamais frontale.',
+            'Elle est progressive et silencieuse.',
+            '',
+            'Signal d\'alerte clair :',
+            '',
+            'Quand un professionnel dit : "Je ne suis pas sûr, mais l\'IA dit que…"',
+            '',
+            '👉 La ligne rouge est déjà franchie.'
+          ]
+        },
+        {
+          title: '2. CE QUI DOIT RESTER STRICTEMENT HUMAIN (TOUJOURS)',
+          content: [
+            'Aucune évolution technologique ne changera ces points :',
+            '',
+            '🔹 Le jugement final',
+            'Choisir malgré l\'incertitude.',
+            '',
+            '🔹 L\'arbitrage moral',
+            'Décider ce qui est acceptable.',
+            '',
+            '🔹 La hiérarchisation',
+            'Ce qui compte vraiment, maintenant.',
+            '',
+            '🔹 L\'assomption des conséquences',
+            'Dire "c\'est ma décision".',
+            '',
+            '🔹 Le sens',
+            'Pourquoi cette décision existe.',
+            '',
+            '👉 L\'IA peut éclairer.',
+            'Elle ne peut pas porter le poids.'
+          ]
+        },
+        {
+          title: '3. RESPONSABILITÉ : LA RÈGLE NON NÉGOCIABLE',
+          content: [
+            'La responsabilité ne se délègue jamais.',
+            'Même quand l\'IA a "raison".',
+            '',
+            'Dans tous les métiers à impact :',
+            '• dirigeant',
+            '• juriste',
+            '• médecin',
+            '• RH',
+            '• manager',
+            '• consultant',
+            '',
+            '👉 Celui qui décide doit pouvoir dire :',
+            '• pourquoi il a décidé',
+            '• ce qu\'il a ignoré',
+            '• ce qu\'il assume',
+            '',
+            'Si l\'IA empêche cela :',
+            '👉 elle est mal utilisée.'
+          ]
+        },
+        {
+          title: '4. POSTURE PROFESSIONNELLE RECOMMANDÉE (MANIFESTE)',
+          content: [
+            'Voici la posture à transmettre dans une formation sérieuse :',
+            '',
+            '• J\'utilise l\'IA pour clarifier, pas pour décider',
+            '• Je garde le doute comme outil professionnel',
+            '• Je sais quand ignorer une réponse',
+            '• J\'assume toujours mes choix',
+            '• Je protège ma capacité à penser seul'
+          ]
+        },
+        {
+          title: '5. TEST FINAL DE MATURITÉ (TRÈS SIMPLE)',
+          content: [
+            'Pose cette question à un professionnel :',
+            '',
+            '"Si l\'IA disparaît demain, peux-tu encore travailler correctement ?"',
+            '',
+            '• Oui → usage sain',
+            '• Non → dépendance installée'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `Le premier secteur d'outils IA n'augmente pas la productivité.
+Il augmente la responsabilité.
+
+C'est pour cela qu'il doit toujours être enseigné en premier.
+
+⸻
+
+SYNTHÈSE GLOBALE
+
+👉 Les IA de raisonnement sont des amplificateurs de maturité professionnelle.
+Elles élèvent les responsables.
+Elles exposent les fuyards.
+
+Les IA de raisonnement créent de la valeur là où il y a complexité, responsabilité et incertitude.
+Elles détruisent de la valeur dès qu'on leur délègue le jugement.
+
+👉 Les IA de raisonnement sont excellentes pour structurer, explorer et reformuler.
+Elles sont dangereuses dès qu'on leur demande de juger, prioriser ou décider.
+
+L'IA de raisonnement est un espace de dialogue, pas une autorité.
+
+Si elle t'aide à mieux penser → usage professionnel
+Si elle pense à ta place → dérive dangereuse`
+}
+
+// Contenu de la formation "IA de Production Rédactionnelle - Secteur 2"
+export const iaRedactionContent: FormationContent = {
+  formationId: 'formation_ia_redaction',
+  introduction: `Ce secteur d'outils existe pour répondre à une réalité simple mais brutale du travail moderne :
+
+👉 Le volume de production écrite a explosé
+👉 La valeur moyenne de cette production a chuté
+
+Aujourd'hui, un professionnel doit produire :
+• emails
+• comptes rendus
+• documents internes
+• propositions
+• contenus marketing
+• procédures
+• supports pédagogiques
+• notes juridiques ou administratives
+
+👉 Beaucoup plus que ce que le cerveau humain peut produire proprement, durablement et sans fatigue.
+
+Ces IA n'ont pas été créées pour "écrire à la place de l'humain",
+mais pour absorber la charge mécanique de l'écriture.`,
+  parts: [
+    {
+      title: 'AXE 1 — RÔLE FONDAMENTAL DANS LE TRAVAIL HUMAIN',
+      sections: [
+        {
+          title: '1. POURQUOI CE SECTEUR EXISTE (LE BESOIN RÉEL)',
+          content: [
+            'Ce secteur d\'outils existe pour répondre à une réalité simple mais brutale du travail moderne :',
+            '',
+            '👉 Le volume de production écrite a explosé',
+            '👉 La valeur moyenne de cette production a chuté',
+            '',
+            'Aujourd\'hui, un professionnel doit produire :',
+            '• emails',
+            '• comptes rendus',
+            '• documents internes',
+            '• propositions',
+            '• contenus marketing',
+            '• procédures',
+            '• supports pédagogiques',
+            '• notes juridiques ou administratives',
+            '',
+            '👉 Beaucoup plus que ce que le cerveau humain peut produire proprement, durablement et sans fatigue.'
+          ]
+        },
+        {
+          title: '2. LA DISTINCTION CLÉ : INTENTION VS EXÉCUTION',
+          content: [
+            'C\'est le point central de ce secteur, et le plus mal compris.',
+            '',
+            'Ce que l\'humain fait (et doit garder) :',
+            '• l\'intention',
+            '• le message',
+            '• la stratégie',
+            '• le ton juste',
+            '• la responsabilité du contenu',
+            '',
+            'Ce que l\'IA fait :',
+            '• produire une première version',
+            '• reformuler',
+            '• décliner',
+            '• adapter à un format',
+            '• accélérer l\'exécution',
+            '',
+            '👉 L\'IA est une machine d\'exécution linguistique, pas de sens.',
+            '',
+            'Quand on inverse les rôles :',
+            '• l\'IA décide quoi dire',
+            '• l\'humain valide vaguement',
+            '',
+            '👉 La valeur s\'effondre.'
+          ]
+        },
+        {
+          title: '3. CE QUE CE SECTEUR CHANGE STRUCTURELLEMENT DANS LE TRAVAIL',
+          content: [
+            'Avant ces IA :',
+            '• écrire prenait du temps',
+            '• le temps limitait la production',
+            '• le filtre naturel était l\'effort',
+            '',
+            'Aujourd\'hui :',
+            '• écrire est facile',
+            '• produire est instantané',
+            '• le filtre a disparu',
+            '',
+            '👉 Le problème n\'est plus "comment écrire",',
+            'mais "pourquoi écrire" et "pour qui".',
+            '',
+            'Ce secteur d\'IA déplace donc la valeur :',
+            '• de la production → vers la pertinence',
+            '• de l\'effort → vers la clarté',
+            '• de la quantité → vers la cohérence'
+          ]
+        },
+        {
+          title: 'RÈGLE FONDAMENTALE À TRANSMETTRE EN FORMATION',
+          content: [
+            'Si l\'IA écrit ce que tu n\'as pas encore pensé,',
+            'le texte sera vide, même s\'il est fluide.',
+            '',
+            'Si tu sais exactement ce que tu veux dire,',
+            'l\'IA devient un amplificateur puissant.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 2 — CE QUE CES IA FONT BIEN / MAL (ET POURQUOI)',
+      sections: [
+        {
+          title: '1. CE QUE CES IA FONT TRÈS BIEN (LEUR VRAIE UTILITÉ)',
+          content: [
+            '1.1 Produire vite un premier jet exploitable',
+            '',
+            'La force principale de ces IA n\'est pas la qualité finale.',
+            'C\'est la capacité à produire un premier état de matière.',
+            '',
+            'Elles excellent pour :',
+            '• sortir une structure',
+            '• poser un plan',
+            '• écrire un brouillon cohérent',
+            '• éviter la page blanche',
+            '• démarrer un document bloqué',
+            '',
+            '👉 Elles remplacent l\'effort initial, pas le travail final.',
+            '',
+            '1.2 Reformuler sans fatigue',
+            '',
+            'Un humain se lasse vite de :',
+            '• réécrire',
+            '• reformuler',
+            '• adapter un texte à plusieurs publics',
+            '• décliner un même message',
+            '',
+            'L\'IA, elle :',
+            '• ne se fatigue pas',
+            '• ne s\'agace pas',
+            '• reformule à l\'infini',
+            '• adapte à différents niveaux',
+            '',
+            '👉 C\'est un moteur de déclinaison, pas de création de sens.'
+          ]
+        },
+        {
+          title: '2. CE QUE CES IA FONT MAL (ET NE FERONT JAMAIS BIEN)',
+          content: [
+            '2.1 Elles ne savent pas ce qui est important',
+            '',
+            'L\'IA :',
+            '• écrit tout "proprement"',
+            '• donne le même poids à chaque idée',
+            '• ne hiérarchise pas naturellement',
+            '',
+            'Or, dans le réel :',
+            '• certaines phrases sont critiques',
+            '• d\'autres sont secondaires',
+            '• certaines doivent être dites',
+            '• d\'autres surtout pas',
+            '',
+            '👉 La hiérarchie du message est humaine.',
+            '',
+            '2.2 Elles produisent du "bon moyen" par défaut',
+            '',
+            'Sans intention claire, l\'IA produit :',
+            '• du texte fluide',
+            '• grammaticalement correct',
+            '• stylistiquement neutre',
+            '• parfaitement oubliable',
+            '',
+            '👉 Le risque n\'est pas l\'erreur.',
+            'Le risque est l\'insignifiance.',
+            '',
+            '2.3 Elles ne mesurent pas l\'impact relationnel',
+            '',
+            'L\'IA ne sait pas :',
+            '• si un message va vexer',
+            '• créer de la peur',
+            '• déclencher un conflit',
+            '• dégrader la confiance',
+            '',
+            '👉 Un texte "bien écrit" peut être humainement désastreux.'
+          ]
+        },
+        {
+          title: 'RÈGLE D\'OR DU SECTEUR 2',
+          content: [
+            'Si le texte te semble "correct" mais ne te ressemble pas,',
+            'il est probablement mauvais.',
+            '',
+            'Un bon usage doit produire un texte :',
+            '• que tu pourrais assumer publiquement',
+            '• que tu pourrais défendre',
+            '• qui reflète ton intention réelle'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 3 — USAGES PROFESSIONNELS CONCRETS (PAR MÉTIERS)',
+      sections: [
+        {
+          title: 'RÈGLE DE BASE (AVANT DE COMMENCER)',
+          content: [
+            'Dans tous les cas suivants, l\'IA rédactionnelle (ex. ChatGPT) doit être utilisée comme :',
+            '',
+            '👉 un moteur de rédaction assistée',
+            '❌ jamais comme un auteur autonome',
+            '❌ jamais comme un porte-voix non contrôlé'
+          ]
+        },
+        {
+          title: '1. DIRIGEANT / ENTREPRENEUR',
+          content: [
+            'Usage IA sain :',
+            '',
+            'L\'IA est utilisée pour :',
+            '• structurer un message stratégique',
+            '• clarifier une intention',
+            '• préparer une communication importante',
+            '• tester plusieurs formulations possibles',
+            '',
+            'Exemples concrets :',
+            '• "Aide-moi à structurer ce message de vision pour les équipes"',
+            '• "Propose trois formulations possibles, je choisis et j\'ajuste"',
+            '',
+            '👉 Le dirigeant garde la voix, l\'IA prépare la forme.',
+            '',
+            'Mauvais usage fréquent :',
+            '• publier directement un texte IA',
+            '• déléguer la formulation d\'une vision',
+            '',
+            '👉 Perte de crédibilité immédiate, même si le texte est "propre".'
+          ]
+        },
+        {
+          title: '2. MARKETING / COMMUNICATION',
+          content: [
+            'Usage IA sain :',
+            '',
+            'L\'IA sert à :',
+            '• produire des premières versions',
+            '• décliner un message sur plusieurs formats',
+            '• tester différents angles',
+            '• adapter un contenu à différents canaux',
+            '',
+            '👉 La stratégie marketing reste humaine.',
+            '',
+            'Mauvais usage :',
+            '• publier en masse sans vision',
+            '• produire du contenu générique',
+            '• laisser l\'IA définir le positionnement',
+            '',
+            '👉 Bruit marketing amplifié.'
+          ]
+        },
+        {
+          title: '3. RESSOURCES HUMAINES / MANAGEMENT',
+          content: [
+            'Usage IA sain :',
+            '',
+            'L\'IA est utilisée pour :',
+            '• reformuler des annonces de poste',
+            '• préparer un message délicat',
+            '• ajuster le ton (ferme mais respectueux)',
+            '• clarifier une communication interne',
+            '',
+            'Exemples :',
+            '• "Aide-moi à formuler ce feedback de façon constructive"',
+            '• "Reformule cette annonce sans jargon ni biais"',
+            '',
+            '👉 L\'IA prépare, le manager assume.',
+            '',
+            'Mauvais usage :',
+            '• envoyer des mails RH écrits par IA sans relecture',
+            '• automatiser la relation humaine',
+            '',
+            '👉 Destruction de la confiance.'
+          ]
+        },
+        {
+          title: '4. JURIDIQUE / ADMINISTRATIF',
+          content: [
+            'Usage IA sain :',
+            '',
+            'L\'IA sert à :',
+            '• produire des premiers jets',
+            '• reformuler un texte juridique',
+            '• vulgariser pour des non-juristes',
+            '• structurer des documents administratifs',
+            '',
+            '👉 Validation humaine obligatoire. Toujours.',
+            '',
+            'Mauvais usage :',
+            '• accepter un texte juridique IA tel quel',
+            '• ne pas vérifier les implications',
+            '',
+            '👉 Risque juridique majeur.'
+          ]
+        },
+        {
+          title: 'TEST SIMPLE D\'USAGE SAIN',
+          content: [
+            'Avant d\'envoyer un texte, se poser cette question :',
+            '',
+            '"Est-ce que j\'assume chaque phrase de ce document ?"',
+            '',
+            '• Oui → usage professionnel',
+            '• Non → dérive IA'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 4 — OUTILS, ARCHITECTURE, WORKFLOWS & BONNES PRATIQUES',
+      sections: [
+        {
+          title: '1. TYPOLOGIE DES OUTILS (NE PAS TOUT MÉLANGER)',
+          content: [
+            '1.1 Assistants rédactionnels généralistes',
+            '',
+            'Exemples :',
+            '• ChatGPT',
+            '• Claude',
+            '',
+            'Rôle :',
+            '• brouillons',
+            '• reformulations',
+            '• déclinaisons',
+            '• structuration de texte',
+            '',
+            '👉 Outils de pré-production, jamais de diffusion brute.',
+            '',
+            '1.2 IA intégrées aux outils de travail',
+            '',
+            'Exemples :',
+            '• Notion AI',
+            '• Microsoft Copilot',
+            '• Google Workspace',
+            '',
+            '👉 Très utiles en équipe, très dangereuses sans règles écrites.'
+          ]
+        },
+        {
+          title: '2. ARCHITECTURE PROFESSIONNELLE SAINE (MODÈLE DE RÉFÉRENCE)',
+          content: [
+            'Principe fondamental :',
+            '',
+            'L\'IA rédactionnelle doit intervenir AVANT la validation humaine, jamais APRÈS.',
+            '',
+            'Architecture recommandée (simple et robuste) :',
+            '1. Intention humaine claire',
+            '2. IA → brouillon / reformulation',
+            '3. Relecture humaine critique',
+            '4. Ajustement du ton, des mots, des silences',
+            '5. Validation finale humaine',
+            '6. Diffusion',
+            '',
+            '👉 L\'IA est un outil d\'atelier, pas de signature.'
+          ]
+        },
+        {
+          title: '3. WORKFLOWS CONCRETS PAR CONTEXTE',
+          content: [
+            '3.1 Workflow "Email sensible" (RH, management, direction)',
+            '',
+            'Bon workflow :',
+            '1. Clarifier l\'objectif (humain)',
+            '2. IA → proposer plusieurs formulations',
+            '3. Choix humain',
+            '4. Réécriture manuelle partielle',
+            '5. Envoi assumé',
+            '',
+            'À ne jamais faire :',
+            '• envoyer un mail IA sans modification',
+            '• utiliser l\'IA pour annoncer une décision difficile',
+            '',
+            '👉 Le message engage la relation, pas l\'outil.',
+            '',
+            '3.2 Workflow "Document stratégique" (consultant, dirigeant)',
+            '',
+            '1. Plan humain',
+            '2. IA → aide à rédiger les sections',
+            '3. Réorganisation humaine',
+            '4. Suppression volontaire (très important)',
+            '5. Version finale assumée',
+            '',
+            '👉 Un bon document est souvent plus court que la version IA.'
+          ]
+        },
+        {
+          title: '4. BONNES PRATIQUES PROFESSIONNELLES (NON NÉGOCIABLES)',
+          content: [
+            '4.1 Toujours séparer "aide à écrire" et "parole officielle"',
+            '',
+            'Règle simple :',
+            '• interne → IA très utile',
+            '• externe → vigilance maximale',
+            '',
+            '👉 Plus le texte engage l\'image, plus l\'humain doit intervenir.',
+            '',
+            '4.2 Introduire une règle de "réécriture humaine obligatoire"',
+            '',
+            'Bonne pratique organisationnelle :',
+            '• au moins 20–30 % du texte doit être modifié manuellement',
+            '• pas pour faire joli',
+            '• pour réintroduire la voix humaine'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 5 — RISQUES, ÉTHIQUE, RESPONSABILITÉ & AVENIR',
+      sections: [
+        {
+          title: '1. LE RISQUE MAJEUR : L\'INFLATION DU VIDE',
+          content: [
+            'Le danger principal de ces IA n\'est ni l\'erreur, ni même la standardisation.',
+            '',
+            '👉 Le danger est l\'inflation massive de contenus sans valeur.',
+            '',
+            'Ce phénomène est déjà visible :',
+            '• trop de mails',
+            '• trop de posts',
+            '• trop de documents',
+            '• trop de messages "bien écrits"',
+            '• trop peu de choses réellement utiles',
+            '',
+            '👉 Quand tout est fluide, plus rien n\'est marquant.',
+            '',
+            'Les organisations tombent alors dans un piège :',
+            '• elles communiquent plus',
+            '• mais sont moins écoutées',
+            '• produisent plus',
+            '• mais sont moins lues',
+            '',
+            '👉 La visibilité baisse à mesure que la production augmente.'
+          ]
+        },
+        {
+          title: '2. LE RISQUE HUMAIN : LA DILUTION DE LA VOIX ET DE L\'AUTORITÉ',
+          content: [
+            'L\'écriture professionnelle n\'est pas neutre.',
+            '',
+            'Elle construit :',
+            '• l\'autorité',
+            '• la crédibilité',
+            '• la confiance',
+            '• la légitimité',
+            '',
+            'Quand l\'IA prend trop de place :',
+            '• la voix devient générique',
+            '• le style se lisse',
+            '• la personnalité disparaît',
+            '• la parole perd du poids',
+            '',
+            '👉 Un texte sans voix est un texte sans auteur.',
+            'Un texte sans auteur est un texte sans responsabilité.'
+          ]
+        },
+        {
+          title: '3. CE QUI DOIT RESTER STRICTEMENT HUMAIN (TOUJOURS)',
+          content: [
+            'Même avec des IA très avancées, certaines fonctions restent inaliénables :',
+            '',
+            '🔹 La définition du message',
+            'Pourquoi on écrit. Pour qui. À quel moment.',
+            '',
+            '🔹 Le choix du silence',
+            'Savoir ne pas communiquer.',
+            '',
+            '🔹 Le ton juste',
+            'Ni trop, ni pas assez.',
+            'L\'IA ne sent pas les tensions.',
+            '',
+            '🔹 La prise de risque assumée',
+            'Dire quelque chose de clivant, si nécessaire.',
+            '',
+            '🔹 L\'engagement personnel',
+            '"Je signe ce que je dis."',
+            '',
+            '👉 L\'IA ne prend jamais de risque.',
+            'Donc elle ne peut pas porter une parole forte.'
+          ]
+        },
+        {
+          title: '4. POSTURE PROFESSIONNELLE À TRANSMETTRE (MANIFESTE)',
+          content: [
+            'Voici la posture à enseigner explicitement :',
+            '',
+            '• J\'utilise l\'IA pour écrire plus clairement, pas pour penser à ma place',
+            '• Je relis toujours ce que je diffuse',
+            '• Je supprime plus que je n\'ajoute',
+            '• Je privilégie l\'impact à la quantité',
+            '• J\'assume chaque mot publié'
+          ]
+        },
+        {
+          title: '5. TEST FINAL DE MATURITÉ (SIMPLE ET BRUTAL)',
+          content: [
+            'Pose cette question à une équipe :',
+            '',
+            '"Si tous vos textes étaient publiés avec votre nom en signature,',
+            'seriez-vous à l\'aise ?"',
+            '',
+            '• Oui → usage sain',
+            '• Non → dérive installée'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `Le secteur 2 ne concerne pas l'écriture.
+Il concerne la responsabilité de la parole professionnelle.
+
+⸻
+
+SYNTHÈSE GLOBALE
+
+👉 Les IA rédactionnelles n'augmentent pas la valeur de la parole.
+Elles rendent visible l'absence de pensée.
+
+Les IA rédactionnelles sont excellentes pour exécuter, décliner et reformuler.
+Elles sont dangereuses dès qu'on leur confie le sens, la hiérarchie ou la responsabilité du message.
+
+Les IA rédactionnelles créent de la valeur quand elles servent la clarté, la cohérence et l'intention humaine.
+Elles détruisent de la valeur quand elles produisent à la place du professionnel.`
+}
+
+// Contenu de la formation "IA d'Analyse et de Synthèse - Secteur 3"
+export const iaAnalyseContent: FormationContent = {
+  formationId: 'formation_ia_analyse',
+  introduction: `Ce secteur d'outils est né d'un constat simple mais implacable :
+
+👉 Les organisations produisent plus de données qu'elles ne peuvent en comprendre.
+
+Aujourd'hui, un professionnel doit composer avec :
+• des KPIs multiples et parfois contradictoires,
+• des tableaux de bord en silos,
+• des rapports longs et peu lus,
+• des décisions prises sous pression temporelle,
+• une confusion entre "mesurer" et "comprendre".
+
+👉 Le cerveau humain est mauvais pour lire des volumes de données abstraites.
+👉 Il est bon pour juger… à condition que la situation soit rendue lisible.
+
+Ces IA existent pour rendre le réel mesurable intelligible, pas pour décider à la place de l'humain.`,
+  parts: [
+    {
+      title: 'AXE 1 — RÔLE FONDAMENTAL DANS LE TRAVAIL HUMAIN',
+      sections: [
+        {
+          title: '1. POURQUOI CE SECTEUR EXISTE (LE PROBLÈME HUMAIN RÉEL)',
+          content: [
+            'Ce secteur d\'outils est né d\'un constat simple mais implacable :',
+            '',
+            '👉 Les organisations produisent plus de données qu\'elles ne peuvent en comprendre.',
+            '',
+            'Aujourd\'hui, un professionnel doit composer avec :',
+            '• des KPIs multiples et parfois contradictoires,',
+            '• des tableaux de bord en silos,',
+            '• des rapports longs et peu lus,',
+            '• des décisions prises sous pression temporelle,',
+            '• une confusion entre "mesurer" et "comprendre".',
+            '',
+            '👉 Le cerveau humain est mauvais pour lire des volumes de données abstraites.',
+            '👉 Il est bon pour juger… à condition que la situation soit rendue lisible.'
+          ]
+        },
+        {
+          title: '2. LA DISTINCTION CLÉ : INFORMATION, INDICATEUR, DÉCISION',
+          content: [
+            'C\'est l\'erreur la plus fréquente et la plus coûteuse.',
+            '',
+            '❌ Confusion courante :',
+            '• données → décisions automatiques',
+            '',
+            '✅ Séparation saine :',
+            '• données : faits bruts',
+            '• indicateurs : interprétations',
+            '• décisions : choix humains sous contrainte',
+            '',
+            '👉 L\'IA opère sur les deux premiers niveaux.',
+            'Jamais sur le troisième.',
+            '',
+            'Quand cette frontière disparaît :',
+            '• la décision se déshumanise,',
+            '• la responsabilité se dilue,',
+            '• les erreurs deviennent "systémiques".'
+          ]
+        },
+        {
+          title: '3. CE QUE CES IA SONT RÉELLEMENT',
+          content: [
+            'Les IA d\'analyse et de synthèse sont :',
+            '• des machines à corrélations',
+            '• des outils de réduction de complexité',
+            '• des amplificateurs de lisibilité',
+            '',
+            'Elles savent très bien :',
+            '• agréger des données hétérogènes,',
+            '• détecter des tendances,',
+            '• faire émerger des signaux faibles,',
+            '• synthétiser de grandes masses d\'information,',
+            '• produire des visualisations compréhensibles.',
+            '',
+            'Exemples d\'écosystèmes souvent utilisés :',
+            '• Power BI',
+            '• Tableau',
+            '• Looker',
+            '',
+            '👉 Elles transforment le bruit en structure.'
+          ]
+        },
+        {
+          title: '4. CE QU\'ELLES NE SONT PAS (ET NE SERONT JAMAIS)',
+          content: [
+            'Même très avancées, ces IA ne sont pas :',
+            '',
+            '❌ des arbitres',
+            '❌ des stratèges',
+            '❌ des juges',
+            '❌ des responsables',
+            '',
+            'Pourquoi ?',
+            'Parce qu\'elles :',
+            '• ne comprennent pas le contexte politique,',
+            '• ne connaissent pas les enjeux humains,',
+            '• ne perçoivent pas l\'urgence réelle,',
+            '• ne portent aucune conséquence.',
+            '',
+            '👉 Une corrélation n\'est pas une cause.',
+            'Un indicateur n\'est pas une décision.'
+          ]
+        },
+        {
+          title: 'RÈGLE FONDAMENTALE À TRANSMETTRE EN FORMATION',
+          content: [
+            'Si un indicateur décide à ta place,',
+            'c\'est que tu as abandonné ton rôle.',
+            '',
+            'Si un indicateur nourrit une discussion responsable,',
+            'il crée de la valeur.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 2 — CE QUE CES IA FONT BIEN / MAL (ET POURQUOI)',
+      sections: [
+        {
+          title: '1. CE QUE CES IA FONT EXTRÊMEMENT BIEN (LEUR VALEUR RÉELLE)',
+          content: [
+            '1.1 Agréger des volumes de données impossibles à lire humainement',
+            '',
+            'C\'est leur force numéro un.',
+            '',
+            'Ces IA savent :',
+            '• croiser des sources multiples (CRM, finance, marketing, opérations),',
+            '• traiter des volumes massifs,',
+            '• actualiser en continu,',
+            '• éliminer une partie du bruit.',
+            '',
+            '👉 Elles voient large là où l\'humain voit partiel.',
+            '',
+            '1.2 Faire émerger des tendances invisibles à l\'intuition',
+            '',
+            'L\'intuition humaine est :',
+            '• très bonne localement,',
+            '• très mauvaise sur des séries longues.',
+            '',
+            'Les IA excellent pour :',
+            '• détecter des tendances lentes,',
+            '• repérer des ruptures,',
+            '• identifier des signaux faibles,',
+            '• comparer des périodes ou segments.',
+            '',
+            '👉 Elles voient ce qui évolue, pas ce qui choque.',
+            '',
+            '1.3 Accélérer la compréhension collective',
+            '',
+            'Dans une organisation, le problème n\'est pas seulement de comprendre :',
+            '👉 c\'est de comprendre ensemble.',
+            '',
+            'Ces IA permettent :',
+            '• un langage commun autour des chiffres,',
+            '• des discussions moins émotionnelles,',
+            '• des arbitrages plus argumentés.',
+            '',
+            '👉 Elles facilitent la discussion.',
+            'Elles ne la remplacent pas.'
+          ]
+        },
+        {
+          title: '2. CE QUE CES IA FONT MAL (ET NE FERONT JAMAIS BIEN)',
+          content: [
+            '2.1 Elles confondent corrélation et causalité',
+            '',
+            'C\'est un point critique.',
+            '',
+            'Une IA peut dire :',
+            '• "Quand X augmente, Y baisse"',
+            'Mais elle ne sait pas :',
+            '• pourquoi',
+            '• dans quel contexte',
+            '• jusqu\'à quand',
+            '• avec quelles conséquences humaines',
+            '',
+            '👉 Une corrélation est une alerte, pas une explication.',
+            '',
+            '2.2 Elles donnent une illusion d\'objectivité',
+            '',
+            'Les chiffres ont un pouvoir psychologique énorme.',
+            '',
+            'Quand un tableau est :',
+            '• propre',
+            '• chiffré',
+            '• visuel',
+            '• cohérent',
+            '',
+            'Il paraît :',
+            '• neutre',
+            '• scientifique',
+            '• incontestable',
+            '',
+            '👉 C\'est faux.',
+            '',
+            'Chaque indicateur dépend :',
+            '• d\'un choix de métrique,',
+            '• d\'un périmètre,',
+            '• d\'un moment,',
+            '• d\'une interprétation humaine initiale.',
+            '',
+            '👉 L\'objectivité est une construction, pas un état.',
+            '',
+            '2.3 Elles ne savent pas ce qui est "grave"',
+            '',
+            'L\'IA traite :',
+            '• une variation de 2 %',
+            '• une chute critique',
+            '• un signal humain faible',
+            '',
+            '👉 sur le même plan statistique.',
+            '',
+            'Or, dans le réel :',
+            '• certaines anomalies sont vitales,',
+            '• d\'autres sont anecdotiques.',
+            '',
+            '👉 La gravité est un jugement humain.'
+          ]
+        },
+        {
+          title: 'RÈGLE D\'OR DU SECTEUR 3',
+          content: [
+            'Un bon indicateur doit susciter une question,',
+            'pas fermer une discussion.',
+            '',
+            'Si un tableau de bord :',
+            '• empêche le débat,',
+            '• impose une conclusion,',
+            '• réduit la responsabilité,',
+            '',
+            '👉 il est mal conçu ou mal utilisé.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 3 — USAGES PROFESSIONNELS CONCRETS (PAR MÉTIERS)',
+      sections: [
+        {
+          title: 'RÈGLE DE CADRE (INDISPENSABLE)',
+          content: [
+            'Dans tous les cas ci-dessous, les outils d\'analyse (ex. Power BI, Tableau) :',
+            '',
+            '👉 ne décident jamais',
+            '👉 ne remplacent pas la discussion humaine',
+            '👉 ne servent pas d\'alibi',
+            '',
+            'Ils servent à structurer un arbitrage, pas à l\'éviter.'
+          ]
+        },
+        {
+          title: '1. COMITÉ DE DIRECTION / DIRIGEANT',
+          content: [
+            'Usage IA sain :',
+            '',
+            'Les IA d\'analyse servent à :',
+            '• poser une photographie claire de la situation',
+            '• visualiser plusieurs scénarios',
+            '• rendre explicites les compromis',
+            '• nourrir un débat stratégique',
+            '',
+            'Exemples concrets :',
+            '• "Quels indicateurs contredisent notre intuition actuelle ?"',
+            '• "Qu\'est-ce que nous ne regardons jamais ?"',
+            '• "Quels risques sont sous-estimés ?"',
+            '',
+            '👉 Le CODIR débat mieux, mais décide toujours imparfaitement — et l\'assume.',
+            '',
+            'Mauvais usage fréquent :',
+            '• "Le dashboard dit qu\'on doit…"',
+            '• éviter un débat politique ou humain',
+            '',
+            '👉 Dérive grave de gouvernance.'
+          ]
+        },
+        {
+          title: '2. FINANCE / CONTRÔLE DE GESTION',
+          content: [
+            'Usage IA sain :',
+            '',
+            'L\'IA sert à :',
+            '• accélérer les clôtures',
+            '• détecter des anomalies',
+            '• simuler des scénarios financiers',
+            '• anticiper des tensions de trésorerie',
+            '',
+            'Outils souvent utilisés :',
+            '• Power BI',
+            '• Looker',
+            '',
+            '👉 Le financier devient un éclaireur, pas un simple producteur de chiffres.',
+            '',
+            'Mauvais usage :',
+            '• sur-optimisation des ratios',
+            '• décisions court-termistes',
+            '• oubli du contexte opérationnel',
+            '',
+            '👉 Les chiffres "optimisés" peuvent détruire la réalité terrain.'
+          ]
+        },
+        {
+          title: '3. MARKETING / GROWTH / COMMERCIAL',
+          content: [
+            'Usage IA sain :',
+            '',
+            'L\'IA est utilisée pour :',
+            '• analyser les parcours clients',
+            '• comparer les canaux',
+            '• identifier des segments rentables',
+            '• mesurer des tendances réelles',
+            '',
+            'Exemples :',
+            '• "Quel canal attire mais ne convertit pas ?"',
+            '• "Quelles campagnes performent à court terme mais détruisent la valeur ?"',
+            '',
+            '👉 L\'IA révèle les angles morts marketing.',
+            '',
+            'Mauvais usage :',
+            '• optimisation aveugle des clics',
+            '• décisions basées sur métriques superficielles',
+            '',
+            '👉 Ce qui se mesure facilement n\'est pas toujours ce qui compte.'
+          ]
+        },
+        {
+          title: '4. RESSOURCES HUMAINES / PEOPLE ANALYTICS',
+          content: [
+            'Usage IA sain :',
+            '',
+            'L\'IA sert à :',
+            '• détecter des signaux faibles (turnover, absentéisme)',
+            '• comprendre des tendances globales',
+            '• nourrir une réflexion managériale',
+            '',
+            '👉 Jamais pour décider individuellement.',
+            '',
+            'Mauvais usage (très dangereux) :',
+            '• scoring individuel automatisé',
+            '• décisions RH chiffrées sans dialogue',
+            '',
+            '👉 Risque éthique et social majeur.'
+          ]
+        },
+        {
+          title: 'QUESTION CLÉ À POSER EN RÉUNION',
+          content: [
+            '"Si ce tableau de bord n\'existait pas,',
+            'quelle décision prendrions-nous quand même ?"',
+            '',
+            '👉 Si personne ne sait répondre,',
+            '👉 l\'outil est devenu un refuge.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 4 — OUTILS, ARCHITECTURE, WORKFLOWS & BONNES PRATIQUES',
+      sections: [
+        {
+          title: '1. TYPOLOGIE DES OUTILS (BIEN LES DISTINGUER EST STRATÉGIQUE)',
+          content: [
+            '1.1 Outils de Business Intelligence (BI)',
+            '',
+            'Exemples :',
+            '• Power BI',
+            '• Tableau',
+            '• Looker',
+            '',
+            'Rôle :',
+            '• agréger des données',
+            '• produire des tableaux de bord',
+            '• visualiser des tendances',
+            '• suivre des indicateurs',
+            '',
+            'Forces :',
+            '• robustesse',
+            '• traçabilité',
+            '• partage collectif',
+            '',
+            'Limites :',
+            '• dépendance au modèle de données',
+            '• rigidité si mal conçu',
+            '• illusion de complétude',
+            '',
+            '👉 La BI montre ce que vous avez décidé de regarder. Pas plus.',
+            '',
+            '1.2 Outils d\'analyse augmentée par IA (Augmented Analytics)',
+            '',
+            'Ces outils ajoutent :',
+            '• détection automatique d\'anomalies',
+            '• suggestions de tendances',
+            '• explications textuelles des chiffres',
+            '',
+            'Risque :',
+            '• surconfiance',
+            '• lecture passive',
+            '• perte de réflexion critique',
+            '',
+            '👉 Plus l\'outil "explique", plus l\'humain doit questionner.'
+          ]
+        },
+        {
+          title: '2. ARCHITECTURE PROFESSIONNELLE SAINE (MODÈLE DE RÉFÉRENCE)',
+          content: [
+            'Principe fondamental :',
+            '',
+            'L\'architecture analytique doit soutenir la décision humaine, pas la remplacer.',
+            '',
+            'Architecture recommandée (simple, robuste) :',
+            '1. Définition humaine des questions',
+            '   • Pourquoi mesure-t-on ?',
+            '   • Quelle décision est concernée ?',
+            '2. Collecte & modélisation des données',
+            '   • périmètre clair',
+            '   • hypothèses explicites',
+            '3. Analyse & visualisation (IA incluse)',
+            '   • tendances',
+            '   • signaux faibles',
+            '4. Discussion humaine',
+            '   • confrontation des points de vue',
+            '   • remise en contexte',
+            '5. Décision humaine assumée',
+            '   • arbitrage',
+            '   • responsabilité claire',
+            '',
+            '👉 La discussion est une étape obligatoire, pas optionnelle.'
+          ]
+        },
+        {
+          title: '3. BONNES PRATIQUES PROFESSIONNELLES (ESSENTIELLES)',
+          content: [
+            '4.1 Limiter volontairement le nombre d\'indicateurs',
+            '',
+            'Règle saine :',
+            '• 5 à 9 indicateurs maximum par décision',
+            '',
+            '👉 Au-delà, on ne décide plus, on observe.',
+            '',
+            '4.2 Associer chaque indicateur à une décision possible',
+            '',
+            'Bonne question :',
+            '"Si cet indicateur bouge, que fait-on concrètement ?"',
+            '',
+            'Si la réponse est floue :',
+            '👉 l\'indicateur est inutile.',
+            '',
+            '4.3 Documenter les hypothèses',
+            '',
+            'Chaque tableau devrait préciser :',
+            '• ce qui est mesuré',
+            '• ce qui ne l\'est pas',
+            '• les biais connus',
+            '• la date de validité',
+            '',
+            '👉 Un indicateur sans hypothèse est dangereux.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 5 — RISQUES, ÉTHIQUE, RESPONSABILITÉ & AVENIR',
+      sections: [
+        {
+          title: '1. LE RISQUE MAJEUR : LA TYRANNIE DES INDICATEURS',
+          content: [
+            'Le danger principal de ce secteur n\'est pas l\'erreur de calcul.',
+            'C\'est la domination silencieuse des chiffres sur le jugement humain.',
+            '',
+            'Progressivement, on observe :',
+            '• des décisions "dictées" par des KPIs',
+            '• des débats écourtés par un graphique',
+            '• des arbitrages évités grâce à un tableau',
+            '• une dépolitisation des décisions humaines',
+            '',
+            '👉 Les chiffres deviennent une autorité morale implicite.',
+            '',
+            'Phrase dangereuse typique :',
+            '"On n\'a pas le choix, les chiffres sont clairs."',
+            '',
+            '👉 Faux. Il y a toujours un choix.',
+            'Les chiffres n\'enlèvent jamais la responsabilité.'
+          ]
+        },
+        {
+          title: '2. LE RISQUE ORGANISATIONNEL : LA PARALYSIE PAR L\'ANALYSE',
+          content: [
+            'Plus les outils sont puissants, plus un nouveau piège apparaît :',
+            '',
+            '👉 l\'attente de la certitude parfaite.',
+            '',
+            'Symptômes fréquents :',
+            '• multiplication des indicateurs',
+            '• reports de décisions',
+            '• demandes d\'analyses supplémentaires',
+            '• peur de "se tromper face aux chiffres"',
+            '',
+            '👉 L\'IA rend l\'incertitude visible,',
+            'mais elle ne la supprime pas.',
+            '',
+            'Une organisation qui attend que l\'IA "confirme" une décision :',
+            '• n\'agit plus',
+            '• subit le réel',
+            '• perd en agilité'
+          ]
+        },
+        {
+          title: '3. CE QUI DOIT RESTER STRICTEMENT HUMAIN (TOUJOURS)',
+          content: [
+            'Même avec des IA très avancées, certaines fonctions ne seront jamais automatisables :',
+            '',
+            '🔹 L\'arbitrage sous contrainte',
+            'Choisir entre deux options imparfaites.',
+            '',
+            '🔹 La hiérarchisation des priorités',
+            'Ce qui compte maintenant, pas ce qui est mesurable.',
+            '',
+            '🔹 L\'acceptation du risque',
+            'Décider sans garantie.',
+            '',
+            '🔹 La responsabilité morale',
+            'Assumer les conséquences humaines.',
+            '',
+            '🔹 Le sens collectif',
+            'Pourquoi cette décision est prise.',
+            '',
+            '👉 Les chiffres n\'ont pas de conscience.',
+            'Les humains, si.'
+          ]
+        },
+        {
+          title: '4. POSTURE PROFESSIONNELLE À TRANSMETTRE (MANIFESTE)',
+          content: [
+            'Voici la posture à enseigner explicitement :',
+            '',
+            '• J\'utilise les chiffres pour éclairer, pas pour me cacher',
+            '• Je sais dire "les données n\'ont pas la réponse"',
+            '• J\'accepte l\'incertitude comme partie du métier',
+            '• J\'assume les conséquences humaines',
+            '• Je décide, même quand les chiffres hésitent'
+          ]
+        },
+        {
+          title: '5. TEST FINAL DE MATURITÉ (SIMPLE ET BRUTAL)',
+          content: [
+            'Pose cette question en comité :',
+            '',
+            '"Si ces indicateurs disparaissaient demain,',
+            'serions-nous encore capables de décider ?"',
+            '',
+            '• Oui → usage mature',
+            '• Non → dépendance installée'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `Ce secteur ne concerne pas la data.
+Il concerne le courage de décider dans un monde mesurable.
+
+⸻
+
+SYNTHÈSE GLOBALE
+
+👉 Les IA d'analyse et de synthèse n'existent pas pour automatiser les décisions,
+mais pour rendre la complexité lisible afin que l'humain décide en conscience.
+
+Les IA d'analyse sont excellentes pour agréger, structurer et révéler des tendances.
+Elles sont dangereuses dès qu'on leur attribue une autorité décisionnelle ou morale.
+
+Les IA d'analyse créent de la valeur quand elles structurent la discussion et rendent les arbitrages visibles.
+Elles détruisent de la valeur quand elles remplacent le courage décisionnel.
+
+👉 Les IA d'analyse n'enlèvent pas la responsabilité humaine.
+Elles la rendent visible, et parfois inconfortable.`
+}
+
+// Contenu de la formation "IA de Recherche et de Veille - Secteur 4"
+export const iaRechercheContent: FormationContent = {
+  formationId: 'formation_ia_recherche',
+  introduction: `Ce secteur est né d'un phénomène massif :
+
+👉 L'information est devenue surabondante, fragmentée et contradictoire.
+
+Aujourd'hui, un professionnel fait face à :
+• trop de sources,
+• trop d'articles,
+• trop d'avis,
+• trop de contenus recyclés,
+• trop peu de temps pour vérifier.
+
+Le problème n'est plus :
+
+"Trouver de l'information"
+
+Mais :
+
+"Identifier ce qui est pertinent, fiable et utile pour décider ou agir."
+
+👉 La rareté s'est déplacée :
+ce n'est plus l'information, c'est l'attention et le discernement.`,
+  parts: [
+    {
+      title: 'AXE 1 — RÔLE FONDAMENTAL DANS LE TRAVAIL HUMAIN',
+      sections: [
+        {
+          title: '1. POURQUOI CE SECTEUR EXISTE (LE PROBLÈME HUMAIN RÉEL)',
+          content: [
+            'Ce secteur est né d\'un phénomène massif :',
+            '',
+            '👉 L\'information est devenue surabondante, fragmentée et contradictoire.',
+            '',
+            'Aujourd\'hui, un professionnel fait face à :',
+            '• trop de sources,',
+            '• trop d\'articles,',
+            '• trop d\'avis,',
+            '• trop de contenus recyclés,',
+            '• trop peu de temps pour vérifier.',
+            '',
+            '👉 La rareté s\'est déplacée :',
+            'ce n\'est plus l\'information, c\'est l\'attention et le discernement.'
+          ]
+        },
+        {
+          title: '2. LA DISTINCTION CLÉ : RECHERCHER ≠ COMPRENDRE',
+          content: [
+            'Erreur classique :',
+            '• chercher → lire → croire',
+            '',
+            'Or :',
+            '• lire n\'est pas comprendre,',
+            '• comprendre n\'est pas savoir,',
+            '• savoir n\'est pas décider.',
+            '',
+            'Les IA de recherche existent pour :',
+            '• réduire le bruit',
+            '• cartographier un sujet',
+            '• accélérer l\'exploration',
+            '• faire émerger les débats, pas les clore',
+            '',
+            '👉 Elles raccourcissent le chemin vers la compréhension,',
+            'mais ne remplacent pas l\'esprit critique.'
+          ]
+        },
+        {
+          title: '3. CE QUE CES IA SONT RÉELLEMENT',
+          content: [
+            'Les IA de recherche et de veille sont :',
+            '• des moteurs d\'exploration augmentée',
+            '• des synthétiseurs multi-sources',
+            '• des cartographes de connaissances',
+            '',
+            'Elles savent :',
+            '• interroger plusieurs sources à la fois,',
+            '• comparer des points de vue,',
+            '• résumer rapidement,',
+            '• identifier des consensus ou des divergences,',
+            '• citer leurs sources (selon les outils).',
+            '',
+            'Exemples d\'outils représentatifs :',
+            '• Perplexity',
+            '• Elicit',
+            '• Consensus',
+            '',
+            '👉 Elles remplacent la recherche exploratoire classique, pas l\'expertise.'
+          ]
+        },
+        {
+          title: '4. CE QU\'ELLES NE SONT PAS (ET NE SERONT JAMAIS)',
+          content: [
+            'Même très performantes, ces IA ne sont pas :',
+            '',
+            '❌ des arbitres de vérité',
+            '❌ des évaluateurs de fiabilité définitive',
+            '❌ des juges scientifiques',
+            '❌ des décideurs stratégiques',
+            '',
+            'Pourquoi ?',
+            'Parce qu\'elles :',
+            '• dépendent de sources existantes,',
+            '• héritent des biais du web,',
+            '• reflètent l\'état du débat, pas sa qualité,',
+            '• ne savent pas ce qui est "acceptable" dans un contexte donné.',
+            '',
+            '👉 Une synthèse n\'est pas une validation.'
+          ]
+        },
+        {
+          title: 'RÈGLE FONDAMENTALE À TRANSMETTRE EN FORMATION',
+          content: [
+            'Si une IA de recherche te donne une réponse qui te rassure trop vite,',
+            'tu as probablement mal posé la question.',
+            '',
+            'Une bonne recherche doit créer de nouvelles questions,',
+            'pas fermer la réflexion.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 2 — CE QUE CES IA FONT BIEN / MAL (ET POURQUOI)',
+      sections: [
+        {
+          title: '1. CE QUE CES IA FONT TRÈS BIEN (LEUR VALEUR RÉELLE)',
+          content: [
+            '1.1 Accélérer l\'exploration d\'un sujet inconnu',
+            '',
+            'C\'est leur force principale.',
+            '',
+            'Ces IA permettent de :',
+            '• balayer rapidement un champ inconnu,',
+            '• identifier les grandes thématiques,',
+            '• repérer les concepts clés,',
+            '• comprendre le vocabulaire d\'un domaine,',
+            '• éviter l\'ignorance grossière.',
+            '',
+            'Avec des outils comme :',
+            '• Perplexity',
+            '• Elicit',
+            '• Consensus',
+            '',
+            '👉 En quelques minutes, un professionnel atteint un niveau de compréhension qui prenait autrefois des heures.',
+            '',
+            '1.2 Réduire drastiquement le bruit informationnel',
+            '',
+            'Contrairement à un moteur de recherche classique, ces IA :',
+            '• agrègent plusieurs sources,',
+            '• éliminent une partie du contenu redondant,',
+            '• synthétisent les points clés,',
+            '• mettent en évidence les convergences.',
+            '',
+            '👉 Elles remplacent le tri manuel fastidieux.',
+            '',
+            '1.3 Mettre en évidence les débats et les divergences',
+            '',
+            'Les bonnes IA de recherche savent :',
+            '• montrer qu\'un sujet n\'est pas tranché,',
+            '• exposer plusieurs positions,',
+            '• identifier des controverses,',
+            '• révéler des zones d\'incertitude.',
+            '',
+            '👉 Elles sont plus utiles quand elles montrent le désaccord que le consensus.'
+          ]
+        },
+        {
+          title: '2. CE QUE CES IA FONT MAL (ET NE FERONT JAMAIS BIEN)',
+          content: [
+            '2.1 Elles ne jugent pas la qualité intellectuelle d\'une source',
+            '',
+            'Une IA peut :',
+            '• citer un article,',
+            '• résumer une étude,',
+            '• mentionner un rapport,',
+            '',
+            'sans savoir :',
+            '• si la méthodologie est faible,',
+            '• si la source est biaisée,',
+            '• si l\'auteur est controversé,',
+            '• si l\'étude est obsolète ou contestée.',
+            '',
+            '👉 La crédibilité scientifique ou intellectuelle n\'est pas calculable automatiquement.',
+            '',
+            '2.2 Elles reflètent l\'état du web, pas l\'état de la vérité',
+            '',
+            'Les IA de recherche sont :',
+            '• dépendantes de contenus existants,',
+            '• sensibles aux tendances dominantes,',
+            '• influencées par ce qui est le plus publié.',
+            '',
+            '👉 Elles reflètent un paysage informationnel, pas une réalité objective.',
+            '',
+            '2.3 Elles donnent une illusion de maîtrise intellectuelle',
+            '',
+            'C\'est le danger psychologique principal.',
+            '',
+            'Après une synthèse IA :',
+            '• on se sent informé,',
+            '• on se sent prêt à parler,',
+            '• on se sent légitime.',
+            '',
+            'Mais souvent :',
+            '• la compréhension est superficielle,',
+            '• les nuances manquent,',
+            '• les implications profondes sont absentes.',
+            '',
+            '👉 Comprendre rapidement n\'est pas comprendre profondément.'
+          ]
+        },
+        {
+          title: 'RÈGLE D\'OR DU SECTEUR 4',
+          content: [
+            'Une bonne IA de recherche doit t\'amener',
+            'à lire moins de mauvaises sources',
+            'et plus de bonnes sources.',
+            '',
+            'Si elle te permet :',
+            '• de ne plus lire du tout,',
+            '👉 elle est mal utilisée.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 3 — USAGES PROFESSIONNELS CONCRETS (PAR MÉTIERS)',
+      sections: [
+        {
+          title: 'RÈGLE DE CADRE (INDISPENSABLE)',
+          content: [
+            'Dans tous les cas suivants, les IA de recherche (ex. Perplexity, Elicit) :',
+            '',
+            '👉 ne remplacent jamais la lecture critique',
+            '👉 ne valident jamais une vérité',
+            '👉 ne dispensent jamais de responsabilité intellectuelle',
+            '',
+            'Elles servent à explorer plus vite, pas à penser moins.'
+          ]
+        },
+        {
+          title: '1. DIRIGEANT / COMITÉ DE DIRECTION',
+          content: [
+            'Usage IA sain :',
+            '',
+            'Le dirigeant utilise l\'IA pour :',
+            '• cartographier un sujet stratégique inconnu',
+            '• comprendre rapidement un marché, une technologie, une réglementation',
+            '• identifier les grandes tendances et controverses',
+            '• préparer des arbitrages éclairés',
+            '',
+            'Exemples concrets :',
+            '• "Quelles sont les grandes tendances contradictoires sur ce marché ?"',
+            '• "Quels risques sont sous-estimés dans les analyses dominantes ?"',
+            '• "Quels scénarios pessimistes sont peu évoqués ?"',
+            '',
+            '👉 L\'IA ouvre le champ.',
+            'Le dirigeant tranche.',
+            '',
+            'Mauvais usage fréquent :',
+            '• utiliser une synthèse IA comme base de décision finale',
+            '• ne pas confronter la recherche à la réalité terrain',
+            '',
+            '👉 Stratégie hors-sol garantie.'
+          ]
+        },
+        {
+          title: '2. CONSULTANT / STRATÉGIE / TRANSFORMATION',
+          content: [
+            'Usage IA sain :',
+            '',
+            'L\'IA sert à :',
+            '• cartographier rapidement un secteur client',
+            '• identifier les grands courants de pensée',
+            '• repérer les pratiques émergentes',
+            '• éviter les angles morts grossiers',
+            '',
+            'Exemples :',
+            '• "Quelles approches opposées existent sur ce sujet ?"',
+            '• "Quelles pratiques sont controversées mais prometteuses ?"',
+            '',
+            '👉 Le consultant gagne du temps pour l\'analyse humaine et le terrain.',
+            '',
+            'Mauvais usage :',
+            '• livrer des synthèses IA comme diagnostic',
+            '• confondre veille rapide et expertise',
+            '',
+            '👉 Le client n\'achète pas une synthèse.',
+            'Il achète un jugement.'
+          ]
+        },
+        {
+          title: '3. JURISTE / AVOCAT / CONFORMITÉ',
+          content: [
+            'Usage IA sain :',
+            '',
+            'L\'IA est utilisée pour :',
+            '• repérer rapidement des évolutions réglementaires',
+            '• identifier des interprétations divergentes',
+            '• comprendre l\'esprit d\'un texte ou d\'une jurisprudence',
+            '• préparer une analyse approfondie',
+            '',
+            '👉 L\'IA éclaire.',
+            'Le juriste valide.',
+            '',
+            'Mauvais usage (très dangereux) :',
+            '• se fier à une interprétation IA',
+            '• ne pas vérifier les sources primaires',
+            '',
+            '👉 Risque juridique majeur.'
+          ]
+        },
+        {
+          title: 'QUESTION CLÉ À SE POSER APRÈS UNE RECHERCHE IA',
+          content: [
+            '"Quelles sources vais-je maintenant lire moi-même ?"',
+            '',
+            'Si la réponse est :',
+            '"Aucune"',
+            '',
+            '👉 La recherche est incomplète.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 4 — OUTILS, ARCHITECTURE, WORKFLOWS & BONNES PRATIQUES',
+      sections: [
+        {
+          title: '1. TYPOLOGIE DES OUTILS (NE PAS CONFONDRE LEURS RÔLES)',
+          content: [
+            '1.1 Moteurs de recherche augmentés (exploration rapide)',
+            '',
+            'Exemples :',
+            '• Perplexity',
+            '• Bing',
+            '',
+            'Rôle :',
+            '• exploration initiale',
+            '• réponses synthétiques',
+            '• comparaison multi-sources',
+            '• orientation rapide',
+            '',
+            '👉 Idéal pour commencer, dangereux pour conclure.',
+            '',
+            '1.2 Assistants de recherche académique / experte',
+            '',
+            'Exemples :',
+            '• Elicit',
+            '• Consensus',
+            '',
+            'Rôle :',
+            '• recherche structurée',
+            '• extraction d\'arguments',
+            '• cartographie des débats',
+            '• accès à la littérature',
+            '',
+            '👉 Excellents pour nourrir une analyse, pas pour décider seuls.'
+          ]
+        },
+        {
+          title: '2. ARCHITECTURE PROFESSIONNELLE SAINE (MODÈLE DE RÉFÉRENCE)',
+          content: [
+            'Principe fondamental :',
+            '',
+            'La veille doit être organisée comme un processus,',
+            'pas comme une succession de recherches opportunistes.',
+            '',
+            'Architecture recommandée (robuste et durable) :',
+            '1. Question stratégique humaine',
+            '   • Pourquoi je cherche ?',
+            '   • Quelle décision ou action est en jeu ?',
+            '2. Exploration large via IA',
+            '   • cartographie',
+            '   • tendances',
+            '   • controverses',
+            '3. Sélection humaine des sources',
+            '   • ce qui mérite d\'être lu',
+            '   • ce qui peut être ignoré',
+            '4. Lecture critique ciblée',
+            '   • sources primaires',
+            '   • documents de référence',
+            '5. Synthèse humaine',
+            '   • ce que j\'ai compris',
+            '   • ce que je ne sais pas encore',
+            '6. Mise à jour régulière',
+            '   • veille continue, pas ponctuelle',
+            '',
+            '👉 L\'IA intervient surtout aux étapes 2 et 3.',
+            'Les étapes 1, 4 et 5 sont humaines.'
+          ]
+        },
+        {
+          title: '3. BONNES PRATIQUES PROFESSIONNELLES (INDISPENSABLES)',
+          content: [
+            '4.1 Toujours formuler une question avant de chercher',
+            '',
+            'Mauvais : "Dis-moi tout sur…"',
+            '',
+            'Bon : "Quelles sont les controverses actuelles sur… ?"',
+            '',
+            '👉 La qualité de la recherche dépend de la qualité de la question.',
+            '',
+            '4.2 Distinguer exploration et validation',
+            '• exploration → IA très utile',
+            '• validation → humain obligatoire',
+            '',
+            '👉 Ne jamais inverser ces étapes.',
+            '',
+            '4.3 Limiter volontairement le temps de recherche IA',
+            '',
+            'Règle saine :',
+            '• temps IA court',
+            '• temps lecture long',
+            '',
+            '👉 Sinon, la veille devient une fuite en avant.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 5 — RISQUES, ÉTHIQUE, RESPONSABILITÉ & AVENIR',
+      sections: [
+        {
+          title: '1. LE RISQUE MAJEUR : L\'ILLUSION DE SAVOIR',
+          content: [
+            'Le danger principal de ce secteur n\'est pas la désinformation brute.',
+            '👉 C\'est l\'illusion de compétence.',
+            '',
+            'Mécanisme très courant :',
+            '• une synthèse claire,',
+            '• bien structurée,',
+            '• multi-sources,',
+            '• livrée rapidement,',
+            '',
+            '➡️ donne au professionnel le sentiment de maîtrise.',
+            '',
+            'Mais en réalité :',
+            '• il n\'a pas lu les sources,',
+            '• il ne connaît pas les controverses en profondeur,',
+            '• il ne maîtrise pas les implications,',
+            '• il n\'a pas testé la solidité des arguments.',
+            '',
+            '👉 Il sait "de quoi ça parle", mais pas "ce que ça engage".',
+            '',
+            'C\'est extrêmement dangereux pour :',
+            '• les dirigeants,',
+            '• les experts,',
+            '• les formateurs,',
+            '• les consultants,',
+            '• les porte-parole.'
+          ]
+        },
+        {
+          title: '2. LE RISQUE ÉTHIQUE : PARLER SANS AVOIR VÉRIFIÉ',
+          content: [
+            'Un point fondamental, souvent ignoré :',
+            '',
+            'Prendre la parole sur un sujet sans avoir vérifié les sources primaires',
+            'est une faute éthique professionnelle.',
+            '',
+            'Pourquoi ?',
+            'Parce que :',
+            '• la parole influence,',
+            '• la parole oriente,',
+            '• la parole engage la confiance des autres.',
+            '',
+            'Dire :',
+            '"Selon les études…"',
+            '',
+            'sans avoir :',
+            '• lu les études,',
+            '• compris leur méthodologie,',
+            '• identifié leurs limites,',
+            '',
+            '👉 c\'est une posture trompeuse, même sans intention de nuire.'
+          ]
+        },
+        {
+          title: '3. CE QUI DOIT RESTER STRICTEMENT HUMAIN (TOUJOURS)',
+          content: [
+            'Même avec des IA de recherche très avancées, certaines fonctions sont intransférables :',
+            '',
+            '🔹 Le jugement de crédibilité',
+            'Savoir à qui faire confiance.',
+            '',
+            '🔹 L\'évaluation de la qualité intellectuelle',
+            'Méthodologie, rigueur, honnêteté.',
+            '',
+            '🔹 La mise en perspective',
+            'Relier un savoir à un contexte réel.',
+            '',
+            '🔹 La prise de position',
+            'Dire : "Voilà ce que j\'en pense, et pourquoi."',
+            '',
+            '🔹 L\'acceptation du doute',
+            'Reconnaître ce qu\'on ne sait pas encore.',
+            '',
+            '👉 L\'IA n\'a pas d\'humilité.',
+            'Le professionnel, si.'
+          ]
+        },
+        {
+          title: '4. POSTURE PROFESSIONNELLE À TRANSMETTRE (MANIFESTE)',
+          content: [
+            'Voici la posture à enseigner explicitement :',
+            '',
+            '• J\'utilise l\'IA pour explorer, pas pour conclure',
+            '• Je lis toujours au moins quelques sources primaires',
+            '• Je distingue ce qui est établi de ce qui est débattu',
+            '• J\'assume mes zones d\'incertitude',
+            '• Je préfère dire "je ne sais pas encore" que parler à vide'
+          ]
+        },
+        {
+          title: '5. TEST FINAL DE MATURITÉ (TRÈS SIMPLE)',
+          content: [
+            'Pose cette question à un professionnel :',
+            '',
+            '"Peux-tu défendre cette position',
+            'sans citer l\'IA ni ses synthèses ?"',
+            '',
+            '• Oui → usage mature',
+            '• Non → dépendance intellectuelle'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `Ce secteur ne concerne pas l'accès à l'information.
+Il concerne l'éthique de la connaissance et la responsabilité de la parole.
+
+⸻
+
+SYNTHÈSE GLOBALE
+
+👉 Les IA de recherche et de veille n'existent pas pour dire le vrai,
+mais pour rendre un sujet intelligible plus rapidement afin que l'humain exerce son discernement.
+
+Les IA de recherche et de veille sont excellentes pour explorer, cartographier et réduire le bruit.
+Elles sont dangereuses dès qu'on leur confie l'évaluation de la vérité, de la qualité ou de la pertinence finale.
+
+Les IA de recherche créent de la valeur quand elles accélèrent l'exploration et élargissent la compréhension.
+Elles détruisent de la valeur quand elles remplacent l'effort intellectuel et la vérification humaine.
+
+👉 Les IA de recherche n'augmentent pas la connaissance.
+Elles rendent visible la différence entre s'informer et comprendre.`
+}
+
+// Contenu de la formation "IA d'Automatisation et d'Orchestration - Secteur 5"
+export const iaAutomatisationContent: FormationContent = {
+  formationId: 'formation_ia_automatisation',
+  introduction: `Les organisations modernes sont freinées par :
+• des tâches répétitives à faible valeur,
+• des ruptures entre outils (silos),
+• des erreurs humaines de saisie,
+• des délais d'exécution inutiles,
+• une charge mentale administrative chronique.
+
+👉 Le problème n'est pas le manque de compétences.
+C'est la friction permanente entre intention et exécution.
+
+Ce secteur existe pour :
+• supprimer la répétition inutile,
+• fiabiliser l'exécution,
+• orchestrer des actions entre systèmes,
+• libérer du temps cognitif humain.`,
+  parts: [
+    {
+      title: 'AXE 1 — RÔLE FONDAMENTAL DANS LE TRAVAIL HUMAIN',
+      sections: [
+        {
+          title: '1. POURQUOI CE SECTEUR EXISTE (LE PROBLÈME HUMAIN RÉEL)',
+          content: [
+            'Les organisations modernes sont freinées par :',
+            '• des tâches répétitives à faible valeur,',
+            '• des ruptures entre outils (silos),',
+            '• des erreurs humaines de saisie,',
+            '• des délais d\'exécution inutiles,',
+            '• une charge mentale administrative chronique.',
+            '',
+            '👉 Le problème n\'est pas le manque de compétences.',
+            'C\'est la friction permanente entre intention et exécution.',
+            '',
+            'Ce secteur existe pour :',
+            '• supprimer la répétition inutile,',
+            '• fiabiliser l\'exécution,',
+            '• orchestrer des actions entre systèmes,',
+            '• libérer du temps cognitif humain.'
+          ]
+        },
+        {
+          title: '2. LA DISTINCTION CLÉ : AUTOMATISER ≠ OPTIMISER',
+          content: [
+            'Erreur classique :',
+            '"Si on automatise, ce sera plus efficace."',
+            '',
+            'Faux.',
+            '• Automatiser un mauvais processus → on accélère le chaos.',
+            '• Automatiser sans comprendre → on perd le contrôle.',
+            '• Automatiser sans responsabilité → on crée des incidents invisibles.',
+            '',
+            '👉 L\'automatisation est un amplificateur.',
+            'Elle amplifie la qualité… ou les erreurs.'
+          ]
+        },
+        {
+          title: '3. CE QUE CES IA SONT RÉELLEMENT',
+          content: [
+            'Les outils de ce secteur sont :',
+            '• des chefs d\'orchestre d\'actions numériques,',
+            '• des ponts entre logiciels,',
+            '• des exécutants fiables de règles définies par l\'humain.',
+            '',
+            'Ils savent :',
+            '• déclencher des actions automatiquement,',
+            '• transférer des données entre outils,',
+            '• appliquer des règles conditionnelles,',
+            '• enchaîner des tâches sans intervention humaine.',
+            '',
+            'Outils représentatifs :',
+            '• Zapier',
+            '• Make',
+            '• n8n',
+            '',
+            '👉 Ils n\'ont aucune intelligence métier par défaut.',
+            'Ils exécutent ce que vous avez décidé.'
+          ]
+        },
+        {
+          title: '4. CE QU\'ILS NE SONT PAS (ET NE SERONT JAMAIS)',
+          content: [
+            'Même "augmentés par l\'IA", ces outils ne sont pas :',
+            '',
+            '❌ des décideurs',
+            '❌ des stratèges',
+            '❌ des arbitres de priorité',
+            '❌ des gardiens du sens',
+            '',
+            'Ils :',
+            '• n\'évaluent pas l\'opportunité,',
+            '• ne comprennent pas les conséquences humaines,',
+            '• n\'assument aucune erreur.',
+            '',
+            '👉 Ils font exactement ce qu\'on leur a demandé.',
+            'Y compris quand c\'est une mauvaise idée.'
+          ]
+        },
+        {
+          title: 'RÈGLE FONDAMENTALE À TRANSMETTRE EN FORMATION',
+          content: [
+            'N\'automatise jamais ce que tu ne comprends pas parfaitement.',
+            '',
+            'Si tu ne peux pas expliquer le processus à voix haute,',
+            'tu ne dois pas l\'automatiser.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 2 — CE QUE CES OUTILS FONT BIEN / MAL (ET POURQUOI)',
+      sections: [
+        {
+          title: '1. CE QUE CES OUTILS FONT EXTRÊMEMENT BIEN (LEUR VRAIE VALEUR)',
+          content: [
+            '1.1 Éliminer la répétition mécanique sans valeur',
+            '',
+            'C\'est leur raison d\'être.',
+            '',
+            'Ils excellent pour :',
+            '• copier des données d\'un outil à un autre,',
+            '• déclencher des actions conditionnelles,',
+            '• exécuter des tâches standardisées,',
+            '• enchaîner des étapes sans fatigue.',
+            '',
+            'Exemples typiques :',
+            '• un formulaire rempli → création d\'un contact → notification,',
+            '• une facture reçue → classement → enregistrement,',
+            '• une commande validée → mise à jour stock → email client.',
+            '',
+            '👉 Ils remplacent les gestes mécaniques, pas les décisions.',
+            '',
+            '1.2 Fiabiliser l\'exécution (moins d\'erreurs humaines)',
+            '',
+            'L\'automatisation apporte :',
+            '• régularité,',
+            '• traçabilité,',
+            '• suppression des oublis,',
+            '• respect strict des règles définies.',
+            '',
+            '👉 Un processus automatisé bien conçu fait toujours la même chose.',
+            'C\'est à la fois sa force… et son danger.',
+            '',
+            '1.3 Accélérer les délais sans pression humaine',
+            '',
+            'Contrairement à l\'humain :',
+            '• l\'outil ne procrastine pas,',
+            '• n\'est pas distrait,',
+            '• n\'oublie pas,',
+            '• ne "verra ça plus tard".',
+            '',
+            '👉 La vitesse vient de l\'absence de friction, pas de l\'intelligence.'
+          ]
+        },
+        {
+          title: '2. CE QUE CES OUTILS FONT MAL (ET NE FERONT JAMAIS BIEN)',
+          content: [
+            '2.1 Ils automatisent sans comprendre',
+            '',
+            'Un outil d\'automatisation :',
+            '• ne comprend pas le métier,',
+            '• ne comprend pas le contexte,',
+            '• ne comprend pas l\'exception.',
+            '',
+            'Il applique :',
+            '• des règles,',
+            '• des conditions,',
+            '• des déclencheurs.',
+            '',
+            '👉 S\'il reçoit une instruction absurde, il l\'exécutera parfaitement.',
+            '',
+            '2.2 Ils gèrent très mal l\'exception (le réel)',
+            '',
+            'Le réel est fait de :',
+            '• cas particuliers,',
+            '• situations ambiguës,',
+            '• exceptions non prévues,',
+            '• contextes humains.',
+            '',
+            'Or :',
+            '• l\'automatisation aime le déterminisme,',
+            '• le monde réel est probabiliste.',
+            '',
+            '👉 Plus un processus est humain, moins il est automatisable à 100 %.',
+            '',
+            '2.3 Ils rendent les erreurs systémiques',
+            '',
+            'Une erreur humaine :',
+            '• est ponctuelle,',
+            '• souvent détectée,',
+            '• limitée dans le temps.',
+            '',
+            'Une erreur automatisée :',
+            '• se répète,',
+            '• se propage,',
+            '• touche tous les flux,',
+            '• peut durer longtemps sans être vue.',
+            '',
+            '👉 Une mauvaise règle automatisée fait beaucoup plus de dégâts qu\'un humain maladroit.'
+          ]
+        },
+        {
+          title: 'RÈGLE D\'OR DU SECTEUR 5',
+          content: [
+            'Si personne ne peut expliquer clairement',
+            'ce que fait une automatisation et pourquoi,',
+            'elle doit être arrêtée.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 3 — USAGES PROFESSIONNELS CONCRETS (PAR MÉTIERS)',
+      sections: [
+        {
+          title: 'RÈGLE DE CADRE (NON NÉGOCIABLE)',
+          content: [
+            'Dans tous les cas suivants, les outils d\'automatisation (ex. Zapier, Make, n8n) :',
+            '',
+            '👉 exécutent des règles définies par l\'humain',
+            '👉 ne prennent jamais de décisions métier',
+            '👉 doivent toujours avoir un responsable identifié'
+          ]
+        },
+        {
+          title: '1. VENTES / COMMERCIAL / CRM',
+          content: [
+            'Automatisations pertinentes :',
+            '',
+            'Cas d\'usage concrets :',
+            '• lead entrant → qualification automatique → assignation commerciale',
+            '• formulaire rempli → création CRM → notification Slack',
+            '• devis signé → mise à jour statut → relance automatique',
+            '',
+            '👉 L\'automatisation sécurise le suivi, pas la relation commerciale.',
+            '',
+            'Ce qui doit rester humain :',
+            '• qualification finale',
+            '• compréhension du besoin réel',
+            '• négociation',
+            '• décision de relance ou d\'abandon',
+            '',
+            'Erreur fréquente :',
+            '• automatiser la relation client',
+            '• emails trop mécaniques',
+            '• séquences déconnectées du réel',
+            '',
+            '👉 La vente est relationnelle.',
+            'L\'automatisation doit rester en arrière-plan.'
+          ]
+        },
+        {
+          title: '2. MARKETING / GROWTH',
+          content: [
+            'Automatisations pertinentes :',
+            '• publication multi-canal programmée',
+            '• synchronisation outils marketing',
+            '• scoring simple de leads',
+            '• alertes sur performances anormales',
+            '',
+            '👉 L\'IA orchestre la diffusion.',
+            'La stratégie reste humaine.',
+            '',
+            'Erreur fréquente :',
+            '• automatiser sans vision',
+            '• produire trop de contenus',
+            '• suivre des métriques sans sens',
+            '',
+            '👉 Automatiser du bruit amplifie le bruit.'
+          ]
+        },
+        {
+          title: '3. FINANCE / COMPTABILITÉ',
+          content: [
+            'Automatisations pertinentes :',
+            '• collecte automatique de factures',
+            '• rapprochements simples',
+            '• classement comptable',
+            '• alertes anomalies',
+            '',
+            '👉 Fiabilité et gain de temps réel.',
+            '',
+            'Ce qui reste humain :',
+            '• validation finale',
+            '• arbitrages financiers',
+            '• décisions budgétaires',
+            '• analyse de risque',
+            '',
+            'Erreur fréquente :',
+            '• automatiser sans contrôle',
+            '• ne pas prévoir de vérification humaine',
+            '',
+            '👉 Une erreur financière automatisée est systémique.'
+          ]
+        },
+        {
+          title: 'QUESTION CLÉ À POSER AVANT TOUTE AUTOMATISATION',
+          content: [
+            '"Que se passe-t-il si cette automatisation se trompe ?"',
+            '',
+            'Si la réponse est :',
+            '"On ne sait pas"',
+            '',
+            '👉 Il ne faut pas l\'automatiser.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 4 — ARCHITECTURE, WORKFLOWS, GOUVERNANCE & BONNES PRATIQUES',
+      sections: [
+        {
+          title: '1. PRINCIPE FONDAMENTAL (À GRAVER DANS LE MARBRE)',
+          content: [
+            'Une automatisation est un processus métier figé dans le temps.',
+            'Si le métier évolue et que l\'automatisation ne suit pas, elle devient toxique.',
+            '',
+            '👉 L\'enjeu n\'est donc pas "d\'automatiser",',
+            'mais de maintenir une automatisation vivante, compréhensible et gouvernée.'
+          ]
+        },
+        {
+          title: '2. ARCHITECTURE PROFESSIONNELLE SAINE (MODÈLE DE RÉFÉRENCE)',
+          content: [
+            'Une architecture saine respecte 6 couches distinctes :',
+            '',
+            '1. Intention métier (humaine)',
+            '   • Pourquoi ce processus existe ?',
+            '   • Quel problème réel résout-il ?',
+            '',
+            '2. Processus documenté',
+            '   • étapes claires',
+            '   • cas standards',
+            '   • exceptions connues',
+            '',
+            '3. Règles d\'automatisation',
+            '   • conditions explicites',
+            '   • seuils définis',
+            '   • limites posées',
+            '',
+            '4. Outil d\'orchestration',
+            '   • exécution technique',
+            '   • ex. Zapier, Make, n8n',
+            '',
+            '5. Contrôle & supervision',
+            '   • logs',
+            '   • alertes',
+            '   • monitoring',
+            '',
+            '6. Responsable humain identifié',
+            '   • propriétaire du workflow',
+            '   • droit d\'arrêt',
+            '   • responsabilité claire',
+            '',
+            '👉 Si une couche manque, le système est fragile.'
+          ]
+        },
+        {
+          title: '3. BONNES PRATIQUES ESSENTIELLES (NON NÉGOCIABLES)',
+          content: [
+            '4.1 Toujours prévoir un "kill switch" humain',
+            '',
+            'Chaque automatisation doit avoir :',
+            '• un bouton d\'arrêt',
+            '• un responsable identifié',
+            '• un plan de reprise manuel',
+            '',
+            '👉 Automatiser sans possibilité d\'arrêt est une faute grave.',
+            '',
+            '4.2 Documenter pour quelqu\'un qui n\'était pas là',
+            '',
+            'La documentation doit permettre à :',
+            '• un nouveau collaborateur',
+            '• un manager',
+            '• un prestataire externe',
+            '',
+            'de comprendre :',
+            '• ce que fait l\'automatisation',
+            '• pourquoi elle existe',
+            '• quand elle doit être modifiée ou supprimée',
+            '',
+            '👉 Si seul le créateur comprend, c\'est un risque.',
+            '',
+            '4.3 Réviser régulièrement les automatisations',
+            '',
+            'Règle saine :',
+            '• revue trimestrielle minimum',
+            '• suppression des workflows inutiles',
+            '• ajustement aux évolutions métier',
+            '',
+            '👉 Une automatisation obsolète est pire qu\'aucune automatisation.'
+          ]
+        },
+        {
+          title: '4. GOUVERNANCE MINIMALE (INDISPENSABLE MÊME EN PME)',
+          content: [
+            'Rôles clairs :',
+            '• créateur',
+            '• propriétaire',
+            '• utilisateur',
+            '• décideur d\'arrêt',
+            '',
+            'Zones sensibles (quasi interdites) :',
+            '• décisions RH individuelles',
+            '• décisions financières finales',
+            '• sanctions',
+            '• arbitrages humains',
+            '',
+            '👉 Plus l\'impact humain est fort, moins l\'automatisation est acceptable.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 5 — RISQUES, ÉTHIQUE, RESPONSABILITÉ & AVENIR',
+      sections: [
+        {
+          title: '1. LE RISQUE MAJEUR : L\'AUTOMATISATION QUI DÉRESPONSABILISE',
+          content: [
+            'Le danger principal de ce secteur n\'est ni technique, ni financier.',
+            '',
+            '👉 Le danger est organisationnel et humain.',
+            '',
+            'Mécanisme typique :',
+            '• "ça tourne tout seul"',
+            '• "c\'est automatisé"',
+            '• "ce n\'est pas moi, c\'est le workflow"',
+            '• plus personne ne surveille',
+            '• plus personne n\'assume',
+            '',
+            '👉 La responsabilité se dissout dans le système.',
+            '',
+            'Quand un incident arrive :',
+            '• personne ne sait expliquer',
+            '• personne ne sait arrêter vite',
+            '• personne ne sait corriger proprement',
+            '',
+            '👉 L\'automatisation devient un angle mort de gouvernance.'
+          ]
+        },
+        {
+          title: '2. LE RISQUE SYSTÉMIQUE : L\'ERREUR QUI SE RÉPÈTE À GRANDE ÉCHELLE',
+          content: [
+            'Une erreur humaine :',
+            '• est localisée',
+            '• souvent détectée',
+            '• rarement répétée exactement à l\'identique',
+            '',
+            'Une erreur automatisée :',
+            '• se répète parfaitement',
+            '• touche tous les flux',
+            '• se propage vite',
+            '• peut durer longtemps sans alerte',
+            '',
+            '👉 L\'IA ne fait pas plus d\'erreurs.',
+            'Elle fait des erreurs plus massives.',
+            '',
+            'C\'est particulièrement critique pour :',
+            '• finance',
+            '• service client',
+            '• RH',
+            '• conformité',
+            '• données personnelles'
+          ]
+        },
+        {
+          title: '3. CE QUI NE DOIT JAMAIS ÊTRE AUTOMATISÉ',
+          content: [
+            'Même avec des IA très avancées, certaines actions doivent rester humaines :',
+            '',
+            '❌ Décisions RH individuelles',
+            '(recrutement, sanction, licenciement)',
+            '',
+            '❌ Décisions financières finales',
+            '(validation de paiement, arbitrage budgétaire)',
+            '',
+            '❌ Arbitrages à fort impact humain',
+            '(refus sensible, exclusion, pénalité)',
+            '',
+            '❌ Gestion de crise',
+            '(le réel est toujours plus complexe que le scénario)',
+            '',
+            '👉 Plus l\'impact est humain, plus l\'automatisation est dangereuse.'
+          ]
+        },
+        {
+          title: '4. RESPONSABILITÉ : LA RÈGLE ABSOLUE (NON NÉGOCIABLE)',
+          content: [
+            'Tout ce qu\'une automatisation fait,',
+            'quelqu\'un doit pouvoir dire : "c\'est sous ma responsabilité".',
+            '',
+            'Il doit toujours y avoir :',
+            '• un propriétaire humain',
+            '• un droit d\'arrêt',
+            '• une capacité d\'explication',
+            '• une traçabilité claire',
+            '',
+            'Phrase inacceptable :',
+            '"C\'est le système qui fait ça."',
+            '',
+            '👉 Un système n\'est jamais responsable.',
+            'Les humains le sont.'
+          ]
+        },
+        {
+          title: '5. POSTURE PROFESSIONNELLE À TRANSMETTRE (MANIFESTE)',
+          content: [
+            'Voici la posture à enseigner explicitement :',
+            '',
+            '• J\'automatise ce que je comprends parfaitement',
+            '• Je garde toujours un droit d\'arrêt humain',
+            '• Je documente pour quelqu\'un qui n\'était pas là',
+            '• Je révise régulièrement mes automatisations',
+            '• J\'assume personnellement ce que le système fait'
+          ]
+        },
+        {
+          title: '6. TEST FINAL DE MATURITÉ (SIMPLE ET BRUTAL)',
+          content: [
+            'Pose cette question dans une organisation :',
+            '',
+            '"Qui est responsable de cette automatisation,',
+            'et peut-il l\'arrêter maintenant ?"',
+            '',
+            '• Réponse claire → usage mature',
+            '• Réponse floue → risque critique'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `Ce secteur ne concerne pas la technologie.
+Il concerne le pouvoir d'agir… et le courage d'en répondre.
+
+⸻
+
+SYNTHÈSE GLOBALE
+
+👉 L'IA d'automatisation n'existe pas pour remplacer l'humain,
+mais pour supprimer la répétition inutile et fiabiliser l'exécution
+afin que l'humain se concentre sur ce qui nécessite du jugement.
+
+Les outils d'automatisation sont excellents pour exécuter des règles simples, répétitives et bien comprises.
+Ils deviennent dangereux dès qu'on leur confie de la complexité humaine, de l'exception ou du jugement.
+
+Les IA d'automatisation créent de la valeur quand elles exécutent des règles simples, répétitives et maîtrisées.
+Elles détruisent de la valeur quand elles remplacent le discernement humain ou masquent les erreurs.
+
+👉 L'automatisation n'enlève pas la responsabilité humaine.
+Elle la rend plus exigeante, plus visible et plus indispensable.`
+}
+
+// Contenu de la formation "IA Créative, Visuelle, Audio & Multimodale - Secteur 6"
+export const iaCreativeContent: FormationContent = {
+  formationId: 'formation_ia_creative',
+  introduction: `Ce secteur ne répond pas d'abord à un besoin artistique.
+Il répond à une rupture structurelle dans la production de contenus.
+
+Aujourd'hui, toutes les organisations ont besoin de :
+• visuels (réseaux sociaux, présentations, branding)
+• vidéos (marketing, formation, communication interne)
+• audio (podcasts, voice-over, formation)
+• contenus multi-formats rapides et cohérents
+
+Or :
+• produire coûte cher,
+• produire prend du temps,
+• produire demande des compétences multiples,
+• les cycles de validation sont longs.
+
+👉 Le monde demande plus de contenus que les humains ne peuvent en produire de manière artisanale.
+
+Ce secteur existe pour :
+• abaisser le coût d'entrée de la création
+• accélérer les itérations
+• permettre l'exploration créative rapide
+• déplacer l'effort humain vers la direction artistique et le sens`,
+  parts: [
+    {
+      title: 'AXE 1 — RÔLE FONDAMENTAL DANS LE TRAVAIL HUMAIN',
+      sections: [
+        {
+          title: '1. POURQUOI CE SECTEUR EXISTE (LE PROBLÈME RÉEL)',
+          content: [
+            'Ce secteur ne répond pas d\'abord à un besoin artistique.',
+            'Il répond à une rupture structurelle dans la production de contenus.',
+            '',
+            'Aujourd\'hui, toutes les organisations ont besoin de :',
+            '• visuels (réseaux sociaux, présentations, branding)',
+            '• vidéos (marketing, formation, communication interne)',
+            '• audio (podcasts, voice-over, formation)',
+            '• contenus multi-formats rapides et cohérents',
+            '',
+            'Or :',
+            '• produire coûte cher,',
+            '• produire prend du temps,',
+            '• produire demande des compétences multiples,',
+            '• les cycles de validation sont longs.',
+            '',
+            '👉 Le monde demande plus de contenus que les humains ne peuvent en produire de manière artisanale.'
+          ]
+        },
+        {
+          title: '2. LA DISTINCTION FONDAMENTALE : CRÉER ≠ PRODUIRE',
+          content: [
+            'C\'est l\'erreur la plus courante.',
+            '',
+            '❌ Vision naïve :',
+            '"L\'IA crée à ma place."',
+            '',
+            '✅ Réalité professionnelle :',
+            '• l\'humain crée l\'intention',
+            '• l\'IA produit des variations',
+            '• l\'humain choisit, ajuste, valide',
+            '',
+            '👉 L\'IA est une machine à propositions, pas une conscience créative.',
+            '',
+            'Elle :',
+            '• explore vite',
+            '• décline sans fatigue',
+            '• combine des styles',
+            '• matérialise des idées',
+            '',
+            'Mais elle ne :',
+            '• ressent rien',
+            '• n\'a aucune intention',
+            '• ne sait pas pourquoi quelque chose est juste',
+            '• ne comprend pas le contexte culturel fin'
+          ]
+        },
+        {
+          title: '3. CE QUE CES IA SONT RÉELLEMENT',
+          content: [
+            'Les IA créatives sont :',
+            '• des moteurs de génération multimodale',
+            '• des simulateurs de styles',
+            '• des accélérateurs de prototypage créatif',
+            '',
+            'Elles transforment :',
+            '• du texte → en image',
+            '• une image → en variation',
+            '• du texte → en vidéo',
+            '• du texte → en voix',
+            '• un concept → en multiples formats',
+            '',
+            'Exemples d\'outils emblématiques :',
+            '• Midjourney (image / direction artistique)',
+            '• DALL·E (illustration, concepts)',
+            '• Runway (vidéo)',
+            '• Adobe Firefly (création pro intégrée)',
+            '',
+            '👉 Elles matérialisent une idée.',
+            'Elles ne la justifient jamais.'
+          ]
+        },
+        {
+          title: 'RÈGLE FONDAMENTALE À TRANSMETTRE EN FORMATION',
+          content: [
+            'Si tu n\'as pas d\'intention claire,',
+            'l\'IA produira du "joli inutile".',
+            '',
+            'Si tu sais ce que tu veux faire ressentir,',
+            'l\'IA devient un accélérateur créatif puissant.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 2 — CE QUE CES IA FONT BIEN / MAL (ET POURQUOI)',
+      sections: [
+        {
+          title: '1. CE QUE CES IA FONT EXTRÊMEMENT BIEN (LEUR VRAIE PUISSANCE)',
+          content: [
+            '1.1 Générer rapidement des volumes de propositions créatives',
+            '',
+            'C\'est leur avantage structurel numéro un.',
+            '',
+            'Les IA créatives excellent pour :',
+            '• produire des dizaines de variations à partir d\'une idée,',
+            '• explorer des styles graphiques, narratifs ou sonores,',
+            '• matérialiser une intuition encore floue,',
+            '• permettre des essais sans coût marginal.',
+            '',
+            'Avec des outils comme :',
+            '• Midjourney',
+            '• DALL·E',
+            '• Adobe Firefly',
+            '',
+            '👉 Elles sont idéales pour l\'exploration, pas pour la décision finale.',
+            '',
+            '1.2 Accélérer le prototypage visuel, vidéo et audio',
+            '',
+            'Avant :',
+            '• une idée nécessitait un brief,',
+            '• puis une production,',
+            '• puis des retours,',
+            '• puis une nouvelle version.',
+            '',
+            'Aujourd\'hui :',
+            '• une idée → plusieurs rendus immédiats.',
+            '',
+            '👉 La valeur est dans la vitesse d\'itération, pas dans le rendu brut.',
+            '',
+            '1.3 Démocratiser l\'accès à des compétences techniques complexes',
+            '',
+            'Ces IA permettent à :',
+            '• un marketeur de produire un visuel,',
+            '• un formateur de créer une vidéo explicative,',
+            '• un entrepreneur de tester une identité visuelle,',
+            '• un communicant de produire de l\'audio.',
+            '',
+            '👉 Elles abaissent la barrière technique, pas la barrière du goût.'
+          ]
+        },
+        {
+          title: '2. CE QUE CES IA FONT MAL (ET NE FERONT JAMAIS BIEN)',
+          content: [
+            '2.1 Elles ne savent pas ce qui est "juste", seulement ce qui est "plausible"',
+            '',
+            'Une IA créative produit :',
+            '• quelque chose de crédible,',
+            '• esthétiquement acceptable,',
+            '• souvent "joli".',
+            '',
+            'Mais elle ne sait pas :',
+            '• si c\'est pertinent,',
+            '• si c\'est cohérent avec une marque,',
+            '• si ça respecte un contexte culturel,',
+            '• si ça provoque la bonne émotion.',
+            '',
+            '👉 La beauté n\'est pas la justesse.',
+            '',
+            '2.2 Elles tendent vers une uniformisation esthétique',
+            '',
+            'Pourquoi autant de contenus IA se ressemblent ?',
+            '',
+            'Parce que :',
+            '• elles sont entraînées sur des masses de contenus dominants,',
+            '• elles optimisent vers des styles populaires,',
+            '• elles lissent les aspérités.',
+            '',
+            'Résultat :',
+            '• mêmes lumières,',
+            '• mêmes compositions,',
+            '• mêmes visages,',
+            '• mêmes ambiances "cinéma propre".',
+            '',
+            '👉 Sans direction artistique humaine forte,',
+            'l\'IA produit du "beau générique".',
+            '',
+            '2.3 Elles ignorent le contexte juridique, culturel et symbolique',
+            '',
+            'Une image peut être :',
+            '• culturellement maladroite,',
+            '• symboliquement problématique,',
+            '• juridiquement risquée,',
+            '• socialement mal interprétée.',
+            '',
+            'L\'IA :',
+            '• ne perçoit pas ces lignes invisibles,',
+            '• ne comprend pas les non-dits,',
+            '• ne mesure pas les conséquences.',
+            '',
+            '👉 Un visuel peut être techniquement réussi et humainement désastreux.'
+          ]
+        },
+        {
+          title: 'RÈGLE D\'OR DU SECTEUR 6',
+          content: [
+            'Si tu ne peux pas expliquer pourquoi ce visuel, cette vidéo ou cette voix est la bonne,',
+            'alors ce n\'est probablement pas la bonne.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 3 — USAGES PROFESSIONNELS CONCRETS (PAR MÉTIERS)',
+      sections: [
+        {
+          title: 'RÈGLE DE CADRE (INDISPENSABLE)',
+          content: [
+            'Dans tous les métiers ci-dessous, les IA créatives (ex. Midjourney, Runway, ElevenLabs) :',
+            '',
+            '👉 proposent',
+            '👉 ne décident jamais',
+            '👉 n\'assument aucune conséquence',
+            '',
+            'La responsabilité esthétique, culturelle et stratégique reste 100 % humaine.'
+          ]
+        },
+        {
+          title: '1. MARKETING / COMMUNICATION / BRANDING',
+          content: [
+            'Usage IA sain :',
+            '',
+            'L\'IA est utilisée pour :',
+            '• explorer des pistes visuelles rapidement',
+            '• tester des univers graphiques',
+            '• décliner une campagne sur plusieurs formats',
+            '• prototyper avant production finale',
+            '',
+            'Cas concrets :',
+            '• moodboards générés pour une campagne',
+            '• variations visuelles d\'un même message',
+            '• tests d\'accroches visuelles A/B',
+            '• déclinaisons multi-réseaux',
+            '',
+            '👉 L\'IA accélère la phase "idées", pas la décision de marque.',
+            '',
+            'Ce qui doit rester humain :',
+            '• positionnement',
+            '• cohérence de marque',
+            '• validation finale',
+            '• choix de ce qui sera vu publiquement',
+            '',
+            'Erreur fréquente :',
+            '• publier des visuels IA "parce qu\'ils sont beaux"',
+            '• perdre l\'identité visuelle',
+            '',
+            '👉 Une marque sans ligne artistique devient invisible.'
+          ]
+        },
+        {
+          title: '2. DESIGNER / DIRECTEUR ARTISTIQUE',
+          content: [
+            'Usage IA sain :',
+            '',
+            'L\'IA devient :',
+            '• un moteur d\'exploration stylistique',
+            '• un assistant de variations',
+            '• un outil de recherche visuelle',
+            '',
+            '👉 Le designer devient plus "chef d\'orchestre" que producteur brut.',
+            '',
+            'Ce qui reste humain (critique) :',
+            '• direction artistique',
+            '• goût',
+            '• cohérence visuelle globale',
+            '• arbitrage final',
+            '',
+            'Erreur fréquente :',
+            '• accepter un rendu IA sans retouche',
+            '• confondre prototype et livrable',
+            '',
+            '👉 Un bon DA supprime plus qu\'il ne génère.'
+          ]
+        },
+        {
+          title: '3. FORMATEUR / ENSEIGNANT / COACH',
+          content: [
+            'Usage IA sain :',
+            '',
+            'L\'IA permet :',
+            '• créer des visuels pédagogiques',
+            '• produire des vidéos explicatives',
+            '• générer des analogies visuelles',
+            '• créer des voix off claires',
+            '',
+            'Outils souvent utilisés :',
+            '• Adobe Firefly',
+            '• Runway',
+            '',
+            '👉 La pédagogie gagne en clarté et en impact visuel.',
+            '',
+            'Ce qui reste humain :',
+            '• la progression pédagogique',
+            '• l\'interaction',
+            '• l\'adaptation au public',
+            '• l\'émotion transmise',
+            '',
+            'Erreur fréquente :',
+            '• supports trop lisses',
+            '• perte d\'incarnation',
+            '',
+            '👉 Un bon formateur n\'est pas un studio de production.'
+          ]
+        },
+        {
+          title: 'QUESTION CLÉ À SE POSER AVANT DIFFUSION',
+          content: [
+            '"Si ce contenu n\'était pas fait par une IA,',
+            'le diffuserais-je quand même ?"',
+            '',
+            '• Oui → usage mature',
+            '• Non → dérive créative'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 4 — OUTILS, ARCHITECTURE, WORKFLOWS & BONNES PRATIQUES',
+      sections: [
+        {
+          title: '1. TYPOLOGIE DES OUTILS (NE PAS TOUT MÉLANGER)',
+          content: [
+            '1.1 Génération d\'images & visuels (exploration / concepts)',
+            '',
+            'Outils emblématiques :',
+            '• Midjourney',
+            '• DALL·E',
+            '• Adobe Firefly',
+            '',
+            'Rôle :',
+            '• exploration stylistique',
+            '• moodboards',
+            '• concepts visuels',
+            '• variations rapides',
+            '',
+            'À faire :',
+            '• générer beaucoup',
+            '• comparer',
+            '• supprimer massivement',
+            '',
+            'À ne jamais faire :',
+            '• publier sans direction artistique',
+            '• considérer le rendu comme final par défaut',
+            '',
+            '👉 Ce sont des outils d\'idéation visuelle, pas des studios de production finis.',
+            '',
+            '1.2 Génération vidéo & animation',
+            '',
+            'Outils clés :',
+            '• Runway',
+            '• Pika',
+            '',
+            '👉 Idéal pour penser une vidéo avant d\'investir.',
+            '❌ Dangereux si utilisé comme livrable final sans montage humain.',
+            '',
+            '1.3 Génération audio & voix',
+            '',
+            'Outil de référence :',
+            '• ElevenLabs',
+            '',
+            'Rôle :',
+            '• voix off pédagogiques',
+            '• prototypes audio',
+            '• accessibilité',
+            '• tests de ton',
+            '',
+            '❌ À éviter pour :',
+            '• messages sensibles',
+            '• communication incarnée',
+            '• relation client',
+            '',
+            '👉 La voix crée de la confiance.',
+            'Une voix synthétique doit être utilisée avec intention claire.'
+          ]
+        },
+        {
+          title: '2. ARCHITECTURE CRÉATIVE PROFESSIONNELLE (MODÈLE SAIN)',
+          content: [
+            'Principe fondamental :',
+            '',
+            'L\'IA doit intervenir en amont de la création finale,',
+            'jamais à la place de la direction artistique.',
+            '',
+            'Architecture recommandée :',
+            '1. Intention humaine claire',
+            '   • message',
+            '   • émotion',
+            '   • public',
+            '   • contexte',
+            '',
+            '2. Exploration IA massive',
+            '   • styles',
+            '   • formats',
+            '   • variations',
+            '',
+            '3. Sélection humaine drastique',
+            '   • suppression > 80 %',
+            '   • choix assumés',
+            '',
+            '4. Production / retouche humaine',
+            '   • cohérence',
+            '   • narration',
+            '   • qualité finale',
+            '',
+            '5. Validation humaine finale',
+            '   • juridique',
+            '   • culturelle',
+            '   • stratégique',
+            '',
+            '👉 Plus on avance, moins l\'IA doit intervenir.'
+          ]
+        },
+        {
+          title: '3. BONNES PRATIQUES ESSENTIELLES (NON NÉGOCIABLES)',
+          content: [
+            '4.1 Toujours séparer "prototype" et "diffusion"',
+            '',
+            'Règle simple :',
+            '• 90 % de ce que produit l\'IA ne doit jamais être publié.',
+            '',
+            '👉 La valeur est dans le tri.',
+            '',
+            '4.2 Créer un référentiel de style clair',
+            '',
+            'Indispensable pour :',
+            '• marques',
+            '• équipes',
+            '• créateurs réguliers',
+            '',
+            'Inclure :',
+            '• palettes',
+            '• typographies',
+            '• ton',
+            '• interdits visuels',
+            '',
+            '👉 Sans cadre, l\'IA produit une identité floue.',
+            '',
+            '4.3 Introduire une règle de relecture humaine obligatoire',
+            '',
+            'Avant diffusion :',
+            '• cohérence',
+            '• symbolique',
+            '• contexte culturel',
+            '• risques juridiques',
+            '',
+            '👉 L\'IA ne voit pas ce que vous risquez.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 5 — RISQUES, ÉTHIQUE, RESPONSABILITÉ & AVENIR',
+      sections: [
+        {
+          title: '1. LE RISQUE MAJEUR : LA BANALISATION DU BEAU',
+          content: [
+            'Le premier danger n\'est pas la mauvaise qualité.',
+            '👉 C\'est la surproduction de contenus esthétiquement corrects mais culturellement vides.',
+            '',
+            'Mécanisme courant :',
+            '• l\'IA produit vite,',
+            '• c\'est "joli",',
+            '• on publie,',
+            '• on recommence.',
+            '',
+            'Résultat :',
+            '• saturation visuelle,',
+            '• perte d\'attention,',
+            '• baisse de mémorabilité,',
+            '• effacement des identités.',
+            '',
+            '👉 Quand tout est beau, plus rien n\'est remarquable.',
+            '👉 La valeur créative se déplace vers la rareté, pas la production.'
+          ]
+        },
+        {
+          title: '2. LE RISQUE CULTUREL : L\'UNIFORMISATION DES IMAGINAIRES',
+          content: [
+            'Les IA créatives apprennent sur :',
+            '• des contenus dominants,',
+            '• des esthétiques populaires,',
+            '• des références majoritaires.',
+            '',
+            'Conséquence directe :',
+            '• mêmes visages,',
+            '• mêmes lumières,',
+            '• mêmes ambiances "cinéma propre",',
+            '• mêmes codes narratifs.',
+            '',
+            '👉 Sans direction humaine forte, l\'IA appauvrit l\'imaginaire collectif.',
+            '',
+            'Ce risque est critique pour :',
+            '• les marques,',
+            '• les médias,',
+            '• la formation,',
+            '• la création artistique,',
+            '• l\'éducation.'
+          ]
+        },
+        {
+          title: '3. CE QUI DOIT RESTER STRICTEMENT HUMAIN (TOUJOURS)',
+          content: [
+            'Même avec des IA créatives très avancées, certaines fonctions sont intransférables :',
+            '',
+            '🔹 Le goût',
+            'Savoir dire : "non, ce n\'est pas juste".',
+            '',
+            '🔹 L\'intention narrative',
+            'Pourquoi cette image ? Pourquoi maintenant ?',
+            '',
+            '🔹 Le cadre culturel',
+            'Ce qui est acceptable ici, maintenant.',
+            '',
+            '🔹 La responsabilité symbolique',
+            'Ce que ce contenu véhicule implicitement.',
+            '',
+            '🔹 Le courage créatif',
+            'Assumer une esthétique qui ne plaît pas à tout le monde.',
+            '',
+            '👉 L\'IA optimise.',
+            'L\'humain choisit.'
+          ]
+        },
+        {
+          title: '4. RESPONSABILITÉ : LA RÈGLE ABSOLUE',
+          content: [
+            'Tout contenu diffusé engage la responsabilité',
+            'de la personne ou de l\'organisation qui le publie.',
+            '',
+            'Cela inclut :',
+            '• le sens,',
+            '• l\'impact émotionnel,',
+            '• la symbolique,',
+            '• la réception culturelle,',
+            '• les conséquences sociales.',
+            '',
+            '👉 L\'IA ne porte aucune responsabilité.',
+            'Elle n\'en portera jamais.'
+          ]
+        },
+        {
+          title: '5. POSTURE PROFESSIONNELLE À TRANSMETTRE (MANIFESTE)',
+          content: [
+            'Voici la posture à enseigner explicitement :',
+            '',
+            '• J\'utilise l\'IA pour explorer, pas pour me définir',
+            '• Je choisis plus que je ne produis',
+            '• Je privilégie la cohérence à la quantité',
+            '• J\'assume l\'impact culturel de ce que je diffuse',
+            '• Je reste identifiable, même avec des outils puissants'
+          ]
+        },
+        {
+          title: '6. TEST FINAL DE MATURITÉ (SIMPLE ET BRUTAL)',
+          content: [
+            'Pose cette question :',
+            '',
+            '"Si tout le monde utilisait exactement les mêmes outils que moi,',
+            'ce que je produis resterait-il reconnaissable ?"',
+            '',
+            '• Oui → usage mature',
+            '• Non → uniformisation en cours'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `Ce secteur ne concerne pas la création.
+Il concerne le sens, l'identité et le courage de choisir dans un monde où tout peut être généré.
+
+⸻
+
+SYNTHÈSE GLOBALE
+
+👉 Les IA créatives ne remplacent pas la créativité humaine.
+Elles déplacent la valeur vers l'intention, la direction et le choix.
+
+Les IA créatives sont extraordinaires pour explorer, varier et matérialiser des idées.
+Elles deviennent dangereuses dès qu'on leur confie le goût, le sens, la narration ou la responsabilité culturelle.
+
+Les IA créatives créent de la valeur quand elles accélèrent l'exploration et enrichissent la réflexion créative.
+Elles détruisent de la valeur quand elles remplacent la direction artistique, la narration et la responsabilité humaine.
+
+👉 Les IA créatives n'enlèvent pas la responsabilité culturelle.
+Elles la rendent plus lourde, plus visible et plus exigeante.`
+}
+
+// Contenu de la formation "IA Agentique & Systèmes Autonomes - Secteur 7"
+export const iaAgentiqueContent: FormationContent = {
+  formationId: 'formation_ia_agentique',
+  introduction: `Jusqu'ici, l'IA :
+• répondait à des demandes,
+• exécutait des tâches ponctuelles,
+• attendait une instruction humaine.
+
+Avec l'IA agentique, on change de paradigme :
+
+👉 L'IA peut maintenant :
+• poursuivre un objectif sur la durée,
+• découper un problème en sous-tâches,
+• décider de la prochaine action,
+• utiliser plusieurs outils,
+• s'auto-corriger partiellement,
+• fonctionner en continu.
+
+👉 Ce n'est plus un outil.
+C'est un système d'action.
+
+Ce secteur existe parce que :
+• les processus sont trop complexes pour être pilotés manuellement,
+• les volumes d'actions explosent,
+• la vitesse d'exécution humaine devient un goulot d'étranglement,
+• les organisations veulent passer de l'automatisation statique à l'adaptation dynamique.`,
+  parts: [
+    {
+      title: 'AXE 1 — RÔLE FONDAMENTAL DANS LE TRAVAIL HUMAIN',
+      sections: [
+        {
+          title: '1. POURQUOI CE SECTEUR EXISTE (LE BASCULEMENT STRUCTUREL)',
+          content: [
+            'Jusqu\'ici, l\'IA :',
+            '• répondait à des demandes,',
+            '• exécutait des tâches ponctuelles,',
+            '• attendait une instruction humaine.',
+            '',
+            'Avec l\'IA agentique, on change de paradigme :',
+            '',
+            '👉 L\'IA peut maintenant :',
+            '• poursuivre un objectif sur la durée,',
+            '• découper un problème en sous-tâches,',
+            '• décider de la prochaine action,',
+            '• utiliser plusieurs outils,',
+            '• s\'auto-corriger partiellement,',
+            '• fonctionner en continu.',
+            '',
+            '👉 Ce n\'est plus un outil.',
+            'C\'est un système d\'action.'
+          ]
+        },
+        {
+          title: '2. LA DISTINCTION FONDAMENTALE : AUTOMATISATION ≠ AGENT',
+          content: [
+            'C\'est le point clé à comprendre.',
+            '',
+            'Automatisation classique :',
+            '• règle fixe',
+            '• déclencheur clair',
+            '• scénario prédéfini',
+            '• pas d\'initiative',
+            '',
+            'Agent IA :',
+            '• objectif global',
+            '• planification autonome',
+            '• choix de séquences',
+            '• itérations',
+            '• ajustements',
+            '',
+            '👉 L\'agent ne suit pas un script.',
+            'Il poursuit un but.'
+          ]
+        },
+        {
+          title: '3. CE QU\'EST RÉELLEMENT UN AGENT IA',
+          content: [
+            'Un agent IA est un système qui combine :',
+            '',
+            '1. Un objectif',
+            '   • "augmenter la conversion"',
+            '   • "maintenir un service opérationnel"',
+            '   • "optimiser un processus"',
+            '',
+            '2. Un moteur de raisonnement',
+            '   • planification',
+            '   • priorisation',
+            '   • choix d\'actions',
+            '',
+            '3. Une mémoire',
+            '   • contexte',
+            '   • historique',
+            '   • apprentissages',
+            '',
+            '4. Des outils',
+            '   • API',
+            '   • logiciels',
+            '   • bases de données',
+            '   • automatisations',
+            '',
+            '5. Une boucle d\'action',
+            '   • observer',
+            '   • décider',
+            '   • agir',
+            '   • évaluer',
+            '   • recommencer',
+            '',
+            '👉 C\'est une boucle décision–action.',
+            '',
+            'Écosystèmes et outils souvent cités :',
+            '• AutoGPT',
+            '• LangChain',
+            '• CrewAI',
+            '',
+            '👉 Ce ne sont pas des produits grand public.',
+            'Ce sont des briques systémiques.'
+          ]
+        },
+        {
+          title: '4. LA FONCTION CENTRALE : DÉLÉGUER L\'EXÉCUTION CONTINUE (PAS LA RESPONSABILITÉ)',
+          content: [
+            'Les agents sont faits pour gérer la continuité,',
+            'pas pour porter la responsabilité.',
+            '',
+            'Ils excellent pour :',
+            '• surveiller en permanence,',
+            '• exécuter des actions répétées,',
+            '• gérer des volumes massifs,',
+            '• réagir vite.',
+            '',
+            'Ils sont mauvais pour :',
+            '• arbitrer moralement,',
+            '• comprendre l\'implicite humain,',
+            '• mesurer l\'impact social,',
+            '• assumer les conséquences.',
+            '',
+            '👉 Ils agissent.',
+            'Ils n\'assument rien.'
+          ]
+        },
+        {
+          title: 'RÈGLE FONDAMENTALE À TRANSMETTRE EN FORMATION',
+          content: [
+            'Un agent doit toujours être subordonné',
+            'à un objectif humain explicite et réversible.',
+            '',
+            'Si tu ne peux pas arrêter un agent facilement,',
+            'il ne doit pas exister.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 2 — CE QUE CES AGENTS FONT BIEN / MAL (ET POURQUOI)',
+      sections: [
+        {
+          title: '1. CE QUE LES AGENTS IA FONT EXTRÊMEMENT BIEN (LEUR VRAIE PUISSANCE)',
+          content: [
+            '1.1 Gérer une exécution continue sans fatigue ni rupture',
+            '',
+            'C\'est leur avantage structurel numéro un.',
+            '',
+            'Un agent peut :',
+            '• surveiller un système 24/7,',
+            '• relancer une action automatiquement,',
+            '• reprendre après un échec,',
+            '• maintenir un objectif dans le temps.',
+            '',
+            '👉 Là où l\'humain se fatigue, l\'agent persiste.',
+            '',
+            '1.2 Découper un objectif en sous-tâches opérables',
+            '',
+            'Contrairement à une automatisation figée, un agent sait :',
+            '• analyser un objectif global,',
+            '• proposer un plan d\'action,',
+            '• séquencer les étapes,',
+            '• ajuster l\'ordre d\'exécution.',
+            '',
+            'Frameworks utilisés pour cela :',
+            '• LangChain',
+            '• CrewAI',
+            '',
+            '👉 Il ne suit pas un scénario.',
+            'Il construit une trajectoire.',
+            '',
+            '1.3 Coordonner plusieurs outils sans supervision constante',
+            '',
+            'Un agent peut :',
+            '• appeler des API,',
+            '• utiliser des outils SaaS,',
+            '• écrire, lire, modifier des données,',
+            '• déclencher des automatisations,',
+            '• analyser les retours.',
+            '',
+            '👉 Il devient un "opérateur logiciel autonome".'
+          ]
+        },
+        {
+          title: '2. CE QUE LES AGENTS IA FONT MAL (ET NE FERONT JAMAIS BIEN)',
+          content: [
+            '2.1 Ils ne comprennent pas le sens profond d\'un objectif',
+            '',
+            'Un agent peut poursuivre :',
+            '• "augmenter la conversion"',
+            '• "réduire les coûts"',
+            '• "optimiser un processus"',
+            '',
+            'Sans jamais comprendre :',
+            '• l\'impact humain,',
+            '• les effets secondaires,',
+            '• les limites éthiques,',
+            '• le contexte implicite.',
+            '',
+            '👉 Ils optimisent littéralement.',
+            'Pas intelligemment.',
+            '',
+            '2.2 Ils peuvent s\'enfermer dans des boucles absurdes',
+            '',
+            'Sans garde-fous :',
+            '• un agent peut répéter une action inefficace,',
+            '• poursuivre un objectif devenu obsolète,',
+            '• interpréter un succès apparent comme une validation,',
+            '• amplifier une erreur.',
+            '',
+            '👉 Un agent persistant peut être obstiné dans l\'erreur.',
+            '',
+            '2.3 Ils propagent les erreurs plus vite que les humains',
+            '',
+            'Un agent :',
+            '• agit vite,',
+            '• agit souvent,',
+            '• agit à grande échelle.',
+            '',
+            '👉 Une mauvaise interprétation devient un problème systémique.',
+            '',
+            'C\'est l\'effet "amplificateur" :',
+            '• plus d\'autonomie = plus d\'impact,',
+            '• sans jugement humain = plus de risques.'
+          ]
+        },
+        {
+          title: 'RÈGLE D\'OR DU SECTEUR 7',
+          content: [
+            'Plus un agent est autonome,',
+            'plus le cadre humain doit être strict.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 3 — USAGES PROFESSIONNELS CONCRETS (PAR MÉTIERS)',
+      sections: [
+        {
+          title: 'RÈGLE DE CADRE (ABSOLUMENT NON NÉGOCIABLE)',
+          content: [
+            'Dans tous les cas ci-dessous, un agent IA :',
+            '',
+            '👉 agit dans un périmètre défini',
+            '👉 poursuit un objectif humain explicite',
+            '👉 est surveillé en continu',
+            '👉 peut être arrêté immédiatement',
+            '👉 n\'a aucune autorité morale ou décisionnelle finale'
+          ]
+        },
+        {
+          title: '1. OPÉRATIONS / PROCESS COMPLEXES',
+          content: [
+            'Usage agentique sain :',
+            '',
+            'Cas concrets :',
+            '• agent qui surveille un processus de bout en bout',
+            '• agent qui détecte les blocages',
+            '• agent qui relance automatiquement certaines étapes',
+            '• agent qui escalade vers l\'humain quand un seuil est dépassé',
+            '',
+            '👉 L\'agent devient un gardien de continuité opérationnelle.',
+            '',
+            'Ce qui doit rester humain :',
+            '• redéfinition du processus',
+            '• arbitrage en cas de conflit',
+            '• décision de modification structurelle',
+            '',
+            'Erreur fréquente :',
+            '• laisser l\'agent "corriger" le process tout seul',
+            '',
+            '👉 Optimiser un mauvais processus le rend simplement plus rapide… et plus mauvais.'
+          ]
+        },
+        {
+          title: '2. IT / DEVOPS / SYSTÈMES NUMÉRIQUES',
+          content: [
+            'Usage agentique sain :',
+            '',
+            'Un agent peut :',
+            '• surveiller en continu les métriques',
+            '• détecter des anomalies',
+            '• proposer un diagnostic',
+            '• déclencher des actions correctives simples',
+            '• alerter l\'équipe humaine avec contexte',
+            '',
+            '👉 L\'agent réduit la charge cognitive, pas la responsabilité technique.',
+            '',
+            'Ce qui reste humain :',
+            '• décisions de rollback',
+            '• arbitrage sécurité',
+            '• choix d\'architecture',
+            '',
+            'Erreur critique :',
+            '• laisser un agent modifier une infra sans validation humaine',
+            '',
+            '👉 Risque systémique majeur.'
+          ]
+        },
+        {
+          title: '3. MARKETING / GROWTH / PERFORMANCE DIGITALE',
+          content: [
+            'Usage agentique sain :',
+            '',
+            'Un agent peut :',
+            '• surveiller en continu les performances',
+            '• tester des variations simples',
+            '• ajuster des paramètres mineurs',
+            '• remonter des insights actionnables',
+            '',
+            '👉 L\'agent exécute des micro-optimisations, l\'humain garde la stratégie.',
+            '',
+            'Ce qui reste humain :',
+            '• positionnement de marque',
+            '• arbitrage budgétaire',
+            '• décisions d\'image',
+            '',
+            'Erreur fréquente :',
+            '• laisser l\'agent optimiser "à la performance brute"',
+            '',
+            '👉 Il peut dégrader la marque pour gagner 0,3 % de clics.'
+          ]
+        },
+        {
+          title: '4. SERVICE CLIENT À GRANDE ÉCHELLE',
+          content: [
+            'Usage agentique sain :',
+            '',
+            'Un agent peut :',
+            '• qualifier automatiquement les demandes',
+            '• répondre aux cas standards',
+            '• suivre un ticket sur plusieurs échanges',
+            '• escalader intelligemment vers l\'humain',
+            '',
+            '👉 L\'agent absorbe le volume.',
+            'L\'humain gère l\'émotion et l\'exception.',
+            '',
+            'Ce qui doit rester humain :',
+            '• clients en colère',
+            '• situations sensibles',
+            '• décisions commerciales exceptionnelles',
+            '',
+            'Erreur grave :',
+            '• laisser l\'agent "tenir tête" à un client',
+            '',
+            '👉 Un agent ne sait pas désamorcer une crise émotionnelle.'
+          ]
+        },
+        {
+          title: 'QUESTION CLÉ À POSER AVANT DÉPLOIEMENT',
+          content: [
+            '"Que se passe-t-il si cet agent se trompe pendant 24 heures sans que personne ne regarde ?"',
+            '',
+            'Si la réponse est :',
+            '"On ne sait pas vraiment…"',
+            '',
+            '👉 Il ne doit pas être déployé.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 4 — ARCHITECTURE, GOUVERNANCE, GARDE-FOUS & BONNES PRATIQUES',
+      sections: [
+        {
+          title: '1. PRINCIPE FONDAMENTAL (NON NÉGOCIABLE)',
+          content: [
+            'Un agent autonome n\'est jamais un système libre.',
+            'C\'est un système sous délégation conditionnelle.',
+            '',
+            'Autrement dit :',
+            '• l\'agent agit',
+            '• l\'humain autorise',
+            '• l\'humain surveille',
+            '• l\'humain assume',
+            '',
+            '👉 Toute architecture qui ne rend pas cela explicite est dangereuse.'
+          ]
+        },
+        {
+          title: '2. ARCHITECTURE DE RÉFÉRENCE D\'UN SYSTÈME AGENTIQUE SAIN',
+          content: [
+            'Un système agentique robuste repose sur 7 couches distinctes.',
+            'Si l\'une manque, le risque devient systémique.',
+            '',
+            '2.1 Objectif humain explicite (couche 1)',
+            '',
+            'Avant tout agent, il doit exister :',
+            '• un objectif clair',
+            '• formulé en langage humain',
+            '• limité dans le temps',
+            '• révisable',
+            '',
+            'Exemple sain :',
+            '"Maintenir un taux de réponse client < 24h sur les demandes standards,',
+            'sans traiter les réclamations sensibles."',
+            '',
+            '❌ Objectif dangereux :',
+            '"Optimiser la satisfaction client."',
+            '',
+            '👉 Un objectif flou produit des comportements absurdes.',
+            '',
+            '2.2 Périmètre d\'action strictement borné (couche 2)',
+            '',
+            'Un agent doit savoir :',
+            '• ce qu\'il peut faire',
+            '• ce qu\'il ne peut jamais faire',
+            '',
+            '👉 Tout ce qui n\'est pas explicitement autorisé est interdit.',
+            '',
+            '2.3 Kill switch immédiat et accessible (couche 5)',
+            '',
+            'Chaque agent doit avoir :',
+            '• un bouton d\'arrêt clair',
+            '• accessible à plusieurs personnes',
+            '• documenté',
+            '• testé régulièrement',
+            '',
+            '👉 Un agent qu\'on ne peut pas arrêter immédiatement',
+            'est un risque organisationnel majeur.',
+            '',
+            '2.4 Responsable humain nommé (couche 7)',
+            '',
+            'Chaque agent doit avoir :',
+            '• un propriétaire',
+            '• un référent métier',
+            '• un droit d\'arrêt',
+            '• une responsabilité explicite',
+            '',
+            '👉 Un agent sans responsable est une faute grave de gouvernance.'
+          ]
+        },
+        {
+          title: '3. BONNES PRATIQUES ABSOLUMENT ESSENTIELLES',
+          content: [
+            '4.1 Commencer petit, toujours',
+            '• un agent',
+            '• un objectif',
+            '• un périmètre',
+            '',
+            '👉 La complexité doit être gagnée, pas supposée.',
+            '',
+            '4.2 Prévoir explicitement l\'échec',
+            '',
+            'Un bon design agentique inclut :',
+            '• "que fait l\'agent quand il ne sait pas ?"',
+            '• "quand doit-il s\'arrêter ?"',
+            '• "quand doit-il escalader ?"',
+            '',
+            '👉 L\'échec bien géré est un signe de maturité.',
+            '',
+            '4.3 Interdire l\'auto-extension de périmètre',
+            '',
+            'Un agent ne doit jamais :',
+            '• décider d\'élargir son champ d\'action',
+            '• se donner de nouveaux droits',
+            '• modifier ses propres règles',
+            '',
+            '👉 Toute extension doit être humaine.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 5 — RISQUES, ÉTHIQUE, RESPONSABILITÉ & AVENIR',
+      sections: [
+        {
+          title: '1. LE RISQUE MAJEUR : LA DÉLÉGATION INVISIBLE DU POUVOIR',
+          content: [
+            'Le danger principal des systèmes agentiques n\'est pas l\'erreur technique.',
+            '👉 C\'est la délégation implicite de pouvoir sans responsabilité explicite.',
+            '',
+            'Mécanisme typique :',
+            '• un agent est mis en place "pour aider",',
+            '• il agit souvent, vite, bien la plupart du temps,',
+            '• on s\'habitue,',
+            '• on regarde moins,',
+            '• on intervient trop tard.',
+            '',
+            '👉 Le pouvoir d\'agir se déplace silencieusement du décideur vers le système.',
+            '',
+            'Quand un problème survient :',
+            '• personne ne sait exactement quand la décision a été prise,',
+            '• personne ne se sent pleinement responsable,',
+            '• la confiance est brisée.'
+          ]
+        },
+        {
+          title: '2. LE RISQUE SYSTÉMIQUE : L\'ERREUR AUTONOME À GRANDE ÉCHELLE',
+          content: [
+            'Un agent autonome :',
+            '• agit en continu,',
+            '• agit à grande vitesse,',
+            '• agit sur de multiples objets (données, outils, personnes).',
+            '',
+            '👉 Une mauvaise interprétation n\'est plus locale : elle devient structurelle.',
+            '',
+            'Exemples concrets de dérives possibles :',
+            '• refus répétés de demandes légitimes,',
+            '• dégradation progressive de la relation client,',
+            '• décisions opérationnelles "optimisées" mais humainement inacceptables,',
+            '• verrouillage d\'un système autour d\'un objectif obsolète.',
+            '',
+            '👉 L\'erreur humaine est ponctuelle.',
+            'L\'erreur agentique est persistante.'
+          ]
+        },
+        {
+          title: '3. CE QUI NE DOIT JAMAIS ÊTRE DÉLÉGUÉ À UN AGENT',
+          content: [
+            'Même avec des IA très avancées, certaines fonctions doivent rester strictement humaines :',
+            '',
+            '❌ Décisions à fort impact humain',
+            '(exclusion, sanction, refus critique)',
+            '',
+            '❌ Arbitrages éthiques',
+            '(quand aucune option n\'est "bonne")',
+            '',
+            '❌ Décisions politiques ou sociales',
+            '(gestion de crise, communication sensible)',
+            '',
+            '❌ Redéfinition des objectifs',
+            '(un agent ne doit jamais redéfinir sa mission)',
+            '',
+            '👉 Plus l\'impact est irréversible, moins l\'autonomie est acceptable.'
+          ]
+        },
+        {
+          title: '4. RESPONSABILITÉ : LA LIGNE ROUGE ABSOLUE',
+          content: [
+            'Tout ce qu\'un agent fait, quelqu\'un doit pouvoir en répondre publiquement.',
+            '',
+            'Cela implique :',
+            '• un responsable nommé,',
+            '• une capacité d\'explication claire,',
+            '• une traçabilité accessible,',
+            '• une possibilité d\'arrêt immédiat.',
+            '',
+            'Phrase inacceptable (et dangereuse) :',
+            '"Ce n\'est pas nous, c\'est l\'agent."',
+            '',
+            '👉 Un agent n\'est jamais responsable.',
+            'Il n\'a ni statut moral, ni responsabilité légale.'
+          ]
+        },
+        {
+          title: '5. POSTURE PROFESSIONNELLE À TRANSMETTRE (MANIFESTE)',
+          content: [
+            'Voici la posture à enseigner explicitement :',
+            '',
+            '• Je délègue l\'exécution, jamais la responsabilité',
+            '• Je préfère un agent perfectible à un agent incontrôlable',
+            '• Je rends visible ce que l\'agent fait',
+            '• Je peux arrêter à tout moment',
+            '• J\'assume publiquement ce que le système produit'
+          ]
+        },
+        {
+          title: '6. TEST FINAL DE MATURITÉ (LE PLUS IMPORTANT)',
+          content: [
+            'Pose cette question, sans détour :',
+            '',
+            '"Si cet agent cause un problème demain,',
+            'qui va s\'expliquer devant une personne impactée ?"',
+            '',
+            '• Réponse claire → usage mature',
+            '• Réponse floue → danger immédiat'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `Ce secteur ne concerne pas l'autonomie des machines.
+Il concerne la capacité des humains à rester responsables
+dans un monde où l'action peut être déléguée en continu.
+
+⸻
+
+SYNTHÈSE GLOBALE
+
+👉 Les IA agentiques ne remplacent pas la décision humaine.
+Elles déplacent l'humain du "faire" vers le "piloter et assumer".
+
+Les agents IA sont extrêmement puissants pour exécuter, coordonner et persister.
+Ils deviennent dangereux dès qu'on leur attribue du jugement, du sens ou une responsabilité implicite.
+
+Les agents IA créent un avantage massif lorsqu'ils gèrent la continuité, le volume et la complexité sous supervision humaine.
+Ils deviennent un risque critique dès qu'ils remplacent le jugement, l'arbitrage ou la responsabilité.
+
+👉 Les IA agentiques n'enlèvent pas la responsabilité humaine.
+Elles la rendent plus lourde, plus visible et absolument incontournable.`
+}
+
+// Contenu de la formation "IA, Emploi & Transformation des Métiers - Secteur 8"
+export const iaEmploiContent: FormationContent = {
+  formationId: 'formation_ia_emploi',
+  introduction: `Deux discours dominent… et les deux sont faux.
+
+❌ "L'IA va remplacer tous les emplois"
+❌ "L'IA ne changera rien, c'est juste un outil de plus"
+
+👉 La réalité est plus dérangeante :
+l'IA ne remplace pas des métiers, elle démonte des tâches.
+
+Ce sont les métiers structurés autour de tâches répétables, prévisibles et mesurables qui sont bouleversés.
+Pas les identités professionnelles dans leur ensemble.
+
+Avec l'IA :
+• certaines tâches disparaissent,
+• d'autres apparaissent,
+• certaines deviennent marginales,
+• d'autres deviennent centrales.
+
+👉 Le métier se fragmente.
+Ce n'est pas une suppression.
+C'est une recomposition.`,
+  parts: [
+    {
+      title: 'AXE 1 — RÔLE FONDAMENTAL : CE QUE L\'IA CHANGE VRAIMENT DANS LE TRAVAIL',
+      sections: [
+        {
+          title: '1. LE MYTHE CENTRAL À DÉTRUIRE D\'ENTRÉE',
+          content: [
+            'Deux discours dominent… et les deux sont faux.',
+            '',
+            '❌ "L\'IA va remplacer tous les emplois"',
+            '❌ "L\'IA ne changera rien, c\'est juste un outil de plus"',
+            '',
+            '👉 La réalité est plus dérangeante :',
+            'l\'IA ne remplace pas des métiers, elle démonte des tâches.',
+            '',
+            'Ce sont les métiers structurés autour de tâches répétables, prévisibles et mesurables qui sont bouleversés.',
+            'Pas les identités professionnelles dans leur ensemble.'
+          ]
+        },
+        {
+          title: '2. LE VRAI CHANGEMENT STRUCTUREL : LA DISSOLUTION DES MÉTIERS "MONOBLOC"',
+          content: [
+            'Historiquement, un métier = un ensemble stable de tâches.',
+            '',
+            'Avec l\'IA :',
+            '• certaines tâches disparaissent,',
+            '• d\'autres apparaissent,',
+            '• certaines deviennent marginales,',
+            '• d\'autres deviennent centrales.',
+            '',
+            '👉 Le métier se fragmente.',
+            '',
+            'Exemple générique (valable partout) :',
+            '• 30–40 % des tâches deviennent automatisables',
+            '• 30 % sont transformées',
+            '• 30 % restent profondément humaines',
+            '',
+            '👉 Ce n\'est pas une suppression.',
+            'C\'est une recomposition.'
+          ]
+        },
+        {
+          title: '3. CE QUE L\'IA AUTOMATISE VRAIMENT (ET PARTOUT)',
+          content: [
+            'Quel que soit le métier, l\'IA tend à absorber :',
+            '• la saisie et le transfert d\'information',
+            '• la recherche basique',
+            '• la production standardisée',
+            '• la synthèse de contenus existants',
+            '• le suivi répétitif',
+            '• le contrôle de règles simples',
+            '',
+            '👉 Tout ce qui est :',
+            '• répétable',
+            '• explicitable',
+            '• standardisable',
+            '• mesurable',
+            '',
+            'est structurellement menacé ou déplacé.'
+          ]
+        },
+        {
+          title: '4. CE QUE L\'IA NE SAIT PAS FAIRE (ET NE SAURA PAS FAIRE À COURT TERME)',
+          content: [
+            'À l\'inverse, certaines dimensions deviennent plus précieuses, pas moins.',
+            '',
+            'Compétences fondamentalement humaines :',
+            '• jugement dans l\'incertitude',
+            '• arbitrage entre intérêts contradictoires',
+            '• responsabilité morale',
+            '• relation humaine réelle',
+            '• contextualisation fine',
+            '• créativité intentionnelle',
+            '• courage décisionnel',
+            '',
+            '👉 L\'IA peut simuler.',
+            'Elle ne peut pas assumer.'
+          ]
+        },
+        {
+          title: '5. LE DÉPLACEMENT MAJEUR DE LA VALEUR',
+          content: [
+            'Avec l\'IA, la valeur professionnelle se déplace :',
+            '',
+            'Avant :',
+            '• savoir faire',
+            '• maîtriser un outil',
+            '• produire plus vite',
+            '• être indispensable opérationnellement',
+            '',
+            'Après :',
+            '• savoir cadrer',
+            '• savoir décider',
+            '• savoir arbitrer',
+            '• savoir expliquer',
+            '• savoir assumer',
+            '',
+            '👉 La valeur monte vers :',
+            '• la supervision',
+            '• la stratégie',
+            '• le sens',
+            '• la responsabilité'
+          ]
+        },
+        {
+          title: 'RÈGLE FONDAMENTALE À TRANSMETTRE EN FORMATION',
+          content: [
+            'Ne te demande pas :',
+            '"Mon métier va-t-il disparaître ?"',
+            '',
+            'Demande-toi :',
+            '"Quelles tâches de mon métier vont perdre de la valeur,',
+            'et lesquelles vont en gagner ?"',
+            '',
+            '👉 C\'est la seule question stratégique pertinente.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 2 — MÉTIERS MENACÉS, TRANSFORMÉS, AUGMENTÉS (LECTURE RÉALISTE)',
+      sections: [
+        {
+          title: '1. AVERTISSEMENT ESSENTIEL (AVANT DE CLASSER)',
+          content: [
+            'Il n\'existe aucun métier 100 % menacé',
+            'Il n\'existe aucun métier 100 % protégé',
+            '',
+            '👉 Ce sont les configurations de tâches qui comptent, pas les intitulés.',
+            '',
+            'Deux personnes avec le même titre peuvent avoir :',
+            '• des trajectoires totalement différentes,',
+            '• une valeur très différente,',
+            '• un risque radicalement opposé.'
+          ]
+        },
+        {
+          title: '2. LES MÉTIERS STRUCTURELLEMENT MENACÉS (OU PLUTÔT : DÉSTRUCTURÉS)',
+          content: [
+            'Ces métiers ne disparaissent pas brutalement, mais :',
+            '• se réduisent en volume,',
+            '• se standardisent,',
+            '• se dévalorisent,',
+            '• se polarisent (quelques experts, beaucoup d\'automatisé).',
+            '',
+            '2.1 Caractéristiques communes (signaux d\'alerte)',
+            '',
+            'Un métier devient fragile si :',
+            '• 70 %+ des tâches sont répétables',
+            '• le travail est basé sur des règles explicites',
+            '• la production est standardisée',
+            '• la valeur est mesurée à la quantité',
+            '• l\'erreur est tolérable individuellement',
+            '',
+            '👉 L\'IA y est structurellement compétitive.',
+            '',
+            '2.2 Exemples typiques (sans caricature)',
+            '• saisie administrative',
+            '• back-office standard',
+            '• production de contenu générique',
+            '• support client niveau 1',
+            '• analyse descriptive simple',
+            '• reporting mécanique',
+            '• traduction basique',
+            '• prospection non qualifiée',
+            '',
+            '👉 Ces métiers ne disparaissent pas :',
+            'ils se compressent et se recomposent.'
+          ]
+        },
+        {
+          title: '3. LES MÉTIERS PROFONDÉMENT TRANSFORMÉS (LA MAJORITÉ)',
+          content: [
+            'C\'est le cœur du bouleversement.',
+            '',
+            'Ces métiers restent indispensables, mais :',
+            '• leurs tâches changent,',
+            '• leurs compétences clés se déplacent,',
+            '• leur posture professionnelle évolue.',
+            '',
+            '3.1 Signes d\'un métier "transformé"',
+            '• coexistence humain / IA',
+            '• décisions encore humaines',
+            '• exécution partiellement automatisée',
+            '• responsabilité toujours humaine',
+            '• besoin accru de supervision',
+            '',
+            '👉 Le métier survit, mais pas sous sa forme ancienne.',
+            '',
+            '3.2 Exemples très concrets',
+            '• marketing → moins d\'exécution, plus de stratégie & arbitrage',
+            '• RH → moins d\'administratif, plus de relation & éthique',
+            '• finance → moins de saisie, plus d\'analyse & décision',
+            '• juriste → moins de recherche brute, plus d\'interprétation',
+            '• enseignant / formateur → moins de transmission descendante, plus de pédagogie active',
+            '• chef de projet → moins de coordination manuelle, plus de pilotage',
+            '',
+            '👉 Ces métiers montent en complexité cognitive.'
+          ]
+        },
+        {
+          title: '4. LES MÉTIERS STRUCTURELLEMENT AUGMENTÉS (LES GAGNANTS RELATIFS)',
+          content: [
+            'Ces métiers voient leur valeur augmenter avec l\'IA, à condition d\'être bien exercés.',
+            '',
+            '4.1 Caractéristiques communes',
+            '• forte responsabilité humaine',
+            '• décisions irréversibles',
+            '• relation humaine critique',
+            '• arbitrage dans l\'incertitude',
+            '• contexte mouvant',
+            '• impact humain ou stratégique fort',
+            '',
+            '👉 L\'IA y est un levier, pas un substitut.',
+            '',
+            '4.2 Exemples clairs',
+            '• dirigeants',
+            '• managers d\'équipes complexes',
+            '• experts métier transverses',
+            '• architectes (tech, organisation, produit)',
+            '• créatifs avec direction artistique',
+            '• consultants stratégiques',
+            '• soignants relationnels',
+            '• enseignants incarnés',
+            '',
+            '👉 Leur valeur repose sur ce que l\'IA ne sait pas assumer.'
+          ]
+        },
+        {
+          title: '5. LA NOUVELLE FRACTURE DU MARCHÉ DU TRAVAIL',
+          content: [
+            'Ce n\'est pas :',
+            '• diplômés vs non-diplômés',
+            '• cols blancs vs cols bleus',
+            '• humains vs machines',
+            '',
+            '👉 La vraie fracture devient :',
+            '',
+            '🔹 Ceux qui :',
+            '• comprennent les systèmes',
+            '• cadrent les objectifs',
+            '• pilotent l\'IA',
+            '• assument les décisions',
+            '',
+            '🔹 Et ceux qui :',
+            '• exécutent sans vision',
+            '• subissent les outils',
+            '• attendent des instructions',
+            '• évitent la responsabilité',
+            '',
+            '👉 C\'est une fracture de posture, pas de métier.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 3 — COMPÉTENCES EN DÉCLIN, ÉMERGENTES ET CRITIQUES',
+      sections: [
+        {
+          title: '1. PRINCIPE CLÉ À COMPRENDRE (AVANT TOUT)',
+          content: [
+            'Les compétences ne disparaissent pas parce qu\'elles sont mauvaises.',
+            'Elles disparaissent parce qu\'elles deviennent abondantes.',
+            '',
+            'Avec l\'IA :',
+            '• ce qui était rare devient courant,',
+            '• ce qui demandait du temps devient instantané,',
+            '• ce qui nécessitait un spécialiste devient accessible.',
+            '',
+            '👉 La valeur se déplace toujours vers ce qui reste rare.'
+          ]
+        },
+        {
+          title: '2. LES COMPÉTENCES EN DÉCLIN (PAS INUTILES, MAIS DÉVALORISÉES)',
+          content: [
+            'Ce sont les compétences qui :',
+            '• restent nécessaires,',
+            '• mais ne différencient plus,',
+            '• et ne justifient plus à elles seules un rôle ou un salaire.',
+            '',
+            '2.1 Compétences techniques "exécutives"',
+            '',
+            'Exemples :',
+            '• rédaction standardisée',
+            '• création de slides basiques',
+            '• recherche d\'informations simple',
+            '• reporting descriptif',
+            '• traduction littérale',
+            '• saisie et mise en forme de données',
+            '• montage ou design sans intention',
+            '',
+            '👉 Elles deviennent des prérequis, pas des avantages.',
+            '',
+            '2.2 Compétences "outil-centrées"',
+            '',
+            'Exemples :',
+            '• "expert Excel"',
+            '• "expert PowerPoint"',
+            '• "expert outil X"',
+            '',
+            '👉 Les outils changent trop vite.',
+            'La valeur ne peut plus reposer dessus.'
+          ]
+        },
+        {
+          title: '3. LES COMPÉTENCES ÉMERGENTES (CELLES QUI MONTENT)',
+          content: [
+            'Ce sont des compétences transversales, souvent absentes des fiches de poste traditionnelles.',
+            '',
+            '3.1 Cadrage & formulation de problèmes',
+            '',
+            'Savoir :',
+            '• poser la bonne question,',
+            '• définir un objectif exploitable,',
+            '• expliciter des contraintes,',
+            '• transformer un flou en problème opérable.',
+            '',
+            '👉 L\'IA est puissante sur les réponses.',
+            'La valeur humaine est dans la question.',
+            '',
+            '3.2 Pilotage d\'outils et de systèmes IA',
+            '',
+            'Inclut :',
+            '• savoir quand utiliser l\'IA',
+            '• savoir quand ne pas l\'utiliser',
+            '• superviser un résultat',
+            '• détecter une dérive',
+            '• corriger un cadre',
+            '',
+            '👉 Le métier évolue vers "opérateur de systèmes intelligents".',
+            '',
+            '3.3 Lecture critique et discernement',
+            '',
+            'Savoir :',
+            '• évaluer une sortie IA,',
+            '• repérer une approximation,',
+            '• identifier un biais,',
+            '• dire "ce n\'est pas acceptable".',
+            '',
+            '👉 Dire non devient une compétence rare.'
+          ]
+        },
+        {
+          title: '4. LES COMPÉTENCES CRITIQUES (NON AUTOMATISABLES)',
+          content: [
+            'Ce sont les compétences qui portent la responsabilité humaine.',
+            'Elles deviennent plus précieuses à mesure que l\'IA progresse.',
+            '',
+            '4.1 Jugement dans l\'incertitude',
+            '• décider sans données complètes',
+            '• arbitrer entre options imparfaites',
+            '• accepter le risque',
+            '',
+            '👉 L\'IA optimise.',
+            'L\'humain tranche.',
+            '',
+            '4.2 Responsabilité et redevabilité',
+            '• assumer une décision',
+            '• en expliquer les raisons',
+            '• en porter les conséquences',
+            '',
+            '👉 Une compétence que l\'IA ne peut pas simuler.',
+            '',
+            '4.3 Intelligence relationnelle réelle',
+            '• écoute active',
+            '• gestion de conflit',
+            '• confiance',
+            '• empathie contextuelle',
+            '',
+            '👉 Plus le monde se digitalise, plus la relation humaine devient rare et précieuse.',
+            '',
+            '4.4 Sens, narration et vision',
+            '',
+            'Savoir :',
+            '• donner du sens à une action,',
+            '• raconter pourquoi on fait les choses,',
+            '• aligner une équipe autour d\'un cap.',
+            '',
+            '👉 Les organisations ne manquent pas d\'outils.',
+            'Elles manquent de clarté.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 4 — REQUALIFICATION, FORMATION & STRATÉGIES CONCRÈTES',
+      sections: [
+        {
+          title: '1. LA FAUSSE BONNE RÉPONSE : "FORMER À L\'IA"',
+          content: [
+            'Erreur massive, observée partout.',
+            '',
+            'Former "à l\'IA" de manière générique donne :',
+            '• des utilisateurs superficiels,',
+            '• des usages gadgets,',
+            '• une inflation de jargon,',
+            '• peu de transformation réelle.',
+            '',
+            '👉 On ne forme pas à l\'IA.',
+            'On forme à un métier qui intègre l\'IA.',
+            '',
+            'La bonne question n\'est pas :',
+            '"Comment former à l\'IA ?"',
+            '',
+            'Mais :',
+            '"Quelles nouvelles responsabilités humaines ce métier doit-il assumer ?"'
+          ]
+        },
+        {
+          title: '2. LE PRINCIPE CENTRAL DE LA REQUALIFICATION',
+          content: [
+            'La requalification ne consiste pas à ajouter des compétences.',
+            'Elle consiste à déplacer le centre de gravité du rôle.',
+            '',
+            'Autrement dit :',
+            '• moins d\'exécution,',
+            '• plus de pilotage,',
+            '• moins de production brute,',
+            '• plus de décision,',
+            '• moins de volume,',
+            '• plus de responsabilité.',
+            '',
+            '👉 Former sans redéfinir le rôle est inefficace.'
+          ]
+        },
+        {
+          title: '3. STRATÉGIE INDIVIDUELLE : COMMENT SE REQUALIFIER (VRAIMENT)',
+          content: [
+            '3.1 Étape 1 — Cartographier ses tâches réelles (pas son titre)',
+            '',
+            'Exercice fondamental :',
+            '• liste toutes tes tâches sur une semaine réelle',
+            '• identifie :',
+            '  • automatisables',
+            '  • augmentables',
+            '  • strictement humaines',
+            '',
+            '👉 C\'est la base de toute stratégie personnelle.',
+            '',
+            '3.2 Étape 2 — Décider ce que tu dois abandonner',
+            '',
+            'C\'est le point le plus difficile.',
+            '',
+            'Il faut volontairement :',
+            '• lâcher certaines tâches historiques,',
+            '• accepter de ne plus être "l\'exécutant clé",',
+            '• céder ce que l\'IA fait mieux ou plus vite.',
+            '',
+            '👉 Ce qu\'on refuse d\'abandonner devient un point de fragilité.',
+            '',
+            '3.3 Étape 3 — Monter en responsabilité, pas en outils',
+            '',
+            'Mauvaise stratégie :',
+            '• apprendre 15 outils IA',
+            '• devenir "expert prompt"',
+            '• courir après les nouveautés',
+            '',
+            'Bonne stratégie :',
+            '• apprendre à cadrer un problème',
+            '• apprendre à superviser un résultat',
+            '• apprendre à expliquer une décision',
+            '• apprendre à assumer des arbitrages',
+            '',
+            '👉 Les outils changent.',
+            'La responsabilité reste.'
+          ]
+        },
+        {
+          title: '4. STRATÉGIE COLLECTIVE : COMMENT FORMER DANS LES ORGANISATIONS',
+          content: [
+            '4.1 Erreur classique des entreprises',
+            '• former tout le monde aux mêmes outils',
+            '• lancer des formations massives génériques',
+            '• espérer une transformation "par diffusion"',
+            '',
+            '👉 Résultat : usage hétérogène, rejet, confusion.',
+            '',
+            '4.2 Approche efficace (observée chez les organisations matures)',
+            '',
+            'Former par rôle, pas par technologie.',
+            '',
+            'Exemples :',
+            '• manager + IA',
+            '• RH + IA',
+            '• finance + IA',
+            '• marketing + IA',
+            '',
+            'Chaque formation doit répondre à :',
+            '• quelles décisions humaines restent ?',
+            '• quels usages IA sont autorisés ?',
+            '• quelles limites sont posées ?',
+            '• quelles responsabilités sont renforcées ?',
+            '',
+            '👉 La formation devient un acte de gouvernance.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 5 — RISQUES SOCIAUX, ÉTHIQUE & AVENIR DU TRAVAIL',
+      sections: [
+        {
+          title: '1. LE RISQUE MAJEUR : LA FRACTURE INVISIBLE (PLUS QUE LE CHÔMAGE)',
+          content: [
+            'Contrairement aux peurs médiatiques, le risque principal n\'est pas un chômage massif immédiat.',
+            '',
+            '👉 Le vrai risque est une fracture silencieuse entre travailleurs "augmentés" et travailleurs "déqualifiés".',
+            '',
+            'Cette fracture se manifeste par :',
+            '• des écarts de responsabilité de plus en plus forts,',
+            '• des écarts de rémunération accrus,',
+            '• une polarisation des rôles (pilotage vs exécution),',
+            '• une perte de sens pour certains métiers.',
+            '',
+            '👉 Ce n\'est pas l\'absence de travail qui menace.',
+            'C\'est la perte de reconnaissance et de trajectoire.'
+          ]
+        },
+        {
+          title: '2. LE RISQUE PSYCHOLOGIQUE : LA PERTE DE SENTIMENT D\'UTILITÉ',
+          content: [
+            'Pour beaucoup de professionnels, le travail est :',
+            '• un marqueur d\'identité,',
+            '• une source de reconnaissance,',
+            '• un espace de progression.',
+            '',
+            'Si l\'IA :',
+            '• absorbe les tâches visibles,',
+            '• accélère tout,',
+            '• rend la contribution humaine floue,',
+            '',
+            '👉 un malaise profond peut apparaître.',
+            '',
+            'Symptômes observés :',
+            '• anxiété professionnelle,',
+            '• sentiment d\'inutilité,',
+            '• repli,',
+            '• rejet de la technologie,',
+            '• burn-out paradoxal ("je fais plus, mais je sers moins").',
+            '',
+            '👉 Le mal-être ne vient pas de l\'IA,',
+            'mais d\'une transformation mal accompagnée.'
+          ]
+        },
+        {
+          title: '3. L\'ENJEU ÉTHIQUE CENTRAL : LA DIGNITÉ DU TRAVAIL',
+          content: [
+            'Question fondamentale (et trop peu posée) :',
+            '',
+            'Quel rôle voulons-nous encore confier aux humains ?',
+            '',
+            'Si l\'humain devient :',
+            '• un simple validateur passif,',
+            '• un exécutant sous surveillance algorithmique,',
+            '• un opérateur sans marge de décision,',
+            '',
+            '👉 le travail perd sa dignité.',
+            '',
+            'L\'éthique du travail à l\'ère de l\'IA implique :',
+            '• du jugement,',
+            '• de la responsabilité,',
+            '• de la possibilité de dire non,',
+            '• de l\'espace pour l\'erreur humaine.',
+            '',
+            '👉 Un travail sans responsabilité est un travail sans sens.'
+          ]
+        },
+        {
+          title: '4. L\'AVENIR DU TRAVAIL : TROIS SCÉNARIOS POSSIBLES',
+          content: [
+            'Scénario 1 — Optimisation froide (risqué)',
+            '• automatisation maximale,',
+            '• pression sur la performance,',
+            '• perte de sens,',
+            '• tensions sociales.',
+            '',
+            'Scénario 2 — Humanisme naïf (irréaliste)',
+            '• refus de l\'IA,',
+            '• perte de compétitivité,',
+            '• marginalisation économique.',
+            '',
+            'Scénario 3 — Humanisme exigeant (souhaitable)',
+            '• IA pour l\'exécution,',
+            '• humains pour le jugement,',
+            '• responsabilité renforcée,',
+            '• requalification continue.',
+            '',
+            '👉 Le futur du travail dépend de choix humains, pas techniques.'
+          ]
+        },
+        {
+          title: '5. POSTURE PROFESSIONNELLE À TRANSMETTRE (MANIFESTE)',
+          content: [
+            'Voici la posture à enseigner et à incarner :',
+            '',
+            '• Je ne me définis pas par ce que je produis, mais par ce que j\'assume',
+            '• J\'utilise l\'IA pour me libérer, pas pour me vider de mon rôle',
+            '• Je protège la part humaine du travail',
+            '• Je refuse les usages qui détruisent le sens',
+            '• Je participe activement à ma requalification'
+          ]
+        },
+        {
+          title: '6. TEST FINAL DE MATURITÉ SOCIALE (SIMPLE ET PUISSANT)',
+          content: [
+            'Pose cette question dans une organisation :',
+            '',
+            '"Sans l\'IA, ce travail aurait-il encore un sens humain ?"',
+            '',
+            '• Oui → transformation saine',
+            '• Non → alerte éthique'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `L'IA n'impose pas un futur du travail.
+Elle nous oblige à le choisir consciemment.
+
+⸻
+
+SYNTHÈSE GLOBALE
+
+👉 L'IA ne détruit pas le travail.
+Elle détruit l'illusion que produire suffit à créer de la valeur.
+
+L'IA ne crée pas une hiérarchie de métiers.
+Elle crée une hiérarchie de responsabilités et de postures professionnelles.
+
+L'IA ne rend pas les humains inutiles.
+Elle rend inutiles les compétences qui évitent la responsabilité.
+
+La requalification à l'ère de l'IA ne consiste pas à apprendre plus de choses,
+mais à accepter plus de responsabilité.
+
+👉 L'IA ne pose pas la question de la fin du travail.
+Elle pose la question du travail que nous jugeons digne d'être humain.`
+}
+
+// Contenu de la formation "IA, Gouvernance & Pouvoir Décisionnel - Secteur 9"
+export const iaGouvernanceContent: FormationContent = {
+  formationId: 'formation_ia_gouvernance',
+  introduction: `Quand l'IA est utilisée dans une organisation, une question devient centrale :
+
+Qui décide vraiment ?
+
+Pas :
+• qui utilise l'outil
+• qui a cliqué
+• qui a validé techniquement
+
+Mais :
+👉 qui porte l'autorité, la responsabilité et la légitimité de la décision.
+
+Avec l'IA, un glissement silencieux se produit.
+
+Avant :
+• le décideur tranche
+• l'outil assiste
+• la responsabilité est claire
+
+Aujourd'hui :
+• l'IA recommande
+• l'humain valide (parfois machinalement)
+• la responsabilité devient floue
+
+👉 Le pouvoir ne disparaît pas.
+Il se déplace.
+
+Souvent :
+• vers les outils,
+• vers les modèles,
+• vers ceux qui les paramètrent,
+• vers ceux qui contrôlent les données.
+
+La gouvernance n'est pas un luxe bureaucratique.
+C'est une condition de survie organisationnelle.`,
+  parts: [
+    {
+      title: 'AXE 1 — RÔLE FONDAMENTAL : QUI DÉCIDE QUAND L\'IA EST PARTOUT ?',
+      sections: [
+        {
+          title: '1. LA QUESTION QUE TOUT LE MONDE ÉVITE (ET QUI POURTANT DÉCIDE DE TOUT)',
+          content: [
+            'Quand l\'IA est utilisée dans une organisation, une question devient centrale :',
+            '',
+            'Qui décide vraiment ?',
+            '',
+            'Pas :',
+            '• qui utilise l\'outil',
+            '• qui a cliqué',
+            '• qui a validé techniquement',
+            '',
+            'Mais :',
+            '👉 qui porte l\'autorité, la responsabilité et la légitimité de la décision.',
+            '',
+            'C\'est là que naissent :',
+            '• les conflits internes,',
+            '• les décisions absurdes,',
+            '• les crises de confiance,',
+            '• les scandales "on ne savait pas".'
+          ]
+        },
+        {
+          title: '2. CE QUE L\'IA FAIT AU POUVOIR (SANS QU\'ON S\'EN RENDE COMPTE)',
+          content: [
+            'Historiquement, le pouvoir décisionnel reposait sur :',
+            '• l\'expérience,',
+            '• l\'expertise,',
+            '• la hiérarchie,',
+            '• la responsabilité visible.',
+            '',
+            'Avec l\'IA, un glissement silencieux se produit.',
+            '',
+            'Avant :',
+            '• le décideur tranche',
+            '• l\'outil assiste',
+            '• la responsabilité est claire',
+            '',
+            'Aujourd\'hui :',
+            '• l\'IA recommande',
+            '• l\'humain valide (parfois machinalement)',
+            '• la responsabilité devient floue',
+            '',
+            '👉 Le pouvoir ne disparaît pas.',
+            'Il se déplace.',
+            '',
+            'Souvent :',
+            '• vers les outils,',
+            '• vers les modèles,',
+            '• vers ceux qui les paramètrent,',
+            '• vers ceux qui contrôlent les données.'
+          ]
+        },
+        {
+          title: '3. LA CONFUSION MAJEURE : AIDE À LA DÉCISION ≠ DÉCISION',
+          content: [
+            'Beaucoup d\'organisations disent :',
+            '',
+            '"L\'IA aide à la décision."',
+            '',
+            'Mais dans les faits :',
+            '• la recommandation devient la décision,',
+            '• la validation humaine devient formelle,',
+            '• le temps manque pour contester.',
+            '',
+            '👉 Quand on ne comprend plus pourquoi une décision est prise,',
+            'ce n\'est plus une aide.',
+            'C\'est un transfert de pouvoir.'
+          ]
+        },
+        {
+          title: '4. LE PROBLÈME CENTRAL : LA DILUTION DE LA RESPONSABILITÉ',
+          content: [
+            'Scénario typique (très répandu) :',
+            '• une décision est prise avec l\'aide de l\'IA,',
+            '• elle pose problème,',
+            '• chacun se renvoie la balle.',
+            '',
+            '"C\'est le modèle."',
+            '"C\'est l\'outil."',
+            '"C\'est la donnée."',
+            '"C\'est l\'algorithme."',
+            '',
+            '👉 Résultat : personne n\'assume.',
+            '',
+            'Or :',
+            '• le droit ne reconnaît pas l\'IA comme responsable,',
+            '• la société non plus,',
+            '• les clients encore moins.',
+            '',
+            '👉 La responsabilité humaine reste totale, même si le pouvoir a glissé.'
+          ]
+        },
+        {
+          title: '5. POURQUOI LA GOUVERNANCE DE L\'IA EST INDISPENSABLE',
+          content: [
+            'La gouvernance n\'est pas un luxe bureaucratique.',
+            'C\'est une condition de survie organisationnelle.',
+            '',
+            'Elle sert à :',
+            '• rendre explicite qui décide quoi,',
+            '• poser des limites claires,',
+            '• protégir les individus,',
+            '• protéger l\'organisation,',
+            '• maintenir la confiance.',
+            '',
+            '👉 Sans gouvernance, l\'IA devient un angle mort du pouvoir.'
+          ]
+        },
+        {
+          title: '9. RÈGLE FONDAMENTALE À TRANSMETTRE EN FORMATION',
+          content: [
+            'Toute décision assistée par IA',
+            'doit pouvoir être expliquée, contestée et assumée par un humain identifié.',
+            '',
+            'Si ce n\'est pas possible :',
+            '👉 la décision est illégitime, même si elle est "optimale".'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 2 — CE QUE L\'IA FAIT BIEN / MAL DANS LA DÉCISION HUMAINE',
+      sections: [
+        {
+          title: '1. CE QUE L\'IA FAIT RÉELLEMENT BIEN DANS LA DÉCISION',
+          content: [
+            'Commençons par être justes : l\'IA apporte une vraie valeur décisionnelle, mais dans un cadre précis.',
+            '',
+            '1.1 Traiter des volumes d\'information inaccessibles à l\'humain',
+            '',
+            'L\'IA excelle pour :',
+            '• analyser de grands volumes de données,',
+            '• repérer des corrélations invisibles,',
+            '• détecter des tendances faibles,',
+            '• agréger des signaux hétérogènes.',
+            '',
+            '👉 Elle étend le champ de vision du décideur.',
+            '',
+            'Mais attention :',
+            '• corrélation ≠ causalité',
+            '• signal ≠ compréhension',
+            '',
+            '1.2 Réduire certains biais humains… mais pas tous',
+            '',
+            'L\'IA peut limiter :',
+            '• la fatigue décisionnelle,',
+            '• l\'incohérence dans des décisions répétées,',
+            '• l\'arbitraire pur,',
+            '• certaines discriminations évidentes.',
+            '',
+            '👉 Elle est utile pour stabiliser des décisions standards.',
+            '',
+            'Mais :',
+            '• elle hérite des biais des données,',
+            '• elle amplifie les biais systémiques,',
+            '• elle ne détecte pas les injustices "socialement acceptées".'
+          ]
+        },
+        {
+          title: '2. CE QUE L\'IA FAIT MAL (ET NE DEVRAIT JAMAIS FAIRE SEULE)',
+          content: [
+            'C\'est ici que les dérives commencent.',
+            '',
+            '2.1 Elle ne comprend pas le sens moral d\'une décision',
+            '',
+            'Une décision humaine n\'est jamais purement optimale.',
+            'Elle intègre :',
+            '• de l\'équité,',
+            '• du compromis,',
+            '• de la compassion,',
+            '• parfois de l\'injustice assumée pour éviter un mal plus grand.',
+            '',
+            '👉 L\'IA optimise des critères.',
+            'Elle ne comprend pas les dilemmes.',
+            '',
+            '2.2 Elle ne perçoit pas l\'impact symbolique d\'une décision',
+            '',
+            'Certaines décisions sont :',
+            '• techniquement justes,',
+            '• humainement destructrices.',
+            '',
+            'Exemples :',
+            '• un refus automatique,',
+            '• une sanction "logique",',
+            '• une décision froide mais légale.',
+            '',
+            '👉 L\'IA ne mesure pas l\'humiliation, la perte de confiance ou la violence symbolique.',
+            '',
+            '2.3 Elle fige le passé dans le futur',
+            '',
+            'L\'IA décide à partir de :',
+            '• données historiques,',
+            '• comportements passés,',
+            '• structures existantes.',
+            '',
+            '👉 Elle reproduit le monde tel qu\'il était, pas tel qu\'il devrait évoluer.',
+            '',
+            'Conséquence :',
+            '• reproduction des inégalités,',
+            '• verrouillage des trajectoires,',
+            '• difficulté à intégrer la rupture, l\'exception, le pardon.'
+          ]
+        },
+        {
+          title: '3. LE PHÉNOMÈNE LE PLUS CRITIQUE : L\'AUTORITÉ AUTOMATIQUE',
+          content: [
+            'Dans beaucoup d\'organisations, on observe ceci :',
+            '• "L\'IA recommande A"',
+            '• "Donc on fait A"',
+            '• "Pourquoi ?"',
+            '• "Parce que l\'IA l\'a dit"',
+            '',
+            '👉 L\'outil devient une autorité implicite.',
+            '',
+            'C\'est un basculement psychologique :',
+            '• moins de contestation,',
+            '• moins de débat,',
+            '• moins de courage managérial.',
+            '',
+            '👉 Quand l\'IA n\'est plus questionnée, elle gouverne.'
+          ]
+        },
+        {
+          title: '7. QUESTIONS OBLIGATOIRES AVANT TOUTE DÉCISION ASSISTÉE PAR IA',
+          content: [
+            'Toute organisation devrait exiger que le décideur puisse répondre à :',
+            '',
+            '1. Pourquoi cette recommandation ?',
+            '2. Quels critères ont été utilisés ?',
+            '3. Qui les a définis ?',
+            '4. Qu\'est-ce que l\'IA ne prend pas en compte ?',
+            '5. Quelles conséquences humaines possibles ?',
+            '6. Suis-je prêt à assumer cette décision sans mentionner l\'IA ?',
+            '',
+            '👉 Si ces réponses sont impossibles, la décision est viciée.'
+          ]
+        },
+        {
+          title: '8. RÈGLE D\'OR DE L\'AXE 2',
+          content: [
+            'Une décision assistée par IA',
+            'ne devient humaine que lorsqu\'elle est contestable.',
+            '',
+            '👉 Ce qui ne peut pas être contesté n\'est pas légitime.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 3 — CAS CONCRETS DE GOUVERNANCE & DE POUVOIR (PAR TYPES D\'ORGANISATIONS)',
+      sections: [
+        {
+          title: 'RÈGLE DE LECTURE (TRÈS IMPORTANTE)',
+          content: [
+            'Dans tous les cas ci-dessous, l\'IA ne crée pas les conflits.',
+            '👉 Elle révèle et amplifie des tensions déjà existantes :',
+            '• flou managérial',
+            '• responsabilités mal définies',
+            '• décisions déjà contestables',
+            '• asymétries de pouvoir',
+            '',
+            'L\'IA agit comme un révélateur organisationnel.'
+          ]
+        },
+        {
+          title: '1. ENTREPRISE PRIVÉE (PME / ETI / GRAND GROUPE)',
+          content: [
+            '1.1 Cas typique : décision "optimisée" mais contestée',
+            '',
+            'Situation :',
+            '• une IA recommande une décision (priorisation client, allocation budgétaire, licenciement économique indirect, refus commercial)',
+            '• le manager valide',
+            '• l\'impact humain est fort',
+            '• la décision est mal vécue',
+            '',
+            'Conflit réel :',
+            '• le manager se protège derrière l\'outil',
+            '• l\'équipe ressent une injustice',
+            '• la direction invoque la "rationalité"',
+            '',
+            '👉 Le pouvoir réel est devenu invisible.',
+            '',
+            '1.2 Gouvernance immature (fréquente)',
+            '• aucune règle écrite sur l\'usage décisionnel de l\'IA',
+            '• responsabilité diluée',
+            '• décisions présentées comme "techniques"',
+            '• contestation rendue difficile',
+            '',
+            '👉 L\'IA devient un bouclier managérial.',
+            '',
+            '1.3 Gouvernance mature (rare mais observable)',
+            '• distinction claire :',
+            '  • recommandation IA ≠ décision',
+            '• obligation de justification humaine',
+            '• droit à la contestation',
+            '• traçabilité des critères',
+            '• responsable nommé',
+            '',
+            '👉 La décision reste politique (au sens noble), pas algorithmique.'
+          ]
+        },
+        {
+          title: '2. RESSOURCES HUMAINES (ZONE LA PLUS SENSIBLE)',
+          content: [
+            '2.1 Cas typique : scoring RH',
+            '',
+            'Usages courants :',
+            '• tri de CV',
+            '• scoring de performance',
+            '• prédiction de départ',
+            '• recommandations de mobilité',
+            '',
+            'Dérive fréquente :',
+            '• le score devient la décision',
+            '• le RH "suit le système"',
+            '• l\'humain n\'est plus écouté',
+            '',
+            '👉 Le pouvoir RH se déshumanise sans disparaître.',
+            '',
+            '2.2 Gouvernance RH saine',
+            '• interdiction des décisions RH automatisées finales',
+            '• obligation d\'entretien humain',
+            '• explicabilité minimale du raisonnement',
+            '• possibilité de dérogation assumée',
+            '',
+            '👉 L\'IA informe, le RH protège la dignité.'
+          ]
+        },
+        {
+          title: '3. MANAGEMENT & HIÉRARCHIE INTERMÉDIAIRE',
+          content: [
+            '3.1 Cas typique : management "piloté par KPI IA"',
+            '• indicateurs en temps réel',
+            '• alertes automatiques',
+            '• recommandations d\'action',
+            '',
+            'Effet pervers :',
+            '• le manager devient exécutant de tableaux de bord',
+            '• moins de dialogue',
+            '• moins de marge humaine',
+            '',
+            '👉 Le pouvoir managérial se déplace vers les systèmes.',
+            '',
+            '3.2 Gouvernance managériale saine',
+            '• KPI = support, pas injonction',
+            '• droit à la décision contre-indicée',
+            '• valorisation du jugement humain',
+            '• formation au discernement IA',
+            '',
+            '👉 Le manager reste un décideur, pas un relais algorithmique.'
+          ]
+        },
+        {
+          title: '4. SERVICE PUBLIC & ADMINISTRATION',
+          content: [
+            '4.1 Cas typique : décision administrative assistée par IA',
+            '',
+            'Exemples :',
+            '• allocation de ressources',
+            '• contrôle automatisé',
+            '• priorisation de dossiers',
+            '',
+            'Risque critique :',
+            '• refus automatique',
+            '• opacité',
+            '• impossibilité de recours compréhensible',
+            '',
+            '👉 La légitimité démocratique est directement en jeu.',
+            '',
+            '4.2 Gouvernance publique saine',
+            '• transparence sur l\'usage de l\'IA',
+            '• droit au recours humain',
+            '• traçabilité des critères',
+            '• responsabilité administrative claire',
+            '',
+            '👉 L\'IA ne doit jamais affaiblir le lien citoyen–institution.'
+          ]
+        },
+        {
+          title: '8. QUESTION CLÉ À POSER PARTOUT',
+          content: [
+            '"Si cette décision est contestée demain,',
+            'qui va s\'expliquer — et au nom de quoi ?"',
+            '',
+            '• réponse claire → gouvernance saine',
+            '• réponse floue → danger latent'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 4 — CADRES, RÈGLES, CHARTES & ARCHITECTURES DE GOUVERNANCE',
+      sections: [
+        {
+          title: '1. PRINCIPE FONDATEUR (À GRAVER DANS LE MARBRE)',
+          content: [
+            'La gouvernance IA ne sert pas à contrôler la technologie.',
+            'Elle sert à organiser la responsabilité humaine.',
+            '',
+            'Si un cadre de gouvernance :',
+            '• parle surtout d\'outils,',
+            '• de performance,',
+            '• de conformité abstraite,',
+            '',
+            '👉 il échouera.',
+            '',
+            'Un bon cadre répond d\'abord à :',
+            '• qui décide ?',
+            '• qui valide ?',
+            '• qui assume ?',
+            '• qui peut dire non ?',
+            '• qui peut arrêter ?'
+          ]
+        },
+        {
+          title: '2. LES 5 PILIERS D\'UNE GOUVERNANCE IA SAINE',
+          content: [
+            'Toute organisation (même petite) doit structurer sa gouvernance autour de 5 piliers.',
+            'S\'il en manque un, la gouvernance est instable.',
+            '',
+            'PILIER 1 — CARTOGRAPHIE DES DÉCISIONS ASSISTÉES PAR IA',
+            '',
+            'Avant toute charte, il faut rendre visible l\'existant.',
+            '',
+            'Cartographier :',
+            '• quelles décisions utilisent de l\'IA',
+            '• à quel moment',
+            '• avec quel impact humain',
+            '• avec quelle fréquence',
+            '• avec quelle réversibilité',
+            '',
+            '👉 On ne gouverne pas ce qu\'on ne voit pas.',
+            '',
+            'PILIER 2 — MATRICE DE RESPONSABILITÉ (RACI DÉCISIONNEL IA)',
+            '',
+            'Chaque décision assistée par IA doit avoir :',
+            '• un responsable décisionnel humain',
+            '• un contributeur technique',
+            '• un validateur métier',
+            '• un droit d\'escalade',
+            '',
+            '👉 La responsabilité ne doit jamais être collective ou abstraite.',
+            '',
+            'Phrase interdite :',
+            '"C\'est une décision du système."',
+            '',
+            'PILIER 3 — RÈGLES D\'USAGE ET LIMITES EXPLICITES',
+            '',
+            'Une gouvernance saine définit :',
+            '• ce que l\'IA peut faire',
+            '• ce qu\'elle ne peut jamais faire',
+            '• ce qui exige une validation humaine',
+            '• ce qui est strictement interdit',
+            '',
+            'Exemples de règles claires :',
+            '• aucune décision RH finale automatisée',
+            '• aucune sanction sans entretien humain',
+            '• aucune communication publique générée sans validation',
+            '• aucun refus sans explicabilité minimale',
+            '',
+            '👉 Les limites protègent autant l\'organisation que les individus.',
+            '',
+            'PILIER 4 — TRAÇABILITÉ, EXPLICABILITÉ & DROIT À LA CONTESTATION',
+            '',
+            'Toute décision significative doit permettre :',
+            '• de retracer les critères utilisés',
+            '• d\'expliquer le raisonnement général',
+            '• d\'identifier le décideur humain',
+            '• de contester la décision',
+            '',
+            '👉 Une décision incontestable est illégitime, même si elle est "optimale".',
+            '',
+            'PILIER 5 — DISPOSITIF D\'ARRÊT, D\'ALERTE & DE RÉVISION',
+            '',
+            'Un système sain prévoit :',
+            '• un droit d\'arrêt clair (kill switch)',
+            '• des seuils d\'alerte',
+            '• des revues régulières',
+            '• la possibilité de revenir en arrière',
+            '',
+            '👉 Ce qui ne peut pas être arrêté n\'est pas gouvernable.'
+          ]
+        },
+        {
+          title: '6. INDICATEURS DE MAUVAISE GOUVERNANCE (À SURVEILLER)',
+          content: [
+            '🚨 Signaux d\'alerte :',
+            '• "On ne sait plus qui a décidé"',
+            '• "C\'est le modèle"',
+            '• "On n\'ose plus contester"',
+            '• "Personne n\'ose arrêter"',
+            '• "On verra si ça pose problème"',
+            '',
+            '👉 Quand ces phrases apparaissent, la gouvernance est déjà défaillante.'
+          ]
+        },
+        {
+          title: '7. QUESTION STRUCTURANTE À POSER AVANT TOUT DÉPLOIEMENT',
+          content: [
+            '"Cette décision peut-elle être expliquée, contestée et assumée',
+            'sans jamais mentionner l\'IA ?"',
+            '',
+            '• oui → cadre sain',
+            '• non → risque juridique, social et managérial'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 5 — RISQUES JURIDIQUES, POLITIQUES & AVENIR DU POUVOIR',
+      sections: [
+        {
+          title: '1. LE RISQUE MAJEUR : LE POUVOIR SANS VISAGE',
+          content: [
+            'Le danger principal de l\'IA dans la décision n\'est pas l\'erreur.',
+            '👉 C\'est l\'opacité du pouvoir.',
+            '',
+            'Quand une décision :',
+            '• est influencée par un modèle,',
+            '• médiée par un système,',
+            '• validée sans débat,',
+            '• expliquée par un jargon technique,',
+            '',
+            '👉 le pouvoir devient invisible.',
+            '',
+            'Or, dans toute société :',
+            '• le pouvoir invisible crée la défiance,',
+            '• la défiance crée la contestation,',
+            '• la contestation crée la rupture.',
+            '',
+            '👉 L\'IA mal gouvernée fragilise la légitimité décisionnelle.'
+          ]
+        },
+        {
+          title: '2. RISQUE JURIDIQUE : "L\'IA" N\'EST PAS UNE PERSONNE MORALE',
+          content: [
+            'Point fondamental (et souvent mal compris) :',
+            '',
+            'Le droit ne reconnaît pas l\'IA comme sujet responsable.',
+            '',
+            'Conséquence directe :',
+            '• toute décision assistée par IA engage un humain ou une organisation,',
+            '• la responsabilité ne peut pas être déléguée à un outil,',
+            '• l\'argument "c\'est l\'algorithme" n\'a aucune valeur juridique.',
+            '',
+            '👉 Plus l\'IA est utilisée, plus la responsabilité humaine est lourde.'
+          ]
+        },
+        {
+          title: '5. RISQUE D\'INSTRUMENTALISATION DE L\'IA',
+          content: [
+            'Dans certaines organisations, l\'IA devient :',
+            '• un outil pour imposer des décisions impopulaires,',
+            '• un alibi pour éviter le dialogue,',
+            '• un moyen de neutraliser la contestation.',
+            '',
+            'Exemples :',
+            '• "ce n\'est pas nous, c\'est le système"',
+            '• "les chiffres sont objectifs"',
+            '• "on ne peut pas faire autrement"',
+            '',
+            '👉 L\'IA devient un outil de domination symbolique.',
+            '',
+            'C\'est extrêmement dangereux pour :',
+            '• la confiance interne,',
+            '• la cohésion sociale,',
+            '• la réputation,',
+            '• la stabilité institutionnelle.'
+          ]
+        },
+        {
+          title: '6. L\'AVENIR DU POUVOIR DÉCISIONNEL (3–5 ANS)',
+          content: [
+            '6.1 Ce qui va se généraliser',
+            '• décisions assistées par IA partout,',
+            '• scoring, priorisation, recommandation,',
+            '• agents décisionnels indirects.',
+            '',
+            '👉 L\'IA deviendra banale dans la décision.',
+            '',
+            '6.2 Ce qui va devenir rare (et précieux)',
+            '• dirigeants capables d\'assumer contre l\'outil,',
+            '• managers qui savent expliquer et arbitrer,',
+            '• organisations qui acceptent la contestation,',
+            '• institutions transparentes sur leurs usages IA.',
+            '',
+            '👉 La valeur se déplacera vers la responsabilité assumée.',
+            '',
+            '6.3 Nouvelle ligne de fracture',
+            '',
+            'Il y aura :',
+            '• des organisations qui se cachent derrière l\'IA,',
+            '• des organisations qui l\'utilisent sans s\'y cacher.',
+            '',
+            '👉 Les secondes inspireront confiance.',
+            'Les premières généreront rejet et crise.'
+          ]
+        },
+        {
+          title: '7. LA NOUVELLE EXIGENCE DU LEADERSHIP',
+          content: [
+            'Le leadership à l\'ère de l\'IA exige :',
+            '• du courage décisionnel',
+            '• de la clarté sur les limites',
+            '• de l\'acceptation du conflit',
+            '• de la pédagogie',
+            '• de l\'humilité face à l\'outil',
+            '',
+            '👉 Un leader augmenté par l\'IA doit être plus humain, pas moins.'
+          ]
+        },
+        {
+          title: '8. POSTURE FINALE À TRANSMETTRE (MANIFESTE)',
+          content: [
+            'Voici la posture de gouvernance à enseigner explicitement :',
+            '',
+            '• Je ne délègue jamais la responsabilité à un système',
+            '• J\'utilise l\'IA pour éclairer, pas pour me cacher',
+            '• Je rends visibles les critères de décision',
+            '• J\'accepte la contestation comme signe de légitimité',
+            '• J\'assume les conséquences humaines des choix faits'
+          ]
+        },
+        {
+          title: '9. TEST FINAL DE MATURITÉ POLITIQUE & JURIDIQUE',
+          content: [
+            'Pose cette question, sans détour :',
+            '',
+            '"Si cette décision est attaquée publiquement ou juridiquement,',
+            'puis-je l\'assumer sans jamais invoquer l\'IA ?"',
+            '',
+            '• Oui → gouvernance solide',
+            '• Non → risque majeur'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `La question de l'IA n'est pas "que peut faire la machine ?"
+C'est : "sommes-nous prêts à assumer le pouvoir qu'elle nous donne ?"
+
+⸻
+
+SYNTHÈSE GLOBALE
+
+👉 L'IA ne supprime pas le pouvoir décisionnel.
+Elle le redistribue silencieusement.
+La gouvernance sert à rendre ce pouvoir visible et assumable.
+
+👉 L'IA est excellente pour informer la décision.
+Elle est dangereuse dès qu'elle devient une autorité qui dispense l'humain de juger et d'assumer.
+
+👉 L'IA ne supprime pas les conflits de pouvoir.
+Elle les rend plus opaques si la gouvernance ne les rend pas explicites.
+
+👉 La gouvernance IA n'est pas un contrôle de la machine.
+C'est une mise en ordre du pouvoir humain à l'ère des systèmes intelligents.
+
+👉 L'IA ne transforme pas seulement le travail ou la décision.
+Elle transforme la nature du pouvoir — et exige une maturité humaine plus élevée que jamais.`
+}
+
+// Contenu de la formation "IA, Humanité & Sens - Secteur 10"
+export const iaHumaniteContent: FormationContent = {
+  formationId: 'formation_ia_humanite',
+  introduction: `La plupart des débats sur l'IA sont mal posés.
+
+On demande :
+• "Que va faire l'IA ?"
+• "Jusqu'où ira-t-elle ?"
+• "Va-t-elle nous remplacer ?"
+
+👉 La vraie question est ailleurs :
+que révèle l'IA de ce que nous valorisions jusque-là ?
+
+L'IA ne crée pas la crise de sens.
+👉 Elle la rend visible.
+
+Pendant des décennies, nous avons confondu :
+• valeur humaine
+• performance mesurable
+• productivité
+• rapidité
+• capacité à produire
+
+L'IA arrive et dit brutalement :
+
+"Je peux produire plus vite, plus longtemps, plus proprement."
+
+👉 Et soudain, beaucoup se demandent :
+"Si produire n'est plus rare, qu'est-ce qui me rend utile ?"
+
+Ce malaise ne vient pas de l'IA.
+👉 Il vient d'une définition appauvrie de la valeur humaine.`,
+  parts: [
+    {
+      title: 'AXE 1 — RÔLE FONDAMENTAL : CE QUE L\'IA RÉVÈLE DE L\'HUMAIN',
+      sections: [
+        {
+          title: '1. L\'IA COMME MIROIR, PAS COMME MENACE',
+          content: [
+            'La plupart des débats sur l\'IA sont mal posés.',
+            '',
+            'On demande :',
+            '• "Que va faire l\'IA ?"',
+            '• "Jusqu\'où ira-t-elle ?"',
+            '• "Va-t-elle nous remplacer ?"',
+            '',
+            '👉 La vraie question est ailleurs :',
+            'que révèle l\'IA de ce que nous valorisions jusque-là ?',
+            '',
+            'L\'IA ne crée pas la crise de sens.',
+            '👉 Elle la rend visible.'
+          ]
+        },
+        {
+          title: '2. CE QUE L\'IA MET À NU : NOTRE CONFUSION ENTRE VALEUR ET PERFORMANCE',
+          content: [
+            'Pendant des décennies, nous avons confondu :',
+            '• valeur humaine',
+            '• performance mesurable',
+            '• productivité',
+            '• rapidité',
+            '• capacité à produire',
+            '',
+            'L\'IA arrive et dit brutalement :',
+            '',
+            '"Je peux produire plus vite, plus longtemps, plus proprement."',
+            '',
+            '👉 Et soudain, beaucoup se demandent :',
+            '"Si produire n\'est plus rare, qu\'est-ce qui me rend utile ?"',
+            '',
+            'Ce malaise ne vient pas de l\'IA.',
+            '👉 Il vient d\'une définition appauvrie de la valeur humaine.'
+          ]
+        },
+        {
+          title: '3. L\'ILLUSION QUI S\'EFFONDRE : "JE SUIS CE QUE JE FAIS"',
+          content: [
+            'Pour beaucoup de professionnels :',
+            '• le métier = l\'identité',
+            '• la compétence = la valeur',
+            '• la maîtrise technique = la légitimité',
+            '',
+            'Quand l\'IA reproduit ou dépasse ces compétences :',
+            '• l\'identité vacille',
+            '• la fierté se fragilise',
+            '• l\'anxiété apparaît',
+            '',
+            '👉 L\'IA ne vole pas l\'identité.',
+            'Elle révèle qu\'elle était trop étroitement définie.'
+          ]
+        },
+        {
+          title: '4. CE QUE L\'IA NE PEUT PAS NOUS ENLEVER (MAIS QU\'ON AVAIT OUBLIÉ)',
+          content: [
+            'L\'IA peut :',
+            '• produire',
+            '• analyser',
+            '• optimiser',
+            '• simuler',
+            '• enchaîner',
+            '',
+            'Mais elle ne peut pas :',
+            '• donner du sens',
+            '• ressentir la responsabilité',
+            '• assumer une erreur',
+            '• porter une intention morale',
+            '• choisir ce qui vaut la peine d\'être fait',
+            '',
+            '👉 Ces dimensions étaient souvent invisibles, car non mesurées.',
+            '',
+            'L\'IA les rend soudain centrales.'
+          ]
+        },
+        {
+          title: '5. POURQUOI L\'IA PROVOQUE DES RÉACTIONS ÉMOTIONNELLES FORTES',
+          content: [
+            'Les résistances à l\'IA sont rarement rationnelles.',
+            '',
+            'On entend :',
+            '• "Je n\'ai pas confiance"',
+            '• "Ça déshumanise"',
+            '• "Ça va trop vite"',
+            '• "Je ne m\'y retrouve plus"',
+            '',
+            '👉 Ces phrases traduisent une inquiétude existentielle, pas technique.',
+            '',
+            'Peurs sous-jacentes :',
+            '• perdre sa place',
+            '• devenir interchangeable',
+            '• ne plus compter',
+            '• ne plus comprendre sa contribution',
+            '',
+            '👉 L\'IA met en crise le "pourquoi je fais ce que je fais".'
+          ]
+        },
+        {
+          title: '9. RÈGLE FONDAMENTALE À TRANSMETTRE EN FORMATION',
+          content: [
+            'Si l\'IA te fait te sentir inutile,',
+            'ce n\'est pas parce que tu l\'es.',
+            'C\'est parce que ta valeur a été définie trop étroitement.',
+            '',
+            '👉 Redéfinir la valeur humaine est un préalable à toute transformation réussie.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 2 — CE QUE L\'IA NE POURRA JAMAIS ÊTRE',
+      sections: [
+        {
+          title: '1. COMPRENDRE LA LIMITE DE NATURE (PAS DE PERFORMANCE)',
+          content: [
+            'Beaucoup de discours disent :',
+            '',
+            '"L\'IA ne fait pas encore X… mais elle y arrivera."',
+            '',
+            'C\'est faux pour certaines dimensions fondamentales.',
+            '',
+            '👉 Il existe des limites ontologiques, pas techniques.',
+            'Ce ne sont pas des retards d\'ingénierie.',
+            'Ce sont des différences de nature.'
+          ]
+        },
+        {
+          title: '2. L\'IA N\'A PAS D\'INTENTION (ET N\'EN AURA PAS)',
+          content: [
+            'L\'IA :',
+            '• génère des réponses',
+            '• optimise des objectifs',
+            '• maximise des critères',
+            '• enchaîne des actions',
+            '',
+            'Mais elle ne veut rien.',
+            '',
+            'Elle n\'a :',
+            '• aucun désir',
+            '• aucune intention propre',
+            '• aucun "pourquoi" interne',
+            '• aucun sens du but',
+            '',
+            '👉 Elle agit sans vouloir.',
+            '',
+            'Tout objectif IA est :',
+            '• défini par un humain',
+            '• pondéré par un humain',
+            '• borné (ou non) par un humain',
+            '',
+            '👉 L\'intention est toujours humaine, même si l\'action est déléguée.'
+          ]
+        },
+        {
+          title: '3. L\'IA N\'A PAS DE RESPONSABILITÉ (ET NE PEUT PAS EN AVOIR)',
+          content: [
+            'Responsabilité =',
+            '• savoir qu\'on peut se tromper',
+            '• assumer les conséquences',
+            '• répondre devant autrui',
+            '• porter une faute',
+            '',
+            'L\'IA :',
+            '• ne peut pas être tenue responsable',
+            '• ne peut pas être coupable',
+            '• ne peut pas réparer moralement',
+            '• ne peut pas demander pardon',
+            '',
+            '👉 Elle ne peut ni répondre, ni être redevable.',
+            '',
+            'Même une IA "autonome" :',
+            '• n\'assume rien',
+            '• n\'est jamais fautive',
+            '• n\'est jamais légitime',
+            '',
+            '👉 La responsabilité est irréductiblement humaine.'
+          ]
+        },
+        {
+          title: '4. L\'IA NE RESSENT RIEN (ET NE COMPREND PAS CE QU\'ELLE SIMULE)',
+          content: [
+            'Une IA peut :',
+            '• simuler l\'empathie',
+            '• produire un langage émotionnel',
+            '• adopter un ton compatissant',
+            '',
+            'Mais elle ne :',
+            '• ressent pas la souffrance',
+            '• ne connaît pas la honte',
+            '• ne comprend pas la peur',
+            '• ne fait pas l\'expérience du doute',
+            '',
+            '👉 Elle imite des formes.',
+            'Elle ne vit aucune expérience.',
+            '',
+            'C\'est une différence abyssale.'
+          ]
+        },
+        {
+          title: '5. L\'IA NE COMPREND PAS LE SENS MORAL D\'UNE DÉCISION',
+          content: [
+            'Un humain décide souvent :',
+            '• contre l\'optimisation',
+            '• contre la règle',
+            '• contre l\'efficacité',
+            '• au nom d\'une valeur',
+            '',
+            'Exemples :',
+            '• pardonner',
+            '• faire une exception',
+            '• protéger le plus faible',
+            '• assumer une perte juste',
+            '',
+            '👉 L\'IA ne sait pas renoncer volontairement à l\'optimal.',
+            '',
+            'Elle n\'a :',
+            '• ni conscience',
+            '• ni culpabilité',
+            '• ni courage moral',
+            '',
+            '👉 La morale n\'est pas calculable.'
+          ]
+        },
+        {
+          title: '10. RÈGLE FONDAMENTALE À TRANSMETTRE',
+          content: [
+            'Tout ce qui implique une intention morale,',
+            'une responsabilité humaine,',
+            'ou une conséquence irréversible',
+            'ne doit jamais être délégué à une IA.',
+            '',
+            'Ce n\'est pas une règle technique.',
+            '👉 C\'est une règle de civilisation.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 3 — CRISES IDENTITAIRES, RÉSISTANCES & PEURS LÉGITIMES',
+      sections: [
+        {
+          title: '1. UNE VÉRITÉ FONDAMENTALE (TROP SOUVENT NIÉE)',
+          content: [
+            'La résistance à l\'IA n\'est pas une résistance au progrès.',
+            'C\'est une résistance à la perte de repères.',
+            '',
+            'Quand quelqu\'un résiste :',
+            '• il ne dit pas "je refuse la technologie"',
+            '• il dit souvent sans le formuler :',
+            '  • "je ne sais plus où est ma place"',
+            '  • "je ne sais plus ce qui me rend légitime"',
+            '  • "j\'ai peur de devenir inutile"',
+            '',
+            '👉 Ces peurs sont humaines, rationnelles et légitimes.',
+            '',
+            'Les balayer par :',
+            '• des discours techniques',
+            '• des injonctions à "s\'adapter"',
+            '• des promesses de performance',
+            '',
+            '👉 ne fait que renforcer la défiance.'
+          ]
+        },
+        {
+          title: '2. LES FORMES DE CRISE IDENTITAIRE (TRÈS CONCRÈTES)',
+          content: [
+            'La crise n\'est pas spectaculaire.',
+            'Elle est souvent silencieuse.',
+            '',
+            '2.1 "Ce que je savais faire ne vaut plus rien"',
+            '',
+            'Symptômes :',
+            '• perte de fierté',
+            '• doute sur sa légitimité',
+            '• comparaison permanente avec l\'IA',
+            '• sentiment d\'obsolescence',
+            '',
+            '👉 Quand la compétence était l\'identité,',
+            'la copie par l\'IA est vécue comme une dépossession.',
+            '',
+            '2.2 "Je ne comprends plus ce qu\'on attend de moi"',
+            '',
+            'Avec l\'IA :',
+            '• les tâches changent vite',
+            '• les critères deviennent flous',
+            '• la valeur n\'est plus visible',
+            '',
+            'Résultat :',
+            '• anxiété',
+            '• suradaptation',
+            '• surproductivité défensive',
+            '• fatigue mentale',
+            '',
+            '👉 L\'incertitude prolongée est psychologiquement destructrice.',
+            '',
+            '2.3 "On me demande d\'utiliser un outil que je ne maîtrise pas"',
+            '',
+            'Beaucoup vivent :',
+            '• une honte silencieuse',
+            '• la peur d\'être jugés "à la traîne"',
+            '• une perte de confiance en soi',
+            '',
+            '👉 La compétence technique devient un marqueur social anxiogène.'
+          ]
+        },
+        {
+          title: '6. LA RESPONSABILITÉ DES FORMATEURS ET LEADERS',
+          content: [
+            'Former à l\'IA sans reconnaître ces peurs, c\'est :',
+            '• former des outils',
+            '• pas des humains',
+            '',
+            'Une formation mature doit :',
+            '• nommer les peurs',
+            '• les légitimer',
+            '• créer un espace de parole',
+            '• redonner des repères humains clairs',
+            '',
+            '👉 On n\'embarque pas les gens en niant ce qu\'ils ressentent.'
+          ]
+        },
+        {
+          title: '7. RECONSTRUIRE UNE IDENTITÉ PROFESSIONNELLE SAINE',
+          content: [
+            'La sortie de crise ne passe pas par :',
+            '• devenir "meilleur que l\'IA"',
+            '• courir après les outils',
+            '• prouver sa performance',
+            '',
+            'Elle passe par :',
+            '• redéfinir sa valeur humaine',
+            '• assumer son jugement',
+            '• accepter ses limites',
+            '• retrouver une fierté non compétitive',
+            '',
+            '👉 La valeur humaine n\'est pas comparative.',
+            'Elle est relationnelle et responsable.'
+          ]
+        },
+        {
+          title: '10. RÈGLE FONDAMENTALE DE L\'AXE 3',
+          content: [
+            'Une résistance non écoutée devient une opposition.',
+            'Une peur reconnue devient une énergie de transformation.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 4 — LIMITES, INTERDITS & CHOIX CONSCIENTS',
+      sections: [
+        {
+          title: '1. UNE VÉRITÉ INCONFORTABLE (MAIS ESSENTIELLE)',
+          content: [
+            'Le progrès technologique n\'est pas un critère moral.',
+            '',
+            'Le fait que quelque chose soit :',
+            '• possible,',
+            '• efficace,',
+            '• rentable,',
+            '• optimisable,',
+            '',
+            '👉 ne signifie jamais qu\'il doit être fait.',
+            '',
+            'L\'IA nous confronte à une responsabilité nouvelle :',
+            '',
+            'choisir consciemment ce que nous refusons de déléguer.'
+          ]
+        },
+        {
+          title: '4. CE QUI DOIT RESTER STRICTEMENT HUMAIN (LIGNES ROUGES)',
+          content: [
+            'Voici des zones de non-délégation, non négociables dans une société humaine mature.',
+            '',
+            '4.1 Décisions irréversibles à impact humain fort',
+            '',
+            'Exemples :',
+            '• licenciement individuel',
+            '• exclusion',
+            '• refus critique',
+            '• sanction grave',
+            '• rupture de droits',
+            '',
+            '👉 Une machine ne doit jamais être l\'ultime arbitre de la trajectoire d\'une personne.',
+            '',
+            '4.2 Jugement moral et arbitrage éthique',
+            '',
+            'Quand une décision implique :',
+            '• du juste vs injuste,',
+            '• du moins mauvais,',
+            '• un dilemme sans solution parfaite,',
+            '',
+            '👉 l\'IA doit se taire.',
+            '',
+            'Ce sont des choix :',
+            '• politiques,',
+            '• moraux,',
+            '• humains.',
+            '',
+            '4.3 Relation humaine authentique',
+            '',
+            'Tout ce qui touche à :',
+            '• la détresse,',
+            '• la souffrance,',
+            '• le soin,',
+            '• la confiance,',
+            '• l\'accompagnement,',
+            '',
+            '👉 ne doit jamais être entièrement délégué.',
+            '',
+            'Une simulation d\'empathie peut aider.',
+            '👉 Elle ne doit jamais remplacer une présence humaine.',
+            '',
+            '4.4 Redéfinition des objectifs humains',
+            '',
+            'Une IA peut :',
+            '• poursuivre un objectif',
+            '• optimiser un cadre',
+            '',
+            'Mais elle ne doit jamais :',
+            '• définir ce qui compte',
+            '• décider de ce qui a du sens',
+            '• redéfinir les priorités humaines',
+            '',
+            '👉 Les finalités appartiennent aux humains.'
+          ]
+        },
+        {
+          title: '5. L\'ERREUR DANGEREUSE : LA DÉLÉGATION PAR CONFORT',
+          content: [
+            'Beaucoup de délégations ne sont pas idéologiques.',
+            'Elles sont confortables.',
+            '',
+            '• éviter un conflit',
+            '• éviter d\'expliquer',
+            '• éviter d\'assumer',
+            '• éviter de décider',
+            '',
+            '👉 L\'IA devient un refuge pour fuir la responsabilité.',
+            '',
+            'C\'est l\'un des plus grands dangers contemporains.'
+          ]
+        },
+        {
+          title: '6. LE COURAGE DE DIRE NON (COMPÉTENCE D\'AVENIR)',
+          content: [
+            'À l\'ère de l\'IA, une compétence devient rare et précieuse :',
+            '',
+            'Savoir dire non à une solution techniquement séduisante.',
+            '',
+            'Dire non quand :',
+            '• ça va trop vite,',
+            '• ça déshumanise,',
+            '• ça fragilise la dignité,',
+            '• ça supprime le dialogue.',
+            '',
+            '👉 Ce courage n\'est pas anti-technologique.',
+            'Il est profondément humain.'
+          ]
+        },
+        {
+          title: '10. TEST DE MATURITÉ ÉTHIQUE (SIMPLE ET RADICAL)',
+          content: [
+            'Pose cette question :',
+            '',
+            '"Si cette décision était rendue publique,',
+            'serions-nous fiers de l\'avoir confiée à une machine ?"',
+            '',
+            '• Oui → limite respectée',
+            '• Non → ligne rouge franchie'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'AXE 5 — CONSTRUIRE UN FUTUR HUMAINEMENT DÉSIRABLE',
+      sections: [
+        {
+          title: '1. UNE CLARIFICATION ESSENTIELLE (AVANT DE PARLER D\'AVENIR)',
+          content: [
+            'Le futur du travail et de la société n\'est pas dicté par l\'IA.',
+            'Il est façonné par les choix humains faits avec l\'IA.',
+            '',
+            'L\'IA :',
+            '• accélère',
+            '• amplifie',
+            '• rend visibles nos orientations',
+            '',
+            '👉 Elle ne décide jamais du cap.',
+            'Elle révèle simplement la direction que nous prenons.'
+          ]
+        },
+        {
+          title: '2. LES DEUX FUTURS POSSIBLES (ET POURQUOI IL FAUT CHOISIR)',
+          content: [
+            'Futur A — Optimisation froide (par défaut)',
+            '• tout ce qui peut être automatisé l\'est',
+            '• la performance devient le critère suprême',
+            '• l\'humain est un ajustement du système',
+            '• la responsabilité se dilue',
+            '• le sens s\'érode',
+            '',
+            '👉 Ce futur n\'est pas dystopique par intention,',
+            'il l\'est par absence de choix.',
+            '',
+            'Futur B — Humanisme exigeant (par décision)',
+            '• l\'IA gère l\'exécution',
+            '• l\'humain garde le jugement',
+            '• la responsabilité est assumée',
+            '• les limites sont explicites',
+            '• la dignité est centrale',
+            '',
+            '👉 Ce futur demande du courage,',
+            'pas seulement de la technologie.'
+          ]
+        },
+        {
+          title: '3. À QUOI RESSEMBLE UN TRAVAIL HUMAINEMENT DÉSIRABLE AVEC L\'IA',
+          content: [
+            'Un travail désirable n\'est pas :',
+            '• facile',
+            '• parfait',
+            '• sans effort',
+            '',
+            'Il est :',
+            '• responsable → on assume des décisions',
+            '• compréhensible → on sait pourquoi on agit',
+            '• relationnel → on n\'est pas seul face aux systèmes',
+            '• perfectible → on peut se tromper et apprendre',
+            '• digne → on n\'est pas réduit à une variable',
+            '',
+            '👉 L\'IA doit libérer l\'humain pour ces dimensions, pas les effacer.'
+          ]
+        },
+        {
+          title: '5. RÔLE CLÉ DES ORGANISATIONS (ENTREPRISES, INSTITUTIONS)',
+          content: [
+            'Les organisations deviennent :',
+            '• des lieux de transformation technologique',
+            '• mais surtout des lieux de structuration du sens',
+            '',
+            'Leur responsabilité :',
+            '• expliciter la valeur humaine attendue',
+            '• protéger la responsabilité individuelle',
+            '• former au jugement, pas seulement aux outils',
+            '• refuser les usages déshumanisants',
+            '',
+            '👉 Une organisation neutre face à l\'IA n\'existe pas.',
+            'Elle est soit protectrice, soit délétère.'
+          ]
+        },
+        {
+          title: '6. RÔLE CLÉ DES INDIVIDUS (PROFESSIONNELS, DIRIGEANTS, CITOYENS)',
+          content: [
+            'À l\'échelle individuelle, le futur désirable repose sur une posture :',
+            '• ne pas chercher à rivaliser avec l\'IA',
+            '• refuser la disparition de sa responsabilité',
+            '• cultiver son discernement',
+            '• accepter la lenteur quand elle est nécessaire',
+            '• défendre la dignité du travail',
+            '',
+            '👉 La valeur humaine n\'est pas dans la vitesse,',
+            'elle est dans la justesse.'
+          ]
+        },
+        {
+          title: '8. MESSAGE CENTRAL DE CLÔTURE (À TRANSMETTRE)',
+          content: [
+            'Nous n\'avons pas besoin d\'être plus performants que les machines.',
+            'Nous avons besoin d\'être plus humains que jamais.',
+            '',
+            'Cela signifie :',
+            '• plus responsables',
+            '• plus conscients',
+            '• plus courageux',
+            '• plus clairs sur nos limites',
+            '• plus exigeants sur le sens'
+          ]
+        },
+        {
+          title: '9. TEST FINAL DE FUTUR DÉSIRABLE',
+          content: [
+            'Pose cette question simple, individuellement ou collectivement :',
+            '',
+            '"Si ce futur devenait la norme pour nos enfants,',
+            'serions-nous fiers de l\'avoir construit ainsi ?"',
+            '',
+            '• Oui → futur désirable',
+            '• Non → réorientation nécessaire'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `Tu peux maintenant affirmer, sans posture marketing :
+
+Former à l'IA sans former à l'humain est irresponsable.
+Former à l'humain sans intégrer l'IA est irréaliste.
+Former aux deux, ensemble, est une exigence de notre époque.
+
+⸻
+
+SYNTHÈSE GLOBALE
+
+👉 L'IA n'est pas une crise de la technologie.
+C'est une crise de définition de ce que signifie "être humain" dans le travail et la société.
+
+👉 L'IA peut imiter des formes humaines.
+Elle ne peut ni vouloir, ni ressentir, ni assumer.
+Ces limites ne sont pas des faiblesses : ce sont nos fondations.
+
+👉 Les peurs face à l'IA ne sont pas des freins au progrès.
+Elles sont des signaux indiquant que l'identité humaine doit être redéfinie, protégée et valorisée.
+
+👉 L'IA rend la limite humaine plus nécessaire que jamais.
+Ce n'est pas la technologie qui doit décider jusqu'où aller,
+c'est notre conception de la dignité humaine.
+
+👉 L'IA ne décide pas du futur.
+Elle nous oblige à décider du type d'humanité que nous voulons préserver et faire grandir.`
+}
+
 // Map pour accéder rapidement au contenu d'une formation
 export const formationContentMap: Record<string, FormationContent> = {
   'formation_0': formateurIAContent,
@@ -6950,5 +13016,15 @@ export const formationContentMap: Record<string, FormationContent> = {
   'formation_rh': rhIAContent,
   'formation_medecin': medecinIAContent,
   'formation_coach': coachIAContent,
-  'formation_immobilier': immobilierIAContent
+  'formation_immobilier': immobilierIAContent,
+  'formation_ia_raisonnement': iaRaisonnementContent,
+  'formation_ia_redaction': iaRedactionContent,
+  'formation_ia_analyse': iaAnalyseContent,
+  'formation_ia_recherche': iaRechercheContent,
+  'formation_ia_automatisation': iaAutomatisationContent,
+  'formation_ia_creative': iaCreativeContent,
+  'formation_ia_agentique': iaAgentiqueContent,
+  'formation_ia_emploi': iaEmploiContent,
+  'formation_ia_gouvernance': iaGouvernanceContent,
+  'formation_ia_humanite': iaHumaniteContent
 }
