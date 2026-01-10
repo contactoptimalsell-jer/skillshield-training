@@ -320,6 +320,44 @@ export const FormationsPage: React.FC = () => {
         </div>
       </Widget>
 
+      {/* Message de synthèse */}
+      <div className="mt-8 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 border border-primary-100">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-lg font-semibold text-primary-900 mb-3">
+                L'IA :
+              </h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• automatise,</li>
+                <li>• accélère,</li>
+                <li>• amplifie.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-primary-900 mb-3">
+                Mais elle ne remplace jamais :
+              </h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• la responsabilité,</li>
+                <li>• le discernement,</li>
+                <li>• la relation,</li>
+                <li>• le courage,</li>
+                <li>• l'éthique.</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-6 pt-6 border-t border-primary-200">
+            <p className="text-center text-primary-900 font-medium text-lg">
+              👉 Tous les métiers que nous avons parcourus ne disparaissent pas.
+            </p>
+            <p className="text-center text-primary-900 font-semibold text-xl mt-2">
+              Ils montent en responsabilité.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Add Formation Modal */}
       <AddFormationModal 
         isOpen={showAddModal}

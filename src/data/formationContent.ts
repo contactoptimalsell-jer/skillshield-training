@@ -4103,6 +4103,2832 @@ Dans un monde automatisé :
 👉 la stratégie redevient une compétence rare.`
 }
 
+// Contenu de la formation "Entrepreneur / Dirigeant de PME face à l'IA"
+export const dirigeantIAContent: FormationContent = {
+  formationId: 'formation_dirigeant',
+  introduction: `Beaucoup de dirigeants abordent l'IA comme ils ont abordé :
+• le digital,
+• les réseaux sociaux,
+• le cloud,
+• le no-code.
+
+Avec cette logique : "Il faut s'y mettre, sinon on va être en retard."
+
+Cette approche est dangereuse.
+
+Pourquoi ?
+Parce que l'IA n'est pas une technologie de surface.
+👉 C'est une technologie de structure.
+
+Elle touche :
+• la prise de décision,
+• la vitesse d'exécution,
+• la compétitivité,
+• la culture interne,
+• la relation client,
+• le pouvoir dans l'organisation.
+
+👉 Mal pilotée, elle amplifie le chaos.
+Bien pilotée, elle crée un avantage quasi impossible à rattraper.`,
+  parts: [
+    {
+      title: 'PARTIE 1 – LA PREMIÈRE ILLUSION À DÉTRUIRE',
+      sections: [
+        {
+          title: '1.1 "L\'IA va nous faire gagner du temps"',
+          content: [
+            'Oui.',
+            'Mais gagner du temps pour quoi ?',
+            '',
+            'Beaucoup d\'entreprises utilisent l\'IA pour :',
+            '• produire plus vite,',
+            '• réduire les coûts,',
+            '• automatiser l\'existant.',
+            '',
+            'Résultat fréquent :',
+            '• plus de volume,',
+            '• plus de bruit,',
+            '• plus de décisions médiocres prises plus vite.',
+            '',
+            '👉 L\'IA accélère tout.',
+            'Y compris les mauvaises décisions.'
+          ]
+        },
+        {
+          title: '1.2 La vraie question du dirigeant',
+          content: [
+            'La seule question pertinente n\'est pas : "Quels outils IA utiliser ?"',
+            '',
+            'Mais : "Quel type d\'entreprise voulons-nous devenir avec l\'IA ?"',
+            '',
+            'Sans cette réponse :',
+            '• l\'IA fragmente les équipes,',
+            '• crée des usages sauvages,',
+            '• détruit la cohérence,',
+            '• installe une dépendance invisible.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 2 – REDÉFINIR LE RÔLE DU DIRIGEANT EN 2025',
+      sections: [
+        {
+          title: '2.1 Le basculement fondamental du leadership',
+          content: [
+            'Avant : "Je décide, les équipes exécutent."',
+            '',
+            'Après : "Je conçois un système où les décisions sont prises au bon niveau, avec les bons garde-fous."',
+            '',
+            '👉 Le dirigeant devient architecte, pas micro-manager.'
+          ]
+        },
+        {
+          title: '2.2 Les 9 responsabilités nouvelles du dirigeant augmenté',
+          content: [
+            '1. Définir une vision claire (non automatisable)',
+            'L\'IA ne sait pas où aller.',
+            'Elle sait aller vite.',
+            '',
+            '2. Définir ce qui ne sera jamais automatisé',
+            'Valeurs.',
+            'Éthique.',
+            'Relation humaine.',
+            'Décisions critiques.',
+            '',
+            '3. Arbitrer entre vitesse et sens',
+            'La vitesse sans direction détruit.',
+            '',
+            '4. Structurer la gouvernance IA',
+            'Qui a le droit de faire quoi ?',
+            'Avec quels outils ?',
+            'Avec quelles limites ?',
+            '',
+            '5. Repenser l\'organisation du travail',
+            'L\'IA modifie :',
+            '• les rôles,',
+            '• les compétences,',
+            '• la hiérarchie implicite.',
+            '',
+            '6. Protéger les équipes',
+            'Contre :',
+            '• la surcharge,',
+            '• la perte de sens,',
+            '• la peur de l\'obsolescence.',
+            '',
+            '7. Assumer la responsabilité finale',
+            '',
+            '👉 Une erreur IA est une erreur de direction, pas de machine.',
+            '',
+            '8. Investir dans la lucidité',
+            'Former à comprendre, pas juste à utiliser.',
+            '',
+            '9. Construire un avantage défendable',
+            'L\'IA seule n\'est jamais un avantage.',
+            'La culture + l\'IA, oui.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 3 – L\'IA COMME LEVIER STRATÉGIQUE (PAS COMME GADGET)',
+      sections: [
+        {
+          title: '3.1 Où l\'IA crée un vrai avantage compétitif',
+          content: [
+            'L\'IA est stratégique quand elle :',
+            '• améliore la qualité des décisions,',
+            '• réduit les frictions internes,',
+            '• renforce la compréhension client,',
+            '• accélère l\'apprentissage collectif,',
+            '• augmente la cohérence.',
+            '',
+            '👉 Si elle ne fait que produire plus, elle est mal utilisée.'
+          ]
+        },
+        {
+          title: '3.2 Cartographie des usages IA par fonction (vision dirigeant)',
+          content: [
+            '• Marketing : compréhension client, pas spam',
+            '• Sales : préparation et clarté, pas pression',
+            '• Ops : fiabilité, pas surveillance',
+            '• RH : accompagnement, pas scoring humain',
+            '• Finance : aide à la décision, pas automatisme',
+            '• Produit : exploration, pas gadget',
+            '',
+            '👉 Le rôle du dirigeant est d\'aligner, pas d\'outiller.'
+          ]
+        },
+        {
+          title: '3.3 Outils transverses utiles (à piloter, pas subir)',
+          content: [
+            '• ChatGPT → Exploration stratégique, clarification, simulation',
+            '• Notion + IA → Mémoire stratégique, documentation vivante',
+            '• Power BI → Vision globale, pas micro-KPIs'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 4 – TRANSFORMATION DE L\'ORGANISATION (LE POINT LE PLUS SENSIBLE)',
+      sections: [
+        {
+          title: '4.1 L\'IA change le pouvoir réel',
+          content: [
+            'Dans beaucoup d\'entreprises :',
+            '• ceux qui maîtrisent l\'IA vont plus vite,',
+            '• prennent plus de décisions,',
+            '• contournent les process.',
+            '',
+            '👉 Sans cadre, cela crée des tensions invisibles.'
+          ]
+        },
+        {
+          title: '4.2 Repenser les rôles',
+          content: [
+            'L\'IA :',
+            '• réduit certains rôles exécutifs,',
+            '• augmente les rôles de coordination,',
+            '• valorise la pensée critique.',
+            '',
+            '👉 Le dirigeant doit anticiper, pas subir.'
+          ]
+        },
+        {
+          title: '4.3 Former sans infantiliser',
+          content: [
+            'Former à l\'IA, ce n\'est pas :',
+            '• faire un atelier outils,',
+            '• montrer des prompts.',
+            '',
+            'C\'est :',
+            '• apprendre à raisonner,',
+            '• apprendre à douter,',
+            '• apprendre à décider avec une machine.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 5 – CAS D\'USAGES DIRIGEANT (TRÈS CONCRETS)',
+      sections: [
+        {
+          title: '5.1 Prise de décision stratégique',
+          content: [
+            'IA :',
+            '• explore des scénarios,',
+            '• identifie des risques.',
+            '',
+            'Dirigeant :',
+            '• tranche,',
+            '• assume,',
+            '• incarne.'
+          ]
+        },
+        {
+          title: '5.2 Réduction des coûts',
+          content: [
+            'IA mal utilisée :',
+            '• coupe aveuglément,',
+            '• détruit la qualité.',
+            '',
+            'IA bien utilisée :',
+            '• identifie les frictions,',
+            '• améliore la fiabilité,',
+            '• libère du temps humain.'
+          ]
+        },
+        {
+          title: '5.3 Croissance et innovation',
+          content: [
+            'IA :',
+            '• aide à explorer,',
+            '• à tester rapidement.',
+            '',
+            'Dirigeant :',
+            '• choisit où investir,',
+            '• protège l\'identité de l\'entreprise.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 6 – ÉTHIQUE, RESPONSABILITÉ ET RISQUES MAJEURS',
+      sections: [
+        {
+          title: '6.1 Les risques réels',
+          content: [
+            '• décisions biaisées,',
+            '• dépendance technologique,',
+            '• perte de savoir interne,',
+            '• dilution de la responsabilité.',
+            '',
+            '👉 Le risque n\'est pas technique.',
+            'Il est managérial.'
+          ]
+        },
+        {
+          title: '6.2 Gouvernance IA minimale vitale',
+          content: [
+            'Tout dirigeant doit définir :',
+            '• ce qui est autorisé,',
+            '• ce qui est interdit,',
+            '• ce qui est sensible,',
+            '• qui valide quoi.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 7 – MODÈLES ÉCONOMIQUES ET IA',
+      sections: [
+        {
+          title: '7.1 Ce qui ne crée PAS d\'avantage durable',
+          content: [
+            '• utiliser les mêmes outils que tout le monde,',
+            '• automatiser sans vision,',
+            '• réduire les coûts sans stratégie.'
+          ]
+        },
+        {
+          title: '7.2 Ce qui crée un avantage défendable',
+          content: [
+            '• compréhension client profonde,',
+            '• excellence opérationnelle,',
+            '• culture forte,',
+            '• capacité d\'adaptation rapide.',
+            '',
+            '👉 L\'IA amplifie la culture existante.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 8 – LE DIRIGEANT À 10 ANS',
+      sections: [
+        {
+          title: 'Vision du dirigeant de demain',
+          content: [
+            'Le dirigeant de demain :',
+            '• n\'est pas un expert IA,',
+            '• est un chef d\'orchestre humain + machine,',
+            '• comprend les limites,',
+            '• protège le sens,',
+            '• assume la responsabilité finale.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 9 – CHECKLIST DU DIRIGEANT AUGMENTÉ',
+      sections: [
+        {
+          title: 'Vérifications essentielles',
+          content: [
+            '• J\'ai une vision claire',
+            '• Je sais ce qui ne sera jamais automatisé',
+            '• J\'ai posé un cadre IA',
+            '• Je protège mes équipes',
+            '• J\'utilise l\'IA pour décider, pas pour fuir',
+            '• J\'assume la responsabilité finale'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `L'IA exécute.
+Le dirigeant donne une direction, pose des limites et assume les conséquences.
+
+Dans un monde où tout s'accélère :
+👉 la lucidité devient la compétence la plus rare.`
+}
+
+// Contenu de la formation "Consultant (Stratégie / Organisation / IT) face à l'IA"
+export const consultantIAContent: FormationContent = {
+  formationId: 'formation_consultant',
+  introduction: `Le métier de consultant repose historiquement sur trois piliers :
+1. Accès à une expertise rare
+2. Capacité de structuration
+3. Crédibilité auprès des décideurs
+
+L'IA est venue attaquer frontalement les deux premiers.
+
+Aujourd'hui, un dirigeant peut :
+• obtenir une analyse stratégique en quelques minutes,
+• générer des frameworks,
+• produire des diagnostics,
+• créer des plans d'action,
+• rédiger des slides propres.
+
+👉 Le consulting de surface est mort.
+
+Ce n'est pas une opinion.
+C'est un fait observable depuis 2023–2025.
+
+Mais paradoxalement…
+
+👉 Jamais les organisations n'ont eu autant besoin de vrais consultants.
+
+Pourquoi ?
+Parce que l'IA augmente la complexité, la vitesse et les risques.`,
+  parts: [
+    {
+      title: 'PARTIE 1 – CE QUI DISPARAÎT DANS LE CONSULTING',
+      sections: [
+        {
+          title: '1.1 La fin du consultant "framework + livrables"',
+          content: [
+            'Soyons honnêtes (et un peu cruels).',
+            '',
+            'Le consultant dont la valeur repose principalement sur :',
+            '• réciter des modèles (SWOT, PESTEL, 5 forces, etc.),',
+            '• produire des slides "propres",',
+            '• reformuler ce que le client sait déjà,',
+            '• livrer des recommandations génériques,',
+            '',
+            '👉 est déjà remplaçable par une IA bien utilisée.',
+            '',
+            'Des outils comme :',
+            '• ChatGPT',
+            '• Claude',
+            '• Gamma',
+            '',
+            'peuvent produire :',
+            '• diagnostics structurés,',
+            '• analyses comparatives,',
+            '• roadmaps,',
+            '• présentations exécutives.',
+            '',
+            '👉 Le livrable n\'est plus la valeur.'
+          ]
+        },
+        {
+          title: '1.2 Ce que l\'IA sait déjà très bien faire en consulting',
+          content: [
+            'Fortement automatisable :',
+            '• analyses documentaires,',
+            '• benchmark de marché,',
+            '• structuration de problèmes,',
+            '• génération de scénarios,',
+            '• rédaction de recommandations.',
+            '',
+            '👉 Si ton offre = "je structure et je recommande",',
+            '👉 tu es en danger.'
+          ]
+        },
+        {
+          title: '1.3 Le vrai problème : la confusion entre clarté intellectuelle et transformation réelle',
+          content: [
+            'Un client ne paye pas (ou ne devrait pas payer) pour :',
+            '• un PDF,',
+            '• un slide deck,',
+            '• une belle synthèse.',
+            '',
+            'Il paye pour :',
+            '• un changement réel,',
+            '• une prise de décision difficile,',
+            '• une transformation qui résiste au réel.',
+            '',
+            '👉 Et c\'est là que l\'IA s\'arrête.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 2 – REDÉFINIR LE MÉTIER DE CONSULTANT EN 2025',
+      sections: [
+        {
+          title: '2.1 Le basculement fondamental',
+          content: [
+            'Avant : "J\'apporte une expertise et des recommandations."',
+            '',
+            'Après : "J\'aide une organisation à changer réellement, malgré ses résistances humaines, politiques et culturelles."',
+            '',
+            '👉 Le consultant devient un catalyseur, pas un expert distant.'
+          ]
+        },
+        {
+          title: '2.2 Les 8 responsabilités réelles du consultant augmenté',
+          content: [
+            '1. Diagnostiquer au-delà du discours officiel',
+            'Ce que l\'organisation dit ≠ ce qui se passe.',
+            '',
+            '2. Lire les dynamiques humaines et politiques',
+            'Pouvoir, peurs, jeux d\'acteurs.',
+            '',
+            '3. Traduire la stratégie en décisions concrètes',
+            'Pas en concepts abstraits.',
+            '',
+            '4. Challenger sans arrogance',
+            'Dire la vérité sans détruire la relation.',
+            '',
+            '5. Accompagner l\'exécution',
+            'Sinon la stratégie meurt.',
+            '',
+            '6. Poser des limites à l\'IA',
+            'Savoir quand ne PAS l\'utiliser.',
+            '',
+            '7. Créer de l\'alignement',
+            'Entre dirigeants, équipes, systèmes.',
+            '',
+            '8. Assumer la responsabilité du changement',
+            '',
+            '👉 Le consultant ne peut plus se cacher derrière un livrable.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 3 – L\'IA COMME ASSISTANT DU CONSULTANT (USAGE MAÎTRISÉ)',
+      sections: [
+        {
+          title: '3.1 L\'IA pour la phase de diagnostic (accélération massive)',
+          content: [
+            'Objectif :',
+            '👉 Comprendre plus vite sans devenir superficiel',
+            '',
+            'Outils clés :',
+            '• ChatGPT → Structuration des problématiques, hypothèses',
+            '• Perplexity → Recherche sectorielle, benchmarks',
+            '• Notion + IA → Centralisation et synthèse des informations',
+            '',
+            '👉 L\'IA fait gagner du temps sur :',
+            '• la lecture,',
+            '• la structuration,',
+            '• la comparaison.',
+            '',
+            '👉 Le consultant investit ce temps dans :',
+            '• l\'observation terrain,',
+            '• les entretiens,',
+            '• la compréhension humaine.'
+          ]
+        },
+        {
+          title: '3.2 L\'IA pour la modélisation stratégique',
+          content: [
+            'IA utile pour :',
+            '• tester des scénarios,',
+            '• explorer des options,',
+            '• visualiser des impacts.',
+            '',
+            'Mais :',
+            '👉 elle ne connaît pas les lignes rouges politiques.'
+          ]
+        },
+        {
+          title: '3.3 L\'IA pour les livrables (sans s\'y cacher)',
+          content: [
+            'Oui, l\'IA peut :',
+            '• aider à rédiger,',
+            '• structurer des slides,',
+            '• clarifier des messages.',
+            '',
+            'Mais :',
+            '👉 le livrable est un support de discussion, pas une fin.',
+            '',
+            'Un consultant qui "livre et part" n\'est plus crédible.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 4 – CONSULTING EN STRATÉGIE FACE À L\'IA',
+      sections: [
+        {
+          title: '4.1 La stratégie n\'est plus rare, l\'exécution l\'est',
+          content: [
+            'L\'IA peut produire :',
+            '• 10 stratégies différentes en 10 minutes.',
+            '',
+            'Le problème n\'est pas : "Quelle stratégie est la meilleure ?"',
+            '',
+            'Mais : "Quelle stratégie cette organisation est réellement capable d\'exécuter ?"',
+            '',
+            '👉 C\'est une question humaine, pas analytique.'
+          ]
+        },
+        {
+          title: '4.2 Le consultant comme révélateur de contraintes réelles',
+          content: [
+            'Ressources.',
+            'Compétences.',
+            'Culture.',
+            'Peurs.',
+            'Pouvoirs.',
+            '',
+            '👉 Le consultant augmenté aide à renoncer intelligemment.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 5 – CONSULTING EN ORGANISATION & TRANSFORMATION',
+      sections: [
+        {
+          title: '5.1 L\'IA change la structure du travail',
+          content: [
+            'Elle :',
+            '• supprime des tâches,',
+            '• crée des déséquilibres,',
+            '• redistribue le pouvoir.',
+            '',
+            '👉 Sans accompagnement, cela crée :',
+            '• résistances,',
+            '• sabotage passif,',
+            '• perte de sens.'
+          ]
+        },
+        {
+          title: '5.2 Le consultant comme médiateur du changement',
+          content: [
+            'Il doit :',
+            '• écouter,',
+            '• traduire,',
+            '• rassurer,',
+            '• confronter,',
+            '• structurer.',
+            '',
+            '👉 L\'IA ne sait pas gérer la peur humaine.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 6 – CONSULTING IT & IA : LE PLUS GRAND PIÈGE',
+      sections: [
+        {
+          title: '6.1 L\'illusion "tout est technique"',
+          content: [
+            'Beaucoup de projets IA échouent non pas parce que :',
+            '• le modèle est mauvais,',
+            '• la donnée est insuffisante,',
+            '',
+            'Mais parce que :',
+            '• les usages sont flous,',
+            '• les équipes ne suivent pas,',
+            '• la gouvernance est absente.',
+            '',
+            '👉 Le consultant IT devient un consultant humain + système.'
+          ]
+        },
+        {
+          title: '6.2 Gouvernance IA : mission clé du consultant',
+          content: [
+            'Le consultant doit aider à définir :',
+            '• qui décide,',
+            '• qui valide,',
+            '• qui est responsable,',
+            '• où sont les limites.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 7 – CAS D\'USAGES CONCRETS (TRÈS APPROFONDIS)',
+      sections: [
+        {
+          title: '7.1 Mission de transformation IA',
+          content: [
+            'IA :',
+            '• aide à explorer,',
+            '• à prototyper.',
+            '',
+            'Consultant :',
+            '• cadre,',
+            '• priorise,',
+            '• protège l\'organisation du chaos.'
+          ]
+        },
+        {
+          title: '7.2 Mission de redressement stratégique',
+          content: [
+            'IA :',
+            '• analyse vite.',
+            '',
+            'Consultant :',
+            '• confronte les non-dits,',
+            '• aide à assumer des décisions douloureuses.'
+          ]
+        },
+        {
+          title: '7.3 Consultant indépendant',
+          content: [
+            'IA :',
+            '• réduit le temps de production,',
+            '• augmente la qualité formelle.',
+            '',
+            'Consultant :',
+            '• vend du discernement,',
+            '• de l\'expérience,',
+            '• du courage intellectuel.',
+            '',
+            '👉 Le conseil devient un métier de responsabilité.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 8 – MODÈLES ÉCONOMIQUES DU CONSULTANT POST-IA',
+      sections: [
+        {
+          title: '8.1 Ce qui se dévalue',
+          content: [
+            '• facturation au livrable,',
+            '• expertise générique,',
+            '• recommandations sans suivi.'
+          ]
+        },
+        {
+          title: '8.2 Ce qui prend de la valeur',
+          content: [
+            '• accompagnement dans le temps,',
+            '• transformation réelle,',
+            '• posture de partenaire,',
+            '• responsabilité partagée.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 9 – COMPÉTENCES À DÉVELOPPER À 5–10 ANS',
+      sections: [
+        {
+          title: 'Les compétences essentielles',
+          content: [
+            '• lecture des systèmes humains,',
+            '• pensée stratégique avancée,',
+            '• compréhension IA,',
+            '• facilitation du changement,',
+            '• courage éthique,',
+            '• communication exécutive.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 10 – CHECKLIST DU CONSULTANT AUGMENTÉ',
+      sections: [
+        {
+          title: 'Vérifications essentielles',
+          content: [
+            '• Je ne me cache pas derrière des slides',
+            '• Je comprends les dynamiques humaines',
+            '• J\'utilise l\'IA pour accélérer, pas simplifier',
+            '• J\'accompagne l\'exécution',
+            '• J\'assume une responsabilité réelle',
+            '• Je crée un changement durable'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `L'IA structure.
+Le consultant révèle, aligne et accompagne le changement réel.
+
+Dans un monde où les réponses sont instantanées :
+👉 le discernement devient la vraie expertise.`
+}
+
+// Contenu de la formation "Avocat / Juriste face à l'IA"
+export const avocatIAContent: FormationContent = {
+  formationId: 'formation_avocat',
+  introduction: `Depuis l'arrivée de l'IA générative, on entend deux discours opposés :
+• "L'IA va remplacer les avocats"
+• "Le droit est trop complexe, trop humain, trop réglementé"
+
+Les deux sont faux.
+
+👉 Le droit ne disparaît pas.
+👉 Mais une grande partie de la pratique juridique actuelle devient obsolète.
+
+Pourquoi ?
+Parce que le droit repose sur trois piliers :
+1. L'accès à l'information juridique
+2. La capacité d'analyse et de structuration
+3. La responsabilité humaine et stratégique
+
+👉 L'IA attaque violemment les deux premiers.
+👉 Elle ne peut pas assumer le troisième.
+
+Et c'est là que le métier se reconstruit.`,
+  parts: [
+    {
+      title: 'PARTIE 1 – CE QUI S\'EFFONDRE DANS LA PRATIQUE JURIDIQUE',
+      sections: [
+        {
+          title: '1.1 La fin du juriste "recherche + restitution"',
+          content: [
+            'Soyons lucides.',
+            '',
+            'Le juriste ou l\'avocat dont la valeur repose principalement sur :',
+            '• rechercher de la jurisprudence,',
+            '• synthétiser des textes,',
+            '• rédiger des actes standards,',
+            '• produire des notes juridiques descriptives,',
+            '',
+            '👉 voit cette valeur fortement diminuer.',
+            '',
+            'Des outils comme :',
+            '• ChatGPT',
+            '• Harvey',
+            '• Lexis+ AI',
+            '• Westlaw Precision',
+            '',
+            'peuvent déjà :',
+            '• rechercher des textes,',
+            '• proposer des synthèses,',
+            '• générer des projets d\'actes,',
+            '• comparer des clauses.',
+            '',
+            '👉 La recherche juridique brute n\'est plus un avantage compétitif.'
+          ]
+        },
+        {
+          title: '1.2 Les tâches juridiques déjà massivement assistées',
+          content: [
+            'Fortement assistées / automatisables :',
+            '• recherche jurisprudentielle,',
+            '• revue contractuelle standard,',
+            '• rédaction d\'actes simples,',
+            '• due diligence basique,',
+            '• notes de synthèse descriptives.',
+            '',
+            '👉 Ce qui était facturé en heures devient :',
+            '• plus rapide,',
+            '• moins cher,',
+            '• parfois internalisé par les clients.'
+          ]
+        },
+        {
+          title: '1.3 Le vrai danger : la banalisation du juridique',
+          content: [
+            'Avec l\'IA :',
+            '• le droit semble "simple",',
+            '• les réponses semblent immédiates,',
+            '• le risque est minimisé à tort.',
+            '',
+            '👉 C\'est une illusion dangereuse.',
+            '',
+            'Car le droit n\'est pas :',
+            '• une réponse,',
+            '• un texte,',
+            '• une règle isolée.',
+            '',
+            '👉 C\'est une prise de responsabilité dans un contexte réel, mouvant, conflictuel.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 2 – REDÉFINIR LE MÉTIER JURIDIQUE EN 2025',
+      sections: [
+        {
+          title: '2.1 Le basculement fondamental',
+          content: [
+            'Avant : "J\'analyse le droit et je produis des actes."',
+            '',
+            'Après : "Je sécurise des décisions humaines dans des contextes juridiques complexes et risqués."',
+            '',
+            'Ce changement est radical.',
+            '',
+            'Le juriste n\'est plus :',
+            '• un technicien du droit.',
+            '',
+            'Il devient :',
+            '• un stratège juridique,',
+            '• un protecteur du risque,',
+            '• un conseiller de décision.'
+          ]
+        },
+        {
+          title: '2.2 Les 9 responsabilités réelles de l\'avocat / juriste augmenté',
+          content: [
+            '1. Comprendre le contexte réel (pas seulement juridique)',
+            'Business, humain, politique.',
+            '',
+            '2. Identifier les risques pertinents',
+            'Pas tous les risques théoriques.',
+            '👉 Les risques réels.',
+            '',
+            '3. Hiérarchiser et arbitrer',
+            'Tout n\'est pas également critique.',
+            '',
+            '4. Traduire le droit en décisions compréhensibles',
+            'Pour des non-juristes.',
+            '',
+            '5. Challenger l\'illusion de sécurité',
+            'Un contrat n\'élimine pas le conflit.',
+            '',
+            '6. Accompagner la stratégie',
+            'Le droit comme levier, pas comme frein.',
+            '',
+            '7. Assumer la responsabilité du conseil',
+            '',
+            '👉 L\'IA ne signe pas l\'avis juridique.',
+            '',
+            '8. Protéger contre les usages naïfs de l\'IA',
+            'Dans l\'entreprise comme chez les clients.',
+            '',
+            '9. Maintenir une éthique professionnelle forte',
+            'Encore plus cruciale à l\'ère de l\'automatisation.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 3 – L\'IA COMME ASSISTANT JURIDIQUE (USAGE MAÎTRISÉ)',
+      sections: [
+        {
+          title: '3.1 L\'IA pour la recherche et la veille juridique',
+          content: [
+            'Objectif :',
+            '👉 Aller plus vite sans perdre en rigueur',
+            '',
+            'Outils clés :',
+            '• Lexis+ AI → Recherche augmentée, jurisprudence',
+            '• Westlaw Precision → Analyse de précédents',
+            '• ChatGPT → Clarification, reformulation, hypothèses',
+            '',
+            '👉 L\'IA accélère la surface.',
+            '👉 Le juriste approfondit le fond.'
+          ]
+        },
+        {
+          title: '3.2 L\'IA pour la rédaction juridique (avec contrôle strict)',
+          content: [
+            'IA utile pour :',
+            '• premiers jets,',
+            '• reformulations,',
+            '• comparaison de clauses,',
+            '• détection d\'incohérences.',
+            '',
+            'Mais :',
+            '👉 aucun acte ne doit être validé sans lecture humaine experte.',
+            '',
+            'Pourquoi ?',
+            '• hallucinations juridiques,',
+            '• erreurs de contexte,',
+            '• confusions de juridiction,',
+            '• obsolescence de sources.'
+          ]
+        },
+        {
+          title: '3.3 L\'IA pour l\'analyse contractuelle',
+          content: [
+            'Outils comme :',
+            '• Luminance',
+            '• Kira',
+            '',
+            'permettent :',
+            '• repérage rapide de clauses,',
+            '• comparaison à des standards,',
+            '• détection de risques.',
+            '',
+            'Mais :',
+            '👉 le jugement sur l\'acceptabilité du risque est humain.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 4 – CAS D\'USAGES JURIDIQUES CONCRETS (TRÈS APPROFONDIS)',
+      sections: [
+        {
+          title: '4.1 Conseil en droit des affaires',
+          content: [
+            'IA :',
+            '• aide à analyser des structures,',
+            '• compare des montages.',
+            '',
+            'Avocat :',
+            '• évalue les risques réels,',
+            '• intègre la stratégie du client,',
+            '• anticipe les contentieux.'
+          ]
+        },
+        {
+          title: '4.2 Contentieux',
+          content: [
+            'IA :',
+            '• analyse des décisions passées,',
+            '• suggère des arguments.',
+            '',
+            'Avocat :',
+            '• lit le contexte,',
+            '• adapte la stratégie,',
+            '• gère l\'imprévisible (humain, juge, partie adverse).',
+            '',
+            '👉 Un procès ne se gagne pas avec des statistiques.'
+          ]
+        },
+        {
+          title: '4.3 Juriste d\'entreprise',
+          content: [
+            'IA :',
+            '• accélère la production,',
+            '• réduit le backlog.',
+            '',
+            'Juriste :',
+            '• devient plus stratégique,',
+            '• plus proche des décisions,',
+            '• plus impliqué dans la gouvernance.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 5 – RISQUES MAJEURS LIÉS À L\'IA EN DROIT',
+      sections: [
+        {
+          title: '5.1 Hallucinations juridiques',
+          content: [
+            'L\'IA peut :',
+            '• inventer des arrêts,',
+            '• mélanger des régimes,',
+            '• citer des textes obsolètes.',
+            '',
+            '👉 C\'est un risque professionnel majeur.'
+          ]
+        },
+        {
+          title: '5.2 Responsabilité et déontologie',
+          content: [
+            'Qui est responsable ?',
+            '• pas l\'outil,',
+            '• pas le modèle,',
+            '• le professionnel.',
+            '',
+            '👉 Le devoir de conseil ne se délègue pas.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 6 – MODÈLES ÉCONOMIQUES POST-IA',
+      sections: [
+        {
+          title: '6.1 Ce qui se dévalue',
+          content: [
+            '• facturation horaire sur tâches standards,',
+            '• recherche brute,',
+            '• actes non différenciés.'
+          ]
+        },
+        {
+          title: '6.2 Ce qui prend de la valeur',
+          content: [
+            '• conseil stratégique,',
+            '• gestion du risque,',
+            '• accompagnement long terme,',
+            '• spécialisation pointue,',
+            '• crédibilité personnelle.',
+            '',
+            '👉 Le juriste devient un partenaire stratégique.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 7 – COMPÉTENCES À DÉVELOPPER À 5–10 ANS',
+      sections: [
+        {
+          title: 'Les compétences essentielles',
+          content: [
+            '• compréhension business,',
+            '• lecture stratégique du risque,',
+            '• pédagogie juridique,',
+            '• maîtrise des outils IA,',
+            '• éthique renforcée,',
+            '• courage du conseil.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 8 – CHECKLIST DE L\'AVOCAT / JURISTE AUGMENTÉ',
+      sections: [
+        {
+          title: 'Vérifications essentielles',
+          content: [
+            '• Je comprends le contexte réel',
+            '• Je hiérarchise les risques',
+            '• J\'utilise l\'IA sans lui déléguer la responsabilité',
+            '• Je sécurise les décisions humaines',
+            '• Je maintiens une éthique forte',
+            '• Je me positionne comme stratège'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `L'IA analyse le droit.
+L'avocat / juriste assume la responsabilité des décisions dans le réel.
+
+Dans un monde où les réponses sont faciles :
+👉 la responsabilité devient la vraie valeur.`
+}
+
+// Contenu de la formation "Comptable / Expert-Comptable face à l'IA"
+export const comptableIAContent: FormationContent = {
+  formationId: 'formation_comptable',
+  introduction: `Pendant longtemps, la valeur du comptable reposait sur :
+• la maîtrise des règles,
+• la rigueur,
+• la capacité à produire des états fiables,
+• la conformité.
+
+Puis sont arrivés :
+• la dématérialisation,
+• l'automatisation,
+• les logiciels comptables intelligents,
+• et désormais… l'IA générative.
+
+Résultat :
+• beaucoup de tâches historiques disparaissent,
+• les clients ne veulent plus "des chiffres",
+• ils veulent comprendre, anticiper, décider.
+
+👉 La comptabilité ne meurt pas.
+Elle quitte le terrain de la production pour celui de la responsabilité.`,
+  parts: [
+    {
+      title: 'PARTIE 1 – CE QUI S\'AUTOMATISE (ET NE REVIENDRA PAS)',
+      sections: [
+        {
+          title: '1.1 La fin de la saisie comptable comme valeur',
+          content: [
+            'Soyons clairs.',
+            '',
+            'La saisie manuelle :',
+            '• factures,',
+            '• écritures récurrentes,',
+            '• rapprochements simples,',
+            '',
+            '👉 n\'a plus de valeur économique forte.',
+            '',
+            'Des outils comme :',
+            '• Pennylane',
+            '• Sage',
+            '• QuickBooks',
+            '• Xero',
+            '',
+            'intègrent déjà :',
+            '• OCR intelligent,',
+            '• catégorisation automatique,',
+            '• rapprochements bancaires,',
+            '• contrôles de cohérence.',
+            '',
+            '👉 La production brute est une commodité.'
+          ]
+        },
+        {
+          title: '1.2 Les tâches comptables déjà massivement assistées',
+          content: [
+            'Fortement automatisables :',
+            '• saisie et classement,',
+            '• rapprochements bancaires,',
+            '• écritures standards,',
+            '• déclarations simples,',
+            '• reporting basique.',
+            '',
+            '👉 Le danger n\'est pas la perte de travail.',
+            '👉 Le danger est de rester bloqué sur ces tâches.'
+          ]
+        },
+        {
+          title: '1.3 Le vrai risque : devenir invisible',
+          content: [
+            'Quand le client pense : "Le logiciel fait la compta."',
+            '',
+            'Alors :',
+            '• la valeur perçue chute,',
+            '• le prix devient le seul critère,',
+            '• la relation se fragilise.',
+            '',
+            '👉 Le comptable doit redevenir visible par la valeur, pas par l\'effort.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 2 – REDÉFINIR LE MÉTIER COMPTABLE EN 2025',
+      sections: [
+        {
+          title: '2.1 Le basculement fondamental',
+          content: [
+            'Avant : "Je produis des comptes conformes."',
+            '',
+            'Après : "Je garantis la fiabilité financière et j\'aide à la prise de décision économique."',
+            '',
+            'La conformité devient :',
+            '• un prérequis,',
+            '• pas une différenciation.'
+          ]
+        },
+        {
+          title: '2.2 Les 9 responsabilités réelles du comptable / expert-comptable augmenté',
+          content: [
+            '1. Garantir la fiabilité',
+            'L\'IA accélère, mais peut se tromper.',
+            '',
+            '2. Détecter les anomalies pertinentes',
+            'Pas toutes.',
+            '👉 Les dangereuses.',
+            '',
+            '3. Traduire les chiffres en décisions',
+            'Un bilan sans lecture est inutile.',
+            '',
+            '4. Anticiper',
+            'Trésorerie, risques, seuils.',
+            '',
+            '5. Accompagner la stratégie du dirigeant',
+            'Pas seulement clôturer l\'exercice.',
+            '',
+            '6. Protéger contre les erreurs d\'automatisation',
+            'Une erreur IA peut coûter très cher.',
+            '',
+            '7. Maintenir une relation de confiance',
+            'La comptabilité est un métier de confiance.',
+            '',
+            '8. Former les clients',
+            'À comprendre leurs chiffres.',
+            '',
+            '9. Assumer la responsabilité finale',
+            '',
+            '👉 Le logiciel ne signe pas les comptes.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 3 – L\'IA COMME ASSISTANT DU COMPTABLE (USAGES MAÎTRISÉS)',
+      sections: [
+        {
+          title: '3.1 L\'IA pour la production (contrôlée)',
+          content: [
+            'Oui, l\'IA doit être utilisée pour :',
+            '• pré-catégoriser,',
+            '• suggérer des écritures,',
+            '• détecter des incohérences,',
+            '• accélérer la clôture.',
+            '',
+            'Mais :',
+            '👉 tout doit être validé humainement.'
+          ]
+        },
+        {
+          title: '3.2 L\'IA pour l\'analyse financière',
+          content: [
+            'Outils et usages :',
+            '• ChatGPT → Lecture de bilans, explications pédagogiques',
+            '• Power BI → Tableaux de bord financiers',
+            '• Pennylane → Analyse temps réel de la trésorerie',
+            '',
+            '👉 L\'IA aide à expliquer.',
+            '👉 Le comptable aide à décider.'
+          ]
+        },
+        {
+          title: '3.3 L\'IA pour la détection des risques',
+          content: [
+            'IA utile pour :',
+            '• repérer des anomalies,',
+            '• détecter des tendances dangereuses,',
+            '• alerter en amont.',
+            '',
+            'Mais :',
+            '👉 le jugement sur le risque est humain.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 4 – CAS D\'USAGES CONCRETS ET APPROFONDIS',
+      sections: [
+        {
+          title: '4.1 PME classique',
+          content: [
+            'Avant IA :',
+            '• clôture lente,',
+            '• peu de visibilité,',
+            '• relation annuelle.',
+            '',
+            'Après IA :',
+            '• données quasi temps réel,',
+            '• alertes,',
+            '• accompagnement continu.',
+            '',
+            '👉 Le comptable devient copilote du dirigeant.'
+          ]
+        },
+        {
+          title: '4.2 Cabinet comptable',
+          content: [
+            'IA permet :',
+            '• réduire la charge répétitive,',
+            '• absorber plus de dossiers,',
+            '• améliorer la qualité.',
+            '',
+            'Mais :',
+            '👉 la valeur se déplace vers :',
+            '• conseil,',
+            '• spécialisation,',
+            '• relation.'
+          ]
+        },
+        {
+          title: '4.3 Expert-comptable conseil',
+          content: [
+            'Nouveaux rôles :',
+            '• aide à la structuration financière,',
+            '• anticipation des difficultés,',
+            '• accompagnement stratégique.',
+            '',
+            '👉 La mission devient continue.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 5 – COMPTABILITÉ, FISCALITÉ ET IA',
+      sections: [
+        {
+          title: '5.1 Fiscalité : zone à haut risque',
+          content: [
+            'L\'IA peut :',
+            '• expliquer des règles,',
+            '• simuler des options.',
+            '',
+            'Mais :',
+            '• une mauvaise interprétation fiscale coûte très cher.',
+            '',
+            '👉 La validation humaine est non négociable.'
+          ]
+        },
+        {
+          title: '5.2 Responsabilité professionnelle',
+          content: [
+            'L\'expert-comptable :',
+            '• reste juridiquement responsable,',
+            '• même si l\'outil s\'est trompé.',
+            '',
+            '👉 L\'IA n\'est jamais responsable devant l\'administration.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 6 – MODÈLES ÉCONOMIQUES POST-IA',
+      sections: [
+        {
+          title: '6.1 Ce qui se dévalue',
+          content: [
+            '• facturation à la saisie,',
+            '• production brute,',
+            '• conformité seule.'
+          ]
+        },
+        {
+          title: '6.2 Ce qui prend de la valeur',
+          content: [
+            '• accompagnement,',
+            '• analyse,',
+            '• conseil,',
+            '• relation de confiance,',
+            '• spécialisation sectorielle.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 7 – COMPÉTENCES À DÉVELOPPER À 5–10 ANS',
+      sections: [
+        {
+          title: 'Les compétences essentielles',
+          content: [
+            '• analyse financière avancée,',
+            '• pédagogie,',
+            '• compréhension IA,',
+            '• conseil stratégique,',
+            '• éthique professionnelle,',
+            '• relation client.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 8 – CHECKLIST DU COMPTABLE / EXPERT-COMPTABLE AUGMENTÉ',
+      sections: [
+        {
+          title: 'Vérifications essentielles',
+          content: [
+            '• J\'utilise l\'IA pour produire plus vite',
+            '• Je vérifie systématiquement',
+            '• Je traduis les chiffres en décisions',
+            '• J\'anticipe les risques',
+            '• Je maintiens la confiance',
+            '• J\'assume la responsabilité finale'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `L'IA produit des chiffres.
+Le comptable garantit leur fiabilité et leur utilité réelle.
+
+Dans un monde automatisé :
+👉 la confiance devient la vraie valeur économique.`
+}
+
+// Contenu de la formation "Ressources Humaines / Recruteur face à l'IA"
+export const rhIAContent: FormationContent = {
+  formationId: 'formation_rh',
+  introduction: `L'IA est en train de pénétrer les Ressources Humaines plus vite que partout ailleurs.
+
+Pourquoi ?
+• beaucoup de données,
+• des process standardisés,
+• une pression forte sur le recrutement,
+• une volonté d'objectiver l'humain.
+
+👉 C'est précisément ce qui rend le sujet explosif.
+
+Car les RH ne gèrent pas :
+• des leads,
+• des tickets,
+• des chiffres.
+
+👉 Elles gèrent des trajectoires humaines, des carrières, des identités professionnelles.
+
+Et l'IA, mal utilisée, peut :
+• renforcer les biais,
+• déshumaniser les décisions,
+• créer une défiance durable,
+• exposer juridiquement l'entreprise.`,
+  parts: [
+    {
+      title: 'PARTIE 1 – CE QUI S\'AUTOMATISE (ET POURQUOI C\'EST DANGEREUX)',
+      sections: [
+        {
+          title: '1.1 La fin du recruteur "tri de CV"',
+          content: [
+            'Soyons directs.',
+            '',
+            'Le recruteur dont la valeur repose principalement sur :',
+            '• trier des CV,',
+            '• faire des préqualifications standard,',
+            '• planifier des entretiens,',
+            '• gérer des pipelines,',
+            '',
+            '👉 voit cette valeur s\'effondrer.',
+            '',
+            'Des outils comme :',
+            '• LinkedIn Recruiter',
+            '• HireVue',
+            '• Pymetrics',
+            '• Eightfold AI',
+            '',
+            'peuvent déjà :',
+            '• scorer des profils,',
+            '• détecter des correspondances,',
+            '• automatiser des étapes entières.',
+            '',
+            '👉 Le tri n\'est plus une compétence humaine.'
+          ]
+        },
+        {
+          title: '1.2 Ce que l\'IA sait déjà faire en RH',
+          content: [
+            'Fortement automatisable :',
+            '• sourcing initial,',
+            '• matching compétences/postes,',
+            '• pré-entretiens standard,',
+            '• planification,',
+            '• reporting RH,',
+            '• analyses de turnover.',
+            '',
+            '👉 Mais attention :',
+            '',
+            'Ce que l\'IA optimise, elle le fige.',
+            '',
+            'Et figer de mauvais critères est extrêmement dangereux.'
+          ]
+        },
+        {
+          title: '1.3 Le vrai risque : l\'illusion d\'objectivité',
+          content: [
+            'Les outils RH IA sont souvent vendus comme : "objectifs", "neutres", "basés sur la data".',
+            '',
+            'C\'est faux.',
+            '',
+            '👉 Ils reproduisent et amplifient les biais existants :',
+            '• biais historiques de recrutement,',
+            '• biais culturels,',
+            '• biais de genre,',
+            '• biais de parcours.',
+            '',
+            '👉 L\'IA en RH sans esprit critique est une bombe à retardement.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 2 – REDÉFINIR LA FONCTION RH EN 2025',
+      sections: [
+        {
+          title: '2.1 Le basculement fondamental',
+          content: [
+            'Avant : "Je gère des process RH."',
+            '',
+            'Après : "Je crée les conditions pour que des humains contribuent durablement et sainement à une organisation."',
+            '',
+            'Les RH ne sont plus :',
+            '• un service support.',
+            '',
+            'Elles deviennent :',
+            '• une fonction stratégique de stabilité humaine.'
+          ]
+        },
+        {
+          title: '2.2 Les 9 responsabilités réelles des RH augmentées',
+          content: [
+            '1. Définir ce qui est acceptable',
+            'Tout ce qui est techniquement possible ne doit pas être fait.',
+            '',
+            '2. Protéger l\'équité',
+            'Pas l\'égalité naïve.',
+            '👉 L\'équité réelle.',
+            '',
+            '3. Comprendre les biais (humains et algorithmiques)',
+            'Et les corriger activement.',
+            '',
+            '4. Traduire les besoins humains',
+            'Pas seulement les besoins business.',
+            '',
+            '5. Garantir la transparence',
+            'Les collaborateurs doivent comprendre les décisions.',
+            '',
+            '6. Accompagner les managers',
+            'L\'IA ne remplace pas le management.',
+            '',
+            '7. Préserver la confiance',
+            'Une confiance perdue en RH est quasi irrécupérable.',
+            '',
+            '8. Assumer la responsabilité des décisions',
+            '',
+            '👉 L\'outil n\'est jamais responsable.',
+            '',
+            '9. Anticiper les transformations de métiers',
+            'L\'IA modifie les rôles, les carrières, les identités.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 3 – L\'IA COMME ASSISTANT DES RH (USAGES RESPONSABLES)',
+      sections: [
+        {
+          title: '3.1 L\'IA pour le sourcing et la présélection (avec garde-fous)',
+          content: [
+            'Objectif :',
+            '👉 Gagner du temps sans perdre l\'humain',
+            '',
+            'Outils utiles :',
+            '• LinkedIn Recruiter → Sourcing intelligent',
+            '• ChatGPT → Reformulation d\'annonces, analyse de profils (avec recul)',
+            '',
+            '👉 Jamais de décision automatique sans validation humaine.'
+          ]
+        },
+        {
+          title: '3.2 L\'IA pour les entretiens (zone rouge)',
+          content: [
+            'Certains outils analysent :',
+            '• la voix,',
+            '• le langage corporel,',
+            '• les micro-expressions.',
+            '',
+            '👉 C\'est extrêmement risqué :',
+            '• scientifiquement discutable,',
+            '• juridiquement sensible,',
+            '• humainement violent.',
+            '',
+            '👉 À éviter dans la majorité des cas.'
+          ]
+        },
+        {
+          title: '3.3 L\'IA pour la gestion des talents',
+          content: [
+            'IA utile pour :',
+            '• identifier des compétences internes,',
+            '• proposer des parcours,',
+            '• anticiper des besoins.',
+            '',
+            'Outils :',
+            '• Eightfold AI',
+            '• Gloat',
+            '',
+            'Mais :',
+            '👉 la mobilité forcée ou opaque détruit la confiance.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 4 – CAS D\'USAGES RH CONCRETS (TRÈS APPROFONDIS)',
+      sections: [
+        {
+          title: '4.1 Recrutement responsable',
+          content: [
+            'IA :',
+            '• aide à élargir le sourcing,',
+            '• réduit certaines tâches.',
+            '',
+            'RH :',
+            '• garde la décision,',
+            '• explique les choix,',
+            '• protège l\'équité.'
+          ]
+        },
+        {
+          title: '4.2 Gestion des performances',
+          content: [
+            'IA :',
+            '• détecte des tendances,',
+            '• alerte sur des risques.',
+            '',
+            'RH :',
+            '• contextualise,',
+            '• évite la surveillance permanente,',
+            '• protège la dignité.'
+          ]
+        },
+        {
+          title: '4.3 Reskilling et transformation des métiers',
+          content: [
+            'IA :',
+            '• cartographie les compétences,',
+            '• identifie les écarts.',
+            '',
+            'RH :',
+            '• accompagne les trajectoires,',
+            '• rassure,',
+            '• forme,',
+            '• donne du sens.',
+            '',
+            '👉 La transformation sans accompagnement crée de la peur.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 5 – DROIT DU TRAVAIL, IA ET RESPONSABILITÉ',
+      sections: [
+        {
+          title: '5.1 Zones juridiques à haut risque',
+          content: [
+            '• décisions automatisées,',
+            '• absence de transparence,',
+            '• discrimination indirecte,',
+            '• surveillance excessive.',
+            '',
+            '👉 Les RH sont juridiquement en première ligne.'
+          ]
+        },
+        {
+          title: '5.2 Le devoir d\'explicabilité',
+          content: [
+            'Tout collaborateur doit pouvoir comprendre :',
+            '• pourquoi il a été évalué ainsi,',
+            '• pourquoi il n\'a pas été retenu,',
+            '• comment une décision a été prise.',
+            '',
+            '👉 "C\'est l\'algorithme" n\'est pas une réponse acceptable.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 6 – MODÈLES RH POST-IA',
+      sections: [
+        {
+          title: '6.1 Ce qui se dévalue',
+          content: [
+            '• RH purement administratives,',
+            '• process déshumanisés,',
+            '• décisions opaques.'
+          ]
+        },
+        {
+          title: '6.2 Ce qui prend de la valeur',
+          content: [
+            '• accompagnement humain,',
+            '• lecture fine des situations,',
+            '• médiation,',
+            '• éthique,',
+            '• confiance.',
+            '',
+            '👉 Les RH deviennent gardiens de l\'humain.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 7 – COMPÉTENCES À DÉVELOPPER À 5–10 ANS',
+      sections: [
+        {
+          title: 'Les compétences essentielles',
+          content: [
+            '• psychologie du travail,',
+            '• compréhension IA,',
+            '• droit social,',
+            '• éthique algorithmique,',
+            '• communication sensible,',
+            '• courage managérial.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 8 – CHECKLIST DES RH AUGMENTÉES',
+      sections: [
+        {
+          title: 'Vérifications essentielles',
+          content: [
+            '• Je comprends les biais IA',
+            '• Je pose des limites claires',
+            '• Je protège la transparence',
+            '• Je garde l\'humain au centre',
+            '• Je forme les managers',
+            '• J\'assume la responsabilité finale'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `L'IA trie.
+Les RH assument, expliquent et protègent.
+
+Dans un monde automatisé :
+👉 la confiance devient l'actif le plus fragile et le plus précieux.`
+}
+
+// Contenu de la formation "Médecin / Professionnel de Santé face à l'IA"
+export const medecinIAContent: FormationContent = {
+  formationId: 'formation_medecin',
+  introduction: `Depuis toujours, la médecine repose sur un équilibre fragile entre :
+• savoir scientifique,
+• expérience clinique,
+• jugement humain,
+• relation patient.
+
+L'IA est venue bousculer cet équilibre en s'attaquant à deux piliers historiques :
+• l'accès au savoir médical,
+• l'aide au raisonnement diagnostique.
+
+Aujourd'hui, une IA peut :
+• analyser des imageries,
+• proposer des diagnostics différentiels,
+• suggérer des protocoles,
+• synthétiser des milliers d'articles,
+• détecter des patterns invisibles à l'œil humain.
+
+👉 Mais l'IA ne soigne pas.
+👉 Elle influence des décisions de soin.
+
+Et influencer une décision médicale, c'est engager une responsabilité éthique et humaine immense.`,
+  parts: [
+    {
+      title: 'PARTIE 1 – CE QUI CHANGE RADICALEMENT DANS LA MÉDECINE',
+      sections: [
+        {
+          title: '1.1 La fin du monopole du savoir médical',
+          content: [
+            'Pendant des siècles, le médecin détenait :',
+            '• le savoir,',
+            '• l\'interprétation,',
+            '• la décision.',
+            '',
+            'Aujourd\'hui :',
+            '• le patient a accès à l\'information,',
+            '• l\'IA a accès à toute la littérature,',
+            '• les recommandations sont instantanées.',
+            '',
+            'Des outils comme :',
+            '• UpToDate',
+            '• PubMed',
+            '• ChatGPT',
+            '',
+            'ont profondément modifié la dynamique.',
+            '',
+            '👉 Le savoir n\'est plus rare.',
+            'Le discernement l\'est.'
+          ]
+        },
+        {
+          title: '1.2 Les actes médicaux déjà fortement assistés par l\'IA',
+          content: [
+            'Fortement assistés (et parfois meilleurs que l\'humain seul) :',
+            '• lecture d\'imagerie (radiologie, dermatologie),',
+            '• détection d\'anomalies biologiques,',
+            '• triage de patients,',
+            '• aide au diagnostic différentiel,',
+            '• prédiction de risques.',
+            '',
+            '👉 Cela ne signifie pas remplacement.',
+            '👉 Cela signifie déplacement de la responsabilité.'
+          ]
+        },
+        {
+          title: '1.3 Le vrai danger : la médecine "assistée sans conscience"',
+          content: [
+            'Quand :',
+            '• le praticien fait confiance sans vérifier,',
+            '• le patient croit que "l\'IA sait",',
+            '• l\'hôpital cherche la productivité avant le soin,',
+            '',
+            '👉 le risque systémique augmente fortement.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 2 – REDÉFINIR LE RÔLE DU PROFESSIONNEL DE SANTÉ EN 2025',
+      sections: [
+        {
+          title: '2.1 Le basculement fondamental',
+          content: [
+            'Avant : "Je pose un diagnostic et je prescris."',
+            '',
+            'Après : "Je prends des décisions médicales complexes en m\'appuyant sur des outils puissants, tout en assumant la responsabilité humaine, clinique et éthique."',
+            '',
+            '👉 Le médecin devient chef d\'orchestre du soin, pas simple exécutant d\'un protocole.'
+          ]
+        },
+        {
+          title: '2.2 Les 10 responsabilités nouvelles du médecin augmenté',
+          content: [
+            '1. Évaluer la fiabilité des outils IA',
+            'Toutes les IA médicales ne se valent pas.',
+            '',
+            '2. Comprendre les limites des modèles',
+            'Biais de données, populations sous-représentées.',
+            '',
+            '3. Maintenir le raisonnement clinique',
+            'Ne jamais déléguer la pensée médicale.',
+            '',
+            '4. Assumer la décision finale',
+            '',
+            '👉 L\'IA ne signe pas l\'ordonnance.',
+            '',
+            '5. Expliquer au patient',
+            'Pourquoi cette décision, avec ou sans IA.',
+            '',
+            '6. Gérer l\'incertitude',
+            'L\'IA n\'élimine pas l\'aléa médical.',
+            '',
+            '7. Protéger la relation thérapeutique',
+            'Sans confiance, il n\'y a pas de soin.',
+            '',
+            '8. Résister à la sur-automatisation',
+            'Plus rapide ≠ meilleur.',
+            '',
+            '9. Participer à la gouvernance IA',
+            'Les médecins doivent être impliqués dans les choix.',
+            '',
+            '10. Défendre l\'éthique du soin',
+            'Même sous pression économique.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 3 – L\'IA COMME ASSISTANT CLINIQUE (USAGES MAÎTRISÉS)',
+      sections: [
+        {
+          title: '3.1 L\'IA pour l\'aide au diagnostic',
+          content: [
+            'Usages pertinents :',
+            '• diagnostic différentiel,',
+            '• rappel de pathologies rares,',
+            '• hiérarchisation des hypothèses.',
+            '',
+            'Outils et contextes :',
+            '• IBM Watson Health',
+            '• Isabel',
+            '• ChatGPT (usage exploratoire uniquement)',
+            '',
+            '👉 Jamais comme oracle.',
+            'Toujours comme aide.'
+          ]
+        },
+        {
+          title: '3.2 L\'IA en imagerie médicale',
+          content: [
+            'Radiologie, dermatologie, ophtalmologie.',
+            '',
+            'IA :',
+            '• détecte,',
+            '• alerte,',
+            '• priorise.',
+            '',
+            'Médecin :',
+            '• interprète,',
+            '• contextualise,',
+            '• décide.',
+            '',
+            '👉 L\'erreur humaine + IA mal comprise est plus dangereuse que l\'erreur humaine seule.'
+          ]
+        },
+        {
+          title: '3.3 L\'IA pour la charge administrative (bénéfice réel)',
+          content: [
+            'IA utile pour :',
+            '• comptes rendus,',
+            '• synthèses de dossiers,',
+            '• codage,',
+            '• préparation de consultations.',
+            '',
+            '👉 Libérer du temps médical est l\'un des meilleurs usages de l\'IA.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 4 – CAS D\'USAGES MÉDICAUX CONCRETS (TRÈS APPROFONDIS)',
+      sections: [
+        {
+          title: '4.1 Médecine générale',
+          content: [
+            'IA :',
+            '• aide au tri,',
+            '• rappelle des diagnostics rares,',
+            '• prépare la consultation.',
+            '',
+            'Médecin :',
+            '• écoute,',
+            '• observe,',
+            '• contextualise,',
+            '• décide.',
+            '',
+            '👉 La médecine générale devient encore plus humaine, pas moins.'
+          ]
+        },
+        {
+          title: '4.2 Médecine hospitalière',
+          content: [
+            'IA :',
+            '• aide à prioriser,',
+            '• alerte sur des risques,',
+            '• optimise les flux.',
+            '',
+            'Médecin :',
+            '• arbitre sous contrainte,',
+            '• gère l\'imprévisible,',
+            '• protège le patient.'
+          ]
+        },
+        {
+          title: '4.3 Spécialités à forte technicité',
+          content: [
+            'IA :',
+            '• augmente la précision,',
+            '• réduit certaines erreurs.',
+            '',
+            'Mais :',
+            '👉 le risque de surconfiance est maximal.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 5 – RELATION PATIENT, IA ET CONFIANCE',
+      sections: [
+        {
+          title: '5.1 Le patient augmenté par l\'IA',
+          content: [
+            'Les patients arrivent avec :',
+            '• des diagnostics IA,',
+            '• des hypothèses,',
+            '• parfois des certitudes erronées.',
+            '',
+            'Le rôle du médecin :',
+            '• écouter sans mépris,',
+            '• expliquer sans condescendance,',
+            '• rétablir un cadre rationnel.'
+          ]
+        },
+        {
+          title: '5.2 Transparence et pédagogie',
+          content: [
+            'Dire : "Une IA m\'a aidé à explorer des pistes."',
+            '',
+            'Est souvent mieux perçu que : "Faites-moi confiance."',
+            '',
+            '👉 La confiance moderne passe par l\'explication.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 6 – ÉTHIQUE, DROIT ET RESPONSABILITÉ',
+      sections: [
+        {
+          title: '6.1 Responsabilité médicale',
+          content: [
+            'En cas d\'erreur :',
+            '• le médecin est responsable,',
+            '• pas l\'outil,',
+            '• pas l\'éditeur du modèle.',
+            '',
+            '👉 La responsabilité ne se délègue jamais.'
+          ]
+        },
+        {
+          title: '6.2 Données de santé et IA',
+          content: [
+            '• données sensibles,',
+            '• risques de fuite,',
+            '• réutilisation abusive.',
+            '',
+            '👉 Le professionnel de santé devient gardien des données patient.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 7 – LE SYSTÈME DE SANTÉ FACE À L\'IA',
+      sections: [
+        {
+          title: '7.1 Le risque systémique',
+          content: [
+            'IA mal intégrée =',
+            '• standardisation abusive,',
+            '• perte d\'autonomie clinique,',
+            '• pression économique accrue.'
+          ]
+        },
+        {
+          title: '7.2 Le rôle politique des soignants',
+          content: [
+            'Les soignants doivent :',
+            '• participer aux décisions,',
+            '• refuser certaines automatisations,',
+            '• défendre le sens du soin.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 8 – COMPÉTENCES À DÉVELOPPER À 5–10 ANS',
+      sections: [
+        {
+          title: 'Les compétences essentielles',
+          content: [
+            '• esprit critique renforcé,',
+            '• compréhension des IA médicales,',
+            '• pédagogie patient,',
+            '• éthique clinique,',
+            '• gouvernance des outils,',
+            '• résilience professionnelle.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 9 – CHECKLIST DU MÉDECIN AUGMENTÉ',
+      sections: [
+        {
+          title: 'Vérifications essentielles',
+          content: [
+            '• Je comprends les limites des IA',
+            '• Je garde le raisonnement clinique',
+            '• J\'explique mes décisions',
+            '• Je protège la relation patient',
+            '• Je refuse l\'automatisation aveugle',
+            '• J\'assume la responsabilité finale'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `L'IA calcule.
+Le médecin soigne, explique et assume.
+
+Dans un monde de technologies puissantes :
+👉 l'humanité du soin devient la compétence la plus précieuse.`
+}
+
+// Contenu de la formation "Coach / Thérapeute face à l'IA"
+export const coachIAContent: FormationContent = {
+  formationId: 'formation_coach',
+  introduction: `Depuis l'arrivée des IA conversationnelles, beaucoup de coachs et de thérapeutes ont ressenti un malaise diffus.
+
+Pourquoi ?
+• l'IA écoute sans juger,
+• répond instantanément,
+• reformule correctement,
+• pose des questions "pertinentes",
+• est disponible 24/7.
+
+Certains patients / clients disent : "Ça m'aide déjà beaucoup."
+
+👉 C'est vrai. Et c'est dangereux si on s'arrête là.
+
+Car ce que l'IA simule très bien :
+• l'écoute,
+• la reformulation,
+• la structure verbale,
+
+👉 ce qu'elle ne fait pas :
+• contenir émotionnellement,
+• sentir les ruptures,
+• porter la responsabilité du cadre,
+• gérer le transfert et le contre-transfert,
+• protéger psychiquement une personne vulnérable.`,
+  parts: [
+    {
+      title: 'PARTIE 1 – CE QUI SE DÉVALUE (ET CE QUI N\'A JAMAIS ÉTÉ LE CŒUR DU MÉTIER)',
+      sections: [
+        {
+          title: '1.1 La fin du coach "outil / méthode"',
+          content: [
+            'Soyons honnêtes.',
+            '',
+            'Le coach dont la valeur repose principalement sur :',
+            '• des modèles standards,',
+            '• des grilles de questionnement,',
+            '• des exercices génériques,',
+            '• des protocoles figés,',
+            '',
+            '👉 voit cette valeur fortement attaquée.',
+            '',
+            'Des IA comme ChatGPT peuvent :',
+            '• poser des questions ouvertes,',
+            '• proposer des exercices,',
+            '• reformuler des blocages,',
+            '• simuler un dialogue réflexif.',
+            '',
+            '👉 La méthode seule n\'est plus un différenciateur.'
+          ]
+        },
+        {
+          title: '1.2 Ce que l\'IA sait déjà faire (et pourquoi ça trompe)',
+          content: [
+            'L\'IA est très forte pour :',
+            '• structurer une réflexion,',
+            '• aider à verbaliser,',
+            '• normaliser des émotions,',
+            '• proposer des pistes.',
+            '',
+            'Mais elle :',
+            '• ne sent pas la dissociation,',
+            '• ne perçoit pas la détresse réelle,',
+            '• ne détecte pas les signaux faibles de rupture,',
+            '• n\'est pas responsable si la personne va mal.',
+            '',
+            '👉 L\'illusion de sécurité est le vrai danger.'
+          ]
+        },
+        {
+          title: '1.3 Le risque majeur : la pseudo-thérapie automatisée',
+          content: [
+            'Quand une personne :',
+            '• remplace un accompagnement humain par une IA,',
+            '• confie des éléments sensibles sans cadre,',
+            '• n\'a aucun tiers responsable,',
+            '',
+            '👉 le risque psychique augmente silencieusement.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 2 – REDÉFINIR LE RÔLE DU COACH / THÉRAPEUTE EN 2025',
+      sections: [
+        {
+          title: '2.1 Le basculement fondamental',
+          content: [
+            'Avant : "J\'aide les gens à avancer."',
+            '',
+            'Après : "Je crée un cadre sécurisé, responsable et humain dans lequel une transformation peut avoir lieu."',
+            '',
+            '👉 Le cœur du métier n\'est pas :',
+            '• la parole,',
+            '• le conseil,',
+            '• l\'exercice.',
+            '',
+            '👉 C\'est le cadre et la présence humaine.'
+          ]
+        },
+        {
+          title: '2.2 Les 10 responsabilités non automatisables du coach / thérapeute',
+          content: [
+            '1. Poser et tenir un cadre',
+            'Temps, limites, posture, responsabilité.',
+            '',
+            '2. Contenir émotionnellement',
+            'Supporter ce qui est déposé sans fuir.',
+            '',
+            '3. Lire le non-verbal',
+            'Silences, micro-ruptures, incohérences.',
+            '',
+            '4. Gérer la relation',
+            'Alliance, résistances, projections.',
+            '',
+            '5. Adapter en temps réel',
+            'Sortir du protocole si nécessaire.',
+            '',
+            '6. Savoir arrêter',
+            'Quand continuer serait dangereux.',
+            '',
+            '7. Assumer une responsabilité humaine',
+            '',
+            '👉 L\'IA ne porte aucune responsabilité.',
+            '',
+            '8. Orienter si nécessaire',
+            'Vers un autre professionnel.',
+            '',
+            '9. Maintenir une éthique stricte',
+            'Même quand le client "en redemande".',
+            '',
+            '10. Protéger la personne contre elle-même parfois',
+            'Ce que l\'IA ne fera jamais.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 3 – L\'IA COMME ASSISTANT DU COACH / THÉRAPEUTE (USAGES SAINS)',
+      sections: [
+        {
+          title: '3.1 L\'IA pour la préparation et la réflexion du praticien',
+          content: [
+            'Usages pertinents :',
+            '• structurer des hypothèses,',
+            '• préparer des séances,',
+            '• réfléchir à des axes,',
+            '• analyser ses propres notes (anonymisées).',
+            '',
+            'Outils :',
+            '• ChatGPT',
+            '• Notion',
+            '',
+            '👉 L\'IA aide le praticien, pas le client directement.'
+          ]
+        },
+        {
+          title: '3.2 L\'IA pour la formation et la supervision (zone utile)',
+          content: [
+            'IA utile pour :',
+            '• expliquer des concepts,',
+            '• comparer des approches,',
+            '• simuler des cas (fictifs),',
+            '• réfléchir à l\'éthique.',
+            '',
+            '👉 Elle ne remplace pas :',
+            '• la supervision humaine,',
+            '• l\'analyse clinique réelle.'
+          ]
+        },
+        {
+          title: '3.3 L\'IA et les clients : ligne rouge claire',
+          content: [
+            '⚠️ À ne pas faire :',
+            '• laisser l\'IA accompagner un client en souffrance,',
+            '• déléguer des échanges thérapeutiques,',
+            '• proposer l\'IA comme substitut relationnel.',
+            '',
+            '👉 Le cadre doit être explicitement humain.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 4 – CAS D\'USAGES CONCRETS (TRÈS APPROFONDIS)',
+      sections: [
+        {
+          title: '4.1 Coach professionnel (dirigeants, managers)',
+          content: [
+            'IA :',
+            '• aide à structurer des enjeux,',
+            '• clarifie des situations complexes.',
+            '',
+            'Coach :',
+            '• travaille la posture,',
+            '• confronte les angles morts,',
+            '• gère l\'ego, la peur, la responsabilité.',
+            '',
+            '👉 Le vrai travail se fait dans l\'inconfort relationnel.'
+          ]
+        },
+        {
+          title: '4.2 Thérapie individuelle',
+          content: [
+            'IA :',
+            '• peut aider à verbaliser entre séances (avec cadre).',
+            '',
+            'Thérapeute :',
+            '• contient,',
+            '• interprète,',
+            '• sécurise,',
+            '• ajuste.',
+            '',
+            '👉 La présence réelle est irremplaçable.'
+          ]
+        },
+        {
+          title: '4.3 Accompagnement long terme',
+          content: [
+            'IA :',
+            '• soutient la réflexion,',
+            '• aide à structurer.',
+            '',
+            'Thérapeute :',
+            '• observe l\'évolution,',
+            '• repère les cycles,',
+            '• gère les moments critiques.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 5 – ÉTHIQUE, DÉRIVES ET RESPONSABILITÉ',
+      sections: [
+        {
+          title: '5.1 Le danger du "toujours disponible"',
+          content: [
+            'L\'IA est :',
+            '• toujours là,',
+            '• toujours répondante.',
+            '',
+            'Mais :',
+            '• la frustration,',
+            '• l\'attente,',
+            '• le manque',
+            'font partie du processus thérapeutique.',
+            '',
+            '👉 La disponibilité permanente peut bloquer la maturation psychique.'
+          ]
+        },
+        {
+          title: '5.2 Responsabilité morale et légale',
+          content: [
+            'En cas de décompensation :',
+            '• l\'IA n\'est pas responsable,',
+            '• le praticien humain l\'est (s\'il a délégué).',
+            '',
+            '👉 La délégation est une faute potentielle.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 6 – MODÈLES ÉCONOMIQUES POST-IA',
+      sections: [
+        {
+          title: '6.1 Ce qui se dévalue',
+          content: [
+            '• coaching générique,',
+            '• scripts,',
+            '• promesses rapides,',
+            '• méthodes miracles.'
+          ]
+        },
+        {
+          title: '6.2 Ce qui prend de la valeur',
+          content: [
+            '• profondeur,',
+            '• cadre clair,',
+            '• responsabilité assumée,',
+            '• relation humaine stable,',
+            '• éthique forte.',
+            '',
+            '👉 Le coach devient un repère, pas un outil.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 7 – COMPÉTENCES À DÉVELOPPER À 5–10 ANS',
+      sections: [
+        {
+          title: 'Les compétences essentielles',
+          content: [
+            '• présence thérapeutique,',
+            '• compréhension des limites IA,',
+            '• éthique renforcée,',
+            '• capacité de discernement,',
+            '• supervision continue,',
+            '• courage de dire non.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 8 – CHECKLIST DU COACH / THÉRAPEUTE AUGMENTÉ',
+      sections: [
+        {
+          title: 'Vérifications essentielles',
+          content: [
+            '• Je ne délègue jamais la relation',
+            '• Je pose un cadre clair',
+            '• J\'utilise l\'IA pour réfléchir, pas accompagner',
+            '• Je protège mes clients',
+            '• Je sais orienter',
+            '• J\'assume la responsabilité humaine'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `L'IA parle.
+Le coach / thérapeute contient, sécurise et transforme.
+
+Dans un monde de paroles faciles :
+👉 la présence humaine devient sacrée.`
+}
+
+// Contenu de la formation "Agent Immobilier face à l'IA"
+export const immobilierIAContent: FormationContent = {
+  formationId: 'formation_immobilier',
+  introduction: `L'une des plus grandes erreurs sur l'immobilier est de croire que c'est :
+• un marché rationnel,
+• une question de prix,
+• une affaire de données.
+
+En réalité, l'immobilier est :
+• une décision émotionnelle sous contrainte financière,
+• souvent liée à :
+• un divorce,
+• une naissance,
+• un décès,
+• une peur de l'avenir,
+• un projet de vie.
+
+👉 L'IA peut traiter des données.
+Elle ne peut pas porter ce poids humain.`,
+  parts: [
+    {
+      title: 'PARTIE 1 – CE QUI S\'AUTOMATISE (ET CE QUI ÉTAIT DÉJÀ FAIBLE)',
+      sections: [
+        {
+          title: '1.1 La fin de l\'agent immobilier "annonces + visites"',
+          content: [
+            'Soyons lucides.',
+            '',
+            'L\'agent dont la valeur repose principalement sur :',
+            '• publier des annonces,',
+            '• ouvrir des portes,',
+            '• faire visiter mécaniquement,',
+            '• relayer des infos disponibles partout,',
+            '',
+            '👉 voit sa valeur chuter fortement.',
+            '',
+            'Pourquoi ?',
+            '',
+            'Parce que des plateformes comme :',
+            '• SeLoger',
+            '• Leboncoin',
+            '• Bien\'ici',
+            '',
+            'ont déjà :',
+            '• démocratisé l\'accès à l\'offre,',
+            '• rendu l\'information publique,',
+            '• standardisé les annonces.',
+            '',
+            '👉 L\'information immobilière n\'est plus rare.'
+          ]
+        },
+        {
+          title: '1.2 Ce que l\'IA sait déjà très bien faire en immobilier',
+          content: [
+            'Fortement automatisable :',
+            '• estimation de prix (AVM),',
+            '• rédaction d\'annonces,',
+            '• retouche photo,',
+            '• visites virtuelles,',
+            '• tri de leads,',
+            '• réponses aux questions simples.',
+            '',
+            'Avec :',
+            '• MeilleursAgents',
+            '• PriceHubble',
+            '• ChatGPT',
+            '• Matterport',
+            '',
+            '👉 Tout ce qui est descriptif et répétitif devient automatisable.'
+          ]
+        },
+        {
+          title: '1.3 Le vrai risque : devenir un simple intermédiaire technique',
+          content: [
+            'Quand :',
+            '• le client pense qu\'il peut tout faire seul,',
+            '• l\'agent n\'apporte pas de valeur stratégique,',
+            '• la relation est faible,',
+            '',
+            '👉 la commission devient incompréhensible.',
+            '',
+            'Et donc contestée.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 2 – REDÉFINIR LE MÉTIER D\'AGENT IMMOBILIER EN 2025',
+      sections: [
+        {
+          title: '2.1 Le basculement fondamental',
+          content: [
+            'Avant : "Je vends un bien immobilier."',
+            '',
+            'Après : "J\'aide des humains à prendre une décision patrimoniale majeure dans un contexte émotionnel, juridique et financier complexe."',
+            '',
+            '👉 Ce n\'est plus un métier de diffusion.',
+            '👉 C\'est un métier de décision accompagnée.'
+          ]
+        },
+        {
+          title: '2.2 Les 10 responsabilités réelles de l\'agent immobilier augmenté',
+          content: [
+            '1. Lire le contexte humain',
+            'Acheter / vendre n\'est jamais neutre.',
+            '',
+            '2. Traduire le marché réel',
+            'Pas les moyennes.',
+            '👉 La réalité locale.',
+            '',
+            '3. Sécuriser juridiquement',
+            'Les erreurs coûtent très cher.',
+            '',
+            '4. Gérer les attentes irréalistes',
+            'Prix, délais, projections.',
+            '',
+            '5. Filtrer et qualifier',
+            'Protéger le temps et l\'énergie.',
+            '',
+            '6. Négocier humainement',
+            'La négociation n\'est pas mathématique.',
+            '',
+            '7. Absorber la charge émotionnelle',
+            'Stress, peur, frustration.',
+            '',
+            '8. Accompagner jusqu\'au bout',
+            'Signature ≠ fin du travail.',
+            '',
+            '9. Assumer la responsabilité morale',
+            'Une mauvaise vente détruit une relation.',
+            '',
+            '10. Être digne de la confiance donnée',
+            '',
+            '👉 La clé absolue.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 3 – L\'IA COMME ASSISTANT DE L\'AGENT IMMOBILIER (USAGES INTELLIGENTS)',
+      sections: [
+        {
+          title: '3.1 L\'IA pour l\'estimation (avec recul)',
+          content: [
+            'Outils :',
+            '• PriceHubble',
+            '• MeilleursAgents',
+            '',
+            '👉 L\'IA donne :',
+            '• une base,',
+            '• une fourchette.',
+            '',
+            '👉 L\'agent :',
+            '• contextualise,',
+            '• corrige,',
+            '• explique.',
+            '',
+            '⚠️ Présenter une estimation IA comme vérité absolue est une faute professionnelle.'
+          ]
+        },
+        {
+          title: '3.2 L\'IA pour la mise en valeur des biens',
+          content: [
+            'IA utile pour :',
+            '• rédaction d\'annonces adaptées,',
+            '• home staging virtuel,',
+            '• retouches photo,',
+            '• segmentation d\'audience.',
+            '',
+            'Outils :',
+            '• ChatGPT',
+            '• Canva',
+            '• Matterport',
+            '',
+            '👉 Le bien est mieux présenté.',
+            '👉 Mais la décision se fait en réel.'
+          ]
+        },
+        {
+          title: '3.3 L\'IA pour la relation client (avec limites strictes)',
+          content: [
+            'IA utile pour :',
+            '• réponses initiales,',
+            '• organisation,',
+            '• rappels,',
+            '• suivi.',
+            '',
+            'Mais :',
+            '👉 les échanges sensibles doivent rester humains :',
+            '• négociation,',
+            '• refus,',
+            '• ajustement de prix,',
+            '• gestion de déception.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 4 – CAS D\'USAGES CONCRETS (TRÈS APPROFONDIS)',
+      sections: [
+        {
+          title: '4.1 Vente d\'un bien chargé émotionnellement',
+          content: [
+            'IA :',
+            '• aide à structurer le dossier.',
+            '',
+            'Agent :',
+            '• écoute,',
+            '• rassure,',
+            '• protège le vendeur de décisions impulsives.',
+            '',
+            '👉 L\'IA ne gère pas le deuil, la peur ou la honte.'
+          ]
+        },
+        {
+          title: '4.2 Achat avec stress financier',
+          content: [
+            'IA :',
+            '• aide à analyser le marché.',
+            '',
+            'Agent :',
+            '• sécurise,',
+            '• explique les risques,',
+            '• aide à renoncer si nécessaire.',
+            '',
+            '👉 Un bon agent sait parfois dire : "N\'achetez pas."'
+          ]
+        },
+        {
+          title: '4.3 Investissement locatif',
+          content: [
+            'IA :',
+            '• simule la rentabilité.',
+            '',
+            'Agent :',
+            '• explique les risques,',
+            '• contextualise fiscalement,',
+            '• anticipe les imprévus.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 5 – NÉGOCIATION & IA : LE MYTHE',
+      sections: [
+        {
+          title: '5.1 Pourquoi l\'IA négocie mal',
+          content: [
+            'La négociation immobilière implique :',
+            '• ego,',
+            '• peur de perdre,',
+            '• besoin de reconnaissance,',
+            '• temporalité émotionnelle.',
+            '',
+            '👉 Aucune IA ne sait gérer cela.'
+          ]
+        },
+        {
+          title: '5.2 Le rôle humain central',
+          content: [
+            'L\'agent :',
+            '• absorbe la tension,',
+            '• reformule,',
+            '• temporise,',
+            '• protège la relation.',
+            '',
+            '👉 C\'est une compétence rare.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 6 – RISQUES MAJEURS LIÉS À L\'IA EN IMMOBILIER',
+      sections: [
+        {
+          title: 'Les risques principaux',
+          content: [
+            '• surestimation automatisée,',
+            '• décisions précipitées,',
+            '• standardisation abusive,',
+            '• perte de confiance,',
+            '• dilution de responsabilité.',
+            '',
+            '👉 L\'IA mal utilisée détruit la réputation locale.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 7 – MODÈLES ÉCONOMIQUES POST-IA',
+      sections: [
+        {
+          title: '7.1 Ce qui se dévalue',
+          content: [
+            '• simple diffusion,',
+            '• volume,',
+            '• opacité.'
+          ]
+        },
+        {
+          title: '7.2 Ce qui prend de la valeur',
+          content: [
+            '• accompagnement complet,',
+            '• expertise locale réelle,',
+            '• négociation humaine,',
+            '• sécurisation,',
+            '• confiance long terme.',
+            '',
+            '👉 L\'agent devient conseiller de vie immobilière.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 8 – COMPÉTENCES À DÉVELOPPER À 5–10 ANS',
+      sections: [
+        {
+          title: 'Les compétences essentielles',
+          content: [
+            '• intelligence émotionnelle,',
+            '• compréhension patrimoniale,',
+            '• lecture du marché local,',
+            '• usage critique de l\'IA,',
+            '• négociation avancée,',
+            '• éthique professionnelle.'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'PARTIE 9 – CHECKLIST DE L\'AGENT IMMOBILIER AUGMENTÉ',
+      sections: [
+        {
+          title: 'Vérifications essentielles',
+          content: [
+            '• Je comprends le contexte humain',
+            '• J\'utilise l\'IA comme outil, pas comme vérité',
+            '• Je sécurise juridiquement',
+            '• Je négocie humainement',
+            '• Je protège mes clients',
+            '• J\'assume ma responsabilité morale'
+          ]
+        }
+      ]
+    }
+  ],
+  conclusion: `L'intelligence artificielle a profondément modifié l'immobilier.
+Elle a rendu l'information accessible.
+Elle a accéléré les estimations.
+Elle a automatisé la diffusion, la mise en valeur, le tri des contacts.
+
+👉 Mais elle n'a pas rendu les décisions immobilières plus simples.
+👉 Elle les a rendues plus anxiogènes.
+
+Car plus il y a de données :
+• plus les clients doutent,
+• plus ils comparent,
+• plus ils ont peur de se tromper.
+
+Et c'est précisément là que le rôle de l'agent immobilier devient irremplaçable.
+
+⸻
+
+L'IA sait décrire un bien
+L'agent immobilier lit une situation humaine
+
+L'IA sait calculer un prix
+L'agent immobilier explique ce qu'il signifie vraiment
+
+L'IA sait simuler un scénario
+L'agent immobilier aide à assumer une décision
+
+L'IA sait répondre vite
+L'agent immobilier sait quand ralentir
+
+⸻
+
+Dans un monde où :
+• les annonces sont partout,
+• les chiffres sont instantanés,
+• les outils sont accessibles à tous,
+
+👉 la valeur ne vient plus de l'information
+👉 elle vient de la responsabilité
+
+Responsabilité :
+• de ne pas surévaluer pour flatter,
+• de ne pas pousser à vendre trop vite,
+• de ne pas laisser un acheteur s'engager au-delà de ses limites,
+• de protéger juridiquement, émotionnellement et financièrement.
+
+⸻
+
+Le futur de l'agent immobilier n'est pas technologique
+Il est éthique, humain et relationnel
+
+L'agent immobilier de demain n'est pas :
+• un diffuseur d'annonces,
+• un ouvreur de portes,
+• un simple intermédiaire.
+
+Il est :
+• un traducteur du marché réel,
+• un régulateur d'émotions,
+• un négociateur humain,
+• un conseiller patrimonial de proximité,
+• un repère dans un moment de vie instable.
+
+⸻
+
+Ceux qui disparaîtront :
+• Ceux qui se contentent de publier
+• Ceux qui délèguent leur jugement à l'IA
+• Ceux qui confondent vitesse et valeur
+• Ceux qui n'assument pas leur responsabilité morale
+
+Ceux qui prospéreront :
+• Ceux qui utilisent l'IA sans s'y soumettre
+• Ceux qui expliquent au lieu de séduire
+• Ceux qui savent dire non
+• Ceux qui protègent leurs clients, même contre eux-mêmes
+
+⸻
+
+En résumé
+
+L'IA change l'immobilier.
+Mais elle ne remplace pas l'agent immobilier.
+
+👉 Elle le force à devenir meilleur.
+
+Dans un monde automatisé,
+👉 la confiance devient la vraie rareté.
+
+Et l'agent immobilier qui comprend cela
+ne sera pas remplacé.
+
+Il deviendra indispensable.`
+}
+
 // Map pour accéder rapidement au contenu d'une formation
 export const formationContentMap: Record<string, FormationContent> = {
   'formation_0': formateurIAContent,
@@ -4116,5 +6942,13 @@ export const formationContentMap: Record<string, FormationContent> = {
   'formation_ux_ui': uxUiIAContent,
   'formation_data_analyst': dataAnalystIAContent,
   'formation_commercial': commercialIAContent,
-  'formation_marketing': marketingIAContent
+  'formation_marketing': marketingIAContent,
+  'formation_dirigeant': dirigeantIAContent,
+  'formation_consultant': consultantIAContent,
+  'formation_avocat': avocatIAContent,
+  'formation_comptable': comptableIAContent,
+  'formation_rh': rhIAContent,
+  'formation_medecin': medecinIAContent,
+  'formation_coach': coachIAContent,
+  'formation_immobilier': immobilierIAContent
 }
