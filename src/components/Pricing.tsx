@@ -8,9 +8,9 @@ import { useApp } from '../context/AppContext'
 
 const plans = [
   {
-    name: 'Formation',
+    name: 'Bouclier',
     tagline: 'Pour maîtriser les compétences de demain',
-    price: 29,
+    price: 19,
     period: '/mois',
     icon: Zap,
     color: 'text-blue-600',
@@ -40,7 +40,7 @@ const plans = [
     borderColor: 'border-cyan-500',
     glassmorphism: 'bg-gradient-to-br from-cyan-500/10 to-cyan-600/5 backdrop-blur-sm',
     features: [
-      'Tout Formation +',
+      'Tout Bouclier +',
       'Veille IA temps réel sur votre métier',
       'Chatbot IA 24/7 pour questions carrière',
       'Analyses sectorielles avancées',
@@ -59,11 +59,11 @@ export const Pricing: React.FC = () => {
   const { showNotification } = useApp()
 
   const handlePlanClick = (planName: string) => {
-    if (planName === 'Formation') {
-      showNotification('Redirection vers l\'inscription Formation...', 'success')
-      // TODO: Rediriger vers Stripe checkout pour Formation (29€)
+    if (planName === 'Bouclier') {
+      showNotification('Redirection vers l\'inscription Bouclier...', 'success')
+      // TODO: Rediriger vers Stripe checkout pour Bouclier (19€)
       setTimeout(() => {
-        window.location.href = '/auth?plan=formation'
+        window.location.href = '/auth?plan=bouclier'
       }, 500)
     } else if (planName === 'Protection Complète') {
       showNotification('Redirection vers l\'essai gratuit Protection Complète...', 'success')

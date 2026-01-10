@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 import { 
   BookOpen, 
   Clock, 
@@ -11,15 +12,19 @@ import {
   Search,
   Award,
   Users,
-  Calendar
+  Calendar,
+  Plus
 } from 'lucide-react'
 import { Widget, Badge, ProgressBar } from './Widget'
 import { useDashboard } from '../../context/DashboardContext'
+import { AddFormationModal } from './AddFormationModal'
 
 export const FormationsPage: React.FC = () => {
   const { formations, updateFormationProgress } = useDashboard()
+  const navigate = useNavigate()
   const [selectedFilter, setSelectedFilter] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
+  const [showAddModal, setShowAddModal] = useState(false)
 
   const filters = [
     { id: 'all', label: 'Toutes les formations', count: formations.length },
@@ -64,6 +69,13 @@ export const FormationsPage: React.FC = () => {
           </p>
         </div>
         <div className="flex items-center space-x-4">
+          <button
+            onClick={() => setShowAddModal(true)}
+            className="flex items-center space-x-2 bg-gradient-secondary text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+          >
+            <Plus className="w-4 h-4" />
+            <span className="font-medium">Ajouter une formation</span>
+          </button>
           <div className="bg-gradient-secondary text-white px-4 py-2 rounded-lg">
             <div className="flex items-center space-x-2">
               <Clock className="w-4 h-4" />
@@ -201,7 +213,8 @@ export const FormationsPage: React.FC = () => {
               key={formation.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
+              className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => navigate(`/dashboard/formations/${formation.id}`)}
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
@@ -306,6 +319,12 @@ export const FormationsPage: React.FC = () => {
           ))}
         </div>
       </Widget>
+
+      {/* Add Formation Modal */}
+      <AddFormationModal 
+        isOpen={showAddModal}
+        onClose={() => setShowAddModal(false)}
+      />
     </div>
   )
 }

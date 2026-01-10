@@ -24,6 +24,7 @@ import { DashboardLayout } from './components/dashboard/DashboardLayout'
 import { DashboardHome } from './components/dashboard/DashboardHome'
 import { ScoreDetails } from './components/dashboard/ScoreDetails'
 import { FormationsPage } from './components/dashboard/FormationsPage'
+import { FormationDetailPage } from './components/dashboard/FormationDetailPage'
 import { WelcomePage } from './components/dashboard/WelcomePage'
 // Sentinelle Dashboard imports
 import { SentinelleLayout } from './components/sentinelle/SentinelleLayout'
@@ -198,6 +199,7 @@ function App() {
                 <Route path="monitoring" element={<div className="text-center py-20"><h2 className="text-2xl font-bold text-primary-900">Veille IA Temps Réel</h2><p className="text-gray-600 mt-4">Page en cours de développement...</p></div>} />
                 <Route path="reconversion" element={<div className="text-center py-20"><h2 className="text-2xl font-bold text-primary-900">Plan de Reconversion</h2><p className="text-gray-600 mt-4">Page en cours de développement...</p></div>} />
                 <Route path="formations" element={<FormationsPage />} />
+                <Route path="formations/:id" element={<FormationDetailPage />} />
                 <Route path="bootcamps" element={<div className="text-center py-20"><h2 className="text-2xl font-bold text-primary-900">Bootcamps Express</h2><p className="text-gray-600 mt-4">Page en cours de développement...</p></div>} />
                 <Route path="sector-analysis" element={<div className="text-center py-20"><h2 className="text-2xl font-bold text-primary-900">Analyses Sectorielles</h2><p className="text-gray-600 mt-4">Page en cours de développement...</p></div>} />
                 <Route path="support" element={<div className="text-center py-20"><h2 className="text-2xl font-bold text-primary-900">Support Prioritaire</h2><p className="text-gray-600 mt-4">Page en cours de développement...</p></div>} />

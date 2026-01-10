@@ -64,18 +64,17 @@ export const TermsPage: React.FC = () => {
                 </ul>
 
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">2.1 Offres disponibles</h3>
-                <div className="grid md:grid-cols-3 gap-4 mb-4">
+                <div className="grid md:grid-cols-2 gap-4 mb-4">
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-blue-900 mb-2">Sentinelle</h4>
-                    <p className="text-blue-700 text-sm">Accès gratuit aux fonctionnalités de base</p>
+                    <h4 className="font-semibold text-blue-900 mb-2">Bouclier</h4>
+                    <p className="text-blue-700 text-sm">Abonnement à 19€/mois pour maîtriser les compétences de demain</p>
                   </div>
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-green-900 mb-2">Bouclier</h4>
-                    <p className="text-green-700 text-sm">Abonnement à 49€/mois avec fonctionnalités avancées</p>
-                  </div>
-                  <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-purple-900 mb-2">Forteresse</h4>
-                    <p className="text-purple-700 text-sm">Abonnement à 99€/mois avec garanties et coaching inclus</p>
+                  <div className="bg-cyan-50 border-2 border-cyan-300 rounded-lg p-4 relative">
+                    <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                      RECOMMANDÉ
+                    </div>
+                    <h4 className="font-semibold text-cyan-900 mb-2">Protection Complète</h4>
+                    <p className="text-cyan-700 text-sm">Abonnement à 49€/mois pour anticiper et transformer votre carrière</p>
                   </div>
                 </div>
               </section>
@@ -188,8 +187,8 @@ export const TermsPage: React.FC = () => {
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Contact</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">Pour toute question concernant les CGU :</p>
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <p className="text-gray-700 mb-2"><strong>Email :</strong> legal@skillshield.app</p>
-                  <p className="text-gray-700"><strong>Adresse :</strong> SkillShield, Paris, France</p>
+                  <p className="text-gray-700 mb-2"><strong>Email :</strong> general@skillshield-ai.com</p>
+                  <p className="text-gray-700"><strong>Adresse :</strong> SkillShield, Juilly, France</p>
                 </div>
               </section>
             </motion.div>

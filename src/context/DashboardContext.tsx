@@ -18,6 +18,7 @@ interface DashboardContextType {
   // Formations
   formations: typeof mockFormations
   updateFormationProgress: (formationId: string, progress: number) => void
+  addFormation: (formation: Omit<typeof mockFormations[0], 'id'>) => void
   
   // Bootcamps
   bootcamps: typeof mockBootcamps
@@ -115,6 +116,16 @@ export const DashboardProvider: React.FC<DashboardProviderProps> = ({ children }
     ))
   }
 
+  const addFormation = (formation: Omit<typeof mockFormations[0], 'id'>) => {
+    const newFormation: typeof mockFormations[0] = {
+      ...formation,
+      id: `formation_${Date.now()}`,
+      status: formation.status || 'not_started',
+      progress: formation.progress || 0
+    }
+    setFormations(prev => [newFormation, ...prev])
+  }
+
   const reserveBootcamp = (bootcampId: string) => {
     setBootcamps(prev => prev.map(bootcamp => 
       bootcamp.id === bootcampId 
@@ -164,6 +175,7 @@ export const DashboardProvider: React.FC<DashboardProviderProps> = ({ children }
     addAlert,
     formations,
     updateFormationProgress,
+    addFormation,
     bootcamps,
     reserveBootcamp,
     reconversionPlan,

@@ -58,8 +58,8 @@ SkillShield permet aux professionnels de :
 - Timeline prédictive d'impact
 
 ### 4. Section Pricing
-- 3 plans : Sentinelle (Gratuit), Bouclier (49€/mois), Forteresse (99€/mois)
-- Cards avec hover effects et badge "Plus populaire"
+- 2 plans : Formation (29€/mois), Protection Complète (49€/mois) - RECOMMANDÉ
+- Cards avec hover effects et badge "RECOMMANDÉ"
 - Comparaison claire des fonctionnalités
 
 ### 5. Section "Pourquoi maintenant ?"
