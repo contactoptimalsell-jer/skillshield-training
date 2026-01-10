@@ -178,4 +178,4 @@ Pour toute question ou support :
 
 ---
 
-**Made with ❤️ for workers facing AI disruption**
+**Made with ❤️ for workers facing AI disruption**# skillshield-training
