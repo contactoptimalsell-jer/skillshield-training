@@ -47,7 +47,8 @@ export interface ProgressionData {
 export async function getUserProgression(clerkUserId: string): Promise<ProgressionData | null> {
   try {
     // Appeler l'API backend pour récupérer la progression
-    const response = await fetch(`/api/progression/${clerkUserId}`)
+    // Utiliser query parameter car la route dynamique [userId].js ne fonctionne pas sur Vercel
+    const response = await fetch(`/api/progression?userId=${encodeURIComponent(clerkUserId)}`)
     
     if (!response.ok) {
       if (response.status === 404) {
