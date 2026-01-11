@@ -19,6 +19,15 @@ function getSupabaseClient() {
   const supabaseUrl = process.env.SUPABASE_URL?.trim()
   const supabaseKey = process.env.SUPABASE_ANON_KEY?.trim()
   
+  console.error('🔍 Environment check:', {
+    hasUrl: !!supabaseUrl,
+    urlLength: supabaseUrl?.length,
+    urlStart: supabaseUrl?.substring(0, 30),
+    hasKey: !!supabaseKey,
+    keyLength: supabaseKey?.length,
+    keyStart: supabaseKey?.substring(0, 20)
+  })
+  
   if (!supabaseUrl || !supabaseKey) {
     const missing = []
     if (!supabaseUrl) missing.push('SUPABASE_URL')
@@ -28,17 +37,22 @@ function getSupabaseClient() {
   
   // Vérifier que l'URL est valide
   if (!supabaseUrl.startsWith('https://')) {
-    throw new Error(`Invalid SUPABASE_URL: must start with https://`)
+    throw new Error(`Invalid SUPABASE_URL: must start with https:// (got: ${supabaseUrl.substring(0, 20)}...)`)
   }
   
   try {
     const client = createClient(supabaseUrl, supabaseKey, {
       auth: {
         persistSession: false
+      },
+      db: {
+        schema: 'public'
       }
     })
+    console.error('✅ Supabase client created successfully')
     return client
   } catch (error) {
+    console.error('❌ Failed to create Supabase client:', error.message)
     throw new Error(`Failed to create Supabase client: ${error.message}`)
   }
 }
@@ -151,6 +165,8 @@ function calculateProgression(completedSteps) {
  */
 async function getProgression(userId, supabase) {
   try {
+    console.error('🔍 Fetching progression for userId:', userId)
+    
     const { data, error } = await supabase
       .from('user_progress')
       .select('*')
@@ -160,7 +176,7 @@ async function getProgression(userId, supabase) {
     if (error) {
       if (error.code === 'PGRST116') {
         // Utilisateur n'existe pas encore, initialiser
-        console.log('User not found, creating initial record')
+        console.error('ℹ️ User not found, creating initial record')
         const { data: newData, error: insertError } = await supabase
           .from('user_progress')
           .insert({
@@ -173,10 +189,11 @@ async function getProgression(userId, supabase) {
           .single()
         
         if (insertError) {
-          console.error('Error creating user progress:', insertError)
+          console.error('❌ Error creating user progress:', insertError)
           throw insertError
         }
         
+        console.error('✅ Initial user progress created')
         const calculation = calculateProgression([])
         return {
           clerkUserId: newData.clerk_user_id,
@@ -188,10 +205,11 @@ async function getProgression(userId, supabase) {
           nextRecommendedAction: calculation.nextRecommendedAction
         }
       }
-      console.error('Supabase query error:', error)
+      console.error('❌ Supabase query error:', error)
       throw error
     }
     
+    console.error('✅ Progression fetched successfully')
     const calculation = calculateProgression(data.completed_steps || [])
     
     return {
@@ -204,7 +222,13 @@ async function getProgression(userId, supabase) {
       nextRecommendedAction: calculation.nextRecommendedAction
     }
   } catch (error) {
-    console.error('Error fetching progression:', error)
+    console.error('❌ Error in getProgression:', {
+      message: error.message,
+      name: error.name,
+      code: error.code,
+      hint: error.hint,
+      cause: error.cause
+    })
     throw error
   }
 }
