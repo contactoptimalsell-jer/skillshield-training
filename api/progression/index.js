@@ -297,6 +297,8 @@ async function addCompletedStep(userId, stepId) {
  * Handler principal (Vercel Serverless Function)
  */
 export default async function handler(req, res) {
+  console.error('🚀 API handler called:', req.method, req.url)
+  
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
@@ -308,6 +310,8 @@ export default async function handler(req, res) {
   }
   
   try {
+    console.error('🔍 Starting handler logic')
+    
     // Vérifier que les variables d'environnement sont présentes
     const hasUrl = !!process.env.SUPABASE_URL
     const hasKey = !!process.env.SUPABASE_ANON_KEY
