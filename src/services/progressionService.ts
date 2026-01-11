@@ -76,7 +76,8 @@ export async function addCompletedStep(
 ): Promise<ProgressionData> {
   try {
     // Appeler l'API backend pour ajouter l'étape
-    const response = await fetch(`/api/progression/${clerkUserId}`, {
+    // Utiliser query parameter car la route dynamique [userId].js ne fonctionne pas sur Vercel
+    const response = await fetch(`/api/progression?userId=${encodeURIComponent(clerkUserId)}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
