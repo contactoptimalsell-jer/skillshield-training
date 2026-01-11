@@ -110,7 +110,7 @@ export const ClerkAuthPage: React.FC = () => {
                 routing="path"
                 path="/auth"
                 signInUrl="/auth?mode=signin"
-                afterSignUpUrl={plan ? `/auth/redirect?plan=${plan}` : '/sentinelle'}
+                afterSignUpUrl={plan ? `/auth/redirect?plan=${plan}` : '/dashboard'}
                 appearance={{
                   elements: {
                     rootBox: 'mx-auto',
