@@ -336,12 +336,25 @@ export default async function handler(req, res) {
     
     return res.status(405).json({ error: 'Method not allowed' })
   } catch (error) {
-    console.error('API Error:', {
+    console.error('❌ API Error:', {
       message: error.message,
-      details: error.stack,
+      name: error.name,
+      stack: error.stack,
       hint: error.hint,
-      code: error.code
+      code: error.code,
+      cause: error.cause
     })
+    
+    // Si c'est une erreur de fetch/network
+    if (error.message?.includes('fetch failed') || error.name === 'TypeError' || error.cause?.code === 'ENOTFOUND' || error.cause?.code === 'ECONNREFUSED') {
+      return res.status(500).json({
+        error: 'Database connection error',
+        message: 'Unable to connect to Supabase. Please check SUPABASE_URL and SUPABASE_ANON_KEY in Vercel environment variables.',
+        details: error.message,
+        hint: 'Verify that SUPABASE_URL starts with https:// and both variables are set for all environments (Production, Preview, Development)'
+      })
+    }
+    
     return res.status(500).json({ 
       error: 'Internal server error',
       message: error.message 
