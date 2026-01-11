@@ -17,14 +17,54 @@ import {
 } from 'lucide-react'
 import { Widget, Badge, ProgressBar } from './Widget'
 import { useDashboard } from '../../context/DashboardContext'
+import { useProgression } from '../../hooks/useProgression'
 import { AddFormationModal } from './AddFormationModal'
 
 export const FormationsPage: React.FC = () => {
   const { formations, updateFormationProgress } = useDashboard()
+  const { addCompletedStep } = useProgression()
   const navigate = useNavigate()
   const [selectedFilter, setSelectedFilter] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [showAddModal, setShowAddModal] = useState(false)
+  
+  // Handler pour commencer une formation
+  const handleStartFormation = async (formationId: string) => {
+    updateFormationProgress(formationId, 0) // Commence la formation
+    
+    // Marquer l'étape de progression
+    try {
+      await addCompletedStep('first_formation_started')
+    } catch (error) {
+      console.warn('Could not update progression:', error)
+    }
+    
+    // Naviguer vers la page de détail
+    navigate(`/dashboard/formations/${formationId}`)
+  }
+  
+  // Handler pour continuer/compléter une formation
+  const handleFormationProgress = async (formationId: string, progress: number) => {
+    const newProgress = Math.min(progress + 10, 100)
+    updateFormationProgress(formationId, newProgress)
+    
+    // Si la formation est terminée, marquer l'étape
+    if (newProgress === 100) {
+      try {
+        await addCompletedStep('first_formation_completed')
+        
+        // Vérifier si c'est la 5ème ou 10ème formation complétée
+        const completedCount = formations.filter(f => f.status === 'completed').length
+        if (completedCount === 4) { // Cette formation va devenir la 5ème
+          await addCompletedStep('formation_5_completed')
+        } else if (completedCount === 9) { // Cette formation va devenir la 10ème
+          await addCompletedStep('formation_10_completed')
+        }
+      } catch (error) {
+        console.warn('Could not update progression:', error)
+      }
+    }
+  }
 
   const filters = [
     { id: 'all', label: 'Toutes les formations', count: formations.length },
@@ -193,7 +233,7 @@ export const FormationsPage: React.FC = () => {
                     ))}
                   </div>
                   <button
-                    onClick={() => updateFormationProgress(formation.id, Math.min((formation.progress || 0) + 10, 100))}
+                    onClick={() => handleFormationProgress(formation.id, formation.progress || 0)}
                     className="bg-gradient-secondary text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center"
                   >
                     <Play className="w-4 h-4 mr-2" />
@@ -301,14 +341,17 @@ export const FormationsPage: React.FC = () => {
                     </div>
                   ) : formation.status === 'in_progress' ? (
                     <button
-                      onClick={() => updateFormationProgress(formation.id, Math.min((formation.progress || 0) + 10, 100))}
+                      onClick={() => handleFormationProgress(formation.id, formation.progress || 0)}
                       className="bg-gradient-secondary text-white px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center"
                     >
                       <Play className="w-4 h-4 mr-2" />
                       Continuer
                     </button>
                   ) : (
-                    <button className="bg-gradient-secondary text-white px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center">
+                    <button 
+                      onClick={() => handleStartFormation(formation.id)}
+                      className="bg-gradient-secondary text-white px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center"
+                    >
                       <Play className="w-4 h-4 mr-2" />
                       Commencer
                     </button>

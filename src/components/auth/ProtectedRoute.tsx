@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom'
-import { useAuth } from '../../context/AuthContext'
+import { useAuth, useUser } from '@clerk/clerk-react'
+import { useAuth as useLocalAuth } from '../../context/AuthContext'
 import { userService } from '../../services/userService'
 
 interface ProtectedRouteProps {
@@ -14,31 +15,36 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   requiredPlan,
   fallbackPath 
 }) => {
-  const { user, loading } = useAuth()
+  const { isSignedIn, isLoaded: clerkLoaded } = useAuth()
+  const { user: clerkUser } = useUser()
+  const { user, loading: localLoading } = useLocalAuth()
   const [userData, setUserData] = React.useState<any>(null)
   const [userLoading, setUserLoading] = React.useState(true)
 
   React.useEffect(() => {
     const fetchUserData = async () => {
-      if (!loading && user) {
+      if (clerkLoaded && isSignedIn && clerkUser) {
         try {
-          const data = await userService.getCurrentUser()
+          // Pass Clerk user ID to userService
+          const data = await userService.getCurrentUser(clerkUser.id)
           setUserData(data)
         } catch (error) {
           console.error('Error fetching user data:', error)
+          // If user service fails, continue with Clerk user
+          setUserData({ current_plan: 'sentinelle' })
         } finally {
           setUserLoading(false)
         }
-      } else if (!loading && !user) {
+      } else if (clerkLoaded && !isSignedIn) {
         setUserLoading(false)
       }
     }
 
     fetchUserData()
-  }, [user, loading])
+  }, [clerkUser, clerkLoaded, isSignedIn])
 
   // Show loading while checking authentication
-  if (loading || userLoading) {
+  if (!clerkLoaded || localLoading || userLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
         <div className="text-center">
@@ -50,7 +56,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   }
 
   // Redirect to login if not authenticated
-  if (!user) {
+  if (!isSignedIn || !user) {
     return <Navigate to="/login" replace />
   }
 
@@ -78,4 +84,3 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
   return <>{children}</>
 }
-

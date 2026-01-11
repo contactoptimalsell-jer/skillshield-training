@@ -2,10 +2,18 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 import { motion } from 'framer-motion'
+import { ClerkProvider } from '@clerk/clerk-react'
 import { AppProvider } from './context/AppContext'
 import { DashboardProvider } from './context/DashboardContext'
 import { AuthProvider } from './context/AuthContext'
 import { CookieProvider } from './context/CookieContext'
+
+// Clerk configuration
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || ''
+
+if (!PUBLISHABLE_KEY) {
+  console.warn('Missing Clerk Publishable Key. Please set VITE_CLERK_PUBLISHABLE_KEY in your environment variables.')
+}
 import { Hero } from './components/Hero'
 import { HowItWorks } from './components/HowItWorks'
 import { RiskCalculator } from './components/RiskCalculator'
@@ -133,11 +141,12 @@ function LandingPage() {
 
 function App() {
   return (
-    <Router>
-      <CookieProvider>
-        <AuthProvider>
-          <AppProvider>
-            <DashboardProvider>
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+      <Router>
+        <CookieProvider>
+          <AuthProvider>
+            <AppProvider>
+              <DashboardProvider>
             <Routes>
               {/* Landing Page Routes */}
               <Route path="/" element={<LandingPage />} />
@@ -163,7 +172,7 @@ function App() {
                         <Route path="/stats-demo" element={<StatsDemoPage />} />
                         <Route path="/pragmatic-stats-demo" element={<PragmaticStatsDemoPage />} />
 
-              {/* Authentication Routes */}
+              {/* Authentication Routes - Using Clerk */}
               <Route path="/signup" element={<AuthPage />} />
               <Route path="/auth" element={<AuthPage />} />
               
@@ -245,11 +254,12 @@ function App() {
 
             {/* Cookie Banner */}
             <CookieBanner onConsentChange={() => {}} />
-          </DashboardProvider>
-        </AppProvider>
-      </AuthProvider>
-      </CookieProvider>
-    </Router>
+              </DashboardProvider>
+            </AppProvider>
+          </AuthProvider>
+        </CookieProvider>
+      </Router>
+    </ClerkProvider>
   )
 }
 

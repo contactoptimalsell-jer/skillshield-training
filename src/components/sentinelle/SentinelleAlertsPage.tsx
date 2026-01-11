@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { 
   AlertTriangle, 
@@ -13,6 +13,7 @@ import {
   ExternalLink,
   Eye
 } from 'lucide-react'
+import { useProgression } from '../../hooks/useProgression'
 import { SentinelleWidget } from './Widget'
 import { UpgradeBanner, PlanBadge } from './UpgradeBanner'
 import { Button } from '../ui/Button'
@@ -26,6 +27,14 @@ import {
 export const SentinelleAlertsPage: React.FC = () => {
   const user = mockSentinelleUser
   const monthlyAlert = mockMonthlyAlert
+  const { addCompletedStep } = useProgression()
+  
+  // Marquer first_alert_read quand on accède à la page des alertes pour la première fois
+  useEffect(() => {
+    addCompletedStep('first_alert_read').catch(error => {
+      console.warn('Could not update progression:', error)
+    })
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {

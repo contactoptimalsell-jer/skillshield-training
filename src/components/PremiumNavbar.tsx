@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Shield, Menu, X } from 'lucide-react'
+import { useAuth, UserButton } from '@clerk/clerk-react'
 import { HeroButton } from './ui/HeroButton'
 
 export const PremiumNavbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { isSignedIn, isLoaded } = useAuth()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +25,11 @@ export const PremiumNavbar: React.FC = () => {
     { name: 'Tarifs', href: '#pricing' },
     { name: 'Blog', href: '#blog' }
   ]
+
+  const handleDashboardClick = () => {
+    navigate('/dashboard')
+    setIsMobileMenuOpen(false)
+  }
 
   return (
     <motion.nav
@@ -69,20 +77,52 @@ export const PremiumNavbar: React.FC = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
-              to="/login"
-              className="text-gray-300 hover:text-cyan-400 transition-colors"
-            >
-              Se connecter
-            </Link>
-            <HeroButton 
-              href="/login" 
-              variant="primary" 
-              size="sm"
-              animated={false}
-            >
-              Rejoindre
-            </HeroButton>
+            {isLoaded && (
+              <>
+                {isSignedIn ? (
+                  <>
+                    <Link
+                      to="/dashboard"
+                      className="text-gray-300 hover:text-cyan-400 transition-colors"
+                    >
+                      Dashboard
+                    </Link>
+                    <div className="text-white">
+                      <UserButton 
+                        afterSignOutUrl="/"
+                        appearance={{
+                          elements: {
+                            avatarBox: 'w-10 h-10',
+                            userButtonPopoverCard: 'bg-slate-800 border border-white/20',
+                            userButtonPopoverActions: 'bg-slate-800',
+                            userButtonPopoverActionButton: 'text-white hover:bg-slate-700',
+                            userButtonPopoverActionButtonText: 'text-white',
+                            userButtonPopoverFooter: 'hidden'
+                          }
+                        }}
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <Link
+                      to="/auth?mode=signin"
+                      className="text-gray-300 hover:text-cyan-400 transition-colors"
+                    >
+                      Se connecter
+                    </Link>
+                    <HeroButton 
+                      onClick={() => navigate('/auth?mode=signup')}
+                      variant="primary" 
+                      size="sm"
+                      animated={false}
+                    >
+                      Rejoindre
+                    </HeroButton>
+                  </>
+                )}
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -119,22 +159,56 @@ export const PremiumNavbar: React.FC = () => {
               </motion.a>
             ))}
             <div className="px-4 pt-4 border-t border-white/10 space-y-3">
-              <Link
-                to="/login"
-                className="block w-full text-center py-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Se connecter
-              </Link>
-              <HeroButton 
-                href="/login" 
-                variant="primary" 
-                size="md"
-                animated={false}
-                className="w-full"
-              >
-                Rejoindre la liste d'attente
-              </HeroButton>
+              {isLoaded && (
+                <>
+                  {isSignedIn ? (
+                    <>
+                      <button
+                        onClick={handleDashboardClick}
+                        className="block w-full text-center py-2 text-gray-300 hover:text-cyan-400 transition-colors"
+                      >
+                        Dashboard
+                      </button>
+                      <div className="flex items-center justify-center py-2">
+                        <UserButton 
+                          afterSignOutUrl="/"
+                          appearance={{
+                            elements: {
+                              avatarBox: 'w-10 h-10',
+                              userButtonPopoverCard: 'bg-slate-800 border border-white/20',
+                              userButtonPopoverActions: 'bg-slate-800',
+                              userButtonPopoverActionButton: 'text-white hover:bg-slate-700',
+                              userButtonPopoverActionButtonText: 'text-white'
+                            }
+                          }}
+                        />
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <Link
+                        to="/auth?mode=signin"
+                        className="block w-full text-center py-2 text-gray-300 hover:text-cyan-400 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Se connecter
+                      </Link>
+                      <HeroButton 
+                        onClick={() => {
+                          navigate('/auth?mode=signup')
+                          setIsMobileMenuOpen(false)
+                        }}
+                        variant="primary" 
+                        size="md"
+                        animated={false}
+                        className="w-full"
+                      >
+                        Rejoindre
+                      </HeroButton>
+                    </>
+                  )}
+                </>
+              )}
             </div>
           </div>
         </motion.div>

@@ -1,5 +1,6 @@
 import { supabase } from '../lib/supabase'
 import type { User, UserProfile, Alert } from '../lib/supabase'
+import { useAuth as useClerkAuth } from '@clerk/clerk-react'
 
 // Define the interface locally to avoid import issues
 export interface ScoreCalculationResult {
@@ -19,23 +20,65 @@ export interface UserWithProfile extends User {
   profile?: UserProfile
 }
 
+// Helper function to get Clerk user ID (used by service functions)
+const getClerkUserId = async (): Promise<string | null> => {
+  try {
+    // This will be called from components that have access to Clerk
+    // For now, return null and handle in components
+    return null
+  } catch (error) {
+    console.error('Error getting Clerk user ID:', error)
+    return null
+  }
+}
+
 export const userService = {
   // Get current user with profile
-  async getCurrentUser(): Promise<UserWithProfile | null> {
+  // Note: This now requires userId from Clerk to be passed
+  async getCurrentUser(userId?: string): Promise<UserWithProfile | null> {
     try {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) return null
+      // If no userId provided, return default structure for Clerk user
+      if (!userId) {
+        // Return a default structure that works with Clerk
+        return {
+          id: '',
+          email: '',
+          current_plan: 'sentinelle',
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
+          profile: undefined
+        } as UserWithProfile
+      }
 
-      const { data: userData } = await supabase
+      // Try to fetch from Supabase using Clerk user ID
+      const { data: userData, error } = await supabase
         .from('users')
         .select(`
           *,
           profile:user_profiles(*)
         `)
-        .eq('id', user.id)
+        .eq('id', userId)
         .single()
 
-      return userData as UserWithProfile
+      if (error && error.code !== 'PGRST116') {
+        // PGRST116 is "not found" - which is OK for new users
+        console.error('Error fetching user from Supabase:', error)
+      }
+
+      // If user exists in Supabase, return it
+      if (userData) {
+        return userData as UserWithProfile
+      }
+
+      // Otherwise, return default structure
+      return {
+        id: userId,
+        email: '',
+        current_plan: 'sentinelle',
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+        profile: undefined
+      } as UserWithProfile
     } catch (error) {
       console.error('Error fetching current user:', error)
       return null
@@ -43,15 +86,17 @@ export const userService = {
   },
 
   // Update user profile
-  async updateProfile(profileData: Partial<UserProfile>): Promise<{ error?: string }> {
+  // Note: This now requires userId from Clerk to be passed
+  async updateProfile(profileData: Partial<UserProfile>, userId?: string): Promise<{ error?: string }> {
     try {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) return { error: 'User not authenticated' }
+      if (!userId) {
+        return { error: 'User ID is required' }
+      }
 
       const { error } = await supabase
         .from('user_profiles')
         .upsert({
-          id: user.id,
+          id: userId,
           ...profileData,
           last_score_calculation: new Date().toISOString()
         })
@@ -130,15 +175,17 @@ export const userService = {
   },
 
   // Get user's alerts
-  async getUserAlerts(limit = 10): Promise<{ error?: string; alerts?: Alert[] }> {
+  // Note: This now requires userId from Clerk to be passed
+  async getUserAlerts(limit = 10, userId?: string): Promise<{ error?: string; alerts?: Alert[] }> {
     try {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) return { error: 'User not authenticated' }
+      if (!userId) {
+        return { alerts: [] } // Return empty array if no user ID
+      }
 
       const { data: alerts, error } = await supabase
         .from('alerts')
         .select('*')
-        .eq('user_id', user.id)
+        .eq('user_id', userId)
         .order('created_at', { ascending: false })
         .limit(limit)
 
@@ -155,16 +202,18 @@ export const userService = {
   },
 
   // Mark alert as read
-  async markAlertAsRead(alertId: string): Promise<{ error?: string }> {
+  // Note: This now requires userId from Clerk to be passed
+  async markAlertAsRead(alertId: string, userId?: string): Promise<{ error?: string }> {
     try {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) return { error: 'User not authenticated' }
+      if (!userId) {
+        return { error: 'User ID is required' }
+      }
 
       const { error } = await supabase
         .from('alerts')
         .update({ is_read: true })
         .eq('id', alertId)
-        .eq('user_id', user.id)
+        .eq('user_id', userId)
 
       if (error) {
         console.error('Error marking alert as read:', error)

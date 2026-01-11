@@ -1,18 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useParams, useNavigate } from 'react-router-dom'
 import { ArrowLeft, BookOpen, Clock, Star, Award, Users } from 'lucide-react'
 import { useDashboard } from '../../context/DashboardContext'
+import { useProgression } from '../../hooks/useProgression'
 import { formationContentMap, FormationContent } from '../../data/formationContent'
 import { Widget, Badge } from './Widget'
 
 export const FormationDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
-  const { formations } = useDashboard()
+  const { formations, updateFormationProgress } = useDashboard()
+  const { addCompletedStep } = useProgression()
   
   const formation = formations.find(f => f.id === id)
   const content = id ? formationContentMap[id] : null
+  
+  // Marquer first_formation_started quand on accède à une formation pour la première fois
+  useEffect(() => {
+    if (formation && formation.status === 'not_started') {
+      updateFormationProgress(formation.id, 0) // Commence la formation
+      
+      // Marquer l'étape de progression (une seule fois)
+      addCompletedStep('first_formation_started').catch(error => {
+        console.warn('Could not update progression:', error)
+      })
+    }
+  }, [formation?.id]) // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!formation) {
     return (

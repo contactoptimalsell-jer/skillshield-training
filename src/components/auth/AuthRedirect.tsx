@@ -1,59 +1,49 @@
-import React, { useEffect, useState } from 'react'
-import { useAuth } from '../../context/AuthContext'
-import { userService } from '../../services/userService'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useNavigate, useSearchParams } from 'react-router-dom'
+import { useAuth } from '@clerk/clerk-react'
+import { useAuth as useLocalAuth } from '../../context/AuthContext'
 
 export const AuthRedirect: React.FC = () => {
-  const { user, loading } = useAuth()
-  const [profileLoading, setProfileLoading] = useState(true)
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
+  const { isSignedIn, isLoaded } = useAuth()
+  const { user } = useLocalAuth()
+  const plan = searchParams.get('plan')
 
   useEffect(() => {
-    const checkUserProfile = async () => {
-      if (!loading && user) {
-        try {
-          const userData = await userService.getCurrentUser()
-          
-          if (userData?.profile) {
-            // User has completed onboarding, redirect to appropriate dashboard
-            const plan = userData.current_plan
-            
-            if (plan === 'sentinelle') {
-              navigate('/sentinelle', { replace: true })
-            } else {
-              navigate('/dashboard', { replace: true })
-            }
-          } else {
-            // User hasn't completed onboarding
-            navigate('/onboarding', { replace: true })
-          }
-        } catch (error) {
-          console.error('Error checking user profile:', error)
-          navigate('/onboarding', { replace: true })
-        } finally {
-          setProfileLoading(false)
-        }
-      } else if (!loading && !user) {
-        // No user, redirect to login
-        navigate('/login', { replace: true })
-      }
+    if (!isLoaded) {
+      return
     }
 
-    checkUserProfile()
-  }, [user, loading, navigate])
+    if (!isSignedIn || !user) {
+      // Not authenticated, redirect to login
+      navigate('/login', { replace: true })
+      return
+    }
 
-  // Show loading while checking profile
-  if (loading || profileLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-12 h-12 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-600">Chargement...</p>
-        </div>
+    // Determine redirect based on plan or default dashboard
+    if (plan) {
+      // Redirect based on plan selection
+      if (plan === 'bouclier') {
+        navigate('/dashboard', { replace: true })
+      } else if (plan === 'protection-complete') {
+        navigate('/dashboard', { replace: true })
+      } else {
+        navigate('/sentinelle', { replace: true })
+      }
+    } else {
+      // Default redirect to sentinelle dashboard
+      navigate('/sentinelle', { replace: true })
+    }
+  }, [isSignedIn, isLoaded, user, navigate, plan])
+
+  // Show loading while redirecting
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-12 h-12 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+        <p className="text-gray-600">Redirection...</p>
       </div>
-    )
-  }
-
-  return null
+    </div>
+  )
 }
-

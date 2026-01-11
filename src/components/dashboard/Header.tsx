@@ -4,20 +4,17 @@ import {
   Search, 
   Bell, 
   Settings, 
-  LogOut, 
-  User, 
-  CreditCard, 
-  ChevronDown,
   Sun,
   Menu,
   X
 } from 'lucide-react'
+import { useUser, UserButton } from '@clerk/clerk-react'
 import { useDashboard } from '../../context/DashboardContext'
 
 export const Header: React.FC = () => {
-  const { user, sidebarCollapsed, toggleSidebar, notifications, markNotificationAsRead } = useDashboard()
+  const { sidebarCollapsed, toggleSidebar, notifications, markNotificationAsRead } = useDashboard()
+  const { user: clerkUser } = useUser()
   const [searchQuery, setSearchQuery] = useState('')
-  const [isProfileOpen, setIsProfileOpen] = useState(false)
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false)
   const [darkMode, setDarkMode] = useState(false)
 
@@ -163,81 +160,31 @@ export const Header: React.FC = () => {
             </AnimatePresence>
           </div>
 
-          {/* Profile dropdown */}
-          <div className="relative">
-            <button
-              onClick={() => setIsProfileOpen(!isProfileOpen)}
-              className="flex items-center space-x-3 p-2 hover:bg-gray-100 rounded-lg transition-colors"
-            >
-              <div className="w-8 h-8 bg-gradient-secondary rounded-full flex items-center justify-center text-white font-semibold text-sm">
-                {user.avatar}
+          {/* Profile - Using Clerk UserButton */}
+          <div className="flex items-center">
+            <UserButton 
+              afterSignOutUrl="/"
+              appearance={{
+                elements: {
+                  avatarBox: 'w-10 h-10',
+                  userButtonPopoverCard: 'bg-white border border-gray-200 shadow-lg',
+                  userButtonPopoverActions: 'bg-white',
+                  userButtonPopoverActionButton: 'text-gray-700 hover:bg-gray-50',
+                  userButtonPopoverActionButtonText: 'text-gray-700',
+                  userButtonPopoverFooter: 'hidden'
+                }
+              }}
+            />
+            {clerkUser && (
+              <div className="hidden md:block ml-3 text-left">
+                <p className="text-sm font-medium text-gray-900">
+                  {clerkUser.firstName || clerkUser.username || 'Utilisateur'}
+                </p>
+                <p className="text-xs text-gray-500">
+                  {clerkUser.emailAddresses[0]?.emailAddress || ''}
+                </p>
               </div>
-              <div className="hidden md:block text-left">
-                <p className="text-sm font-medium text-gray-900">{user.name}</p>
-                <p className="text-xs text-gray-500">Plan {user.plan}</p>
-              </div>
-              <ChevronDown className="w-4 h-4 text-gray-400" />
-            </button>
-
-            <AnimatePresence>
-              {isProfileOpen && (
-                <>
-                  {/* Backdrop pour fermer en cliquant à côté */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="fixed inset-0 z-40"
-                    onClick={() => setIsProfileOpen(false)}
-                  />
-                  
-                  {/* Panel du profil */}
-                  <motion.div
-                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-200 z-50"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <div className="p-4 border-b border-gray-100">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-gradient-secondary rounded-full flex items-center justify-center text-white font-semibold">
-                          {user.avatar}
-                        </div>
-                        <div>
-                          <p className="font-medium text-gray-900">{user.name}</p>
-                          <p className="text-sm text-gray-500">{user.email}</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="py-2">
-                      <button className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
-                        <User className="w-4 h-4 mr-3" />
-                        Mon compte
-                      </button>
-                      <button className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
-                        <CreditCard className="w-4 h-4 mr-3" />
-                        Facturation
-                      </button>
-                      <button className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
-                        <Settings className="w-4 h-4 mr-3" />
-                        Paramètres
-                      </button>
-                    </div>
-                    
-                    <div className="border-t border-gray-100 py-2">
-                      <button className="flex items-center w-full px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors">
-                        <LogOut className="w-4 h-4 mr-3" />
-                        Déconnexion
-                      </button>
-                    </div>
-                  </motion.div>
-                </>
-              )}
-            </AnimatePresence>
+            )}
           </div>
         </div>
       </div>

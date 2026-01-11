@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, ArrowLeft, User, Building2, Calendar, Target } from 'lucide-react'
+import { useUser } from '@clerk/clerk-react'
 import { useAuth } from '../../context/AuthContext'
 import { userService } from '../../services/userService'
+import { useProgression } from '../../hooks/useProgression'
 import { Button } from '../ui/Button'
 import { Card } from '../ui/Card'
 import toast from 'react-hot-toast'
@@ -23,7 +25,9 @@ export const OnboardingFlow: React.FC = () => {
     yearsExperience: 0,
     automationExposure: 5
   })
+  const { user: clerkUser } = useUser()
   const { user } = useAuth()
+  const { addCompletedStep } = useProgression()
 
   const steps = [
     {
@@ -77,15 +81,20 @@ export const OnboardingFlow: React.FC = () => {
   }
 
   const handleComplete = async () => {
+    if (!clerkUser?.id) {
+      toast.error('Erreur : utilisateur non authentifié')
+      return
+    }
+
     setLoading(true)
     try {
-      // Save profile data
+      // Save profile data with Clerk user ID
       const { error } = await userService.updateProfile({
         job_title: data.jobTitle,
         sector: data.sector,
         years_experience: data.yearsExperience,
         automation_exposure: data.automationExposure
-      })
+      }, clerkUser.id)
 
       if (error) {
         toast.error('Erreur lors de la sauvegarde du profil')
@@ -97,6 +106,18 @@ export const OnboardingFlow: React.FC = () => {
       
       if (scoreError) {
         console.warn('Could not calculate score:', scoreError)
+      }
+
+      // Marquer les étapes de progression
+      try {
+        await addCompletedStep('profile_created')
+        await addCompletedStep('onboarding_completed')
+        if (!scoreError) {
+          await addCompletedStep('score_calculated')
+        }
+      } catch (progressionError) {
+        console.warn('Could not update progression:', progressionError)
+        // Ne pas bloquer le flux si la progression échoue
       }
 
       toast.success('Profil créé avec succès !')

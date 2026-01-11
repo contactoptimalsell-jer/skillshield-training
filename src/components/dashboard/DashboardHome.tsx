@@ -17,6 +17,7 @@ import {
 import { Widget, StatCard, ProgressBar, Badge, MetricCard } from './Widget'
 import { AINewsWidget } from './AINewsWidget'
 import { SkillsWidget } from './SkillsWidget' // Added import
+import { ProgressionWidget } from '../progression/ProgressionWidget'
 import { useDashboard } from '../../context/DashboardContext'
 
 export const DashboardHome: React.FC = () => {
@@ -71,6 +72,9 @@ export const DashboardHome: React.FC = () => {
           </div>
         </div>
       </motion.div>
+
+      {/* Progression Widget */}
+      <ProgressionWidget showDetails={true} />
 
       {/* Main Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

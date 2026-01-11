@@ -639,63 +639,6 @@ export const mockFormations: Formation[] = [
     status: 'not_started',
     certification: true,
     skills: ['IA', 'Humanité', 'Sens', 'Éthique', 'Responsabilité', 'Dignité']
-  },
-  {
-    id: 'formation_1',
-    title: 'Docker & Kubernetes Mastery',
-    description: 'Apprenez à containeriser et orchestrer vos applications avec Docker et Kubernetes.',
-    duration: 45,
-    level: 'Intermédiaire',
-    rating: 4.8,
-    reviews: 2340,
-    price: 299,
-    isIncluded: true,
-    progress: 23,
-    status: 'in_progress',
-    certification: true,
-    skills: ['Docker', 'Kubernetes', 'DevOps', 'CI/CD']
-  },
-  {
-    id: 'formation_2',
-    title: 'React 18 Avancé',
-    description: 'Maîtrisez les nouvelles fonctionnalités de React 18 et Concurrent Features.',
-    duration: 32,
-    level: 'Avancé',
-    rating: 4.9,
-    reviews: 1890,
-    price: 199,
-    isIncluded: true,
-    status: 'not_started',
-    certification: true,
-    skills: ['React', 'JavaScript', 'Concurrent Features', 'Suspense']
-  },
-  {
-    id: 'formation_3',
-    title: 'Prompt Engineering Avancé',
-    description: 'Optimisez vos interactions avec l\'IA pour maximiser la productivité.',
-    duration: 18,
-    level: 'Intermédiaire',
-    rating: 4.7,
-    reviews: 1567,
-    price: 149,
-    isIncluded: true,
-    status: 'not_started',
-    certification: false,
-    skills: ['IA', 'Prompt Engineering', 'Productivité', 'Automatisation']
-  },
-  {
-    id: 'formation_4',
-    title: 'CI/CD avec GitHub Actions',
-    description: 'Automatisez vos déploiements avec GitHub Actions.',
-    duration: 20,
-    level: 'Intermédiaire',
-    rating: 4.6,
-    reviews: 1234,
-    price: 179,
-    isIncluded: true,
-    status: 'not_started',
-    certification: true,
-    skills: ['GitHub Actions', 'CI/CD', 'DevOps', 'Automatisation']
   }
 ]
 
