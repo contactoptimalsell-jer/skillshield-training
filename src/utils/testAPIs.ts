@@ -11,7 +11,7 @@ export const testAPIs = {
     try {
       console.log('🔍 Test arXiv API...')
       const response = await fetch(
-        'http://export.arxiv.org/api/query?search_query=cat:cs.AI&max_results=5'
+        '/api/arxiv-proxy?search_query=cat:cs.AI&max_results=5'
       )
       
       if (!response.ok) {

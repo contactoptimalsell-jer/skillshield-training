@@ -68,11 +68,13 @@ class PragmaticStatsService {
 
   /**
    * Récupère les données arXiv (publications IA)
+   * Utilise un proxy API pour contourner CORS
    */
   private async fetchArxivData(): Promise<ArxivData> {
     try {
+      // Utiliser le proxy API au lieu de l'URL directe (problème CORS)
       const response = await fetch(
-        'http://export.arxiv.org/api/query?search_query=cat:cs.AI&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
+        '/api/arxiv-proxy?search_query=cat:cs.AI&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
       );
       
       if (!response.ok) {
