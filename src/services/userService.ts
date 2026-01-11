@@ -137,12 +137,16 @@ export const userService = {
   },
 
   // Calculate and save AI risk score
-  async calculateAndSaveScore(): Promise<{ 
+  async calculateAndSaveScore(userId?: string): Promise<{ 
     error?: string; 
     score?: ScoreCalculationResult 
   }> {
     try {
-      const user = await this.getCurrentUser()
+      if (!userId) {
+        return { error: 'User ID is required' }
+      }
+
+      const user = await this.getCurrentUser(userId)
       if (!user || !user.profile) {
         return { error: 'User profile not found' }
       }
