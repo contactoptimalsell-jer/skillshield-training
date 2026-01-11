@@ -14,36 +14,20 @@
 
 import { createClient } from '@supabase/supabase-js'
 
-// Initialiser Supabase - vérifier que les variables sont présentes
-const supabaseUrl = process.env.SUPABASE_URL
-const supabaseKey = process.env.SUPABASE_ANON_KEY
-
-console.error('🔍 Initialization check:', {
-  hasUrl: !!supabaseUrl,
-  hasKey: !!supabaseKey,
-  urlLength: supabaseUrl?.length || 0,
-  keyLength: supabaseKey?.length || 0,
-  urlStartsWithHttps: supabaseUrl?.startsWith('https://') || false
-})
-
-if (!supabaseUrl || !supabaseKey) {
-  console.error('⚠️ Missing Supabase environment variables at initialization')
-}
-
-let supabase = null
-try {
-  if (supabaseUrl && supabaseKey) {
-    supabase = createClient(supabaseUrl, supabaseKey, {
-      auth: {
-        persistSession: false
-      }
-    })
-    console.error('✅ Supabase client created successfully')
-  } else {
-    console.error('❌ Cannot create Supabase client - missing env vars')
+// Fonction helper pour créer le client Supabase
+function getSupabaseClient() {
+  const supabaseUrl = process.env.SUPABASE_URL
+  const supabaseKey = process.env.SUPABASE_ANON_KEY
+  
+  if (!supabaseUrl || !supabaseKey) {
+    throw new Error('Missing Supabase environment variables')
   }
-} catch (error) {
-  console.error('❌ Error creating Supabase client:', error.message)
+  
+  return createClient(supabaseUrl, supabaseKey, {
+    auth: {
+      persistSession: false
+    }
+  })
 }
 
 // Configuration de progression (identique à [userId].js)
@@ -216,11 +200,7 @@ async function getProgression(userId, supabase) {
  * POST /api/progression?userId=xxx
  * Ajoute une étape complétée à la progression
  */
-async function addCompletedStep(userId, stepId) {
-  if (!supabase) {
-    throw new Error('Supabase client not initialized - check environment variables')
-  }
-  
+async function addCompletedStep(userId, stepId, supabase) {
   try {
     // Récupérer la progression actuelle
     const { data: currentData, error: fetchError } = await supabase
@@ -303,45 +283,16 @@ export default async function handler(req, res) {
   }
   
   try {
-    console.error('🔍 Starting handler logic')
-    
-    // Vérifier que les variables d'environnement sont présentes
-    const hasUrl = !!process.env.SUPABASE_URL
-    const hasKey = !!process.env.SUPABASE_ANON_KEY
-    
-    if (!hasUrl || !hasKey) {
-      console.error('❌ Missing environment variables')
-      return res.status(500).json({ 
-        error: 'Server configuration error',
-        message: 'Missing Supabase environment variables',
-        debug: {
-          hasSupabaseUrl: hasUrl,
-          hasSupabaseKey: hasKey,
-          urlLength: process.env.SUPABASE_URL?.length || 0,
-          keyLength: process.env.SUPABASE_ANON_KEY?.length || 0
-        }
-      })
-    }
-    
-    console.error('✅ Env vars present:', { hasUrl, hasKey })
-    
-    // Vérifier que le client Supabase est initialisé
-    if (!supabase) {
+    // Créer le client Supabase dans le handler (variables disponibles)
+    let supabase
+    try {
+      supabase = getSupabaseClient()
+    } catch (error) {
       return res.status(500).json({
         error: 'Server configuration error',
-        message: 'Supabase client not initialized'
+        message: error.message
       })
     }
-    
-    // Log pour debug (sans exposer les valeurs complètes)
-    console.log('🔍 Supabase config check:', {
-      urlPresent: !!process.env.SUPABASE_URL,
-      keyPresent: !!process.env.SUPABASE_ANON_KEY,
-      urlPrefix: process.env.SUPABASE_URL?.substring(0, 30) || 'missing',
-      urlLength: process.env.SUPABASE_URL?.length || 0,
-      keyLength: process.env.SUPABASE_ANON_KEY?.length || 0,
-      clientInitialized: !!supabase
-    })
     
     // Récupérer l'ID utilisateur depuis les query params
     const { userId } = req.query
