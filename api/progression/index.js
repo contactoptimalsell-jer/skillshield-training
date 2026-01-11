@@ -269,13 +269,26 @@ export default async function handler(req, res) {
     if (!process.env.SUPABASE_URL || !process.env.SUPABASE_ANON_KEY) {
       console.error('Missing environment variables:', {
         hasSupabaseUrl: !!process.env.SUPABASE_URL,
-        hasSupabaseKey: !!process.env.SUPABASE_ANON_KEY
+        hasSupabaseKey: !!process.env.SUPABASE_ANON_KEY,
+        supabaseUrl: process.env.SUPABASE_URL ? `${process.env.SUPABASE_URL.substring(0, 20)}...` : 'missing',
+        supabaseKey: process.env.SUPABASE_ANON_KEY ? `${process.env.SUPABASE_ANON_KEY.substring(0, 20)}...` : 'missing'
       })
       return res.status(500).json({ 
         error: 'Server configuration error',
-        message: 'Missing Supabase environment variables'
+        message: 'Missing Supabase environment variables',
+        debug: {
+          hasSupabaseUrl: !!process.env.SUPABASE_URL,
+          hasSupabaseKey: !!process.env.SUPABASE_ANON_KEY
+        }
       })
     }
+    
+    // Log pour debug (sans exposer les valeurs complètes)
+    console.log('Supabase config:', {
+      urlPresent: !!process.env.SUPABASE_URL,
+      keyPresent: !!process.env.SUPABASE_ANON_KEY,
+      urlPrefix: process.env.SUPABASE_URL?.substring(0, 20) || 'missing'
+    })
     
     // Récupérer l'ID utilisateur depuis les query params
     const { userId } = req.query
