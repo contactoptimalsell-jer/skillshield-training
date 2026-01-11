@@ -7,15 +7,6 @@ import { AppProvider } from './context/AppContext'
 import { DashboardProvider } from './context/DashboardContext'
 import { AuthProvider } from './context/AuthContext'
 import { CookieProvider } from './context/CookieContext'
-
-// Clerk configuration
-// Note: Utilise VITE_CLERK_PUBLISHABLE_KEY (pas NEXT_PUBLIC_) car c'est un projet Vite
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || ''
-
-if (!PUBLISHABLE_KEY) {
-  console.error('Missing Clerk Publishable Key. Please set VITE_CLERK_PUBLISHABLE_KEY in your environment variables.')
-  console.error('Get your key at: https://dashboard.clerk.com/last-active?path=api-keys')
-}
 import { Hero } from './components/Hero'
 import { HowItWorks } from './components/HowItWorks'
 import { RiskCalculator } from './components/RiskCalculator'
@@ -59,6 +50,32 @@ import { PragmaticStatsDemoPage } from './components/dashboard/PragmaticStatsDem
 import { WaitingListPage } from './components/auth/WaitingListPage'
 import { AdvancedRiskCalculator } from './components/calculator/AdvancedRiskCalculator'
 import { ResultsPage } from './pages/ResultsPage'
+
+// Clerk configuration
+// Vérifie les variables d'environnement disponibles
+const getClerkPublishableKey = () => {
+  // Vérifie d'abord VITE_CLERK_PUBLISHABLE_KEY (standard Vite)
+  const viteKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+  
+  // Fallback pour compatibilité (si quelqu'un a mis NEXT_PUBLIC_ par erreur)
+  const nextKey = import.meta.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+  
+  // Fallback direct (pour debug)
+  const directKey = import.meta.env.CLERK_PUBLISHABLE_KEY
+  
+  const key = viteKey || nextKey || directKey || ''
+  
+  if (!key) {
+    console.error('❌ Missing Clerk Publishable Key')
+    console.error('Available env vars:', Object.keys(import.meta.env).filter(k => k.includes('CLERK')))
+    console.error('Get your key at: https://dashboard.clerk.com/last-active?path=api-keys')
+    console.error('In Vercel, set: VITE_CLERK_PUBLISHABLE_KEY')
+  }
+  
+  return key
+}
+
+const PUBLISHABLE_KEY = getClerkPublishableKey()
 
 function LandingPage() {
   return (
@@ -142,6 +159,28 @@ function LandingPage() {
 }
 
 function App() {
+  // Si pas de clé Clerk, on affiche une page d'erreur ou on continue sans auth
+  if (!PUBLISHABLE_KEY) {
+    return (
+      <Router>
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8 text-center">
+            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">⚠️</span>
+            </div>
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">Configuration Requise</h1>
+            <p className="text-gray-600 mb-4">
+              La clé Clerk n'est pas configurée. Veuillez configurer <code className="bg-gray-100 px-2 py-1 rounded">VITE_CLERK_PUBLISHABLE_KEY</code> dans Vercel.
+            </p>
+            <p className="text-sm text-gray-500">
+              Vérifiez les variables d'environnement dans Vercel Dashboard → Settings → Environment Variables
+            </p>
+          </div>
+        </div>
+      </Router>
+    )
+  }
+
   return (
     <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
       <Router>
@@ -256,11 +295,11 @@ function App() {
 
             {/* Cookie Banner */}
             <CookieBanner onConsentChange={() => {}} />
-              </DashboardProvider>
-            </AppProvider>
-          </AuthProvider>
-        </CookieProvider>
-      </Router>
+          </DashboardProvider>
+        </AppProvider>
+      </AuthProvider>
+      </CookieProvider>
+    </Router>
     </ClerkProvider>
   )
 }
