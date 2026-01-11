@@ -88,6 +88,9 @@ export const OnboardingFlow: React.FC = () => {
 
     setLoading(true)
     try {
+      // S'assurer que l'utilisateur existe dans Supabase d'abord
+      await userService.getCurrentUser(clerkUser.id, clerkUser.emailAddresses[0]?.emailAddress || '')
+
       // Save profile data with Clerk user ID
       const { error } = await userService.updateProfile({
         job_title: data.jobTitle,
@@ -97,7 +100,9 @@ export const OnboardingFlow: React.FC = () => {
       }, clerkUser.id)
 
       if (error) {
-        toast.error('Erreur lors de la sauvegarde du profil')
+        console.error('Profile update error:', error)
+        toast.error(`Erreur lors de la sauvegarde du profil: ${error}`)
+        setLoading(false)
         return
       }
 
