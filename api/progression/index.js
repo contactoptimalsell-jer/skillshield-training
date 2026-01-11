@@ -16,18 +16,31 @@ import { createClient } from '@supabase/supabase-js'
 
 // Fonction helper pour créer le client Supabase
 function getSupabaseClient() {
-  const supabaseUrl = process.env.SUPABASE_URL
-  const supabaseKey = process.env.SUPABASE_ANON_KEY
+  const supabaseUrl = process.env.SUPABASE_URL?.trim()
+  const supabaseKey = process.env.SUPABASE_ANON_KEY?.trim()
   
   if (!supabaseUrl || !supabaseKey) {
-    throw new Error('Missing Supabase environment variables')
+    const missing = []
+    if (!supabaseUrl) missing.push('SUPABASE_URL')
+    if (!supabaseKey) missing.push('SUPABASE_ANON_KEY')
+    throw new Error(`Missing Supabase environment variables: ${missing.join(', ')}`)
   }
   
-  return createClient(supabaseUrl, supabaseKey, {
-    auth: {
-      persistSession: false
-    }
-  })
+  // Vérifier que l'URL est valide
+  if (!supabaseUrl.startsWith('https://')) {
+    throw new Error(`Invalid SUPABASE_URL: must start with https://`)
+  }
+  
+  try {
+    const client = createClient(supabaseUrl, supabaseKey, {
+      auth: {
+        persistSession: false
+      }
+    })
+    return client
+  } catch (error) {
+    throw new Error(`Failed to create Supabase client: ${error.message}`)
+  }
 }
 
 // Configuration de progression (identique à [userId].js)
@@ -286,11 +299,15 @@ export default async function handler(req, res) {
     // Créer le client Supabase dans le handler (variables disponibles)
     let supabase
     try {
+      console.error('🔍 Creating Supabase client...')
       supabase = getSupabaseClient()
+      console.error('✅ Supabase client created')
     } catch (error) {
+      console.error('❌ Error creating Supabase client:', error.message)
       return res.status(500).json({
         error: 'Server configuration error',
-        message: error.message
+        message: error.message,
+        details: 'Check SUPABASE_URL and SUPABASE_ANON_KEY in Vercel environment variables'
       })
     }
     
