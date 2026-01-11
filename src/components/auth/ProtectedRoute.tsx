@@ -25,8 +25,9 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
     const fetchUserData = async () => {
       if (clerkLoaded && isSignedIn && clerkUser) {
         try {
-          // Pass Clerk user ID to userService
-          const data = await userService.getCurrentUser(clerkUser.id)
+          // Pass Clerk user ID and email to userService (creates user in Supabase if doesn't exist)
+          const email = clerkUser.emailAddresses[0]?.emailAddress || ''
+          const data = await userService.getCurrentUser(clerkUser.id, email)
           setUserData(data)
         } catch (error) {
           console.error('Error fetching user data:', error)

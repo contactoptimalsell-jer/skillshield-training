@@ -35,14 +35,15 @@ const getClerkUserId = async (): Promise<string | null> => {
 export const userService = {
   // Get current user with profile
   // Note: This now requires userId from Clerk to be passed
-  async getCurrentUser(userId?: string): Promise<UserWithProfile | null> {
+  // This function automatically creates a user record in Supabase if it doesn't exist
+  async getCurrentUser(userId?: string, email?: string): Promise<UserWithProfile | null> {
     try {
       // If no userId provided, return default structure for Clerk user
       if (!userId) {
         // Return a default structure that works with Clerk
         return {
           id: '',
-          email: '',
+          email: email || '',
           current_plan: 'sentinelle',
           created_at: new Date().toISOString(),
           updated_at: new Date().toISOString(),
@@ -70,17 +71,39 @@ export const userService = {
         return userData as UserWithProfile
       }
 
-      // Otherwise, return default structure
-      return {
-        id: userId,
-        email: '',
-        current_plan: 'sentinelle',
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString(),
-        profile: undefined
-      } as UserWithProfile
+      // User doesn't exist in Supabase - create it automatically
+      const { data: newUser, error: createError } = await supabase
+        .from('users')
+        .insert({
+          id: userId,
+          email: email || '',
+          current_plan: 'sentinelle',
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString()
+        })
+        .select(`
+          *,
+          profile:user_profiles(*)
+        `)
+        .single()
+
+      if (createError) {
+        console.error('Error creating user in Supabase:', createError)
+        // Return default structure even if creation fails
+        return {
+          id: userId,
+          email: email || '',
+          current_plan: 'sentinelle',
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
+          profile: undefined
+        } as UserWithProfile
+      }
+
+      // Return the newly created user
+      return newUser as UserWithProfile
     } catch (error) {
-      console.error('Error fetching current user:', error)
+      console.error('Error fetching/creating current user:', error)
       return null
     }
   },
