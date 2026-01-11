@@ -29,11 +29,11 @@ export const AuthRedirect: React.FC = () => {
       } else if (plan === 'protection-complete') {
         navigate('/dashboard', { replace: true })
       } else {
-        navigate('/sentinelle', { replace: true })
+        navigate('/dashboard', { replace: true })
       }
     } else {
-      // Default redirect to sentinelle dashboard
-      navigate('/sentinelle', { replace: true })
+      // Default redirect to main dashboard
+      navigate('/dashboard', { replace: true })
     }
   }, [isSignedIn, isLoaded, user, navigate, plan])
 

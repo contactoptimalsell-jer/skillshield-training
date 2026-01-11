@@ -12,7 +12,7 @@ export const AuthPage: React.FC = () => {
   // Redirect if already signed in
   useEffect(() => {
     if (isSignedIn) {
-      const redirectTo = plan ? `/auth/redirect?plan=${plan}` : '/sentinelle'
+      const redirectTo = plan ? `/auth/redirect?plan=${plan}` : '/dashboard'
       navigate(redirectTo, { replace: true })
     }
   }, [isSignedIn, navigate, plan])
