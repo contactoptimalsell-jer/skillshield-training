@@ -67,28 +67,53 @@ interface DashboardProviderProps {
 }
 
 export const DashboardProvider: React.FC<DashboardProviderProps> = ({ children }) => {
-  const { user: clerkUser } = useUser()
-  const [user, setUser] = useState(mockUser)
+  const { user: clerkUser, isLoaded: isClerkUserLoaded } = useUser()
+  
+  // Initialiser avec les données Clerk si disponibles, sinon mockUser
+  const getInitialUser = (): User => {
+    if (!isClerkUserLoaded || !clerkUser) {
+      return mockUser
+    }
+    
+    const firstName = clerkUser.firstName || ''
+    const lastName = clerkUser.lastName || ''
+    const fullName = firstName && lastName 
+      ? `${firstName} ${lastName}`
+      : firstName || clerkUser.username || clerkUser.emailAddresses[0]?.emailAddress || 'Utilisateur'
+    
+    const initials = firstName && lastName
+      ? `${firstName[0]}${lastName[0]}`.toUpperCase()
+      : firstName
+      ? firstName[0].toUpperCase()
+      : fullName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2) || 'JD'
+    
+    return {
+      ...mockUser,
+      id: clerkUser.id,
+      name: fullName,
+      email: clerkUser.emailAddresses[0]?.emailAddress || '',
+      avatar: initials
+    }
+  }
+  
+  const [user, setUser] = useState<User>(getInitialUser())
   const [riskScore, setRiskScore] = useState(mockRiskScore)
   
   // Synchroniser les données utilisateur avec Clerk
   useEffect(() => {
-    if (clerkUser) {
-      // Construire le nom depuis Clerk (firstName + lastName ou email/username)
+    if (isClerkUserLoaded && clerkUser) {
       const firstName = clerkUser.firstName || ''
       const lastName = clerkUser.lastName || ''
       const fullName = firstName && lastName 
         ? `${firstName} ${lastName}`
         : firstName || clerkUser.username || clerkUser.emailAddresses[0]?.emailAddress || 'Utilisateur'
       
-      // Construire les initiales pour l'avatar
       const initials = firstName && lastName
         ? `${firstName[0]}${lastName[0]}`.toUpperCase()
         : firstName
         ? firstName[0].toUpperCase()
-        : fullName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
+        : fullName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2) || 'JD'
       
-      // Mettre à jour l'utilisateur avec les données Clerk
       setUser(prev => ({
         ...prev,
         id: clerkUser.id,
@@ -96,8 +121,11 @@ export const DashboardProvider: React.FC<DashboardProviderProps> = ({ children }
         email: clerkUser.emailAddresses[0]?.emailAddress || prev.email,
         avatar: initials
       }))
+    } else if (isClerkUserLoaded && !clerkUser) {
+      // Si Clerk est chargé mais pas d'utilisateur, réinitialiser avec mockUser
+      setUser(mockUser)
     }
-  }, [clerkUser])
+  }, [clerkUser, isClerkUserLoaded])
   const [alerts, setAlerts] = useState(mockAIAlerts)
   const [formations, setFormations] = useState(mockFormations)
   const [bootcamps, setBootcamps] = useState(mockBootcamps)
