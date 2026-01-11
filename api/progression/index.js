@@ -293,22 +293,24 @@ export default async function handler(req, res) {
   
   try {
     // Vérifier que les variables d'environnement sont présentes
-    if (!process.env.SUPABASE_URL || !process.env.SUPABASE_ANON_KEY) {
-      console.error('Missing environment variables:', {
-        hasSupabaseUrl: !!process.env.SUPABASE_URL,
-        hasSupabaseKey: !!process.env.SUPABASE_ANON_KEY,
-        supabaseUrl: process.env.SUPABASE_URL ? `${process.env.SUPABASE_URL.substring(0, 20)}...` : 'missing',
-        supabaseKey: process.env.SUPABASE_ANON_KEY ? `${process.env.SUPABASE_ANON_KEY.substring(0, 20)}...` : 'missing'
-      })
+    const hasUrl = !!process.env.SUPABASE_URL
+    const hasKey = !!process.env.SUPABASE_ANON_KEY
+    
+    if (!hasUrl || !hasKey) {
+      console.error('❌ Missing environment variables')
       return res.status(500).json({ 
         error: 'Server configuration error',
         message: 'Missing Supabase environment variables',
         debug: {
-          hasSupabaseUrl: !!process.env.SUPABASE_URL,
-          hasSupabaseKey: !!process.env.SUPABASE_ANON_KEY
+          hasSupabaseUrl: hasUrl,
+          hasSupabaseKey: hasKey,
+          urlLength: process.env.SUPABASE_URL?.length || 0,
+          keyLength: process.env.SUPABASE_ANON_KEY?.length || 0
         }
       })
     }
+    
+    console.error('✅ Env vars present:', { hasUrl, hasKey })
     
     // Vérifier que le client Supabase est initialisé
     if (!supabase) {
