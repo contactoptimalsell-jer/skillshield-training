@@ -1,5 +1,7 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react'
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react'
+import { useUser } from '@clerk/clerk-react'
 import { mockUser, mockRiskScore, mockAIAlerts, mockFormations, mockBootcamps, mockReconversionPlan, mockSectorReports, dashboardWidgets } from '../data/mockData'
+import type { User } from '../data/mockData'
 
 interface DashboardContextType {
   // User data
