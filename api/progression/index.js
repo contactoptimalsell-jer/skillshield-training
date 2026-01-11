@@ -18,17 +18,33 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = process.env.SUPABASE_URL
 const supabaseKey = process.env.SUPABASE_ANON_KEY
 
+console.error('🔍 Initialization check:', {
+  hasUrl: !!supabaseUrl,
+  hasKey: !!supabaseKey,
+  urlLength: supabaseUrl?.length || 0,
+  keyLength: supabaseKey?.length || 0,
+  urlStartsWithHttps: supabaseUrl?.startsWith('https://') || false
+})
+
 if (!supabaseUrl || !supabaseKey) {
   console.error('⚠️ Missing Supabase environment variables at initialization')
 }
 
-const supabase = supabaseUrl && supabaseKey
-  ? createClient(supabaseUrl, supabaseKey, {
+let supabase = null
+try {
+  if (supabaseUrl && supabaseKey) {
+    supabase = createClient(supabaseUrl, supabaseKey, {
       auth: {
         persistSession: false
       }
     })
-  : null
+    console.error('✅ Supabase client created successfully')
+  } else {
+    console.error('❌ Cannot create Supabase client - missing env vars')
+  }
+} catch (error) {
+  console.error('❌ Error creating Supabase client:', error.message)
+}
 
 // Configuration de progression (identique à [userId].js)
 const PROGRESSION_STEPS = {
