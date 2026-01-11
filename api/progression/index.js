@@ -351,7 +351,7 @@ export default async function handler(req, res) {
     }
     
     if (req.method === 'GET') {
-      const progression = await getProgression(userId)
+      const progression = await getProgression(userId, supabase)
       return res.status(200).json(progression)
     }
     
@@ -362,7 +362,7 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: 'stepId is required' })
       }
       
-      const progression = await addCompletedStep(userId, stepId)
+      const progression = await addCompletedStep(userId, stepId, supabase)
       return res.status(200).json(progression)
     }
     
