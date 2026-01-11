@@ -14,10 +14,21 @@
 
 import { createClient } from '@supabase/supabase-js'
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_ANON_KEY
-)
+// Initialiser Supabase - vérifier que les variables sont présentes
+const supabaseUrl = process.env.SUPABASE_URL
+const supabaseKey = process.env.SUPABASE_ANON_KEY
+
+if (!supabaseUrl || !supabaseKey) {
+  console.error('⚠️ Missing Supabase environment variables at initialization')
+}
+
+const supabase = supabaseUrl && supabaseKey
+  ? createClient(supabaseUrl, supabaseKey, {
+      auth: {
+        persistSession: false
+      }
+    })
+  : null
 
 // Configuration de progression (identique à [userId].js)
 const PROGRESSION_STEPS = {
@@ -95,7 +106,7 @@ function getNextRecommendedAction(completedSteps) {
     return {
       stepId: 'score_calculated',
       label: 'Calculer votre score IA',
-      reason: 'Découvrez votre niveau de risque face à l\'IA'
+      reason: 'Découvrez votre niveau de risque face à l'IA'
     }
   }
   
@@ -126,7 +137,12 @@ function calculateProgression(completedSteps) {
  * Récupère la progression d'un utilisateur
  */
 async function getProgression(userId) {
+  if (!supabase) {
+    throw new Error('Supabase client not initialized - check environment variables')
+  }
+  
   try {
+    console.log('Fetching progression for userId:', userId)
     const { data, error } = await supabase
       .from('user_progress')
       .select('*')
@@ -136,6 +152,7 @@ async function getProgression(userId) {
     if (error) {
       if (error.code === 'PGRST116') {
         // Utilisateur n'existe pas encore, initialiser
+        console.log('User not found, creating initial record')
         const { data: newData, error: insertError } = await supabase
           .from('user_progress')
           .insert({
@@ -147,7 +164,10 @@ async function getProgression(userId) {
           .select()
           .single()
         
-        if (insertError) throw insertError
+        if (insertError) {
+          console.error('Error creating user progress:', insertError)
+          throw insertError
+        }
         
         const calculation = calculateProgression([])
         return {
@@ -160,6 +180,7 @@ async function getProgression(userId) {
           nextRecommendedAction: calculation.nextRecommendedAction
         }
       }
+      console.error('Supabase query error:', error)
       throw error
     }
     
@@ -185,6 +206,10 @@ async function getProgression(userId) {
  * Ajoute une étape complétée à la progression
  */
 async function addCompletedStep(userId, stepId) {
+  if (!supabase) {
+    throw new Error('Supabase client not initialized - check environment variables')
+  }
+  
   try {
     // Récupérer la progression actuelle
     const { data: currentData, error: fetchError } = await supabase
@@ -283,11 +308,20 @@ export default async function handler(req, res) {
       })
     }
     
+    // Vérifier que le client Supabase est initialisé
+    if (!supabase) {
+      return res.status(500).json({
+        error: 'Server configuration error',
+        message: 'Supabase client not initialized'
+      })
+    }
+    
     // Log pour debug (sans exposer les valeurs complètes)
-    console.log('Supabase config:', {
+    console.log('Supabase config check:', {
       urlPresent: !!process.env.SUPABASE_URL,
       keyPresent: !!process.env.SUPABASE_ANON_KEY,
-      urlPrefix: process.env.SUPABASE_URL?.substring(0, 20) || 'missing'
+      urlPrefix: process.env.SUPABASE_URL?.substring(0, 30) || 'missing',
+      clientInitialized: !!supabase
     })
     
     // Récupérer l'ID utilisateur depuis les query params
@@ -315,7 +349,12 @@ export default async function handler(req, res) {
     
     return res.status(405).json({ error: 'Method not allowed' })
   } catch (error) {
-    console.error('API Error:', error)
+    console.error('API Error:', {
+      message: error.message,
+      details: error.stack,
+      hint: error.hint,
+      code: error.code
+    })
     return res.status(500).json({ 
       error: 'Internal server error',
       message: error.message 
