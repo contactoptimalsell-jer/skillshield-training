@@ -15,7 +15,7 @@ export const ClerkAuthPage: React.FC = () => {
   // Redirect if already signed in
   useEffect(() => {
     if (isSignedIn) {
-      const redirectTo = plan ? `/auth/redirect?plan=${plan}` : '/dashboard'
+      const redirectTo = plan ? `/auth/redirect?plan=${plan}` : '/sentinelle'
       navigate(redirectTo, { replace: true })
     }
   }, [isSignedIn, navigate, plan])
@@ -88,7 +88,7 @@ export const ClerkAuthPage: React.FC = () => {
                 routing="path"
                 path="/auth"
                 signUpUrl="/auth?mode=signup"
-                afterSignInUrl={plan ? `/auth/redirect?plan=${plan}` : '/dashboard'}
+                afterSignInUrl={plan ? `/auth/redirect?plan=${plan}` : '/sentinelle'}
                 appearance={{
                   elements: {
                     rootBox: 'mx-auto',
@@ -110,7 +110,7 @@ export const ClerkAuthPage: React.FC = () => {
                 routing="path"
                 path="/auth"
                 signInUrl="/auth?mode=signin"
-                afterSignUpUrl={plan ? `/auth/redirect?plan=${plan}` : '/dashboard'}
+                afterSignUpUrl={plan ? `/auth/redirect?plan=${plan}` : '/sentinelle'}
                 appearance={{
                   elements: {
                     rootBox: 'mx-auto',
