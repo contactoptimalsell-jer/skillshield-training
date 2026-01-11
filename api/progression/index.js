@@ -138,11 +138,13 @@ function calculateProgression(completedSteps) {
  */
 async function getProgression(userId) {
   if (!supabase) {
+    console.error('❌ Supabase client is null - environment variables may be missing')
     throw new Error('Supabase client not initialized - check environment variables')
   }
   
   try {
-    console.log('Fetching progression for userId:', userId)
+    console.log('✅ Fetching progression for userId:', userId)
+    console.log('✅ Supabase client initialized, making query...')
     const { data, error } = await supabase
       .from('user_progress')
       .select('*')
@@ -317,10 +319,12 @@ export default async function handler(req, res) {
     }
     
     // Log pour debug (sans exposer les valeurs complètes)
-    console.log('Supabase config check:', {
+    console.log('🔍 Supabase config check:', {
       urlPresent: !!process.env.SUPABASE_URL,
       keyPresent: !!process.env.SUPABASE_ANON_KEY,
       urlPrefix: process.env.SUPABASE_URL?.substring(0, 30) || 'missing',
+      urlLength: process.env.SUPABASE_URL?.length || 0,
+      keyLength: process.env.SUPABASE_ANON_KEY?.length || 0,
       clientInitialized: !!supabase
     })
     
