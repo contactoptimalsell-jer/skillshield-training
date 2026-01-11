@@ -42,10 +42,39 @@ export const ProgressionWidget: React.FC<ProgressionWidgetProps> = ({
     )
   }
 
-  if (error || !progression) {
+  if (error) {
+    console.error('Progression error:', error)
     return (
       <div className={`bg-white rounded-xl border border-gray-200 p-6 ${className}`}>
         <p className="text-sm text-gray-500">Impossible de charger la progression</p>
+        <p className="text-xs text-gray-400 mt-1">Erreur: {error.message}</p>
+      </div>
+    )
+  }
+  
+  if (!progression) {
+    // Progression n'existe pas encore (utilisateur nouveau) - afficher progression à 0
+    return (
+      <div className={`bg-white rounded-xl border border-gray-200 p-6 ${className}`}>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-semibold text-gray-900">Votre Progression</h3>
+          <span className="px-3 py-1 bg-gray-100 text-gray-800 text-sm font-medium rounded-full border border-gray-200">
+            Niveau 1
+          </span>
+        </div>
+        <div className="mb-4">
+          <div className="w-full bg-gray-200 rounded-full h-3">
+            <div className="bg-cyan-400 h-3 rounded-full" style={{ width: '0%' }}></div>
+          </div>
+          <div className="flex justify-between items-center mt-2">
+            <span className="text-sm text-gray-600">0 points</span>
+            <span className="text-sm text-gray-600">0%</span>
+          </div>
+        </div>
+        <div className="mt-4 p-4 bg-cyan-50 rounded-lg border border-cyan-200">
+          <p className="text-sm font-medium text-cyan-900 mb-1">Prochaine action recommandée</p>
+          <p className="text-sm text-cyan-700">Complétez votre onboarding pour démarrer votre progression</p>
+        </div>
       </div>
     )
   }

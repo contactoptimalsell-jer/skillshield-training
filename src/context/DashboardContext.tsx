@@ -104,15 +104,37 @@ export const DashboardProvider: React.FC<DashboardProviderProps> = ({ children }
     if (isClerkUserLoaded && clerkUser) {
       const firstName = clerkUser.firstName || ''
       const lastName = clerkUser.lastName || ''
-      const fullName = firstName && lastName 
-        ? `${firstName} ${lastName}`
-        : firstName || clerkUser.username || clerkUser.emailAddresses[0]?.emailAddress || 'Utilisateur'
       
-      const initials = firstName && lastName
-        ? `${firstName[0]}${lastName[0]}`.toUpperCase()
-        : firstName
-        ? firstName[0].toUpperCase()
-        : fullName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2) || 'JD'
+      // Construire le nom complet avec fallbacks
+      let fullName = ''
+      if (firstName && lastName) {
+        fullName = `${firstName} ${lastName}`
+      } else if (firstName) {
+        fullName = firstName
+      } else if (clerkUser.username) {
+        fullName = clerkUser.username
+      } else if (clerkUser.emailAddresses[0]?.emailAddress) {
+        // Utiliser la partie avant @ de l'email comme nom
+        const emailPrefix = clerkUser.emailAddresses[0].emailAddress.split('@')[0]
+        fullName = emailPrefix.split('.').map(part => part.charAt(0).toUpperCase() + part.slice(1)).join(' ') || emailPrefix
+      } else {
+        fullName = 'Utilisateur'
+      }
+      
+      // Calculer les initiales
+      let initials = 'JD'
+      if (firstName && lastName) {
+        initials = `${firstName[0]}${lastName[0]}`.toUpperCase()
+      } else if (firstName) {
+        initials = firstName[0].toUpperCase()
+      } else if (fullName) {
+        const parts = fullName.split(' ')
+        if (parts.length >= 2) {
+          initials = `${parts[0][0]}${parts[1][0]}`.toUpperCase()
+        } else {
+          initials = fullName.slice(0, 2).toUpperCase()
+        }
+      }
       
       setUser(prev => ({
         ...prev,
