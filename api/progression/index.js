@@ -106,7 +106,7 @@ function getNextRecommendedAction(completedSteps) {
     return {
       stepId: 'score_calculated',
       label: 'Calculer votre score IA',
-      reason: 'Découvrez votre niveau de risque face à l'IA'
+      reason: 'Découvrez votre niveau de risque face à l\'IA'
     }
   }
   
