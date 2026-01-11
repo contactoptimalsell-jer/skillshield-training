@@ -102,7 +102,7 @@ export const OnboardingFlow: React.FC = () => {
       }
 
       // Calculate initial AI risk score
-      const { error: scoreError } = await userService.calculateAndSaveScore()
+      const { error: scoreError } = await userService.calculateAndSaveScore(clerkUser.id)
       
       if (scoreError) {
         console.warn('Could not calculate score:', scoreError)
