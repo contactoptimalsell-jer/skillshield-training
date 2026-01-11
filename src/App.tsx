@@ -9,10 +9,12 @@ import { AuthProvider } from './context/AuthContext'
 import { CookieProvider } from './context/CookieContext'
 
 // Clerk configuration
+// Note: Utilise VITE_CLERK_PUBLISHABLE_KEY (pas NEXT_PUBLIC_) car c'est un projet Vite
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || ''
 
 if (!PUBLISHABLE_KEY) {
-  console.warn('Missing Clerk Publishable Key. Please set VITE_CLERK_PUBLISHABLE_KEY in your environment variables.')
+  console.error('Missing Clerk Publishable Key. Please set VITE_CLERK_PUBLISHABLE_KEY in your environment variables.')
+  console.error('Get your key at: https://dashboard.clerk.com/last-active?path=api-keys')
 }
 import { Hero } from './components/Hero'
 import { HowItWorks } from './components/HowItWorks'
