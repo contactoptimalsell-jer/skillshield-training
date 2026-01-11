@@ -26,8 +26,7 @@ export default async function handler(req, res) {
     const sortBy = req.query.sortBy || 'submittedDate'
     const sortOrder = req.query.sortOrder || 'descending'
 
-    // Construire l'URL ArXiv
-    // Utiliser HTTPS si disponible, sinon HTTP
+    // Construire l'URL ArXiv (utiliser HTTPS)
     const arxivUrl = `https://export.arxiv.org/api/query?search_query=${encodeURIComponent(searchQuery)}&start=${start}&max_results=${maxResults}&sortBy=${sortBy}&sortOrder=${sortOrder}`
 
     // Faire la requête depuis le serveur (pas de problème CORS)
