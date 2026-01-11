@@ -152,15 +152,8 @@ function calculateProgression(completedSteps) {
  * GET /api/progression?userId=xxx
  * Récupère la progression d'un utilisateur
  */
-async function getProgression(userId) {
-  if (!supabase) {
-    console.error('❌ Supabase client is null - environment variables may be missing')
-    throw new Error('Supabase client not initialized - check environment variables')
-  }
-  
+async function getProgression(userId, supabase) {
   try {
-    console.log('✅ Fetching progression for userId:', userId)
-    console.log('✅ Supabase client initialized, making query...')
     const { data, error } = await supabase
       .from('user_progress')
       .select('*')
