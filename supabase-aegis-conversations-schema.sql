@@ -11,10 +11,10 @@
 -- Table : Conversations Aegis
 CREATE TABLE IF NOT EXISTS aegis_conversations (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id TEXT NOT NULL, -- Clerk User ID (référence users.id qui est TEXT)
+  user_id TEXT NOT NULL, -- Clerk User ID (users.id est TEXT dans notre structure)
   user_message TEXT NOT NULL,
   bot_response TEXT NOT NULL,
-  timestamp TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  timestamp TIMESTAMPTZ DEFAULT NOW(),
   tokens_used INTEGER
 );
 
