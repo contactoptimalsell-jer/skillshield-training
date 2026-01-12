@@ -70,9 +70,19 @@ async function getUserContext(userId, supabase) {
       .eq('clerk_user_id', userId)
       .single()
 
+    // Extraire le prénom de l'email si pas de first_name
+    const emailPrefix = userData.email?.split('@')[0] || ''
+    const firstName = emailPrefix.split('.')[0] || emailPrefix || 'Utilisateur'
+
+    // Déterminer les formations complétées depuis completed_steps
+    const completedSteps = progressData?.completed_steps || []
+    const completedFormations = completedSteps.filter(step => 
+      step.includes('formation') || step.includes('formation_completed')
+    )
+
     return {
       hasProfile: !!profile.job_title,
-      firstName: profile.job_title ? 'Utilisateur' : null, // Pas de first_name dans le schéma actuel
+      firstName: firstName,
       email: userData.email,
       score: profile.ai_risk_score || null,
       riskLevel: profile.ai_risk_score 
@@ -83,8 +93,9 @@ async function getUserContext(userId, supabase) {
       yearsExperience: profile.years_experience || null,
       automationExposure: profile.automation_exposure || null,
       plan: userData.current_plan || 'sentinelle',
-      formations: progressData?.completed_steps || [],
-      completedFormations: progressData?.completed_steps?.filter(step => step.includes('formation')) || [],
+      formations: completedSteps,
+      completedFormations: completedFormations,
+      currentFormation: null, // À implémenter si vous avez une table formations
       lastActive: userData.updated_at
     }
   } catch (error) {
@@ -147,13 +158,12 @@ Encourage-le à le faire pour obtenir des conseils personnalisés.`
   }
 
   return basePrompt + `\n\n## Contexte Utilisateur Actuel
-- Email : ${context.email}
-- Score de risque IA : ${context.score}% (${context.riskLevel || 'Non calculé'})
+- Prénom : ${context.firstName || 'Utilisateur'}
+- Score de risque IA : ${context.score !== null ? `${context.score}%` : 'Non calculé'} (${context.riskLevel || 'Non calculé'})
 - Métier : ${context.job || 'Non renseigné'}
 - Secteur : ${context.sector || 'Non renseigné'}
-- Années d'expérience : ${context.yearsExperience || 'Non renseigné'}
-- Exposition à l'automatisation : ${context.automationExposure || 'Non renseigné'}/10
 - Plan : ${context.plan}
+- Formation en cours : ${context.currentFormation || 'Aucune'}
 - Formations complétées : ${context.completedFormations.length}
 
 ## Instructions Spécifiques
@@ -178,8 +188,8 @@ function getSpecificInstructions(context) {
   }
 
   // Selon le plan
-  if (context.plan === 'sentinelle') {
-    instructions.push("- L'utilisateur est en plan Sentinelle. Tu peux mentionner les avantages des plans payants SANS être insistant.")
+  if (context.plan === 'sentinelle' || context.plan === 'gratuit') {
+    instructions.push("- L'utilisateur est en plan gratuit/Sentinelle. Tu peux mentionner les avantages des plans payants SANS être insistant.")
   }
 
   // Selon la progression
@@ -276,7 +286,8 @@ export default async function handler(req, res) {
  */
 async function logConversation(userId, userMessage, botResponse, supabase) {
   try {
-    await supabase
+    // Vérifier si la table existe avant d'insérer
+    const { error } = await supabase
       .from('aegis_conversations')
       .insert({
         user_id: userId,
@@ -284,6 +295,10 @@ async function logConversation(userId, userMessage, botResponse, supabase) {
         bot_response: botResponse,
         created_at: new Date().toISOString()
       })
+    
+    if (error && error.code !== '42P01') { // 42P01 = table does not exist
+      console.warn('Could not log conversation:', error)
+    }
   } catch (error) {
     // Ne pas bloquer si le logging échoue
     console.warn('Could not log conversation:', error)
