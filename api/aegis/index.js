@@ -15,6 +15,10 @@
 import OpenAI from 'openai'
 import { createClient } from '@supabase/supabase-js'
 
+// Constantes de limitation
+const MAX_TOKENS_PER_RESPONSE = 800 // Limite stricte
+const RATE_LIMIT_PER_USER = 50 // Messages/jour par user
+
 // Initialiser OpenAI
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
@@ -173,6 +177,31 @@ Adapte tes réponses à ce profil. Sois précis et référence son score/métier
 }
 
 /**
+ * Récupère le nombre de messages de l'utilisateur dans les dernières 24h
+ */
+async function getUserDailyMessageCount(userId, supabase) {
+  try {
+    const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()
+    
+    const { count, error } = await supabase
+      .from('aegis_conversations')
+      .select('*', { count: 'exact', head: true })
+      .eq('user_id', userId)
+      .gte('timestamp', oneDayAgo)
+    
+    if (error && error.code !== '42P01') { // 42P01 = table does not exist
+      console.warn('Error counting user messages:', error)
+      return 0
+    }
+    
+    return count || 0
+  } catch (error) {
+    console.warn('Error getting user message count:', error)
+    return 0
+  }
+}
+
+/**
  * Instructions spécifiques selon le profil
  */
 function getSpecificInstructions(context) {
@@ -239,6 +268,14 @@ export default async function handler(req, res) {
       })
     }
 
+    // Vérifier le rate limiting
+    const userMessageCount = await getUserDailyMessageCount(userId, supabase)
+    if (userMessageCount >= RATE_LIMIT_PER_USER) {
+      return res.status(429).json({ 
+        error: 'Limite quotidienne atteinte. Réessaye demain ou passe au plan supérieur.' 
+      })
+    }
+
     // 1. Récupérer le contexte utilisateur
     const userContext = await getUserContext(userId, supabase)
 
@@ -257,7 +294,7 @@ export default async function handler(req, res) {
         { role: "user", content: message }
       ],
       temperature: 0.7,
-      max_tokens: 800,
+      max_tokens: MAX_TOKENS_PER_RESPONSE,
       presence_penalty: 0.6,
       frequency_penalty: 0.3
     })
