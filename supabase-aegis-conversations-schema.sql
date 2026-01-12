@@ -11,15 +11,16 @@
 -- Table : Conversations Aegis
 CREATE TABLE IF NOT EXISTS aegis_conversations (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id TEXT NOT NULL,
+  user_id TEXT NOT NULL, -- Clerk User ID (référence users.id qui est TEXT)
   user_message TEXT NOT NULL,
   bot_response TEXT NOT NULL,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+  timestamp TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  tokens_used INTEGER
 );
 
 -- Index pour performances
 CREATE INDEX IF NOT EXISTS idx_aegis_conversations_user_id ON aegis_conversations(user_id);
-CREATE INDEX IF NOT EXISTS idx_aegis_conversations_created_at ON aegis_conversations(created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_aegis_conversations_timestamp ON aegis_conversations(timestamp DESC);
 
 -- Désactiver RLS (sécurité gérée côté API)
 ALTER TABLE aegis_conversations DISABLE ROW LEVEL SECURITY;

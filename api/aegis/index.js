@@ -284,16 +284,16 @@ export default async function handler(req, res) {
 /**
  * Logger la conversation (optionnel - nécessite table aegis_conversations)
  */
-async function logConversation(userId, userMessage, botResponse, supabase) {
+async function logConversation(userId, userMessage, botResponse, tokensUsed, supabase) {
   try {
-    // Vérifier si la table existe avant d'insérer
     const { error } = await supabase
       .from('aegis_conversations')
       .insert({
         user_id: userId,
         user_message: userMessage,
         bot_response: botResponse,
-        created_at: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        tokens_used: tokensUsed
       })
     
     if (error && error.code !== '42P01') { // 42P01 = table does not exist
