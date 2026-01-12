@@ -264,12 +264,14 @@ export default async function handler(req, res) {
 
     const response = completion.choices[0].message.content
 
+    const tokensUsed = completion.usage.total_tokens
+
     // 4. Logger la conversation (optionnel - table à créer si nécessaire)
-    // await logConversation(userId, message, response, supabase)
+    await logConversation(userId, message, response, tokensUsed, supabase)
 
     return res.status(200).json({ 
       response,
-      tokensUsed: completion.usage.total_tokens 
+      tokensUsed 
     })
 
   } catch (error) {
