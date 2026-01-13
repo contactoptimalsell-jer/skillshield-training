@@ -312,7 +312,21 @@ export default async function handler(req, res) {
     })
 
   } catch (error) {
-    console.error('Erreur Aegis:', error)
+    console.error('❌ Erreur Aegis:', {
+      message: error.message,
+      name: error.name,
+      stack: error.stack,
+      cause: error.cause
+    })
+    
+    // Log plus détaillé pour le debugging
+    if (error.response) {
+      console.error('❌ OpenAI API Error Response:', error.response)
+    }
+    if (error.status) {
+      console.error('❌ Error Status:', error.status)
+    }
+    
     return res.status(500).json({ 
       error: 'Désolé, je rencontre un problème technique. Réessayez dans un instant.',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
