@@ -287,10 +287,10 @@ export default async function handler(req, res) {
       model: "gpt-4o-mini",
       messages: [
         { role: "system", content: systemPrompt },
-        ...conversationHistory.map(msg => ({
+        ...(Array.isArray(conversationHistory) ? conversationHistory.map(msg => ({
           role: msg.role || (msg.isUser ? "user" : "assistant"),
-          content: msg.content || msg.text || msg.message
-        })),
+          content: msg.content || msg.text || msg.message || ''
+        })).filter(msg => msg.content && msg.content.trim() !== '') : []),
         { role: "user", content: message }
       ],
       temperature: 0.7,
