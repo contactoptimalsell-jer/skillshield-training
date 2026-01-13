@@ -5904,21 +5904,64 @@ ${nextQ.question}
       return;
     }
     
-    // Déterminer le scénario de réponse
-    const scenarioKey = findBestScenario(message, emotion, updatedContext, sparringMode);
-    
-    // Générer la réponse personnalisée
-    let response;
-    if (scenarioKey === 'personalized') {
-      response = SCENARIOS.personalized(updatedContext, emotion, message);
-    } else {
-      response = SCENARIOS[scenarioKey](updatedContext);
+    // Appeler l'API Aegis
+    try {
+      if (!clerkUser?.id) {
+        throw new Error('Utilisateur non authentifié');
+      }
+
+      // Préparer l'historique de conversation pour l'API
+      const conversationHistory = messages
+        .slice(-10) // Garder les 10 derniers messages
+        .map(msg => ({
+          role: msg.isUser ? 'user' : 'assistant',
+          content: msg.text || msg.message || ''
+        }))
+        .filter(msg => msg.content && msg.content.trim() !== '');
+
+      const apiResponse = await fetch('/api/aegis', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          userId: clerkUser.id,
+          message: message,
+          conversationHistory: conversationHistory
+        })
+      });
+
+      if (!apiResponse.ok) {
+        const errorData = await apiResponse.json().catch(() => ({}));
+        throw new Error(errorData.error || `Erreur ${apiResponse.status}`);
+      }
+
+      const data = await apiResponse.json();
+      
+      setIsTyping(false);
+      
+      const aiMessage = { text: data.response, isUser: false, timestamp: new Date() };
+      setMessages(prev => [...prev, aiMessage]);
+    } catch (error) {
+      console.error('Erreur lors de l\'appel à l\'API Aegis:', error);
+      setIsTyping(false);
+      
+      // Fallback vers les réponses locales en cas d'erreur
+      const scenarioKey = findBestScenario(message, emotion, updatedContext, sparringMode);
+      let response;
+      if (scenarioKey === 'personalized') {
+        response = SCENARIOS.personalized(updatedContext, emotion, message);
+      } else {
+        response = SCENARIOS[scenarioKey](updatedContext);
+      }
+      
+      const aiMessage = { 
+        text: response, 
+        isUser: false, 
+        timestamp: new Date() 
+      };
+      setMessages(prev => [...prev, aiMessage]);
     }
-    
-    setIsTyping(false);
-    
-    const aiMessage = { text: response, isUser: false, timestamp: new Date() };
-    setMessages(prev => [...prev, aiMessage]);
   };
   
   const handleQuickAction = (actionType) => {
