@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Send, X, FileText, Swords, Paperclip, TrendingUp, Target, RefreshCw, Briefcase, Heart, BarChart3, Lightbulb, Calendar, Download, Bell, Brain, Clock, CheckCircle, Zap, Building2, AlertTriangle, FileText as PDFIcon, Upload, Image as ImageIcon, Eye, AlertCircle, Award, Trophy, Star, Medal, Users, Gift } from 'lucide-react';
+import { useUser } from '@clerk/clerk-react';
 
 // ============================================================================
 // 🎨 DESIGN TOKENS - SkillShield Design System
@@ -5685,6 +5686,7 @@ const ChatInput = ({ onSend, disabled, emotionalState }) => {
 // 🛡️ MAIN AEGIS CHATBOT COMPONENT
 // ============================================================================
 const AegisChatbot = ({ isDev = false }) => {
+  const { user: clerkUser } = useUser();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
